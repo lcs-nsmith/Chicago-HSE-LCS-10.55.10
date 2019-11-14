@@ -9,23 +9,23 @@
 /* Begin PBXBuildFile section */
 		0EAC5E1F237DF9C300E92727 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EAC5E1E237DF9C300E92727 /* AppDelegate.swift */; };
 		0EAC5E21237DF9C300E92727 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EAC5E20237DF9C300E92727 /* SceneDelegate.swift */; };
-		0EAC5E23237DF9C300E92727 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EAC5E22237DF9C300E92727 /* ViewController.swift */; };
 		0EAC5E26237DF9C300E92727 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0EAC5E24237DF9C300E92727 /* Main.storyboard */; };
 		0EAC5E28237DF9C700E92727 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0EAC5E27237DF9C700E92727 /* Assets.xcassets */; };
 		0EAC5E2B237DF9C700E92727 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0EAC5E29237DF9C700E92727 /* LaunchScreen.storyboard */; };
 		7A64AC5E237DFA650067FC9D /* Actors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A64AC5D237DFA650067FC9D /* Actors.swift */; };
+		7A64AC60237DFC400067FC9D /* ActorsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A64AC5F237DFC400067FC9D /* ActorsTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		0EAC5E1B237DF9C300E92727 /* Chicago-HSE-LCS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Chicago-HSE-LCS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0EAC5E1E237DF9C300E92727 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0EAC5E20237DF9C300E92727 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		0EAC5E22237DF9C300E92727 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		0EAC5E25237DF9C300E92727 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0EAC5E27237DF9C700E92727 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0EAC5E2A237DF9C700E92727 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0EAC5E2C237DF9C700E92727 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7A64AC5D237DFA650067FC9D /* Actors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Actors.swift; sourceTree = "<group>"; };
+		7A64AC5F237DFC400067FC9D /* ActorsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActorsTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,12 +60,12 @@
 			children = (
 				0EAC5E1E237DF9C300E92727 /* AppDelegate.swift */,
 				0EAC5E20237DF9C300E92727 /* SceneDelegate.swift */,
-				0EAC5E22237DF9C300E92727 /* ViewController.swift */,
 				0EAC5E24237DF9C300E92727 /* Main.storyboard */,
 				0EAC5E27237DF9C700E92727 /* Assets.xcassets */,
 				0EAC5E29237DF9C700E92727 /* LaunchScreen.storyboard */,
 				0EAC5E2C237DF9C700E92727 /* Info.plist */,
 				7A64AC5D237DFA650067FC9D /* Actors.swift */,
+				7A64AC5F237DFC400067FC9D /* ActorsTableViewController.swift */,
 			);
 			path = "Chicago-HSE-LCS";
 			sourceTree = "<group>";
@@ -141,8 +141,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0EAC5E23237DF9C300E92727 /* ViewController.swift in Sources */,
 				0EAC5E1F237DF9C300E92727 /* AppDelegate.swift in Sources */,
+				7A64AC60237DFC400067FC9D /* ActorsTableViewController.swift in Sources */,
 				0EAC5E21237DF9C300E92727 /* SceneDelegate.swift in Sources */,
 				7A64AC5E237DFA650067FC9D /* Actors.swift in Sources */,
 			);
