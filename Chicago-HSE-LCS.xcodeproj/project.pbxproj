@@ -21,7 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		0EAC5E1B237DF9C300E92727 /* Chicago-HSE-LCS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Chicago-HSE-LCS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0EAC5E1B237DF9C300E92727 /* Chicago.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Chicago.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0EAC5E1E237DF9C300E92727 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0EAC5E20237DF9C300E92727 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		0EAC5E25237DF9C300E92727 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -58,7 +58,7 @@
 		0EAC5E1C237DF9C300E92727 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				0EAC5E1B237DF9C300E92727 /* Chicago-HSE-LCS.app */,
+				0EAC5E1B237DF9C300E92727 /* Chicago.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -99,7 +99,7 @@
 			);
 			name = "Chicago-HSE-LCS";
 			productName = "Chicago-HSE-LCS";
-			productReference = 0EAC5E1B237DF9C300E92727 /* Chicago-HSE-LCS.app */;
+			productReference = 0EAC5E1B237DF9C300E92727 /* Chicago.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -312,9 +312,9 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "ca.russellgordon.Chicago-HSE-LCS";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Chicago;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -330,9 +330,9 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "ca.russellgordon.Chicago-HSE-LCS";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Chicago;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
