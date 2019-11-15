@@ -15,7 +15,11 @@ class FacultyDetailViewController: UIViewController {
     var facultyMemberToDisplay: Faculty?
 
     // Outlets to connect this controller to the view
-
+    @IBOutlet weak var facultyHeadShot: UIImageView!
+    @IBOutlet weak var facultySupportRole: UILabel!
+    @IBOutlet weak var facultyBio: UILabel!
+    @IBOutlet weak var scrollView: UIScrollView!
+    
     // MARK: Methods
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,6 +31,21 @@ class FacultyDetailViewController: UIViewController {
         
         // Set the navigation title item
         self.navigationItem.title = facultySetFromTableView.name
+        
+        // Set details for this faculty member
+        facultyHeadShot.image = UIImage(named: facultySetFromTableView.imageId)
+        facultySupportRole.text = facultySetFromTableView.supportRole
+        facultyBio.text = facultySetFromTableView.bio
+        
+        // Now resize the label inside the scroll view to accommoate the size of the text we just loaded in
+        facultyBio.sizeToFit()
+        
+        // Set the scroll view size
+        // 1. width same as it already was
+        // 2. height same as Faculty Bio label
+        //    (recall that label was just resized to fit new content)
+        scrollView.contentSize = CGSize(width: scrollView.contentSize.width
+            , height: facultyBio.frame.size.height)
 
     }
 

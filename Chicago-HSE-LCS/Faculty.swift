@@ -12,4 +12,5 @@ struct Faculty {
     var name: String
     var supportRole: String
     var bio: String
+    var imageId: String
 }
