@@ -12,7 +12,7 @@ class MainMenuViewController: UIViewController, UITableViewDataSource, UITableVi
     
     // MARK: Properties
     @IBOutlet weak var tableView: UITableView!
-
+    
     // List of menu items
     // TODO: Replace 'magic constants' with an enumeration with raw string values for menu items
     // See https://docs.swift.org/swift-book/LanguageGuide/Enumerations.html#ID149
@@ -37,6 +37,28 @@ class MainMenuViewController: UIViewController, UITableViewDataSource, UITableVi
         
         // Set a zero-height footer so that no blank cells show after the list of menu items
         tableView.tableFooterView = UIView()
+        
+        // Get table view to always have black background
+        tableView.backgroundColor = .black
+        
+        // Set the seperator color to always be dark grey
+        tableView.separatorColor = .darkGray
+        
+        // Set the navigation bar tint color to be black, always
+        self.navigationController?.navigationBar.barTintColor = .black
+        
+        // Set the navigation bar title color to be white, always
+        let textAttributes = [NSAttributedString.Key.foregroundColor:UIColor.white]
+        self.navigationController?.navigationBar.titleTextAttributes = textAttributes
+
+    }
+    
+    
+    override func viewWillAppear(_ animated: Bool) {
+        
+        // Hide the navigation item on the root view controller
+        self.navigationController?.setNavigationBarHidden(true, animated: false)
+                
     }
     
     /*
@@ -89,6 +111,17 @@ class MainMenuViewController: UIViewController, UITableViewDataSource, UITableVi
         
         // Depending on the section, fill the textLabel with the relevant text
         cell.textLabel?.text = mainMenuItems[indexPath.row].name
+        cell.textLabel?.textColor = .white
+        
+        // Make the cell always select as dark gray
+        let backgroundColorView = UIView()
+        backgroundColorView.backgroundColor = UIColor.darkGray
+        cell.selectedBackgroundView = backgroundColorView
+        
+        // Set a custom disclosure indicator (white) so it is visible on dark background
+        let chevron = UIImage(named: "chevron.png")
+        cell.accessoryType = .disclosureIndicator
+        cell.accessoryView = UIImageView(image: chevron!)
         
         // Return the configured cell
         return cell

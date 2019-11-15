@@ -154,6 +154,7 @@ class ActorsTableViewController: UITableViewController {
     
     
     ]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -162,6 +163,16 @@ class ActorsTableViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        
+        // Show the navigation item
+        self.navigationController?.setNavigationBarHidden(false, animated: false)
+        
+        // Get table view to always have black background
+        tableView.backgroundColor = .black
+        
+        // Set the seperator color to always be dark grey
+        tableView.separatorColor = .darkGray
+
     }
 
     // MARK: - Table view data source

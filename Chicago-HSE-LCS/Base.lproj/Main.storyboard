@@ -10,7 +10,7 @@
         <!--Main Menu View Controller-->
         <scene sceneID="2wF-3j-5pt">
             <objects>
-                <viewController id="eiB-Rv-YOP" customClass="MainMenuViewController" customModule="Chicago_HSE_LCS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="eiB-Rv-YOP" customClass="MainMenuViewController" customModule="Chicago" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="vYr-dE-t3W">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -23,6 +23,7 @@
                             </imageView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="BSd-dC-B9c">
                                 <rect key="frame" x="0.0" y="244" width="414" height="618"/>
+                                <color key="sectionIndexBackgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="PlainCell" id="dcz-5V-skD">
                                         <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
@@ -31,6 +32,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="383" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
@@ -65,7 +67,7 @@
         <!--Actors / Cast-->
         <scene sceneID="xpl-kj-Hn5">
             <objects>
-                <tableViewController id="oDI-oI-k8k" userLabel="Actors / Cast" customClass="ActorsTableViewController" customModule="Chicago_HSE_LCS" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="oDI-oI-k8k" userLabel="Actors / Cast" customClass="ActorsTableViewController" customModule="Chicago" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Xyq-5s-txr">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -95,7 +97,7 @@
         <!--Crew-->
         <scene sceneID="n6e-aB-ptk">
             <objects>
-                <tableViewController id="l0g-V4-d5d" userLabel="Crew" customClass="CrewsTableViewController" customModule="Chicago_HSE_LCS" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="l0g-V4-d5d" userLabel="Crew" customClass="CrewsTableViewController" customModule="Chicago" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="eVz-6m-ZZV">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
