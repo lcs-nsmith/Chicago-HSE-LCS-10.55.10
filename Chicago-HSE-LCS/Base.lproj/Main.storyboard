@@ -58,12 +58,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Lmx-z4-zXo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-104.34782608695653" y="113.83928571428571"/>
+            <point key="canvasLocation" x="-426" y="114"/>
         </scene>
-        <!--Actors-->
+        <!--Actors / Cast-->
         <scene sceneID="xpl-kj-Hn5">
             <objects>
-                <tableViewController id="oDI-oI-k8k" customClass="ActorsTableViewController" customModule="Chicago_HSE_LCS" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="oDI-oI-k8k" userLabel="Actors / Cast" customClass="ActorsTableViewController" customModule="Chicago_HSE_LCS" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Xyq-5s-txr">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -87,12 +87,12 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JwO-ca-Pyg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-426" y="856"/>
+            <point key="canvasLocation" x="1564" y="-5"/>
         </scene>
-        <!--Root View Controller-->
+        <!--Crew-->
         <scene sceneID="n6e-aB-ptk">
             <objects>
-                <tableViewController id="l0g-V4-d5d" customClass="CrewsTableViewController" customModule="Chicago_HSE_LCS" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="l0g-V4-d5d" userLabel="Crew" customClass="CrewsTableViewController" customModule="Chicago_HSE_LCS" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="eVz-6m-ZZV">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -116,7 +116,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xhv-he-EGF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1239" y="856"/>
+            <point key="canvasLocation" x="687" y="-473"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="VfI-gs-OdE">
