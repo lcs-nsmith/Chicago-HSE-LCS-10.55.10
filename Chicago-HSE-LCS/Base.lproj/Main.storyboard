@@ -54,6 +54,8 @@
                     <navigationItem key="navigationItem" id="dIH-JT-SM9"/>
                     <connections>
                         <outlet property="tableView" destination="BSd-dC-B9c" id="1Ac-h1-ccb"/>
+                        <segue destination="l0g-V4-d5d" kind="show" identifier="Crew" id="LEv-AA-IfX"/>
+                        <segue destination="oDI-oI-k8k" kind="show" identifier="Cast" id="F3U-qm-8RB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Lmx-z4-zXo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -87,7 +89,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JwO-ca-Pyg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1564" y="-5"/>
+            <point key="canvasLocation" x="572" y="-531"/>
         </scene>
         <!--Crew-->
         <scene sceneID="n6e-aB-ptk">
@@ -116,7 +118,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xhv-he-EGF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="687" y="-473"/>
+            <point key="canvasLocation" x="1317" y="-232"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="VfI-gs-OdE">
