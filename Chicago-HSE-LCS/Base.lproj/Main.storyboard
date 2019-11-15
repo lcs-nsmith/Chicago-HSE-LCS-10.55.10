@@ -204,6 +204,9 @@
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="LOg-jU-BkB" kind="show" id="1zb-eg-eyE"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -216,6 +219,22 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sQP-yw-Df2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1677" y="842"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="pXw-AT-zJE">
+            <objects>
+                <viewController id="LOg-jU-BkB" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="j2e-ZH-Ynz">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="118-9v-5bg"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="sgR-zM-uyB"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xRn-Me-Xt8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2910" y="842"/>
         </scene>
     </scenes>
     <resources>

@@ -17,6 +17,7 @@
 		0EAC5E37237E45F400E92727 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EAC5E36237E45F400E92727 /* Colors.swift */; };
 		0EAC5E39237E555400E92727 /* FacultyTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EAC5E38237E555400E92727 /* FacultyTableViewController.swift */; };
 		0EAC5E3B237E558E00E92727 /* Faculty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EAC5E3A237E558E00E92727 /* Faculty.swift */; };
+		0EAC5E3D237E5B1B00E92727 /* FacultyDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EAC5E3C237E5B1B00E92727 /* FacultyDetailViewController.swift */; };
 		7A64AC5E237DFA650067FC9D /* Actors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A64AC5D237DFA650067FC9D /* Actors.swift */; };
 		7A64AC60237DFC400067FC9D /* ActorsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A64AC5F237DFC400067FC9D /* ActorsTableViewController.swift */; };
 		7A64AC62237E05810067FC9D /* Crew.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A64AC61237E05810067FC9D /* Crew.swift */; };
@@ -36,6 +37,7 @@
 		0EAC5E36237E45F400E92727 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		0EAC5E38237E555400E92727 /* FacultyTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacultyTableViewController.swift; sourceTree = "<group>"; };
 		0EAC5E3A237E558E00E92727 /* Faculty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Faculty.swift; sourceTree = "<group>"; };
+		0EAC5E3C237E5B1B00E92727 /* FacultyDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacultyDetailViewController.swift; sourceTree = "<group>"; };
 		7A64AC5D237DFA650067FC9D /* Actors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Actors.swift; sourceTree = "<group>"; };
 		7A64AC5F237DFC400067FC9D /* ActorsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActorsTableViewController.swift; sourceTree = "<group>"; };
 		7A64AC61237E05810067FC9D /* Crew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Crew.swift; sourceTree = "<group>"; };
@@ -87,6 +89,7 @@
 				0EAC5E36237E45F400E92727 /* Colors.swift */,
 				0EAC5E38237E555400E92727 /* FacultyTableViewController.swift */,
 				0EAC5E3A237E558E00E92727 /* Faculty.swift */,
+				0EAC5E3C237E5B1B00E92727 /* FacultyDetailViewController.swift */,
 			);
 			path = "Chicago-HSE-LCS";
 			sourceTree = "<group>";
@@ -168,6 +171,7 @@
 				0EAC5E33237E314000E92727 /* MainMenuItem.swift in Sources */,
 				0EAC5E1F237DF9C300E92727 /* AppDelegate.swift in Sources */,
 				0EAC5E3B237E558E00E92727 /* Faculty.swift in Sources */,
+				0EAC5E3D237E5B1B00E92727 /* FacultyDetailViewController.swift in Sources */,
 				7A64AC60237DFC400067FC9D /* ActorsTableViewController.swift in Sources */,
 				0EAC5E21237DF9C300E92727 /* SceneDelegate.swift in Sources */,
 				7A64AC5E237DFA650067FC9D /* Actors.swift in Sources */,

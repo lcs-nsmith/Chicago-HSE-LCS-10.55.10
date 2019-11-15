@@ -63,14 +63,14 @@ class FacultyTableViewController: UITableViewController {
     
     // Configure the cell
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-
+        
         // Create an object of the dynamic cell "FacultyCell"
         let cell = tableView.dequeueReusableCell(withIdentifier: "FacultyCell", for: indexPath)
         
         // Depending on the section, fill the textLabel with the relevant text
         cell.textLabel?.text = facultyMembers[indexPath.row].name
         cell.textLabel?.textColor = .white
-
+        
         // Make the cell have a black background colour
         cell.backgroundColor = .black
         
@@ -124,14 +124,23 @@ class FacultyTableViewController: UITableViewController {
      }
      */
     
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destination.
-     // Pass the selected object to the new view controller.
-     }
-     */
+    // MARK: - Navigation
+    
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        // Get a reference to the destination view controller using segue.destination
+        guard let detailViewController = segue.destination as? FacultyDetailViewController else {
+            return
+        }
+        
+        // Get the currently selected row of the table view
+        guard let index = tableView.indexPathForSelectedRow?.row else {
+            return
+        }
+        
+        // Now set the emoji to be displayed
+        detailViewController.facultyMemberToDisplay = facultyMembers[index]
+    }
     
 }
