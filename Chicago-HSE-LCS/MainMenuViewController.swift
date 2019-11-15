@@ -8,11 +8,14 @@
 
 import UIKit
 
-class MainMenuViewController: UIViewController, UITableViewDataSource {
+class MainMenuViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     // MARK: Properties
     @IBOutlet weak var tableView: UITableView!
-    
+
+    // List of menu items
+    // TODO: Replace 'magic constants' with an enumeration with raw string values for menu items
+    // See https://docs.swift.org/swift-book/LanguageGuide/Enumerations.html#ID149
     var mainMenuItems: [MainMenuItem] = [
         
         MainMenuItem(name: "Cast"),
@@ -45,6 +48,20 @@ class MainMenuViewController: UIViewController, UITableViewDataSource {
      // Pass the selected object to the new view controller.
      }
      */
+    
+    // Print the currently selected menu item to the console
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        // Activate a given segue based on what item was selected
+        switch mainMenuItems[indexPath.row].name {
+        case "Cast":
+            performSegue(withIdentifier: "Cast", sender: nil)
+        case "Crew":
+            performSegue(withIdentifier: "Crew", sender: nil)
+        default:
+            break
+        }
+    }
     
     // How many sections are in the table view
     func numberOfSections(in tableView: UITableView) -> Int {

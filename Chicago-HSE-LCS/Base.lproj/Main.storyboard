@@ -78,6 +78,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -85,7 +86,7 @@
                             <outlet property="delegate" destination="oDI-oI-k8k" id="L2k-xd-H42"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Actors" id="OTm-3E-0LK"/>
+                    <navigationItem key="navigationItem" title="Cast" id="OTm-3E-0LK"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JwO-ca-Pyg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -107,6 +108,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -114,7 +116,7 @@
                             <outlet property="delegate" destination="l0g-V4-d5d" id="NuL-Q6-QxX"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="tTa-1A-p54"/>
+                    <navigationItem key="navigationItem" title="Crew" id="tTa-1A-p54" userLabel="Crew"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xhv-he-EGF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
