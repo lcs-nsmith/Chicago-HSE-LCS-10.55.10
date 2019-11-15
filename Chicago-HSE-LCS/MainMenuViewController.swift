@@ -80,6 +80,8 @@ class MainMenuViewController: UIViewController, UITableViewDataSource, UITableVi
             performSegue(withIdentifier: "Cast", sender: nil)
         case "Crew":
             performSegue(withIdentifier: "Crew", sender: nil)
+        case "Faculty":
+            performSegue(withIdentifier: "Faculty", sender: nil)
         default:
             break
         }
@@ -106,12 +108,15 @@ class MainMenuViewController: UIViewController, UITableViewDataSource, UITableVi
     // Configure the cell
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        // Create an object of the dynamic cell "PlainCell"
-        let cell = tableView.dequeueReusableCell(withIdentifier: "PlainCell", for: indexPath)
+        // Create an object of the dynamic cell "MenuItemCell"
+        let cell = tableView.dequeueReusableCell(withIdentifier: "MenuItemCell", for: indexPath)
         
         // Depending on the section, fill the textLabel with the relevant text
         cell.textLabel?.text = mainMenuItems[indexPath.row].name
         cell.textLabel?.textColor = .white
+        
+        // Make the cell have a black background colour
+        cell.backgroundColor = .black
         
         // Make the cell always select as dark gray
         let backgroundColorView = UIView()
