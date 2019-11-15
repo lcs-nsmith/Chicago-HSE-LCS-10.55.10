@@ -199,15 +199,6 @@
                         <scrollView key="tableFooterView" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" id="HKs-hD-Pao">
                             <rect key="frame" x="0.0" y="99.5" width="414" height="0.0"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <subviews>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="UkB-pB-Lcc" userLabel="Bio detail">
-                                    <rect key="frame" x="0.0" y="53.5" width="398" height="20.5"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                    <nil key="textColor"/>
-                                    <nil key="highlightedColor"/>
-                                </label>
-                            </subviews>
                             <viewLayoutGuide key="contentLayoutGuide" id="Y3G-OR-6pV"/>
                             <viewLayoutGuide key="frameLayoutGuide" id="Mvv-gw-390"/>
                         </scrollView>
@@ -276,19 +267,19 @@
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" indicatorStyle="white" translatesAutoresizingMaskIntoConstraints="NO" id="ccZ-zj-xNt">
                                 <rect key="frame" x="20" y="607.5" width="374" height="254.5"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="QEO-XN-CoK" userLabel="Bio details">
-                                        <rect key="frame" x="20" y="8" width="374" height="239"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="QEO-XN-CoK" userLabel="Bio details">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="20"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="QEO-XN-CoK" firstAttribute="trailing" secondItem="ccZ-zj-xNt" secondAttribute="trailing" id="NCm-7d-eDx"/>
-                                    <constraint firstItem="QEO-XN-CoK" firstAttribute="leading" secondItem="ccZ-zj-xNt" secondAttribute="leading" id="QBZ-Qq-ivI"/>
-                                    <constraint firstItem="QEO-XN-CoK" firstAttribute="top" secondItem="ccZ-zj-xNt" secondAttribute="top" constant="8" id="cUJ-D8-EX5"/>
-                                    <constraint firstItem="QEO-XN-CoK" firstAttribute="width" secondItem="ccZ-zj-xNt" secondAttribute="width" multiplier="0.903382" id="kNW-hJ-MPs"/>
-                                    <constraint firstItem="QEO-XN-CoK" firstAttribute="bottom" secondItem="dLl-Mn-CQI" secondAttribute="bottom" id="wdx-s3-krc"/>
+                                    <constraint firstItem="QEO-XN-CoK" firstAttribute="trailing" secondItem="ccZ-zj-xNt" secondAttribute="trailing" id="HKh-gz-Nhi"/>
+                                    <constraint firstItem="QEO-XN-CoK" firstAttribute="leading" secondItem="ccZ-zj-xNt" secondAttribute="leading" id="Lt4-eK-e37"/>
+                                    <constraint firstItem="QEO-XN-CoK" firstAttribute="bottom" secondItem="dLl-Mn-CQI" secondAttribute="bottom" id="XCU-JM-siT"/>
+                                    <constraint firstItem="QEO-XN-CoK" firstAttribute="top" secondItem="ccZ-zj-xNt" secondAttribute="top" id="YmD-dI-gEn"/>
+                                    <constraint firstItem="QEO-XN-CoK" firstAttribute="width" secondItem="ccZ-zj-xNt" secondAttribute="width" id="b13-Jb-25M"/>
                                 </constraints>
                                 <viewLayoutGuide key="contentLayoutGuide" id="dLl-Mn-CQI"/>
                                 <viewLayoutGuide key="frameLayoutGuide" id="0bh-kW-gON"/>
