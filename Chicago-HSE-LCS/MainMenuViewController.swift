@@ -11,6 +11,8 @@ import UIKit
 class MainMenuViewController: UIViewController, UITableViewDataSource {
     
     // MARK: Properties
+    @IBOutlet weak var tableView: UITableView!
+    
     var mainMenuItems: [MainMenuItem] = [
         
         MainMenuItem(name: "Cast"),
@@ -29,6 +31,9 @@ class MainMenuViewController: UIViewController, UITableViewDataSource {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
+        
+        // Set a zero-height footer so that no blank cells show after the list of menu items
+        tableView.tableFooterView = UIView()
     }
     
     /*
