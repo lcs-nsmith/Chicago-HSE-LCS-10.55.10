@@ -274,7 +274,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ccZ-zj-xNt">
-                                <rect key="frame" x="0.0" y="607.5" width="414" height="254.5"/>
+                                <rect key="frame" x="20" y="607.5" width="374" height="254.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="QEO-XN-CoK" userLabel="Bio details">
                                         <rect key="frame" x="20" y="8" width="374" height="239"/>
@@ -284,8 +284,8 @@
                                     </label>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="QEO-XN-CoK" firstAttribute="trailing" secondItem="ccZ-zj-xNt" secondAttribute="trailing" constant="-20" id="NCm-7d-eDx"/>
-                                    <constraint firstItem="QEO-XN-CoK" firstAttribute="leading" secondItem="ccZ-zj-xNt" secondAttribute="leading" constant="20" id="QBZ-Qq-ivI"/>
+                                    <constraint firstItem="QEO-XN-CoK" firstAttribute="trailing" secondItem="ccZ-zj-xNt" secondAttribute="trailing" id="NCm-7d-eDx"/>
+                                    <constraint firstItem="QEO-XN-CoK" firstAttribute="leading" secondItem="ccZ-zj-xNt" secondAttribute="leading" id="QBZ-Qq-ivI"/>
                                     <constraint firstItem="QEO-XN-CoK" firstAttribute="top" secondItem="ccZ-zj-xNt" secondAttribute="top" constant="8" id="cUJ-D8-EX5"/>
                                     <constraint firstItem="QEO-XN-CoK" firstAttribute="width" secondItem="ccZ-zj-xNt" secondAttribute="width" multiplier="0.903382" id="kNW-hJ-MPs"/>
                                     <constraint firstItem="QEO-XN-CoK" firstAttribute="bottom" secondItem="dLl-Mn-CQI" secondAttribute="bottom" id="wdx-s3-krc"/>
@@ -301,7 +301,7 @@
                             <constraint firstItem="ccZ-zj-xNt" firstAttribute="bottom" secondItem="118-9v-5bg" secondAttribute="bottom" id="8Ra-un-XDe"/>
                             <constraint firstItem="MLl-hl-7h1" firstAttribute="trailing" secondItem="118-9v-5bg" secondAttribute="trailing" constant="-20" id="DM2-QT-CGV"/>
                             <constraint firstItem="Val-es-4az" firstAttribute="leading" secondItem="118-9v-5bg" secondAttribute="leading" id="EeL-gC-9Wd"/>
-                            <constraint firstItem="ccZ-zj-xNt" firstAttribute="leading" secondItem="118-9v-5bg" secondAttribute="leading" id="Gnk-ok-J9j"/>
+                            <constraint firstItem="ccZ-zj-xNt" firstAttribute="leading" secondItem="118-9v-5bg" secondAttribute="leading" constant="20" id="Gnk-ok-J9j"/>
                             <constraint firstItem="6J4-R1-ZD8" firstAttribute="top" secondItem="Val-es-4az" secondAttribute="bottom" constant="8" id="RCk-A0-dsj"/>
                             <constraint firstItem="Val-es-4az" firstAttribute="trailing" secondItem="118-9v-5bg" secondAttribute="trailing" id="ZLb-rC-7b8"/>
                             <constraint firstItem="6J4-R1-ZD8" firstAttribute="leading" secondItem="118-9v-5bg" secondAttribute="leading" constant="20" id="aqV-Tf-RcZ"/>
@@ -311,7 +311,7 @@
                             <constraint firstItem="XPC-Rk-khg" firstAttribute="leading" secondItem="6J4-R1-ZD8" secondAttribute="leading" id="que-fX-4mN"/>
                             <constraint firstItem="MLl-hl-7h1" firstAttribute="leading" secondItem="118-9v-5bg" secondAttribute="leading" constant="20" id="toO-qW-CR4"/>
                             <constraint firstItem="XPC-Rk-khg" firstAttribute="top" secondItem="6J4-R1-ZD8" secondAttribute="bottom" constant="8" id="urn-n7-RZf"/>
-                            <constraint firstItem="ccZ-zj-xNt" firstAttribute="trailing" secondItem="118-9v-5bg" secondAttribute="trailing" id="wci-nA-3QF"/>
+                            <constraint firstItem="ccZ-zj-xNt" firstAttribute="trailing" secondItem="118-9v-5bg" secondAttribute="trailing" constant="-20" id="wci-nA-3QF"/>
                             <constraint firstItem="MLl-hl-7h1" firstAttribute="top" secondItem="XPC-Rk-khg" secondAttribute="bottom" constant="8" id="xWe-1q-NHE"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="118-9v-5bg"/>
