@@ -185,22 +185,33 @@
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="R2c-a5-ATe">
                                 <rect key="frame" x="0.0" y="88" width="414" height="808"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="64b-DS-sjg">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="64b-DS-sjg">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1680.6666666666667"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="YTu-W6-2eK">
-                                                <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="AboutThisAppPlaceHolder" translatesAutoresizingMaskIntoConstraints="NO" id="YTu-W6-2eK">
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="800"/>
                                             </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="01Y-LU-Fq2">
+                                                <rect key="frame" x="0.0" y="808" width="414" height="872.66666666666652"/>
+                                                <mutableString key="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus at risus massa. Vestibulum ac ligula eget mauris tempor porttitor. Curabitur at nunc sit amet quam sagittis pulvinar et sed est. Aliquam tincidunt lorem a sem posuere sollicitudin. Pellentesque ut posuere lectus. Sed tincidunt non nisi at cursus. Integer mattis dui in magna feugiat, porttitor mollis nunc sodales. Donec quis leo nec risus cursus sodales at ac libero. Integer ut pulvinar nunc. Nullam nec dui aliquam leo suscipit venenatis. Fusce malesuada, lectus ut vehicula gravida, odio purus viverra ante, sit amet varius enim libero at enim. Vestibulum non dolor eu diam vulputate venenatis at eget mi. Nunc varius lobortis lacus, eget congue metus dapibus sit amet. Vivamus efficitur eget nibh eget aliquet.
+
+Morbi rutrum ac arcu at finibus. Maecenas dapibus ante at dapibus tempor. Nulla ornare, erat et pulvinar sollicitudin, dolor felis pharetra diam, quis gravida orci eros non ligula. Sed ac auctor mauris, ac convallis eros. Donec nisl ex, suscipit id facilisis eu, gravida eu quam. Suspendisse quis euismod nibh. Fusce placerat nisl varius leo varius sodales. Nunc tempor viverra lacus quis efficitur. Maecenas scelerisque, dolor et fermentum ornare, nisl metus convallis nisi, a lobortis quam ipsum at sem. Praesent maximus dolor sit amet magna egestas, a ornare dolor rhoncus. Vestibulum ac elementum augue, eu fringilla velit. Praesent a dolor eros. Sed id tempor mi.
+
+Suspendisse quis ligula vel enim varius ultricies. Mauris ultrices ligula in sem maximus tristique. Pellentesque sapien enim, faucibus et scelerisque at, porttitor accumsan erat. Phasellus at ante aliquet, lacinia nisi ut, malesuada felis. Quisque pharetra tincidunt ligula, venenatis vehicula est. Nulla non elit urna. Integer facilisis nec nisi ut rhoncus. Suspendisse semper maximus leo rutrum mollis. Sed ac nisi augue. Proin eget dictum magna. Curabitur in lacus molestie, porttitor nisi eu, ultricies ex. Proin ut dictum mi, eget volutpat leo. Donec metus mauris, luctus eu ligula ac, venenatis molestie libero.</mutableString>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                         </subviews>
                                     </stackView>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="64b-DS-sjg" firstAttribute="bottom" secondItem="e7y-EW-mZU" secondAttribute="bottom" id="Tmf-zd-8Ar"/>
-                                    <constraint firstItem="64b-DS-sjg" firstAttribute="leading" secondItem="uDi-6g-WnM" secondAttribute="leading" id="VY0-Qd-L0o"/>
-                                    <constraint firstItem="64b-DS-sjg" firstAttribute="width" secondItem="e7y-EW-mZU" secondAttribute="width" id="c3F-ga-pVh"/>
-                                    <constraint firstItem="64b-DS-sjg" firstAttribute="trailing" secondItem="uDi-6g-WnM" secondAttribute="trailing" constant="414" id="kaX-gq-Qg7"/>
-                                    <constraint firstItem="64b-DS-sjg" firstAttribute="top" secondItem="uDi-6g-WnM" secondAttribute="top" id="r2H-b6-ZY9"/>
-                                    <constraint firstItem="64b-DS-sjg" firstAttribute="bottom" secondItem="uDi-6g-WnM" secondAttribute="bottom" constant="896" id="rMx-lx-lXS"/>
+                                    <constraint firstItem="64b-DS-sjg" firstAttribute="trailing" secondItem="uDi-6g-WnM" secondAttribute="trailing" constant="414" id="DTL-1K-Dzu"/>
+                                    <constraint firstItem="64b-DS-sjg" firstAttribute="leading" secondItem="uDi-6g-WnM" secondAttribute="leading" id="FYH-st-6OE"/>
+                                    <constraint firstItem="YTu-W6-2eK" firstAttribute="width" secondItem="R2c-a5-ATe" secondAttribute="width" id="Qzn-3e-q5A"/>
+                                    <constraint firstItem="64b-DS-sjg" firstAttribute="width" secondItem="e7y-EW-mZU" secondAttribute="width" id="bzr-oS-n6w"/>
+                                    <constraint firstItem="64b-DS-sjg" firstAttribute="bottom" secondItem="uDi-6g-WnM" secondAttribute="bottom" constant="1600.6666666666667" id="o5g-OJ-dTg"/>
+                                    <constraint firstItem="64b-DS-sjg" firstAttribute="top" secondItem="uDi-6g-WnM" secondAttribute="top" id="tbw-tP-D4t"/>
                                 </constraints>
                                 <viewLayoutGuide key="contentLayoutGuide" id="uDi-6g-WnM"/>
                                 <viewLayoutGuide key="frameLayoutGuide" id="e7y-EW-mZU"/>
@@ -211,7 +222,7 @@
                             <constraint firstItem="R2c-a5-ATe" firstAttribute="trailing" secondItem="kCB-rh-QBL" secondAttribute="trailing" id="HJb-W5-h7z"/>
                             <constraint firstItem="R2c-a5-ATe" firstAttribute="leading" secondItem="kCB-rh-QBL" secondAttribute="leading" id="iql-pc-knK"/>
                             <constraint firstItem="R2c-a5-ATe" firstAttribute="top" secondItem="kCB-rh-QBL" secondAttribute="top" id="mGp-P2-Otx"/>
-                            <constraint firstAttribute="bottom" secondItem="R2c-a5-ATe" secondAttribute="bottom" id="pj6-vD-EBP"/>
+                            <constraint firstItem="R2c-a5-ATe" firstAttribute="bottom" secondItem="Ktf-DB-jMz" secondAttribute="bottom" id="pj6-vD-EBP"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="kCB-rh-QBL"/>
                     </view>
@@ -356,6 +367,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="AboutThisAppPlaceHolder" width="1200" height="800"/>
         <image name="banner" width="449.66665649414062" height="151.66667175292969"/>
         <image name="facultyPlaceholderImage" width="2293" height="2293"/>
     </resources>
