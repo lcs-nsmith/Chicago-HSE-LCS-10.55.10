@@ -18,6 +18,7 @@
 		0EAC5E39237E555400E92727 /* FacultyTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EAC5E38237E555400E92727 /* FacultyTableViewController.swift */; };
 		0EAC5E3B237E558E00E92727 /* Faculty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EAC5E3A237E558E00E92727 /* Faculty.swift */; };
 		0EAC5E3D237E5B1B00E92727 /* FacultyDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EAC5E3C237E5B1B00E92727 /* FacultyDetailViewController.swift */; };
+		42C3AD9D23820CF90015216E /* ConcessionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42C3AD9C23820CF90015216E /* ConcessionsViewController.swift */; };
 		7A64AC5E237DFA650067FC9D /* CastMember.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A64AC5D237DFA650067FC9D /* CastMember.swift */; };
 		7A64AC60237DFC400067FC9D /* CastMemberTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A64AC5F237DFC400067FC9D /* CastMemberTableViewController.swift */; };
 		7A64AC62237E05810067FC9D /* Crew.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A64AC61237E05810067FC9D /* Crew.swift */; };
@@ -39,6 +40,7 @@
 		0EAC5E38237E555400E92727 /* FacultyTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacultyTableViewController.swift; sourceTree = "<group>"; };
 		0EAC5E3A237E558E00E92727 /* Faculty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Faculty.swift; sourceTree = "<group>"; };
 		0EAC5E3C237E5B1B00E92727 /* FacultyDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacultyDetailViewController.swift; sourceTree = "<group>"; };
+		42C3AD9C23820CF90015216E /* ConcessionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConcessionsViewController.swift; sourceTree = "<group>"; };
 		7A64AC5D237DFA650067FC9D /* CastMember.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CastMember.swift; sourceTree = "<group>"; };
 		7A64AC5F237DFC400067FC9D /* CastMemberTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CastMemberTableViewController.swift; sourceTree = "<group>"; };
 		7A64AC61237E05810067FC9D /* Crew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Crew.swift; sourceTree = "<group>"; };
@@ -93,6 +95,7 @@
 				0EAC5E3A237E558E00E92727 /* Faculty.swift */,
 				0EAC5E3C237E5B1B00E92727 /* FacultyDetailViewController.swift */,
 				813DAC952381AE560053EE91 /* LightNavigationController.swift */,
+				42C3AD9C23820CF90015216E /* ConcessionsViewController.swift */,
 			);
 			path = "Chicago-HSE-LCS";
 			sourceTree = "<group>";
@@ -180,6 +183,7 @@
 				0EAC5E21237DF9C300E92727 /* SceneDelegate.swift in Sources */,
 				7A64AC5E237DFA650067FC9D /* CastMember.swift in Sources */,
 				7A64AC62237E05810067FC9D /* Crew.swift in Sources */,
+				42C3AD9D23820CF90015216E /* ConcessionsViewController.swift in Sources */,
 				0EAC5E39237E555400E92727 /* FacultyTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
