@@ -14,13 +14,13 @@ class MusicianTableViewController: UITableViewController {
     // Array of all musicians
     var BandMembers: [Musician] = [
     
-        Musician(name: "Aidan Melville", instrument: "Saxophone", Bio: "Aidan Melville is a member of the Concert Band, Jazz Band, and Lorelei Choir. He has been playing Saxophone for 5 years and in bands for 4 with 3 years in both bands at LCS. He loves playing jazz and is extremely excited to be performing Chicago this year.", ImageID: "Aidan"),
+        Musician(name: "Aidan Melville", instrument: "Saxophone", Bio: "Aidan Melville is a member of the Concert Band, Jazz Band, and Lorelei Choir. He has been playing Saxophone for 5 years and in bands for 4 with 3 years in both bands at LCS. He loves playing jazz and is extremely excited to be performing Chicago this year.", ImageID: "geoffBemrose"),
         
-        Musician(name: "Jeewoo Lee", instrument: "Trumpet", Bio: "Yet to write.", ImageID: "jeewoo"),
+        Musician(name: "Jeewoo Lee", instrument: "Trumpet", Bio: "Jeewoo plays the trumpet as part of the pit band in this production.", ImageID: "jeewoo"),
         
-        Musician(name: "Ryosuke Togawa", instrument: "Trumpet", Bio: "Yet to write.", ImageID: "ryosuke"),
+        Musician(name: "Ryosuke Togawa", instrument: "Trumpet", Bio: "Ryosuke plays the trumpet as part of the pit band in this production.", ImageID: "ryosuke"),
         
-        Musician(name: "Prajina Salvarajah", instrument: "Saxophone", Bio: "Yet to write.", ImageID: "prajina"),
+        Musician(name: "Prajina Salvarajah", instrument: "Saxophone", Bio: "Prajina plays the saxophone as part of the pit band in this production.", ImageID: "prajina"),
         
         Musician(name: "Rachel Xu", instrument: "Flute", Bio: "Yet to write.", ImageID: "rachel"),
         
@@ -162,5 +162,21 @@ class MusicianTableViewController: UITableViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+           
+           // Get a reference to the destination view controller using segue.destination
+           guard let detailViewController = segue.destination as? MusicianDetailViewController else {
+               return
+           }
+           
+           // Get the currently selected row of the table view
+           guard let index = tableView.indexPathForSelectedRow?.row else {
+               return
+           }
+           
+           // Now set the faculty member to be displayed
+           detailViewController.bandMemberToDisplay = BandMembers[index]
+       }
 
 }
