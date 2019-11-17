@@ -61,6 +61,7 @@
                         <segue destination="K6M-nb-1Nu" kind="show" identifier="Musicians" id="zZI-zL-ZWh"/>
                         <segue destination="waj-bC-F4W" kind="show" identifier="Faculty" id="MQ3-hh-yC9"/>
                         <segue destination="ufw-hn-enk" kind="show" identifier="Acknowledgements" id="S6t-zF-Tyz"/>
+                        <segue destination="OYc-9z-LN5" kind="show" identifier="Concessions" id="08K-eu-lq7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Lmx-z4-zXo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -133,13 +134,53 @@
                     <view key="view" contentMode="scaleToFill" id="gGn-hl-GmI" customClass="Concessions">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ka7-v2-Oh2">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="U1E-3k-eg1">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="442.5"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="facultyPlaceholderImage" translatesAutoresizingMaskIntoConstraints="NO" id="F1H-VP-qJW">
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="414"/>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="VMP-wp-xxv">
+                                                <rect key="frame" x="0.0" y="422" width="414" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="F1H-VP-qJW" firstAttribute="height" secondItem="U1E-3k-eg1" secondAttribute="width" id="2DI-kZ-p2N"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="U1E-3k-eg1" firstAttribute="trailing" secondItem="zgH-Gf-mZq" secondAttribute="trailing" id="CBh-Oq-PTr"/>
+                                    <constraint firstItem="U1E-3k-eg1" firstAttribute="bottom" secondItem="zgH-Gf-mZq" secondAttribute="bottom" id="D4K-9R-GjT"/>
+                                    <constraint firstItem="U1E-3k-eg1" firstAttribute="top" secondItem="zgH-Gf-mZq" secondAttribute="top" id="Mgd-lD-XUM"/>
+                                    <constraint firstItem="U1E-3k-eg1" firstAttribute="width" secondItem="nYS-Y7-Cf0" secondAttribute="width" id="Xr6-zw-iUg"/>
+                                    <constraint firstItem="U1E-3k-eg1" firstAttribute="leading" secondItem="zgH-Gf-mZq" secondAttribute="leading" id="mCY-dO-VDT"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="zgH-Gf-mZq"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="nYS-Y7-Cf0"/>
+                            </scrollView>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="ka7-v2-Oh2" firstAttribute="bottom" secondItem="gGn-hl-GmI" secondAttribute="bottom" id="A1k-QX-fb5"/>
+                            <constraint firstItem="ka7-v2-Oh2" firstAttribute="top" secondItem="gGn-hl-GmI" secondAttribute="top" id="BFc-bP-EQw"/>
+                            <constraint firstItem="ka7-v2-Oh2" firstAttribute="trailing" secondItem="gGn-hl-GmI" secondAttribute="trailing" id="BbN-V4-9DF"/>
+                            <constraint firstItem="ka7-v2-Oh2" firstAttribute="leading" secondItem="gGn-hl-GmI" secondAttribute="leading" id="li3-yF-zxh"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Wgm-1M-Yh7"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Concessions" id="BSP-ti-Ws2"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TEs-ZQ-j2J" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1104" y="982"/>
+            <point key="canvasLocation" x="-1104.3478260869565" y="981.69642857142856"/>
         </scene>
         <!--Light Navigation Controller-->
         <scene sceneID="VfI-gs-OdE">
