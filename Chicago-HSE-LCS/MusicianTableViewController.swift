@@ -16,15 +16,15 @@ class MusicianTableViewController: UITableViewController {
     
         Musician(name: "Aidan Melville", instrument: "Saxophone", Bio: "Aidan Melville is a member of the Concert Band, Jazz Band, and Lorelei Choir. He has been playing Saxophone for 5 years and in bands for 4 with 3 years in both bands at LCS. He loves playing jazz and is extremely excited to be performing Chicago this year.", ImageID: "Aidan"),
         
-        Musician(name: "Jeewoo Lee", instrument: "Trumpet", Bio: "Yet to write.", ImageID: "Jeewoo"),
+        Musician(name: "Jeewoo Lee", instrument: "Trumpet", Bio: "Yet to write.", ImageID: "jeewoo"),
         
-        Musician(name: "Ryosuke Togawa", instrument: "Trumpet", Bio: "Yet to write.", ImageID: "Ryosuke"),
+        Musician(name: "Ryosuke Togawa", instrument: "Trumpet", Bio: "Yet to write.", ImageID: "ryosuke"),
         
-        Musician(name: "Prajina Salvarajah", instrument: "Saxophone", Bio: "Yet to write.", ImageID: "Prajina"),
+        Musician(name: "Prajina Salvarajah", instrument: "Saxophone", Bio: "Yet to write.", ImageID: "prajina"),
         
-        Musician(name: "Rachel Xu", instrument: "Flute", Bio: "Yet to write.", ImageID: "Rachel"),
+        Musician(name: "Rachel Xu", instrument: "Flute", Bio: "Yet to write.", ImageID: "rachel"),
         
-        Musician(name: "Dorothy Li", instrument: "Flute", Bio: "Yet to write.", ImageID: "Dorothy")
+        Musician(name: "Dorothy Li", instrument: "Flute", Bio: "Yet to write.", ImageID: "dorothy")
     
     ]
     
