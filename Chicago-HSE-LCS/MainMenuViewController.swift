@@ -26,6 +26,11 @@ class MainMenuViewController: UIViewController, UITableViewDataSource, UITableVi
         
     ]
     
+    // Set the status bar text color for the root view controller
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
+    
     // MARK: Initializer
     
     
@@ -50,6 +55,9 @@ class MainMenuViewController: UIViewController, UITableViewDataSource, UITableVi
         // Set the navigation bar title color to be white, always
         let textAttributes = [NSAttributedString.Key.foregroundColor:UIColor.white]
         self.navigationController?.navigationBar.titleTextAttributes = textAttributes
+        
+        // Signal need to update the status bar
+        self.setNeedsStatusBarAppearanceUpdate()
 
     }
     
@@ -59,6 +67,15 @@ class MainMenuViewController: UIViewController, UITableViewDataSource, UITableVi
         // Hide the navigation item on the root view controller
         self.navigationController?.setNavigationBarHidden(true, animated: false)
                 
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+
+        // Set the status bar text to be white for child controllers, always
+        // Helpful tip from: https://stackoverflow.com/questions/19022210/preferredstatusbarstyle-isnt-called/19513714#19513714
+        self.navigationController?.navigationBar.barStyle = UIBarStyle.black
+
+
     }
     
     /*
