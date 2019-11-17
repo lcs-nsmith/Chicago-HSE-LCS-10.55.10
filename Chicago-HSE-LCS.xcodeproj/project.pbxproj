@@ -18,6 +18,7 @@
 		0EAC5E39237E555400E92727 /* FacultyTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EAC5E38237E555400E92727 /* FacultyTableViewController.swift */; };
 		0EAC5E3B237E558E00E92727 /* Faculty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EAC5E3A237E558E00E92727 /* Faculty.swift */; };
 		0EAC5E3D237E5B1B00E92727 /* FacultyDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EAC5E3C237E5B1B00E92727 /* FacultyDetailViewController.swift */; };
+		7A20F0CB2381E689005F91F0 /* CastDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A20F0CA2381E689005F91F0 /* CastDetailTableViewController.swift */; };
 		7A64AC5E237DFA650067FC9D /* CastMember.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A64AC5D237DFA650067FC9D /* CastMember.swift */; };
 		7A64AC60237DFC400067FC9D /* CastMemberTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A64AC5F237DFC400067FC9D /* CastMemberTableViewController.swift */; };
 		7A64AC62237E05810067FC9D /* Crew.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A64AC61237E05810067FC9D /* Crew.swift */; };
@@ -39,6 +40,7 @@
 		0EAC5E38237E555400E92727 /* FacultyTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacultyTableViewController.swift; sourceTree = "<group>"; };
 		0EAC5E3A237E558E00E92727 /* Faculty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Faculty.swift; sourceTree = "<group>"; };
 		0EAC5E3C237E5B1B00E92727 /* FacultyDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacultyDetailViewController.swift; sourceTree = "<group>"; };
+		7A20F0CA2381E689005F91F0 /* CastDetailTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CastDetailTableViewController.swift; sourceTree = "<group>"; };
 		7A64AC5D237DFA650067FC9D /* CastMember.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CastMember.swift; sourceTree = "<group>"; };
 		7A64AC5F237DFC400067FC9D /* CastMemberTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CastMemberTableViewController.swift; sourceTree = "<group>"; };
 		7A64AC61237E05810067FC9D /* Crew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Crew.swift; sourceTree = "<group>"; };
@@ -93,6 +95,7 @@
 				0EAC5E3A237E558E00E92727 /* Faculty.swift */,
 				0EAC5E3C237E5B1B00E92727 /* FacultyDetailViewController.swift */,
 				813DAC952381AE560053EE91 /* LightNavigationController.swift */,
+				7A20F0CA2381E689005F91F0 /* CastDetailTableViewController.swift */,
 			);
 			path = "Chicago-HSE-LCS";
 			sourceTree = "<group>";
@@ -169,6 +172,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0EAC5E35237E336300E92727 /* MainMenuViewController.swift in Sources */,
+				7A20F0CB2381E689005F91F0 /* CastDetailTableViewController.swift in Sources */,
 				813DAC962381AE560053EE91 /* LightNavigationController.swift in Sources */,
 				0EAC5E37237E45F400E92727 /* Colors.swift in Sources */,
 				7A64AC64237E073D0067FC9D /* CrewsTableViewController.swift in Sources */,
@@ -326,7 +330,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 2;
-				DEVELOPMENT_TEAM = U2ZN2W2UQJ;
+				DEVELOPMENT_TEAM = FH64C344KX;
 				INFOPLIST_FILE = "Chicago-HSE-LCS/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -347,7 +351,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 2;
-				DEVELOPMENT_TEAM = U2ZN2W2UQJ;
+				DEVELOPMENT_TEAM = FH64C344KX;
 				INFOPLIST_FILE = "Chicago-HSE-LCS/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
