@@ -61,16 +61,53 @@ class MusicianTableViewController: UITableViewController {
 
     // MARK: - Table view data source
 
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
-    }
+   // How many sections are in the table view
+       override func numberOfSections(in tableView: UITableView) -> Int {
+           return 1
+       }
+       
+       // How many rows to show in that one section
+       override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+           
+           // On the first section, return the count of menu items
+           // For any other section, return 0
+           if section == 0 {
+               return BandMembers.count
+           } else {
+               return 0
+           }
+           
+       }
 
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
-    }
-
+    
+    // Configure the cell
+       override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+           
+           // Create an object of the dynamic cell "FacultyCell"
+           let cell = tableView.dequeueReusableCell(withIdentifier: "MusicianCell", for: indexPath)
+           
+           // Depending on the section, fill the textLabel with the relevant text
+           cell.textLabel?.text = BandMembers[indexPath.row].name
+           cell.textLabel?.textColor = .white
+           
+           // Make the cell have a black background colour
+           cell.backgroundColor = .black
+           
+           // Make the cell always select as dark gray
+           let backgroundColorView = UIView()
+           backgroundColorView.backgroundColor = UIColor.darkGray
+           cell.selectedBackgroundView = backgroundColorView
+           
+           // Set a custom disclosure indicator (white) so it is visible on dark background
+           let chevron = UIImage(named: "chevron.png")
+           cell.accessoryType = .disclosureIndicator
+           cell.accessoryView = UIImageView(image: chevron!)
+           
+           // Return the configured cell
+           return cell
+           
+       }
+       
     /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
