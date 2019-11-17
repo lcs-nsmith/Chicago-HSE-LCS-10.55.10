@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Actor {
+struct CastMember {
     var name: String
     var character: String
     var bio: String

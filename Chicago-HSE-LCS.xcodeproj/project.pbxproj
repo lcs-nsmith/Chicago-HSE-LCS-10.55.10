@@ -18,8 +18,8 @@
 		0EAC5E39237E555400E92727 /* FacultyTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EAC5E38237E555400E92727 /* FacultyTableViewController.swift */; };
 		0EAC5E3B237E558E00E92727 /* Faculty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EAC5E3A237E558E00E92727 /* Faculty.swift */; };
 		0EAC5E3D237E5B1B00E92727 /* FacultyDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EAC5E3C237E5B1B00E92727 /* FacultyDetailViewController.swift */; };
-		7A64AC5E237DFA650067FC9D /* Actors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A64AC5D237DFA650067FC9D /* Actors.swift */; };
-		7A64AC60237DFC400067FC9D /* ActorsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A64AC5F237DFC400067FC9D /* ActorsTableViewController.swift */; };
+		7A64AC5E237DFA650067FC9D /* CastMember.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A64AC5D237DFA650067FC9D /* CastMember.swift */; };
+		7A64AC60237DFC400067FC9D /* CastMemberTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A64AC5F237DFC400067FC9D /* CastMemberTableViewController.swift */; };
 		7A64AC62237E05810067FC9D /* Crew.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A64AC61237E05810067FC9D /* Crew.swift */; };
 		7A64AC64237E073D0067FC9D /* CrewsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A64AC63237E073D0067FC9D /* CrewsTableViewController.swift */; };
 		813DAC962381AE560053EE91 /* LightNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 813DAC952381AE560053EE91 /* LightNavigationController.swift */; };
@@ -39,8 +39,8 @@
 		0EAC5E38237E555400E92727 /* FacultyTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacultyTableViewController.swift; sourceTree = "<group>"; };
 		0EAC5E3A237E558E00E92727 /* Faculty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Faculty.swift; sourceTree = "<group>"; };
 		0EAC5E3C237E5B1B00E92727 /* FacultyDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacultyDetailViewController.swift; sourceTree = "<group>"; };
-		7A64AC5D237DFA650067FC9D /* Actors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Actors.swift; sourceTree = "<group>"; };
-		7A64AC5F237DFC400067FC9D /* ActorsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActorsTableViewController.swift; sourceTree = "<group>"; };
+		7A64AC5D237DFA650067FC9D /* CastMember.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CastMember.swift; sourceTree = "<group>"; };
+		7A64AC5F237DFC400067FC9D /* CastMemberTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CastMemberTableViewController.swift; sourceTree = "<group>"; };
 		7A64AC61237E05810067FC9D /* Crew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Crew.swift; sourceTree = "<group>"; };
 		7A64AC63237E073D0067FC9D /* CrewsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrewsTableViewController.swift; sourceTree = "<group>"; };
 		813DAC952381AE560053EE91 /* LightNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightNavigationController.swift; sourceTree = "<group>"; };
@@ -82,8 +82,8 @@
 				0EAC5E27237DF9C700E92727 /* Assets.xcassets */,
 				0EAC5E29237DF9C700E92727 /* LaunchScreen.storyboard */,
 				0EAC5E2C237DF9C700E92727 /* Info.plist */,
-				7A64AC5D237DFA650067FC9D /* Actors.swift */,
-				7A64AC5F237DFC400067FC9D /* ActorsTableViewController.swift */,
+				7A64AC5D237DFA650067FC9D /* CastMember.swift */,
+				7A64AC5F237DFC400067FC9D /* CastMemberTableViewController.swift */,
 				7A64AC61237E05810067FC9D /* Crew.swift */,
 				7A64AC63237E073D0067FC9D /* CrewsTableViewController.swift */,
 				0EAC5E32237E313F00E92727 /* MainMenuItem.swift */,
@@ -176,9 +176,9 @@
 				0EAC5E1F237DF9C300E92727 /* AppDelegate.swift in Sources */,
 				0EAC5E3B237E558E00E92727 /* Faculty.swift in Sources */,
 				0EAC5E3D237E5B1B00E92727 /* FacultyDetailViewController.swift in Sources */,
-				7A64AC60237DFC400067FC9D /* ActorsTableViewController.swift in Sources */,
+				7A64AC60237DFC400067FC9D /* CastMemberTableViewController.swift in Sources */,
 				0EAC5E21237DF9C300E92727 /* SceneDelegate.swift in Sources */,
-				7A64AC5E237DFA650067FC9D /* Actors.swift in Sources */,
+				7A64AC5E237DFA650067FC9D /* CastMember.swift in Sources */,
 				7A64AC62237E05810067FC9D /* Crew.swift in Sources */,
 				0EAC5E39237E555400E92727 /* FacultyTableViewController.swift in Sources */,
 			);
