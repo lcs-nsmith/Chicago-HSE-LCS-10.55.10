@@ -90,6 +90,8 @@ class MainMenuViewController: UIViewController, UITableViewDataSource, UITableVi
             performSegue(withIdentifier: "Crew", sender: nil)
         case "Faculty":
             performSegue(withIdentifier: "Faculty", sender: nil)
+        case "Acknowledgements":
+            performSegue(withIdentifier: "Acknowledgements", sender: nil)
         default:
             break
         }
