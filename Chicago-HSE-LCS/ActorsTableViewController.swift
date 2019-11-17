@@ -155,6 +155,12 @@ class ActorsTableViewController: UITableViewController {
     
     ]
     
+    // Set the status bar text to be white
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
+
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -172,6 +178,10 @@ class ActorsTableViewController: UITableViewController {
         
         // Set the seperator color to always be dark grey
         tableView.separatorColor = .darkGray
+
+        // Signal need to update the status bar
+        self.setNeedsStatusBarAppearanceUpdate()
+
 
     }
 
