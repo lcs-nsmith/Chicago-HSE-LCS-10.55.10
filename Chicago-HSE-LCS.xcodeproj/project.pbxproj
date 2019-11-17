@@ -23,6 +23,7 @@
 		7A64AC62237E05810067FC9D /* Crew.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A64AC61237E05810067FC9D /* Crew.swift */; };
 		7A64AC64237E073D0067FC9D /* CrewsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A64AC63237E073D0067FC9D /* CrewsTableViewController.swift */; };
 		813DAC962381AE560053EE91 /* LightNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 813DAC952381AE560053EE91 /* LightNavigationController.swift */; };
+		F7DE7D0B23820CF800B373E1 /* TicketsDatesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7DE7D0A23820CF800B373E1 /* TicketsDatesViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,7 @@
 		7A64AC61237E05810067FC9D /* Crew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Crew.swift; sourceTree = "<group>"; };
 		7A64AC63237E073D0067FC9D /* CrewsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrewsTableViewController.swift; sourceTree = "<group>"; };
 		813DAC952381AE560053EE91 /* LightNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightNavigationController.swift; sourceTree = "<group>"; };
+		F7DE7D0A23820CF800B373E1 /* TicketsDatesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketsDatesViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +95,7 @@
 				0EAC5E3A237E558E00E92727 /* Faculty.swift */,
 				0EAC5E3C237E5B1B00E92727 /* FacultyDetailViewController.swift */,
 				813DAC952381AE560053EE91 /* LightNavigationController.swift */,
+				F7DE7D0A23820CF800B373E1 /* TicketsDatesViewController.swift */,
 			);
 			path = "Chicago-HSE-LCS";
 			sourceTree = "<group>";
@@ -176,6 +179,7 @@
 				0EAC5E1F237DF9C300E92727 /* AppDelegate.swift in Sources */,
 				0EAC5E3B237E558E00E92727 /* Faculty.swift in Sources */,
 				0EAC5E3D237E5B1B00E92727 /* FacultyDetailViewController.swift in Sources */,
+				F7DE7D0B23820CF800B373E1 /* TicketsDatesViewController.swift in Sources */,
 				7A64AC60237DFC400067FC9D /* CastMemberTableViewController.swift in Sources */,
 				0EAC5E21237DF9C300E92727 /* SceneDelegate.swift in Sources */,
 				7A64AC5E237DFA650067FC9D /* CastMember.swift in Sources */,
