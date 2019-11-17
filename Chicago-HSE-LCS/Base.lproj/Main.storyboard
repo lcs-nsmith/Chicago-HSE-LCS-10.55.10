@@ -3,7 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -84,6 +84,9 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <segue destination="70y-ef-9cY" kind="show" id="xxF-IR-Q9V"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -95,7 +98,87 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JwO-ca-Pyg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="493" y="-688"/>
+            <point key="canvasLocation" x="-323" y="-742"/>
+        </scene>
+        <!--Cast Detail View Controller-->
+        <scene sceneID="cfs-rs-rDQ">
+            <objects>
+                <viewController id="70y-ef-9cY" customClass="CastDetailViewController" customModule="Chicago_LCS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="vgC-Vw-0kQ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qkH-5w-Xvr">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="HS6-Ln-Eab">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="540"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="WvB-br-97l">
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="414"/>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Character" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="afe-dA-KXP" userLabel="Support Role label">
+                                                <rect key="frame" x="0.0" y="422" width="414" height="26.5"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
+                                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="1CT-No-cRL" userLabel="Support Role details">
+                                                <rect key="frame" x="0.0" y="456.5" width="414" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Bio" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F1F-NM-xAP" userLabel="Bio label">
+                                                <rect key="frame" x="0.0" y="485" width="414" height="26.5"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
+                                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="v6b-Y4-c43" userLabel="Support Role details">
+                                                <rect key="frame" x="0.0" y="519.5" width="414" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="WvB-br-97l" firstAttribute="height" secondItem="HS6-Ln-Eab" secondAttribute="width" id="eSZ-Fm-NMb"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <constraints>
+                                    <constraint firstItem="HS6-Ln-Eab" firstAttribute="top" secondItem="woA-wo-ARw" secondAttribute="top" id="2SK-KW-lCB"/>
+                                    <constraint firstItem="HS6-Ln-Eab" firstAttribute="trailing" secondItem="woA-wo-ARw" secondAttribute="trailing" id="Bxf-gn-7Ld"/>
+                                    <constraint firstItem="HS6-Ln-Eab" firstAttribute="leading" secondItem="woA-wo-ARw" secondAttribute="leading" id="PbT-rX-zd5"/>
+                                    <constraint firstItem="HS6-Ln-Eab" firstAttribute="width" secondItem="5v2-PJ-lOf" secondAttribute="width" id="WA6-mm-ioa"/>
+                                    <constraint firstItem="HS6-Ln-Eab" firstAttribute="bottom" secondItem="woA-wo-ARw" secondAttribute="bottom" id="rLz-FD-HlO"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="woA-wo-ARw"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="5v2-PJ-lOf"/>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="qkH-5w-Xvr" firstAttribute="leading" secondItem="vgC-Vw-0kQ" secondAttribute="leading" id="LFz-O2-YWz"/>
+                            <constraint firstItem="qkH-5w-Xvr" firstAttribute="top" secondItem="vgC-Vw-0kQ" secondAttribute="top" id="NAx-jl-LmZ"/>
+                            <constraint firstItem="qkH-5w-Xvr" firstAttribute="bottom" secondItem="vgC-Vw-0kQ" secondAttribute="bottom" id="hJR-fH-bAc"/>
+                            <constraint firstItem="qkH-5w-Xvr" firstAttribute="trailing" secondItem="vgC-Vw-0kQ" secondAttribute="trailing" id="wuL-I8-fv7"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Xdn-vH-BCD"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="5xg-Of-8Hv"/>
+                    <connections>
+                        <outlet property="castBio" destination="F1F-NM-xAP" id="0TE-cu-LjY"/>
+                        <outlet property="castHeadShot" destination="WvB-br-97l" id="66t-mQ-J4M"/>
+                        <outlet property="castRole" destination="afe-dA-KXP" id="aI9-8h-Bsw"/>
+                        <outlet property="castView" destination="v6b-Y4-c43" id="WG7-uP-1XK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pIT-81-EDD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="492.75362318840581" y="-761.38392857142856"/>
         </scene>
         <!--CrewList-->
         <scene sceneID="n6e-aB-ptk">
