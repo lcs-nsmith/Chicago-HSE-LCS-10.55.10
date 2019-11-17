@@ -11,5 +11,7 @@ import Foundation
 struct Crew {
     var name: String
     var job: String
+    var imageId: String
     var bio: String
+    
 }
