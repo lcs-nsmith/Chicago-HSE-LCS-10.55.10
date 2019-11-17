@@ -9,22 +9,40 @@
 import UIKit
 
 class MusicianDetailViewController: UIViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+    
+    // MARK: Properties
+    // The emoji to display detail about
+    var bandMemberToDisplay: Musician?
+    
+    // Outlets to connect this controller to the view
+    @IBOutlet weak var musicianHeadShot: UIImageView!
+    @IBOutlet weak var musicianInstrument: UILabel!
+    @IBOutlet weak var musicianBio: UILabel!
+    
+    // Set the status bar text to be white
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    // MARK: Methods
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        // Get a reference to the emoji set in the table view prior to segue
+        guard let musicianSetFromTableView = bandMemberToDisplay else {
+            return
+        }
+        
+        // Set the navigation title item
+        self.navigationItem.title = musicianSetFromTableView.name
+        
+        // Set details for this faculty member
+        musicianHeadShot.image = UIImage(named: musicianSetFromTableView.ImageID)
+        musicianInstrument.text = musicianSetFromTableView.instrument
+        musicianBio.text = musicianSetFromTableView.Bio
+        
+        // Signal need to update the status bar
+        self.setNeedsStatusBarAppearanceUpdate()
+        
     }
-    */
-
 }

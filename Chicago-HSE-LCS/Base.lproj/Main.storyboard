@@ -173,6 +173,21 @@
             </objects>
             <point key="canvasLocation" x="1677" y="114"/>
         </scene>
+        <!--Musician Detail-->
+        <scene sceneID="T7z-BV-XUn">
+            <objects>
+                <viewController title="Musician Detail" id="O70-oJ-l4k" customClass="MusicianDetailViewController" customModule="Chicago_LCS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ahh-le-etR">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="wwR-jt-xMf"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hb4-RE-yWP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2888" y="137"/>
+        </scene>
         <!--Acknowledgements-->
         <scene sceneID="FzS-7h-iFy">
             <objects>
