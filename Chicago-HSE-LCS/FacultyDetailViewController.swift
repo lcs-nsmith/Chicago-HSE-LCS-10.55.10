@@ -20,6 +20,11 @@ class FacultyDetailViewController: UIViewController {
     @IBOutlet weak var facultyBio: UILabel!
     @IBOutlet weak var scrollView: UIScrollView!
     
+    // Set the status bar text to be white
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
+    
     // MARK: Methods
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -46,6 +51,9 @@ class FacultyDetailViewController: UIViewController {
         //    (recall that label was just resized to fit new content)
         scrollView.contentSize = CGSize(width: scrollView.contentSize.width
             , height: facultyBio.frame.size.height)
+        
+        // Signal need to update the status bar
+        self.setNeedsStatusBarAppearanceUpdate()
 
     }
 

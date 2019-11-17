@@ -20,6 +20,11 @@ class FacultyTableViewController: UITableViewController {
         """, imageId: "geoffBemrose")
     ]
     
+    // Set the status bar text to be white
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -40,6 +45,9 @@ class FacultyTableViewController: UITableViewController {
         
         // Set a zero-height footer so that no blank cells show after the list of menu items
         tableView.tableFooterView = UIView()
+        
+        // Signal need to update the status bar
+        self.setNeedsStatusBarAppearanceUpdate()
         
     }
     
