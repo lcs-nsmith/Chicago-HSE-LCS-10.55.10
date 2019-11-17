@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="banner" translatesAutoresizingMaskIntoConstraints="NO" id="7r9-SR-wRo">
-                                <rect key="frame" x="0.0" y="88" width="414" height="148"/>
+                                <rect key="frame" x="0.0" y="87.999999999999986" width="414" height="148.00000000000003"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="148" id="fcZ-p5-dRg"/>
                                 </constraints>
@@ -182,18 +182,36 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6Gi-gj-bzc">
-                                <rect key="frame" x="0.0" y="88" width="414" height="269"/>
-                            </imageView>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="R2c-a5-ATe">
+                                <rect key="frame" x="0.0" y="88" width="414" height="808"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="64b-DS-sjg">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="YTu-W6-2eK">
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
+                                            </imageView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="64b-DS-sjg" firstAttribute="bottom" secondItem="e7y-EW-mZU" secondAttribute="bottom" id="Tmf-zd-8Ar"/>
+                                    <constraint firstItem="64b-DS-sjg" firstAttribute="leading" secondItem="uDi-6g-WnM" secondAttribute="leading" id="VY0-Qd-L0o"/>
+                                    <constraint firstItem="64b-DS-sjg" firstAttribute="width" secondItem="e7y-EW-mZU" secondAttribute="width" id="c3F-ga-pVh"/>
+                                    <constraint firstItem="64b-DS-sjg" firstAttribute="trailing" secondItem="uDi-6g-WnM" secondAttribute="trailing" constant="414" id="kaX-gq-Qg7"/>
+                                    <constraint firstItem="64b-DS-sjg" firstAttribute="top" secondItem="uDi-6g-WnM" secondAttribute="top" id="r2H-b6-ZY9"/>
+                                    <constraint firstItem="64b-DS-sjg" firstAttribute="bottom" secondItem="uDi-6g-WnM" secondAttribute="bottom" constant="896" id="rMx-lx-lXS"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="uDi-6g-WnM"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="e7y-EW-mZU"/>
+                            </scrollView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="kCB-rh-QBL" firstAttribute="bottom" secondItem="6Gi-gj-bzc" secondAttribute="bottom" constant="505" id="0HW-JK-KWi"/>
-                            <constraint firstItem="6Gi-gj-bzc" firstAttribute="centerX" secondItem="Ktf-DB-jMz" secondAttribute="centerX" id="9tE-PB-Vum"/>
-                            <constraint firstItem="6Gi-gj-bzc" firstAttribute="centerX" secondItem="Ktf-DB-jMz" secondAttribute="centerX" id="I99-o1-3wf"/>
-                            <constraint firstItem="6Gi-gj-bzc" firstAttribute="centerX" secondItem="Ktf-DB-jMz" secondAttribute="centerX" id="fQK-cM-bMg"/>
-                            <constraint firstItem="6Gi-gj-bzc" firstAttribute="leading" secondItem="kCB-rh-QBL" secondAttribute="leading" id="hSx-jo-vn7"/>
-                            <constraint firstItem="6Gi-gj-bzc" firstAttribute="top" secondItem="kCB-rh-QBL" secondAttribute="top" id="xDL-dY-ACg"/>
+                            <constraint firstItem="R2c-a5-ATe" firstAttribute="trailing" secondItem="kCB-rh-QBL" secondAttribute="trailing" id="HJb-W5-h7z"/>
+                            <constraint firstItem="R2c-a5-ATe" firstAttribute="leading" secondItem="kCB-rh-QBL" secondAttribute="leading" id="iql-pc-knK"/>
+                            <constraint firstItem="R2c-a5-ATe" firstAttribute="top" secondItem="kCB-rh-QBL" secondAttribute="top" id="mGp-P2-Otx"/>
+                            <constraint firstAttribute="bottom" secondItem="R2c-a5-ATe" secondAttribute="bottom" id="pj6-vD-EBP"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="kCB-rh-QBL"/>
                     </view>

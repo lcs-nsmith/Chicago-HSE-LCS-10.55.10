@@ -15,13 +15,6 @@ class AboutThisAppViewController: UIViewController {
 
         // Show the navigation item
         self.navigationController?.setNavigationBarHidden(false, animated: false)
-        
-        // Get table view to always have black background
-        
-        
-        
-        // Set the seperator color to always be dark grey
-
         // Signal need to update the status bar
         self.setNeedsStatusBarAppearanceUpdate()
         
