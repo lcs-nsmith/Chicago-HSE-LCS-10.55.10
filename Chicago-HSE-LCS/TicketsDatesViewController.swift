@@ -13,7 +13,12 @@ class TicketsDatesViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        // Show the navigation item
+        self.navigationController?.setNavigationBarHidden(false, animated: false)
         // Do any additional setup after loading the view.
+        
+        // Signal need to update the status bar
+        self.setNeedsStatusBarAppearanceUpdate()
     }
     
 
