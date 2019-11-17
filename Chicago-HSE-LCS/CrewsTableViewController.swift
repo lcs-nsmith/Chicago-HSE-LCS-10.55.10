@@ -14,29 +14,29 @@ class CrewsTableViewController: UITableViewController {
     //MARK: Properties
     
     var crews : [Crew] = [
-    Crew(name: "Emily Schnurr", job: "Stage Manager", imageId: "facultyPlaceholderImage", bio: """
+    Crew(name: "Emily Schnurr", job: "Stage Manager", imageId: "emilySchnurr", bio: """
     Emily is thrilled to be the stage manager of Chicago! She had always loved theater and started stage managing in grade 7. Last year, Emily was the stage manager for The Heart of Robin Hood. In her spare time, Emily is the Senior in Charge of photography and a Senior in Charge of chapel. She has always had a love for the arts, both fine arts of performing arts. Emily is traveling to London England this March with her drama class to deepen her skills as a stage manager. She hopes you enjoy the show!
 
     """),
         
-    Crew(name: "Gabi Thorpe", job: "Stage Manager", imageId: "facultyPlaceholderImage", bio: """
+    Crew(name: "Gabi Thorpe", job: "Stage Manager", imageId: "gabiThorpe", bio: """
     This is Gabi’s first time being a part of an LCS production. She is one of the stage managers for Chicago and has learned so much throughout this whole experience. She decided to take on this opportunity in order to see the more technical side of theatre. She wants to thank the wonderful production team for everything they’ve taught her with this experience!
 
 
     """),
 
-    Crew(name: "Camila Marcos", job: "Assistant Stage Manager", imageId: "facultyPlaceholderImage", bio: """
+    Crew(name: "Camila Marcos", job: "Assistant Stage Manager", imageId: "camilaMarcos", bio: """
     Camila is a grade 9 student at Lakefield. She has been doing theatre since she was 7 years old. She has always been on stage and I wanted to learn more about the magic that happens backstage.
 
     """),
         
-    Crew(name: "Faith Dickinson", job: "Dance Captain", imageId: "facultyPlaceholderImage", bio: """
+    Crew(name: "Faith Dickinson", job: "Dance Captain", imageId: "faithDickinson", bio: """
     Faith is grateful for her position as Assistant Choreographer in the production of Chicago. She has loved dancing since she was three years old. This show has taught her a lot about choreographing in the ‘real world’, the demand, focus, and dedication needed. She has learned that choreographing is a true passion of hers and she feels the need to pursue it in her future. Faith would like to thank the directors for allowing her as a part of the team.
 
 
     """),
         
-    Crew(name: "Simon Dutil", job: "Lighting and Sound Director", imageId: "facultyPlaceholderImage",  bio: """
+    Crew(name: "Simon Dutil", job: "Lighting and Sound Director", imageId: "simonDutil",  bio: """
     Simon Dutil is from Saint-Georges, Quebec and it is his second year at Lakefield. He has now done 2 productions, one dance showcase and the play The Heart of Robin Hood as a lighting and sound designer. He is undertaking his first musical! He is always there to help from painting the set to teaching other people how to use the light. Simon is always looking for new challenges and loves to learn new skills.
 
     """)
