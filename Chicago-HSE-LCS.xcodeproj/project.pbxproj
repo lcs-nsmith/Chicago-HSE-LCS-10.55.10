@@ -24,6 +24,7 @@
 		7A64AC62237E05810067FC9D /* Crew.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A64AC61237E05810067FC9D /* Crew.swift */; };
 		7A64AC64237E073D0067FC9D /* CrewsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A64AC63237E073D0067FC9D /* CrewsTableViewController.swift */; };
 		813DAC962381AE560053EE91 /* LightNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 813DAC952381AE560053EE91 /* LightNavigationController.swift */; };
+		9D31DBC9238202BA00259CAE /* CrewDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D31DBC8238202BA00259CAE /* CrewDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +47,7 @@
 		7A64AC61237E05810067FC9D /* Crew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Crew.swift; sourceTree = "<group>"; };
 		7A64AC63237E073D0067FC9D /* CrewsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrewsTableViewController.swift; sourceTree = "<group>"; };
 		813DAC952381AE560053EE91 /* LightNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightNavigationController.swift; sourceTree = "<group>"; };
+		9D31DBC8238202BA00259CAE /* CrewDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CrewDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +89,7 @@
 				7A64AC5D237DFA650067FC9D /* CastMember.swift */,
 				7A64AC5F237DFC400067FC9D /* CastMemberTableViewController.swift */,
 				7A64AC61237E05810067FC9D /* Crew.swift */,
+				9D31DBC8238202BA00259CAE /* CrewDetailViewController.swift */,
 				7A64AC63237E073D0067FC9D /* CrewsTableViewController.swift */,
 				0EAC5E32237E313F00E92727 /* MainMenuItem.swift */,
 				0EAC5E34237E336300E92727 /* MainMenuViewController.swift */,
@@ -171,6 +174,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9D31DBC9238202BA00259CAE /* CrewDetailViewController.swift in Sources */,
 				0EAC5E35237E336300E92727 /* MainMenuViewController.swift in Sources */,
 				7A20F0CB2381E689005F91F0 /* CastDetailTableViewController.swift in Sources */,
 				813DAC962381AE560053EE91 /* LightNavigationController.swift in Sources */,
@@ -338,7 +342,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "ca.jeewoolee.Chicago-HSE-LCS";
+				PRODUCT_BUNDLE_IDENTIFIER = "ca.nickanstoetz.Chicago-HSE-LCS";
 				PRODUCT_NAME = "Chicago@LCS";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -359,7 +363,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "ca.jeewoolee.Chicago-HSE-LCS";
+				PRODUCT_BUNDLE_IDENTIFIER = "ca.nickanstoetz.Chicago-HSE-LCS";
 				PRODUCT_NAME = "Chicago@LCS";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
