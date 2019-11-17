@@ -16,13 +16,10 @@ class CrewsTableViewController: UITableViewController {
     var crews : [Crew] = [
         Crew(name: "Emily Schnurr", job: "Stage Manager", bio: """
         Emily is thrilled to be the stage manager of Chicago! She had always loved theater and started stage managing in grade 7. Last year, Emily was the stage manager for The Heart of Robin Hood. In her spare time, Emily is the Senior in Charge of photography and a Senior in Charge of chapel. She has always had a love for the arts, both fine arts of performing arts. Emily is traveling to London England this March with her drama class to deepen her skills as a stage manager. She hopes you enjoy the show!
-
 """),
         
         Crew(name: "Gabi Thorpe", job: "Stage Manager", bio: """
         This is Gabi’s first time being a part of an LCS production. She is one of the stage managers for Chicago and has learned so much throughout this whole experience. She decided to take on this opportunity in order to see the more technical side of theatre. She wants to thank the wonderful production team for everything they’ve taught her with this experience!
-
-
 """),
 
         Crew(name: "Camila Marcos", job: "Assistant Stage Manager", bio: """

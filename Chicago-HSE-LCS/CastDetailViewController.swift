@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CastDetailViewController: UITableViewController {
+class CastDetailViewController: UIViewController {
 
     
     var castMemberToDisplay: CastMember?
@@ -16,9 +16,11 @@ class CastDetailViewController: UITableViewController {
     // Outlets to connect this controller to the view
 
     @IBOutlet weak var castHeadShot: UIImageView!
+    
     @IBOutlet weak var castRole: UILabel!
+    @IBOutlet weak var scrollView: UIScrollView!
+    
     @IBOutlet weak var castBio: UILabel!
-    @IBOutlet weak var castView: UILabel!
     
     
     // Set the status bar text to be white

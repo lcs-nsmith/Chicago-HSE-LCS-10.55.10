@@ -76,7 +76,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ActorCell" id="fql-wE-n6y">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CastMemberCell" id="fql-wE-n6y">
                                 <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="fql-wE-n6y" id="Yoa-b5-dQ0">
@@ -170,10 +170,10 @@
                     </view>
                     <navigationItem key="navigationItem" id="5xg-Of-8Hv"/>
                     <connections>
-                        <outlet property="castBio" destination="F1F-NM-xAP" id="0TE-cu-LjY"/>
+                        <outlet property="castBio" destination="v6b-Y4-c43" id="fyz-cY-wY5"/>
                         <outlet property="castHeadShot" destination="WvB-br-97l" id="66t-mQ-J4M"/>
-                        <outlet property="castRole" destination="afe-dA-KXP" id="aI9-8h-Bsw"/>
-                        <outlet property="castView" destination="v6b-Y4-c43" id="WG7-uP-1XK"/>
+                        <outlet property="castRole" destination="1CT-No-cRL" id="cN4-2p-wRe"/>
+                        <outlet property="scrollView" destination="qkH-5w-Xvr" id="cDU-j9-KWI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pIT-81-EDD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
