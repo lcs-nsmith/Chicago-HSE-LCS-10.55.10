@@ -22,7 +22,8 @@ class MainMenuViewController: UIViewController, UITableViewDataSource, UITableVi
         MainMenuItem(name: "Crew"),
         MainMenuItem(name: "Musicians"),
         MainMenuItem(name: "Faculty"),
-        MainMenuItem(name: "Acknowledgements")
+        MainMenuItem(name: "Acknowledgements"),
+        MainMenuItem(name: "Synopsis & Song List"),
         
     ]
     
@@ -90,6 +91,9 @@ class MainMenuViewController: UIViewController, UITableViewDataSource, UITableVi
             performSegue(withIdentifier: "Crew", sender: nil)
         case "Faculty":
             performSegue(withIdentifier: "Faculty", sender: nil)
+        case "Synopsis & Song List":
+            performSegue(withIdentifier: "SynopsisSongList", sender: nil)
+
         default:
             break
         }

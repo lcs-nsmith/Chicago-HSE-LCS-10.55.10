@@ -75,7 +75,7 @@ class CastMemberTableViewController: UITableViewController {
 
 """),
         
-        CastMember(name: "Julio Midence", character: "Judge/Harry/Ensemble", bio: """
+        CastMember(name: "Julio Midence", character: "Judge/Bernie/Harry/Ensemble", bio: """
         Julio has always had an interest in the 1920s. He really enjoys the dancing and music portrayed in the Chicago Musical. The name Midence has played a significant role in the arts of LCS with the older sibling, Raul Midence participating in 4 of the LCS theatre productions. Julio can be often found outside playing frisbee with his great roommate Will Hicks. Julio is excited to be able to participate in such an amazing show!
 """),
         
