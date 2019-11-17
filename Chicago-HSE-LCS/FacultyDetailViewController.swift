@@ -42,16 +42,6 @@ class FacultyDetailViewController: UIViewController {
         facultySupportRole.text = facultySetFromTableView.supportRole
         facultyBio.text = facultySetFromTableView.bio
         
-        // Now resize the label inside the scroll view to accommoate the size of the text we just loaded in
-        facultyBio.sizeToFit()
-        
-        // Set the scroll view size
-        // 1. width same as it already was
-        // 2. height same as Faculty Bio label
-        //    (recall that label was just resized to fit new content)
-        scrollView.contentSize = CGSize(width: scrollView.contentSize.width
-            , height: facultyBio.frame.size.height)
-        
         // Signal need to update the status bar
         self.setNeedsStatusBarAppearanceUpdate()
 
