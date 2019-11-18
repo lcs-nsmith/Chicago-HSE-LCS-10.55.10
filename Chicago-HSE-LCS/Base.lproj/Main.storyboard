@@ -68,10 +68,10 @@
             </objects>
             <point key="canvasLocation" x="-426" y="114"/>
         </scene>
-        <!--Actors / Cast List-->
+        <!--Cast Member-->
         <scene sceneID="xpl-kj-Hn5">
             <objects>
-                <tableViewController id="oDI-oI-k8k" userLabel="Actors / Cast List" customClass="CastMemberTableViewController" customModule="Chicago_LCS" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="oDI-oI-k8k" userLabel="Cast Member" customClass="CastMemberTableViewController" customModule="Chicago_LCS" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Xyq-5s-txr">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
