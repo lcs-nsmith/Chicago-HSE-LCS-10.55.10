@@ -17,6 +17,7 @@ class FacultyDetailViewController: UIViewController {
     // Outlets to connect this controller to the view
     @IBOutlet weak var facultyHeadShot: UIImageView!
     @IBOutlet weak var facultySupportRole: UILabel!
+    @IBOutlet weak var labelBio: UILabel!
     @IBOutlet weak var facultyBio: UILabel!
     @IBOutlet weak var scrollView: UIScrollView!
     
@@ -37,10 +38,23 @@ class FacultyDetailViewController: UIViewController {
         // Set the navigation title item
         self.navigationItem.title = facultySetFromTableView.name
         
-        // Set details for this faculty member
-        facultyHeadShot.image = UIImage(named: facultySetFromTableView.imageId)
+        // Set photo for this faculty member, if one exists
+        if facultySetFromTableView.imageId.isEmpty {
+            facultyHeadShot.isHidden = true
+        } else {
+            facultyHeadShot.image = UIImage(named: facultySetFromTableView.imageId)
+        }
+        
+        // Set support role
         facultySupportRole.text = facultySetFromTableView.supportRole
-        facultyBio.text = facultySetFromTableView.bio
+        
+        // Set bio if present
+        if facultySetFromTableView.bio.isEmpty {
+            labelBio.isHidden = true
+            facultyBio.isHidden = true
+        } else {
+            facultyBio.text = facultySetFromTableView.bio
+        }
         
         // Signal need to update the status bar
         self.setNeedsStatusBarAppearanceUpdate()

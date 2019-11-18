@@ -559,6 +559,7 @@ All images © Lakefield College School, 2019.  Used with permission.</string>
                         <outlet property="facultyBio" destination="QEO-XN-CoK" id="CGA-aZ-tbJ"/>
                         <outlet property="facultyHeadShot" destination="Val-es-4az" id="DWm-oE-Vpi"/>
                         <outlet property="facultySupportRole" destination="XPC-Rk-khg" id="1Yf-BQ-E7V"/>
+                        <outlet property="labelBio" destination="MLl-hl-7h1" id="wJm-gU-dy8"/>
                         <outlet property="scrollView" destination="ccZ-zj-xNt" id="8LU-kx-6iz"/>
                     </connections>
                 </viewController>
