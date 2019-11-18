@@ -63,6 +63,7 @@
                         <segue destination="l0g-V4-d5d" kind="show" identifier="Crew" id="i8C-TY-RcN"/>
                         <segue destination="4Cz-LK-Gd7" kind="show" identifier="ArtDisplay" id="s3F-c2-bhm"/>
                         <segue destination="Vfi-HU-F3E" kind="show" identifier="Characters" id="gB2-gl-aSJ"/>
+                        <segue destination="LYC-8R-afc" kind="show" id="oBS-qp-nCa"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Lmx-z4-zXo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -100,7 +101,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JwO-ca-Pyg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="493" y="-625"/>
+            <point key="canvasLocation" x="-426" y="-748"/>
         </scene>
         <!--Crew Detail View Controller-->
         <scene sceneID="0mq-Ih-nBr">
@@ -186,7 +187,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Yse-g7-ZBf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2690" y="-1375"/>
+            <point key="canvasLocation" x="490" y="-1449"/>
         </scene>
         <!--CrewList-->
         <scene sceneID="n6e-aB-ptk">
@@ -218,7 +219,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xhv-he-EGF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1677" y="-625"/>
+            <point key="canvasLocation" x="491" y="-749"/>
         </scene>
         <!--Light Navigation Controller-->
         <scene sceneID="VfI-gs-OdE">
@@ -268,7 +269,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Irt-Sb-onS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1677" y="114"/>
+            <point key="canvasLocation" x="1557" y="-749"/>
         </scene>
         <!--Acknowledgements-->
         <scene sceneID="FzS-7h-iFy">
@@ -284,7 +285,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xSj-r1-768" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="622" y="1132"/>
+            <point key="canvasLocation" x="-2597" y="972"/>
         </scene>
         <!--Faculty List-->
         <scene sceneID="Zmj-U8-awg">
@@ -322,7 +323,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sQP-yw-Df2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1677" y="842"/>
+            <point key="canvasLocation" x="1557" y="71"/>
         </scene>
         <!--Faculty Detail-->
         <scene sceneID="pXw-AT-zJE">
@@ -407,7 +408,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xRn-Me-Xt8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2908.6956521739135" y="841.74107142857144"/>
+            <point key="canvasLocation" x="2441" y="71"/>
         </scene>
         <!--Art Display-->
         <scene sceneID="aSb-AK-UKI">
@@ -468,7 +469,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KWw-kB-DdU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1100" y="1102.2321428571429"/>
+            <point key="canvasLocation" x="1971" y="972"/>
         </scene>
         <!--Cast Member Detail View Controller-->
         <scene sceneID="s6U-Xm-9VY">
@@ -554,7 +555,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kTs-lO-63z" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1552" y="-1375"/>
+            <point key="canvasLocation" x="-426" y="-1449"/>
         </scene>
         <!--Characters List-->
         <scene sceneID="nq9-tI-mEe">
@@ -592,7 +593,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ATk-yk-Mp6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-426" y="931"/>
+            <point key="canvasLocation" x="-1265" y="-708"/>
         </scene>
         <!--Characters Detail-->
         <scene sceneID="3sC-Zb-JVy">
@@ -677,7 +678,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cKr-eT-fhM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-426" y="1641"/>
+            <point key="canvasLocation" x="-1265" y="-1449"/>
         </scene>
         <!--Musician Detail-->
         <scene sceneID="fRB-yQ-kJB">
@@ -761,7 +762,62 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="63q-bF-Jyz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2886.9565217391305" y="136.60714285714286"/>
+            <point key="canvasLocation" x="2441" y="-1013"/>
+        </scene>
+        <!--Concessions View Controller-->
+        <scene sceneID="JK6-UD-IIU">
+            <objects>
+                <viewController id="LYC-8R-afc" customClass="ConcessionsViewController" customModule="Chicago_LCS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="0u5-dc-zTF">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="b1c-i9-V2f">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="f0P-7A-9Ce">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="442.5"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="facultyPlaceholderImage" translatesAutoresizingMaskIntoConstraints="NO" id="2Db-Ab-NKZ">
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="414"/>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="Se8-FR-RrG">
+                                                <rect key="frame" x="0.0" y="422" width="414" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="2Db-Ab-NKZ" firstAttribute="height" secondItem="f0P-7A-9Ce" secondAttribute="width" id="63x-fd-Tde"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="f0P-7A-9Ce" firstAttribute="trailing" secondItem="EXQ-Ag-cVM" secondAttribute="trailing" id="Ea2-Yp-BTq"/>
+                                    <constraint firstItem="f0P-7A-9Ce" firstAttribute="top" secondItem="EXQ-Ag-cVM" secondAttribute="top" id="Kaf-Lm-nHV"/>
+                                    <constraint firstItem="f0P-7A-9Ce" firstAttribute="leading" secondItem="EXQ-Ag-cVM" secondAttribute="leading" id="VnJ-KT-lVf"/>
+                                    <constraint firstItem="f0P-7A-9Ce" firstAttribute="bottom" secondItem="EXQ-Ag-cVM" secondAttribute="bottom" id="gyv-fA-o4f"/>
+                                    <constraint firstItem="f0P-7A-9Ce" firstAttribute="width" secondItem="J0W-7U-M5O" secondAttribute="width" id="xPo-5C-ank"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="EXQ-Ag-cVM"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="J0W-7U-M5O"/>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="b1c-i9-V2f" firstAttribute="leading" secondItem="0u5-dc-zTF" secondAttribute="leading" id="3s9-eJ-QxJ"/>
+                            <constraint firstItem="b1c-i9-V2f" firstAttribute="bottom" secondItem="0u5-dc-zTF" secondAttribute="bottom" id="Ek9-NX-8Dc"/>
+                            <constraint firstItem="b1c-i9-V2f" firstAttribute="trailing" secondItem="0u5-dc-zTF" secondAttribute="trailing" id="MvK-uv-tfD"/>
+                            <constraint firstItem="b1c-i9-V2f" firstAttribute="top" secondItem="0u5-dc-zTF" secondAttribute="top" id="vHG-O3-VAD"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="jk2-rO-I7I"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="yuk-bY-yjJ"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Szc-rm-CHQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-426" y="1106"/>
         </scene>
     </scenes>
     <resources>
