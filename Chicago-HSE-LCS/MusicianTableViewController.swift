@@ -14,7 +14,7 @@ class MusicianTableViewController: UITableViewController {
     // Array of all musicians
     var BandMembers: [Musician] = [
     
-        Musician(name: "Aidan Melville", instrument: "Saxophone", Bio: "Aidan Melville is a member of the Concert Band, Jazz Band, and Lorelei Choir. He has been playing Saxophone for 5 years and in bands for 4 with 3 years in both bands at LCS. He loves playing jazz and is extremely excited to be performing Chicago this year.", ImageID: "geoffBemrose"),
+        Musician(name: "Aidan Melville", instrument: "Saxophone", Bio: "Aidan Melville is a member of the Concert Band, Jazz Band, and Lorelei Choir. He has been playing Saxophone for 5 years and in bands for 4 with 3 years in both bands at LCS. He loves playing jazz and is extremely excited to be performing Chicago this year.", ImageID: "aidan"),
         
         Musician(name: "Jeewoo Lee", instrument: "Trumpet", Bio: "Jeewoo plays the trumpet as part of the pit band in this production.", ImageID: "jeewoo"),
         
@@ -22,9 +22,9 @@ class MusicianTableViewController: UITableViewController {
         
         Musician(name: "Prajina Salvarajah", instrument: "Saxophone", Bio: "Prajina plays the saxophone as part of the pit band in this production.", ImageID: "prajina"),
         
-        Musician(name: "Rachel Xu", instrument: "Flute", Bio: "Yet to write.", ImageID: "rachel"),
+        Musician(name: "Rachel Xu", instrument: "Flute", Bio: "Rachel plays the flute as part of the pit band in this production.", ImageID: "rachel"),
         
-        Musician(name: "Dorothy Li", instrument: "Flute", Bio: "Yet to write.", ImageID: "dorothy")
+        Musician(name: "Dorothy Li", instrument: "Flute", Bio: "Dorothy plays the flute as part of the pit band in this production.", ImageID: "dorothy")
     
     ]
     
