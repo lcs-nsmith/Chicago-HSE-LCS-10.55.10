@@ -179,7 +179,7 @@
 			files = (
 				9D31DBC9238202BA00259CAE /* CrewDetailViewController.swift in Sources */,
 				0EAC5E35237E336300E92727 /* MainMenuViewController.swift in Sources */,
-				7A20F0CB2381E689005F91F0 /* CastDetailTableViewController.swift in Sources */,
+				7A20F0CB2381E689005F91F0 /* CastDetailViewController.swift in Sources */,
 				813DAC962381AE560053EE91 /* LightNavigationController.swift in Sources */,
 				0EAC5E37237E45F400E92727 /* Colors.swift in Sources */,
 				0EAC5E4123820CF600E92727 /* ArtDisplayViewController.swift in Sources */,
