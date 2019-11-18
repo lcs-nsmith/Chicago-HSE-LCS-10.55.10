@@ -123,9 +123,9 @@
 				0EAC5E3C237E5B1B00E92727 /* FacultyDetailViewController.swift */,
 				0EAC5E4023820CF600E92727 /* ArtDisplayViewController.swift */,
 				42C3AD9C23820CF90015216E /* ConcessionsViewController.swift */,
+				F7DE7D0A23820CF800B373E1 /* TicketsDatesViewController.swift */,
 				0EAC5E36237E45F400E92727 /* Colors.swift */,
 				813DAC952381AE560053EE91 /* LightNavigationController.swift */,
-				F7DE7D0A23820CF800B373E1 /* TicketsDatesViewController.swift */,
 			);
 			path = "Chicago-HSE-LCS";
 			sourceTree = "<group>";
