@@ -13,7 +13,12 @@ class ArtDisplayViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        // Show the navigation item
+        self.navigationController?.setNavigationBarHidden(false, animated: false)
+        
+        // Signal need to update the status bar
+        self.setNeedsStatusBarAppearanceUpdate()
+
     }
     
 

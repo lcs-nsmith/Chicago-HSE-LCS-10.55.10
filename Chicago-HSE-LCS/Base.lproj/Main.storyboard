@@ -61,6 +61,7 @@
                         <segue destination="waj-bC-F4W" kind="show" identifier="Faculty" id="MQ3-hh-yC9"/>
                         <segue destination="ufw-hn-enk" kind="show" identifier="Acknowledgements" id="S6t-zF-Tyz"/>
                         <segue destination="l0g-V4-d5d" kind="show" identifier="Crew" id="i8C-TY-RcN"/>
+                        <segue destination="4Cz-LK-Gd7" kind="show" identifier="ArtDisplay" id="s3F-c2-bhm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Lmx-z4-zXo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -396,13 +397,53 @@
                     <view key="view" contentMode="scaleToFill" id="BsR-7P-00U" userLabel="Art Display">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vnk-Xf-ZcZ">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="JnA-db-Cmx">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="442.5"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="facultyPlaceholderImage" translatesAutoresizingMaskIntoConstraints="NO" id="EDa-wi-BGb">
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="414"/>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="3Dw-Dh-hWm">
+                                                <rect key="frame" x="0.0" y="422" width="414" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="EDa-wi-BGb" firstAttribute="height" secondItem="JnA-db-Cmx" secondAttribute="width" id="F4V-nm-XK1"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="JnA-db-Cmx" firstAttribute="width" secondItem="QMQ-NS-j6f" secondAttribute="width" id="C92-AK-PUu"/>
+                                    <constraint firstItem="JnA-db-Cmx" firstAttribute="leading" secondItem="SdK-8a-uZy" secondAttribute="leading" id="ODh-qM-8kz"/>
+                                    <constraint firstItem="JnA-db-Cmx" firstAttribute="top" secondItem="SdK-8a-uZy" secondAttribute="top" id="i6P-ao-D5l"/>
+                                    <constraint firstItem="JnA-db-Cmx" firstAttribute="trailing" secondItem="SdK-8a-uZy" secondAttribute="trailing" id="kKk-ir-U0s"/>
+                                    <constraint firstItem="JnA-db-Cmx" firstAttribute="bottom" secondItem="SdK-8a-uZy" secondAttribute="bottom" id="qs1-7k-SbT"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="SdK-8a-uZy"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="QMQ-NS-j6f"/>
+                            </scrollView>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="vnk-Xf-ZcZ" firstAttribute="trailing" secondItem="BsR-7P-00U" secondAttribute="trailing" id="SgB-VO-DFZ"/>
+                            <constraint firstItem="vnk-Xf-ZcZ" firstAttribute="bottom" secondItem="BsR-7P-00U" secondAttribute="bottom" id="fYA-rt-kr9"/>
+                            <constraint firstItem="vnk-Xf-ZcZ" firstAttribute="leading" secondItem="hMw-c6-s91" secondAttribute="leading" id="gQM-Ya-SfD"/>
+                            <constraint firstItem="vnk-Xf-ZcZ" firstAttribute="top" secondItem="BsR-7P-00U" secondAttribute="top" id="hcZ-se-pSi"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="hMw-c6-s91"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Art Display" id="0dm-sE-xiG"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KWw-kB-DdU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1099" y="1103"/>
+            <point key="canvasLocation" x="-1100" y="1102.2321428571429"/>
         </scene>
     </scenes>
     <resources>
