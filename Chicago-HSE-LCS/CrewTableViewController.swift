@@ -39,6 +39,11 @@ class CrewTableViewController: UITableViewController {
     Crew(name: "Simon Dutil", job: "Lighting and Sound Director", imageId: "simonDutil",  bio: """
     Simon Dutil is from Saint-Georges, Quebec and it is his second year at Lakefield. He has now done 2 productions, one dance showcase and the play The Heart of Robin Hood as a lighting and sound designer. He is undertaking his first musical! He is always there to help from painting the set to teaching other people how to use the light. Simon is always looking for new challenges and loves to learn new skills.
 
+    """),
+    
+    Crew(name: "Joe Huang", job: "Set Builder", imageId: "joeHuang",  bio: """
+    Joe Huang is very glad to be the part of Chicago. It's his first time to participate in the production.
+
     """)
     
     ]
