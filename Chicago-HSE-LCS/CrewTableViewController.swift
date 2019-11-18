@@ -39,6 +39,12 @@ class CrewTableViewController: UITableViewController {
     Crew(name: "Simon Dutil", job: "Lighting and Sound Director", imageId: "simonDutil",  bio: """
     Simon Dutil is from Saint-Georges, Quebec and it is his second year at Lakefield. He has now done 2 productions, one dance showcase and the play The Heart of Robin Hood as a lighting and sound designer. He is undertaking his first musical! He is always there to help from painting the set to teaching other people how to use the light. Simon is always looking for new challenges and loves to learn new skills.
 
+    """),
+    
+    
+    Crew(name: "Wulfric Harris-Stoertz", job: "Stage Hand/Set Builder", imageId: "wulfricHarris-Stoertz",  bio: """
+    Wulfric Harris-Stoertz is a crucial part of the crew, providing brute force, skill in construction, and bad puns to the set-building effort. Wulfric works backstage to keep the play running smoothly and to try to minimize and counteract the destruction caused by the actors on the props and set. This is Wulfric’s fourth play at Lakefield and he looks forward to the final show.
+
     """)
     
     ]
