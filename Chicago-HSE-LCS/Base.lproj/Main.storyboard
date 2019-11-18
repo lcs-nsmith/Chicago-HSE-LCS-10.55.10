@@ -252,7 +252,7 @@
                                     <constraint firstItem="wiY-Nn-41G" firstAttribute="trailing" secondItem="XRy-Qm-Mya" secondAttribute="trailing" id="8vh-38-8ML"/>
                                     <constraint firstItem="wiY-Nn-41G" firstAttribute="leading" secondItem="XRy-Qm-Mya" secondAttribute="leading" id="Jnk-lL-WMv"/>
                                     <constraint firstItem="wiY-Nn-41G" firstAttribute="width" secondItem="U3n-QK-1F6" secondAttribute="width" id="OuO-ei-eqo"/>
-                                    <constraint firstItem="wiY-Nn-41G" firstAttribute="bottom" secondItem="XRy-Qm-Mya" secondAttribute="bottom" constant="20" symbolic="YES" id="j4z-bv-Tew"/>
+                                    <constraint firstItem="wiY-Nn-41G" firstAttribute="bottom" secondItem="XRy-Qm-Mya" secondAttribute="bottom" symbolic="YES" id="j4z-bv-Tew"/>
                                 </constraints>
                                 <viewLayoutGuide key="contentLayoutGuide" id="XRy-Qm-Mya"/>
                                 <viewLayoutGuide key="frameLayoutGuide" id="U3n-QK-1F6"/>
