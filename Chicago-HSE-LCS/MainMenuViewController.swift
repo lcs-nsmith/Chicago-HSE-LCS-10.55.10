@@ -28,8 +28,9 @@ class MainMenuViewController: UIViewController, UITableViewDataSource, UITableVi
         MainMenuItem(name: "Production Team Notes"),
         MainMenuItem(name: "Art Display"),
         MainMenuItem(name: "Concessions"),
-        MainMenuItem(name: "Acknowledgements and Legal"),
-        MainMenuItem(name: "About This App")
+        MainMenuItem(name: "Our Musical Theatre Program"),
+        MainMenuItem(name: "About This App"),
+        MainMenuItem(name: "Acknowledgements and Legal")
         
     ]
     
