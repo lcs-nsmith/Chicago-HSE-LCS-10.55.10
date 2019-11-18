@@ -16,17 +16,20 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="banner" translatesAutoresizingMaskIntoConstraints="NO" id="4XR-Lh-YUE">
-                                <rect key="frame" x="0.0" y="-33" width="414" height="153"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="banner" translatesAutoresizingMaskIntoConstraints="NO" id="4XR-Lh-YUE">
+                                <rect key="frame" x="0.0" y="44" width="414" height="148"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="148" id="gDG-f4-gQ3"/>
+                                </constraints>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="4XR-Lh-YUE" secondAttribute="trailing" id="9tP-Lh-lNd"/>
-                            <constraint firstItem="4XR-Lh-YUE" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Q9M-Y0-xZi"/>
+                            <constraint firstItem="4XR-Lh-YUE" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="9tP-Lh-lNd"/>
+                            <constraint firstItem="4XR-Lh-YUE" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="Q9M-Y0-xZi"/>
                             <constraint firstItem="4XR-Lh-YUE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="ZJT-rA-4Hg"/>
                             <constraint firstItem="4XR-Lh-YUE" firstAttribute="width" secondItem="Ze5-6b-2t3" secondAttribute="width" id="fI2-IH-Xmw"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="top" secondItem="4XR-Lh-YUE" secondAttribute="top" id="kxh-yB-Ul4"/>
+                            <constraint firstItem="4XR-Lh-YUE" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="kxh-yB-Ul4"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
