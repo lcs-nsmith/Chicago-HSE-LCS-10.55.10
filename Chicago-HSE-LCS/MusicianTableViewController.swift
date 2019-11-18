@@ -36,7 +36,9 @@ class MusicianTableViewController: UITableViewController {
         
         Musician(name: "Ryosuke Togawa", instrument: "Trumpet", Bio: """
                 Ryosuke plays the trumpet as part of the pit band in this production. He is passionate about cooking food as much as he is playing the trumpet
-                """, ImageID: "ryosuke")
+                """, ImageID: "ryosuke"),
+        
+        Musician(name: "... and our Community Musicians", instrument: "", Bio: "", ImageID: "ryosuke"),
         
         ]
     

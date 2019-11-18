@@ -17,6 +17,8 @@ class MusicianDetailViewController: UIViewController {
     // Outlets to connect this controller to the view
     @IBOutlet weak var musicianHeadShot: UIImageView!
     @IBOutlet weak var musicianInstrument: UILabel!
+    @IBOutlet weak var labelInstrument: UILabel!
+    @IBOutlet weak var labelBio: UILabel!
     @IBOutlet weak var musicianBio: UILabel!
     
     // Set the status bar text to be white
@@ -33,13 +35,40 @@ class MusicianDetailViewController: UIViewController {
             return
         }
         
-        // Set the navigation title item
-        self.navigationItem.title = musicianSetFromTableView.name
-        
-        // Set details for this faculty member
-        musicianHeadShot.image = UIImage(named: musicianSetFromTableView.ImageID)
-        musicianInstrument.text = musicianSetFromTableView.instrument
-        musicianBio.text = musicianSetFromTableView.Bio
+        // Add an exception for community musicians
+        switch musicianSetFromTableView.name {
+        case "... and our Community Musicians":
+            
+            // Set the navigation title item
+            self.navigationItem.title = "Community Musicians"
+            
+            // Hide items not needed
+            musicianHeadShot.isHidden = true
+            labelInstrument.isHidden = true
+            musicianInstrument.isHidden = true
+            labelBio.isHidden = true
+            musicianBio.text = """
+                                Kelsey Van Blarcom (Piano 1)
+                                Teala Kozmik (Piano 2)
+                                Cydney Kamping (Reed 1)
+                                Christine Williamson (Reed 2)
+                                Bruce Cole (Reed 3)
+                                Doug Sutherland (Trumpet)
+                                Peter Hanmore (Trombone)
+                                Al Pounsett (Banjo)
+                                Sam Quinn (Bass)
+                                Nick Gilroy (Drums)
+                                """
+            
+        default:
+            // Set the navigation title item
+            self.navigationItem.title = musicianSetFromTableView.name
+            
+            // Set details for this faculty member
+            musicianHeadShot.image = UIImage(named: musicianSetFromTableView.ImageID)
+            musicianInstrument.text = musicianSetFromTableView.instrument
+            musicianBio.text = musicianSetFromTableView.Bio
+        }
         
         // Signal need to update the status bar
         self.setNeedsStatusBarAppearanceUpdate()

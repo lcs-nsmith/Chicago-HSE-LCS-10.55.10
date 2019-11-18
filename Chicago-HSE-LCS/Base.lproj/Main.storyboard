@@ -267,11 +267,11 @@
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="307-4y-cr6">
                                                         <rect key="frame" x="10" y="8" width="394" height="507.5"/>
-                                                        <mutableString key="text">Lakefield College School’s well-rounded approach to education has a longstanding reputation of educating artists and athletes for life. We are known for our outstanding drama productions and our musicals have long garnered the attention and support of our local media and the greater community.
+                                                        <string key="text">Lakefield College School’s well-rounded approach to education has a longstanding reputation of educating artists and athletes for life. We are known for our outstanding drama productions and our musicals have long garnered the attention and support of our local media and the greater community.
 
 Novice and experienced students find opportunities to explore a full range of activities both behind and on stage—as many as 65 students may be involved in one production. Valuable skills are developed through live performance, technical and production work. Students fine-tune their ability to sing, dance, act, direct, build sets, design lights and produce projects of their own design. For the first time this year, student musicians will play alongside professionals from our community in our live pit band. 
 
-During the fall, winter and spring terms, our students are dedicated to developing all aspects of their performance abilities in preparation for our annual drama productions, instrumental and vocal music performances and dance showcases.</mutableString>
+During the fall, winter and spring terms, our students are dedicated to developing all aspects of their performance abilities in preparation for our annual drama productions, instrumental and vocal music performances and dance showcases.</string>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
@@ -1041,6 +1041,8 @@ Mixed Media. 6 x 4 inches.</string>
                     </view>
                     <navigationItem key="navigationItem" id="Pel-PJ-DIO"/>
                     <connections>
+                        <outlet property="labelBio" destination="Q9Q-ww-ghO" id="gJB-g4-U50"/>
+                        <outlet property="labelInstrument" destination="RSU-D1-TWk" id="Ghy-GP-a7S"/>
                         <outlet property="musicianBio" destination="VjD-L9-1H9" id="a3x-y8-wga"/>
                         <outlet property="musicianHeadShot" destination="maw-Ea-8bW" id="hCZ-Pg-cdS"/>
                         <outlet property="musicianInstrument" destination="UIE-zD-jJx" id="QqP-g9-TLc"/>
