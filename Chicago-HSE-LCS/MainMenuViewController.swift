@@ -19,6 +19,7 @@ class MainMenuViewController: UIViewController, UITableViewDataSource, UITableVi
     var mainMenuItems: [MainMenuItem] = [
         
         MainMenuItem(name: "Tickets and Dates"),
+        MainMenuItem(name: "Production Team Notes"),
         MainMenuItem(name: "Characters"),
         MainMenuItem(name: "Cast"),
         MainMenuItem(name: "Crew"),
@@ -89,6 +90,8 @@ class MainMenuViewController: UIViewController, UITableViewDataSource, UITableVi
         
         // Activate a given segue based on what item was selected
         switch mainMenuItems[indexPath.row].name {
+        case "Production Team Notes":
+            performSegue(withIdentifier: "ProductionTeamNotes", sender: nil)
         case "Tickets and Dates":
             performSegue(withIdentifier: "TicketsDates", sender: nil)
         case "Characters":
