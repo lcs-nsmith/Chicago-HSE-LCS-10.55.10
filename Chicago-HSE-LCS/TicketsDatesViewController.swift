@@ -31,5 +31,21 @@ class TicketsDatesViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
+    
+    func openTicketsWebsite() {
+        guard let url = URL(string: "https://www.universe.com/events/chicago-high-school-edition-tickets-WX743Y") else {
+            return
+        }
+        UIApplication.shared.open(url)
+    }
+    
+    @IBAction func openTicketsFromSeatingLabel(_ sender: Any) {
+        openTicketsWebsite()
+    }
+    
+    @IBAction func openTicketsFromReminderLabel(_ sender: Any) {
+        openTicketsWebsite()
+    }
+    
+    
 }
