@@ -37,7 +37,7 @@ class MainMenuViewController: UIViewController, UITableViewDataSource, UITableVi
     ]
     var intermissionItems: [MainMenuItem] = [
         
-        MainMenuItem(name: "Art Display"),
+        MainMenuItem(name: "Theatre Lobby Art Display"),
         MainMenuItem(name: "Concessions")
         
     ]
@@ -134,7 +134,7 @@ class MainMenuViewController: UIViewController, UITableViewDataSource, UITableVi
         case 1:
             // Now what page to navigation to in this section
             switch intermissionItems[indexPath.row].name {
-            case "Art Display":
+            case "Theatre Lobby Art Display":
                 performSegue(withIdentifier: "ArtDisplay", sender: nil)
             case "Concessions":
                 performSegue(withIdentifier: "Concessions", sender: nil)
