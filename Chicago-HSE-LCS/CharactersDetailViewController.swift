@@ -37,7 +37,12 @@ class CharactersDetailViewController: UIViewController {
         self.navigationItem.title = characterSetFromTableView.characterName
         
         // Set details for this character
-        characterHeadShot.image = UIImage(named: characterSetFromTableView.imageId)
+        // Set photo for this faculty member, if one exists
+        if characterSetFromTableView.imageId.isEmpty {
+            characterHeadShot.isHidden = true
+        } else {
+            characterHeadShot.image = UIImage(named: characterSetFromTableView.imageId)
+        }
         playedBy.text = characterSetFromTableView.playedBy
         
         // Signal need to update the status bar
