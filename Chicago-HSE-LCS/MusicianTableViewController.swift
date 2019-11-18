@@ -16,9 +16,9 @@ class MusicianTableViewController: UITableViewController {
     
         Musician(name: "Aidan Melville", instrument: "Saxophone", Bio: "Aidan Melville is a member of the Concert Band, Jazz Band, and Lorelei Choir. He has been playing Saxophone for 5 years and in bands for 4 with 3 years in both bands at LCS. He loves playing jazz and is extremely excited to be performing Chicago this year.", ImageID: "aidan"),
         
-        Musician(name: "Jeewoo Lee", instrument: "Trumpet", Bio: "Jeewoo plays the trumpet as part of the pit band in this production.", ImageID: "jeewoo"),
+        Musician(name: "Jeewoo Lee", instrument: "Trumpet", Bio: "Jeewoo plays the trumpet as part of the pit band in this production. He is also a member of the concert band. He got cut from soccer, but he thinks that made him step out from the comfort zone, and try new things since he had never been the part of the production before", ImageID: "jeewoo"),
         
-        Musician(name: "Ryosuke Togawa", instrument: "Trumpet", Bio: "Ryosuke plays the trumpet as part of the pit band in this production.", ImageID: "ryosuke"),
+        Musician(name: "Ryosuke Togawa", instrument: "Trumpet", Bio: "Ryosuke plays the trumpet as part of the pit band in this production. He is passionate about cooking food as much as he is plying the trumpet", ImageID: "ryosuke"),
         
         Musician(name: "Prajina Salvarajah", instrument: "Saxophone", Bio: """
     This is Prajina’s first time being part of an LCS production. She has been playing the clarinet since 5th grade and has learned how to play the tenor saxophone last year. She has been a member of the LCS Concert band for 1 year and has recently joined the Jazz band. She is thrilled to play in the live band for the Chicago Musical.
