@@ -12,7 +12,7 @@ class MusicianTableViewController: UITableViewController {
 
     //MARK: Properties
     // Array of all musicians
-    var BandMembers: [Musician] = [
+    var bandMembers: [Musician] = [
     
         Musician(name: "Aidan Melville", instrument: "Saxophone", Bio: """
                 Aidan Melville is a member of the Concert Band, Jazz Band, and Lorelei Choir. He has been playing Saxophone for 5 years and in bands for 4 with 3 years in both bands at LCS. He loves playing jazz and is extremely excited to be performing Chicago this year.
@@ -86,7 +86,7 @@ class MusicianTableViewController: UITableViewController {
            // On the first section, return the count of menu items
            // For any other section, return 0
            if section == 0 {
-               return BandMembers.count
+               return bandMembers.count
            } else {
                return 0
            }
@@ -101,7 +101,7 @@ class MusicianTableViewController: UITableViewController {
            let cell = tableView.dequeueReusableCell(withIdentifier: "MusicianCell", for: indexPath)
            
            // Depending on the section, fill the textLabel with the relevant text
-           cell.textLabel?.text = BandMembers[indexPath.row].name
+           cell.textLabel?.text = bandMembers[indexPath.row].name
            cell.textLabel?.textColor = .white
            
            // Make the cell have a black background colour
@@ -190,7 +190,7 @@ class MusicianTableViewController: UITableViewController {
            }
            
            // Now set the faculty member to be displayed
-           detailViewController.bandMemberToDisplay = BandMembers[index]
+           detailViewController.bandMemberToDisplay = bandMembers[index]
        }
 
 }
