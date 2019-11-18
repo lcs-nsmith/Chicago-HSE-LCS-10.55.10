@@ -145,7 +145,7 @@ class MainMenuViewController: UIViewController, UITableViewDataSource, UITableVi
             // Now what page to navigation to in this section
             switch otherItems[indexPath.row].name {
             case "Our Musical Theatre Program":
-                break
+                performSegue(withIdentifier: "MusicalTheatreProgram", sender: nil)
             case "About This App":
                 performSegue(withIdentifier: "About", sender: nil)
             case "Acknowledgements and Legal":
