@@ -1378,19 +1378,19 @@ Mixed Media. 6 x 4 inches.</string>
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="f0P-7A-9Ce">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1067"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="436"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="facultyPlaceholderImage" translatesAutoresizingMaskIntoConstraints="NO" id="2Db-Ab-NKZ">
-                                                <rect key="frame" x="0.0" y="0.0" width="414" height="414"/>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="popcorn" translatesAutoresizingMaskIntoConstraints="NO" id="2Db-Ab-NKZ">
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="310.5"/>
                                             </imageView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="qt7-8t-NCB">
-                                                <rect key="frame" x="0.0" y="422" width="414" height="645"/>
+                                                <rect key="frame" x="0.0" y="318.5" width="414" height="117.5"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="Se8-FR-RrG">
-                                                        <rect key="frame" x="10" y="8" width="394" height="629"/>
-                                                        <string key="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut finibus diam lectus, quis egestas nisl luctus id. Vivamus ac erat ornare, porttitor elit vitae, pretium nisi. Integer quis ultricies lectus, vitae blandit diam. In vel purus non turpis dignissim dapibus et in orci. Sed non vehicula tortor, vitae cursus odio. Quisque aliquam nulla velit, eget scelerisque sem tristique ac. Integer tempus enim at magna venenatis dictum. Integer bibendum erat non scelerisque mollis. In tempor pretium magna, ac vehicula ligula accumsan et. Curabitur finibus eget libero vitae sagittis.
+                                                        <rect key="frame" x="10" y="8" width="394" height="101.5"/>
+                                                        <string key="text">The Lakefield College School DECA Club will be selling a variety of concessions in the Theatre Lobby during Intermission.
 
-In condimentum, nunc sed euismod efficitur, dui tellus mattis turpis, ut dapibus leo purus vel turpis. Vestibulum tristique, nisl id sollicitudin accumsan, mauris dui vestibulum justo, vitae sagittis lectus orci quis libero. Sed porttitor nunc at libero lobortis laoreet. Suspendisse fermentum sapien id tortor euismod, quis mollis purus accumsan. Nunc interdum ultricies ipsum, eget auctor erat placerat sit amet. Nunc scelerisque risus quis leo consequat, vitae tempor tortor hendrerit. Praesent nec urna tempus metus aliquam hendrerit non ac leo. Fusce tincidunt nisl ac dui fringilla, accumsan placerat nisl vulputate. Cras commodo tincidunt dui, sit amet ornare eros imperdiet sit amet. Mauris eget ultricies tortor, ut tincidunt ante. Integer faucibus hendrerit velit ac efficitur. Pellentesque elementum ac sapien consectetur dignissim. Praesent faucibus facilisis lacinia.</string>
+Don't miss out on this tasty array of treats!</string>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
@@ -1400,7 +1400,7 @@ In condimentum, nunc sed euismod efficitur, dui tellus mattis turpis, ut dapibus
                                             </stackView>
                                         </subviews>
                                         <constraints>
-                                            <constraint firstItem="2Db-Ab-NKZ" firstAttribute="height" secondItem="f0P-7A-9Ce" secondAttribute="width" id="63x-fd-Tde"/>
+                                            <constraint firstItem="2Db-Ab-NKZ" firstAttribute="height" secondItem="f0P-7A-9Ce" secondAttribute="width" multiplier="0.75" id="63x-fd-Tde"/>
                                         </constraints>
                                     </stackView>
                                 </subviews>
@@ -1409,6 +1409,7 @@ In condimentum, nunc sed euismod efficitur, dui tellus mattis turpis, ut dapibus
                                     <constraint firstItem="f0P-7A-9Ce" firstAttribute="trailing" secondItem="EXQ-Ag-cVM" secondAttribute="trailing" id="Ea2-Yp-BTq"/>
                                     <constraint firstItem="f0P-7A-9Ce" firstAttribute="top" secondItem="EXQ-Ag-cVM" secondAttribute="top" id="Kaf-Lm-nHV"/>
                                     <constraint firstItem="f0P-7A-9Ce" firstAttribute="leading" secondItem="EXQ-Ag-cVM" secondAttribute="leading" id="VnJ-KT-lVf"/>
+                                    <constraint firstItem="2Db-Ab-NKZ" firstAttribute="width" secondItem="b1c-i9-V2f" secondAttribute="width" id="dYd-oa-EEJ"/>
                                     <constraint firstItem="f0P-7A-9Ce" firstAttribute="bottom" secondItem="EXQ-Ag-cVM" secondAttribute="bottom" id="gyv-fA-o4f"/>
                                     <constraint firstItem="f0P-7A-9Ce" firstAttribute="width" secondItem="J0W-7U-M5O" secondAttribute="width" id="xPo-5C-ank"/>
                                 </constraints>
@@ -1952,6 +1953,7 @@ Alf Curtis Construction, Russell Gordon and his Grade 12 Computer Science class 
         <image name="banner" width="674.5" height="227.5"/>
         <image name="facultyPlaceholderImage" width="2293" height="2293"/>
         <image name="lostBees" width="1050" height="1624"/>
+        <image name="popcorn" width="1920" height="1440"/>
         <image name="postcardShow" width="750" height="1058"/>
     </resources>
 </document>
