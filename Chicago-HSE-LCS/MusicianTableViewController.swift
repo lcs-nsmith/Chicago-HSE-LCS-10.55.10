@@ -22,9 +22,15 @@ class MusicianTableViewController: UITableViewController {
         
         Musician(name: "Prajina Salvarajah", instrument: "Saxophone", Bio: "Prajina plays the saxophone as part of the pit band in this production.", ImageID: "prajina"),
         
-        Musician(name: "Rachel Xu", instrument: "Flute", Bio: "Rachel plays the flute as part of the pit band in this production.", ImageID: "rachel"),
+        Musician(name: "Rachel Xu", instrument: "Flute", Bio: """
+    Rachel is from China Beijing and it is her fourth year in Lakefield. This is Rachel’s first time participating in a pit band. She has been playing flute since grade one, she has done a duet with clarinet and trio with cello and flute. Rachel is also a member of the LCS concert band for four years. She is excited to be performing in Chicago this year. Hope you enjoy the show!
+
+    """, ImageID: "rachel"),
         
-        Musician(name: "Dorothy Li", instrument: "Flute", Bio: "Dorothy plays the flute as part of the pit band in this production.", ImageID: "dorothy")
+        Musician(name: "Dorothy Li", instrument: "Flute", Bio: """
+    This is Dorothy's fourth year in Lakefield. She's been playing the clarinet since grade 3. Dorothy has played in different concert bands and orchestras throughout the years. However, it's her first time being a member of the pit band and plays live in a musical, she's very excited to perform in Chicago!
+
+    """, ImageID: "dorothy")
     
     ]
     

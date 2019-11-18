@@ -44,6 +44,11 @@ class CrewTableViewController: UITableViewController {
     Crew(name: "Joe Huang", job: "Set Builder", imageId: "joeHuang",  bio: """
     Joe Huang is very glad to be the part of Chicago. It's his first time to participate in the production.
 
+    """),
+    
+    Crew(name: "Wulfric  Harris-Stoertz", job: "Stage Hand/Set Builder", imageId: "wulfricHarris-Stoertz",  bio: """
+    Wulfric Harris-Stoertz is a crucial part of the crew, providing brute force, skill in construction, and bad puns to the set-building effort. Wulfric works backstage to keep the play running smoothly and to try to minimize and counteract the destruction caused by the actors on the props and set. This is Wulfric’s fourth play at Lakefield and he looks forward to the final show.
+
     """)
     
     ]
