@@ -18,25 +18,26 @@ class MusicianTableViewController: UITableViewController {
                 Aidan Melville is a member of the Concert Band, Jazz Band, and Lorelei Choir. He has been playing Saxophone for 5 years and in bands for 4 with 3 years in both bands at LCS. He loves playing jazz and is extremely excited to be performing Chicago this year.
                 """, ImageID: "aidan"),
         
+        Musician(name: "Dorothy Li", instrument: "Flute", Bio: """
+                This is Dorothy's fourth year in Lakefield. She's been playing the clarinet since grade 3. Dorothy has played in different concert bands and orchestras throughout the years. However, it's her first time being a member of the pit band and plays live in a musical, she's very excited to perform in Chicago!
+                """, ImageID: "dorothy"),
+
         Musician(name: "Jeewoo Lee", instrument: "Trumpet", Bio: """
                 Jeewoo plays the trumpet as part of the pit band in this production. He is also a member of the concert band. He got cut from soccer, but he thinks that made him step out from the comfort zone, and try new things since he had never been the part of the production before
                 """, ImageID: "jeewoo"),
         
-        Musician(name: "Ryosuke Togawa", instrument: "Trumpet", Bio: """
-                Ryosuke plays the trumpet as part of the pit band in this production. He is passionate about cooking food as much as he is playing the trumpet
-                """, ImageID: "ryosuke"),
-        
         Musician(name: "Prajina Salvarajah", instrument: "Saxophone", Bio: """
                 This is Prajina’s first time being part of an LCS production. She has been playing the clarinet since 5th grade and has learned how to play the tenor saxophone last year. She has been a member of the LCS Concert band for 1 year and has recently joined the Jazz band. She is thrilled to play in the live band for the Chicago Musical.
                 """, ImageID: "prajina"),
-        
+
         Musician(name: "Rachel Xu", instrument: "Flute", Bio: """
                 Rachel is from China Beijing and it is her fourth year in Lakefield. This is Rachel’s first time participating in a pit band. She has been playing flute since grade one, she has done a duet with clarinet and trio with cello and flute. Rachel is also a member of the LCS concert band for four years. She is excited to be performing in Chicago this year. Hope you enjoy the show!
                 """, ImageID: "rachel"),
         
-        Musician(name: "Dorothy Li", instrument: "Flute", Bio: """
-                This is Dorothy's fourth year in Lakefield. She's been playing the clarinet since grade 3. Dorothy has played in different concert bands and orchestras throughout the years. However, it's her first time being a member of the pit band and plays live in a musical, she's very excited to perform in Chicago!
-                """, ImageID: "dorothy")
+        Musician(name: "Ryosuke Togawa", instrument: "Trumpet", Bio: """
+                Ryosuke plays the trumpet as part of the pit band in this production. He is passionate about cooking food as much as he is playing the trumpet
+                """, ImageID: "ryosuke")
+        
         ]
     
       // Set the status bar text to be white
