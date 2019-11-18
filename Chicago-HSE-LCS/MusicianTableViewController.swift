@@ -20,7 +20,10 @@ class MusicianTableViewController: UITableViewController {
         
         Musician(name: "Ryosuke Togawa", instrument: "Trumpet", Bio: "Ryosuke plays the trumpet as part of the pit band in this production.", ImageID: "ryosuke"),
         
-        Musician(name: "Prajina Salvarajah", instrument: "Saxophone", Bio: "Prajina plays the saxophone as part of the pit band in this production.", ImageID: "prajina"),
+        Musician(name: "Prajina Salvarajah", instrument: "Saxophone", Bio: """
+    This is Prajina’s first time being part of an LCS production. She has been playing the clarinet since 5th grade and has learned how to play the tenor saxophone last year. She has been a member of the LCS Concert band for 1 year and has recently joined the Jazz band. She is thrilled to play in the live band for the Chicago Musical.
+
+    """, ImageID: "prajina"),
         
         Musician(name: "Rachel Xu", instrument: "Flute", Bio: """
     Rachel is from China Beijing and it is her fourth year in Lakefield. This is Rachel’s first time participating in a pit band. She has been playing flute since grade one, she has done a duet with clarinet and trio with cello and flute. Rachel is also a member of the LCS concert band for four years. She is excited to be performing in Chicago this year. Hope you enjoy the show!
