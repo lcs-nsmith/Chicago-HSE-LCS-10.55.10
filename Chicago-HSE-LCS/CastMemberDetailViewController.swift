@@ -8,17 +8,17 @@
 
 import UIKit
 
-class CastDetailViewController: UIViewController {
+class CastMemberDetailViewController: UIViewController {
 
     
     var castMemberToDisplay: CastMember?
     
     // Outlets to connect this controller to the view
 
+
     @IBOutlet weak var castHeadShot: UIImageView!
     
     @IBOutlet weak var castRole: UILabel!
-    @IBOutlet weak var scrollView: UIScrollView!
     
     @IBOutlet weak var castBio: UILabel!
     

@@ -236,7 +236,7 @@ class CastMemberTableViewController: UITableViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         // Get a reference to the destination view controller using segue.destination
-        guard let detailViewController = segue.destination as? CastDetailViewController else {
+        guard let detailViewController = segue.destination as? CastMemberDetailViewController else {
             return
         }
         
