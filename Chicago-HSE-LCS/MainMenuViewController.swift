@@ -18,6 +18,7 @@ class MainMenuViewController: UIViewController, UITableViewDataSource, UITableVi
     // See https://docs.swift.org/swift-book/LanguageGuide/Enumerations.html#ID149
     var mainMenuItems: [MainMenuItem] = [
         
+        MainMenuItem(name: "Characters"),
         MainMenuItem(name: "Cast"),
         MainMenuItem(name: "Crew"),
         MainMenuItem(name: "Musicians"),
@@ -85,6 +86,8 @@ class MainMenuViewController: UIViewController, UITableViewDataSource, UITableVi
         
         // Activate a given segue based on what item was selected
         switch mainMenuItems[indexPath.row].name {
+        case "Characters":
+            performSegue(withIdentifier: "Characters", sender: nil)
         case "Cast":
             performSegue(withIdentifier: "Cast", sender: nil)
         case "Crew":
