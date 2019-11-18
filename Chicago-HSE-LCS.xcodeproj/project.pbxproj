@@ -23,6 +23,7 @@
 		302F3A372381E81D003B3725 /* CharactersTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 302F3A362381E81D003B3725 /* CharactersTableViewController.swift */; };
 		302F3A392381E93C003B3725 /* Characters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 302F3A382381E93C003B3725 /* Characters.swift */; };
 		302F3A3B2381EAAE003B3725 /* CharactersDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 302F3A3A2381EAAE003B3725 /* CharactersDetailViewController.swift */; };
+		42C3AD9D23820CF90015216E /* ConcessionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42C3AD9C23820CF90015216E /* ConcessionsViewController.swift */; };
 		7A64AC5E237DFA650067FC9D /* CastMember.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A64AC5D237DFA650067FC9D /* CastMember.swift */; };
 		7A64AC60237DFC400067FC9D /* CastMemberTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A64AC5F237DFC400067FC9D /* CastMemberTableViewController.swift */; };
 		7A64AC62237E05810067FC9D /* Crew.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A64AC61237E05810067FC9D /* Crew.swift */; };
@@ -53,6 +54,7 @@
 		302F3A362381E81D003B3725 /* CharactersTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersTableViewController.swift; sourceTree = "<group>"; };
 		302F3A382381E93C003B3725 /* Characters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Characters.swift; sourceTree = "<group>"; };
 		302F3A3A2381EAAE003B3725 /* CharactersDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersDetailViewController.swift; sourceTree = "<group>"; };
+		42C3AD9C23820CF90015216E /* ConcessionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConcessionsViewController.swift; sourceTree = "<group>"; };
 		7A64AC5D237DFA650067FC9D /* CastMember.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CastMember.swift; sourceTree = "<group>"; };
 		7A64AC5F237DFC400067FC9D /* CastMemberTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CastMemberTableViewController.swift; sourceTree = "<group>"; };
 		7A64AC61237E05810067FC9D /* Crew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Crew.swift; sourceTree = "<group>"; };
@@ -120,6 +122,7 @@
 				0EAC5E4023820CF600E92727 /* ArtDisplayViewController.swift */,
 				0EAC5E36237E45F400E92727 /* Colors.swift */,
 				813DAC952381AE560053EE91 /* LightNavigationController.swift */,
+				42C3AD9C23820CF90015216E /* ConcessionsViewController.swift */,
 			);
 			path = "Chicago-HSE-LCS";
 			sourceTree = "<group>";
@@ -216,6 +219,7 @@
 				7A64AC5E237DFA650067FC9D /* CastMember.swift in Sources */,
 				9EF52C542381E76000825087 /* Musician.swift in Sources */,
 				7A64AC62237E05810067FC9D /* Crew.swift in Sources */,
+				42C3AD9D23820CF90015216E /* ConcessionsViewController.swift in Sources */,
 				0EAC5E39237E555400E92727 /* FacultyTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
