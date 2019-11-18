@@ -33,6 +33,7 @@
 		9EF52C522381E6DD00825087 /* MusicianTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EF52C512381E6DD00825087 /* MusicianTableViewController.swift */; };
 		9EF52C542381E76000825087 /* Musician.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EF52C532381E76000825087 /* Musician.swift */; };
 		9EF52C5A2381FACD00825087 /* MusicianDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EF52C592381FACD00825087 /* MusicianDetailViewController.swift */; };
+		F7DE7D0B23820CF800B373E1 /* TicketsDatesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7DE7D0A23820CF800B373E1 /* TicketsDatesViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -64,6 +65,7 @@
 		9EF52C512381E6DD00825087 /* MusicianTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicianTableViewController.swift; sourceTree = "<group>"; };
 		9EF52C532381E76000825087 /* Musician.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Musician.swift; sourceTree = "<group>"; };
 		9EF52C592381FACD00825087 /* MusicianDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicianDetailViewController.swift; sourceTree = "<group>"; };
+		F7DE7D0A23820CF800B373E1 /* TicketsDatesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketsDatesViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +125,7 @@
 				42C3AD9C23820CF90015216E /* ConcessionsViewController.swift */,
 				0EAC5E36237E45F400E92727 /* Colors.swift */,
 				813DAC952381AE560053EE91 /* LightNavigationController.swift */,
+				F7DE7D0A23820CF800B373E1 /* TicketsDatesViewController.swift */,
 			);
 			path = "Chicago-HSE-LCS";
 			sourceTree = "<group>";
@@ -212,6 +215,7 @@
 				0EAC5E4323821E8B00E92727 /* CastMemberDetailViewController.swift in Sources */,
 				0EAC5E3D237E5B1B00E92727 /* FacultyDetailViewController.swift in Sources */,
 				9EF52C5A2381FACD00825087 /* MusicianDetailViewController.swift in Sources */,
+				F7DE7D0B23820CF800B373E1 /* TicketsDatesViewController.swift in Sources */,
 				7A64AC60237DFC400067FC9D /* CastMemberTableViewController.swift in Sources */,
 				302F3A372381E81D003B3725 /* CharactersTableViewController.swift in Sources */,
 				0EAC5E21237DF9C300E92727 /* SceneDelegate.swift in Sources */,
