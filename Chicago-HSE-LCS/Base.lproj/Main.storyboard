@@ -1030,7 +1030,7 @@ Mixed Media. 6 x 4 inches.</string>
                                 <viewLayoutGuide key="frameLayoutGuide" id="zel-1h-d3o"/>
                             </scrollView>
                         </subviews>
-                        <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="ewf-1d-Pbt" firstAttribute="bottom" secondItem="Mn2-dT-3th" secondAttribute="bottom" id="XQB-qr-q5R"/>
                             <constraint firstItem="ewf-1d-Pbt" firstAttribute="trailing" secondItem="Mn2-dT-3th" secondAttribute="trailing" id="hwj-k7-2tY"/>
