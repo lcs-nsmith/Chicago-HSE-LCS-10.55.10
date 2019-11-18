@@ -68,6 +68,7 @@
                         <segue destination="8kG-VF-a4K" kind="show" identifier="TicketsDates" id="l8p-vs-wam"/>
                         <segue destination="SiL-5K-JOX" kind="show" identifier="About" id="IT1-SL-ndl"/>
                         <segue destination="OdO-Yh-N6Y" kind="show" identifier="ProductionTeamNotes" id="Zon-Nb-Yac"/>
+                        <segue destination="0s0-q6-e68" kind="show" identifier="MusicalNumbers" id="Rrc-Mg-8Ck"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Lmx-z4-zXo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -518,9 +519,9 @@ All images © Lakefield College School, 2019.  Used with permission.</string>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="3Dw-Dh-hWm">
                                                         <rect key="frame" x="10" y="8" width="394" height="629"/>
-                                                        <mutableString key="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut finibus diam lectus, quis egestas nisl luctus id. Vivamus ac erat ornare, porttitor elit vitae, pretium nisi. Integer quis ultricies lectus, vitae blandit diam. In vel purus non turpis dignissim dapibus et in orci. Sed non vehicula tortor, vitae cursus odio. Quisque aliquam nulla velit, eget scelerisque sem tristique ac. Integer tempus enim at magna venenatis dictum. Integer bibendum erat non scelerisque mollis. In tempor pretium magna, ac vehicula ligula accumsan et. Curabitur finibus eget libero vitae sagittis.
+                                                        <string key="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut finibus diam lectus, quis egestas nisl luctus id. Vivamus ac erat ornare, porttitor elit vitae, pretium nisi. Integer quis ultricies lectus, vitae blandit diam. In vel purus non turpis dignissim dapibus et in orci. Sed non vehicula tortor, vitae cursus odio. Quisque aliquam nulla velit, eget scelerisque sem tristique ac. Integer tempus enim at magna venenatis dictum. Integer bibendum erat non scelerisque mollis. In tempor pretium magna, ac vehicula ligula accumsan et. Curabitur finibus eget libero vitae sagittis.
 
-In condimentum, nunc sed euismod efficitur, dui tellus mattis turpis, ut dapibus leo purus vel turpis. Vestibulum tristique, nisl id sollicitudin accumsan, mauris dui vestibulum justo, vitae sagittis lectus orci quis libero. Sed porttitor nunc at libero lobortis laoreet. Suspendisse fermentum sapien id tortor euismod, quis mollis purus accumsan. Nunc interdum ultricies ipsum, eget auctor erat placerat sit amet. Nunc scelerisque risus quis leo consequat, vitae tempor tortor hendrerit. Praesent nec urna tempus metus aliquam hendrerit non ac leo. Fusce tincidunt nisl ac dui fringilla, accumsan placerat nisl vulputate. Cras commodo tincidunt dui, sit amet ornare eros imperdiet sit amet. Mauris eget ultricies tortor, ut tincidunt ante. Integer faucibus hendrerit velit ac efficitur. Pellentesque elementum ac sapien consectetur dignissim. Praesent faucibus facilisis lacinia.</mutableString>
+In condimentum, nunc sed euismod efficitur, dui tellus mattis turpis, ut dapibus leo purus vel turpis. Vestibulum tristique, nisl id sollicitudin accumsan, mauris dui vestibulum justo, vitae sagittis lectus orci quis libero. Sed porttitor nunc at libero lobortis laoreet. Suspendisse fermentum sapien id tortor euismod, quis mollis purus accumsan. Nunc interdum ultricies ipsum, eget auctor erat placerat sit amet. Nunc scelerisque risus quis leo consequat, vitae tempor tortor hendrerit. Praesent nec urna tempus metus aliquam hendrerit non ac leo. Fusce tincidunt nisl ac dui fringilla, accumsan placerat nisl vulputate. Cras commodo tincidunt dui, sit amet ornare eros imperdiet sit amet. Mauris eget ultricies tortor, ut tincidunt ante. Integer faucibus hendrerit velit ac efficitur. Pellentesque elementum ac sapien consectetur dignissim. Praesent faucibus facilisis lacinia.</string>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
@@ -1004,20 +1005,26 @@ In condimentum, nunc sed euismod efficitur, dui tellus mattis turpis, ut dapibus
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="f0P-7A-9Ce">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1031"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1067"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="facultyPlaceholderImage" translatesAutoresizingMaskIntoConstraints="NO" id="2Db-Ab-NKZ">
                                                 <rect key="frame" x="0.0" y="0.0" width="414" height="414"/>
                                             </imageView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="Se8-FR-RrG">
-                                                <rect key="frame" x="0.0" y="422" width="414" height="609"/>
-                                                <mutableString key="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut finibus diam lectus, quis egestas nisl luctus id. Vivamus ac erat ornare, porttitor elit vitae, pretium nisi. Integer quis ultricies lectus, vitae blandit diam. In vel purus non turpis dignissim dapibus et in orci. Sed non vehicula tortor, vitae cursus odio. Quisque aliquam nulla velit, eget scelerisque sem tristique ac. Integer tempus enim at magna venenatis dictum. Integer bibendum erat non scelerisque mollis. In tempor pretium magna, ac vehicula ligula accumsan et. Curabitur finibus eget libero vitae sagittis.
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="qt7-8t-NCB">
+                                                <rect key="frame" x="0.0" y="422" width="414" height="645"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="Se8-FR-RrG">
+                                                        <rect key="frame" x="10" y="8" width="394" height="629"/>
+                                                        <string key="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut finibus diam lectus, quis egestas nisl luctus id. Vivamus ac erat ornare, porttitor elit vitae, pretium nisi. Integer quis ultricies lectus, vitae blandit diam. In vel purus non turpis dignissim dapibus et in orci. Sed non vehicula tortor, vitae cursus odio. Quisque aliquam nulla velit, eget scelerisque sem tristique ac. Integer tempus enim at magna venenatis dictum. Integer bibendum erat non scelerisque mollis. In tempor pretium magna, ac vehicula ligula accumsan et. Curabitur finibus eget libero vitae sagittis.
 
-In condimentum, nunc sed euismod efficitur, dui tellus mattis turpis, ut dapibus leo purus vel turpis. Vestibulum tristique, nisl id sollicitudin accumsan, mauris dui vestibulum justo, vitae sagittis lectus orci quis libero. Sed porttitor nunc at libero lobortis laoreet. Suspendisse fermentum sapien id tortor euismod, quis mollis purus accumsan. Nunc interdum ultricies ipsum, eget auctor erat placerat sit amet. Nunc scelerisque risus quis leo consequat, vitae tempor tortor hendrerit. Praesent nec urna tempus metus aliquam hendrerit non ac leo. Fusce tincidunt nisl ac dui fringilla, accumsan placerat nisl vulputate. Cras commodo tincidunt dui, sit amet ornare eros imperdiet sit amet. Mauris eget ultricies tortor, ut tincidunt ante. Integer faucibus hendrerit velit ac efficitur. Pellentesque elementum ac sapien consectetur dignissim. Praesent faucibus facilisis lacinia.</mutableString>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
+In condimentum, nunc sed euismod efficitur, dui tellus mattis turpis, ut dapibus leo purus vel turpis. Vestibulum tristique, nisl id sollicitudin accumsan, mauris dui vestibulum justo, vitae sagittis lectus orci quis libero. Sed porttitor nunc at libero lobortis laoreet. Suspendisse fermentum sapien id tortor euismod, quis mollis purus accumsan. Nunc interdum ultricies ipsum, eget auctor erat placerat sit amet. Nunc scelerisque risus quis leo consequat, vitae tempor tortor hendrerit. Praesent nec urna tempus metus aliquam hendrerit non ac leo. Fusce tincidunt nisl ac dui fringilla, accumsan placerat nisl vulputate. Cras commodo tincidunt dui, sit amet ornare eros imperdiet sit amet. Mauris eget ultricies tortor, ut tincidunt ante. Integer faucibus hendrerit velit ac efficitur. Pellentesque elementum ac sapien consectetur dignissim. Praesent faucibus facilisis lacinia.</string>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <edgeInsets key="layoutMargins" top="8" left="10" bottom="8" right="10"/>
+                                            </stackView>
                                         </subviews>
                                         <constraints>
                                             <constraint firstItem="2Db-Ab-NKZ" firstAttribute="height" secondItem="f0P-7A-9Ce" secondAttribute="width" id="63x-fd-Tde"/>
@@ -1160,7 +1167,7 @@ Suspendisse quis ligula vel enim varius ultricies. Mauris ultrices ligula in sem
                                                     <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="DVR-CO-7sF" userLabel="Director's note details">
                                                         <rect key="frame" x="5" y="8" width="384" height="325"/>
                                                         <gestureRecognizers/>
-                                                        <mutableString key="text">The ever-growing LCS Musical Theatre program is very proud to take on such a powerful and exciting show. From the challenging choreography, characters and vocals, to the student musicians playing alongside professionals in the pit; the student set builders and artistic designers to the technical sound, lighting and stage crew, this production has been embraced by the students in every way with so much excitement and passion. We could not be prouder of them! The Production team would like to thank all of you for your continued support of the Arts at Lakefield College School. Working with over sixty-five talented, dedicated and professional young people has been an incredible and inspirational journey for us. We hope you enjoy the show!</mutableString>
+                                                        <string key="text">The ever-growing LCS Musical Theatre program is very proud to take on such a powerful and exciting show. From the challenging choreography, characters and vocals, to the student musicians playing alongside professionals in the pit; the student set builders and artistic designers to the technical sound, lighting and stage crew, this production has been embraced by the students in every way with so much excitement and passion. We could not be prouder of them! The Production team would like to thank all of you for your continued support of the Arts at Lakefield College School. Working with over sixty-five talented, dedicated and professional young people has been an incredible and inspirational journey for us. We hope you enjoy the show!</string>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
@@ -1180,10 +1187,10 @@ Suspendisse quis ligula vel enim varius ultricies. Mauris ultrices ligula in sem
                                                     <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="AAx-Cn-KsH" userLabel="Special thanks details">
                                                         <rect key="frame" x="5" y="8" width="384" height="345"/>
                                                         <gestureRecognizers/>
-                                                        <mutableString key="text">All of our family and friends, LCS Faculty &amp; Staff, Aramark Campus Services, 
+                                                        <string key="text">All of our family and friends, LCS Faculty &amp; Staff, Aramark Campus Services, 
 Brian McCaw &amp; LCS Facilities Services, Sarah Young, Neil Young, 
 Tai Timbers and Maar’s Music, Tom Vaccaro (Peterborough Academy of Circus Arts), 
-Alf Curtis Construction, Russell Gordon and his Grade 12 Computer Science class (App development), Justin Hiscox, Lori Davidson, Katherine Carlton, Tayler Morencie (Art Display), Drew Antzis, Marjorie Claassen, Vicky Boomgaardt, Simon Spivey, Sara Connelly, Tony Buell, Will Callaghan, Nicole Rogerson, Stephanie Wilcox, Sam Tweedle (Kawartha NOW), Lance Anderson (Ptbo this Week), Neil Morton (PTBO Canada), Entrepreneurship Club (DECA) for the intermission concession stand.</mutableString>
+Alf Curtis Construction, Russell Gordon and his Grade 12 Computer Science class (App development), Justin Hiscox, Lori Davidson, Katherine Carlton, Tayler Morencie (Art Display), Drew Antzis, Marjorie Claassen, Vicky Boomgaardt, Simon Spivey, Sara Connelly, Tony Buell, Will Callaghan, Nicole Rogerson, Stephanie Wilcox, Sam Tweedle (Kawartha NOW), Lance Anderson (Ptbo this Week), Neil Morton (PTBO Canada), Entrepreneurship Club (DECA) for the intermission concession stand.</string>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
@@ -1221,6 +1228,350 @@ Alf Curtis Construction, Russell Gordon and his Grade 12 Computer Science class 
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1NG-BZ-7R0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-2388" y="-749"/>
+        </scene>
+        <!--Musical Numbers-->
+        <scene sceneID="dE0-be-1tB">
+            <objects>
+                <viewController id="0s0-q6-e68" customClass="MusicalNumbersViewController" customModule="Chicago_LCS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="TJX-yC-Suj">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="maC-Gu-D27">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="G5B-V1-Abw">
+                                        <rect key="frame" x="0.0" y="10" width="414" height="994.5"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Mnt-WL-Frn">
+                                                <rect key="frame" x="10" y="8" width="79" height="36.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ACT 1        " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lbC-7b-9JJ">
+                                                        <rect key="frame" x="0.0" y="8" width="79" height="20.5"/>
+                                                        <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                                        <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <edgeInsets key="layoutMargins" top="8" left="0.0" bottom="8" right="0.0"/>
+                                            </stackView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&quot;All That Jazz&quot;" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hmY-p5-vuH">
+                                                <rect key="frame" x="10" y="52.5" width="116.5" height="20.5"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="PDM-yG-jBs">
+                                                <rect key="frame" x="10" y="81" width="151" height="20.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Velma, Ensemble" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hs5-z1-O1O">
+                                                        <rect key="frame" x="10" y="0.0" width="131" height="20.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <edgeInsets key="layoutMargins" top="0.0" left="10" bottom="0.0" right="10"/>
+                                            </stackView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&quot;Funny Honey&quot;" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="POx-fw-dqj">
+                                                <rect key="frame" x="10" y="109.5" width="120" height="20.5"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="MaO-7A-WOq">
+                                                <rect key="frame" x="10" y="138" width="61.5" height="20.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Roxie" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4gu-dY-uYA">
+                                                        <rect key="frame" x="10" y="0.0" width="41.5" height="20.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <edgeInsets key="layoutMargins" top="0.0" left="10" bottom="0.0" right="10"/>
+                                            </stackView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&quot;Cell Block Tango&quot;" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WcP-BM-H6N">
+                                                <rect key="frame" x="10" y="166.5" width="147.5" height="20.5"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="2Fs-gB-CPk">
+                                                <rect key="frame" x="10" y="195" width="190.5" height="20.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Velma, Cell Block Girls" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ukc-37-UAR">
+                                                        <rect key="frame" x="10" y="0.0" width="170.5" height="20.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <edgeInsets key="layoutMargins" top="0.0" left="10" bottom="0.0" right="10"/>
+                                            </stackView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&quot;When You're Good To Mama&quot;" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DYr-S0-Y2x">
+                                                <rect key="frame" x="10" y="223.5" width="239" height="20.5"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="NNV-5J-2CD">
+                                                <rect key="frame" x="10" y="252" width="67" height="20.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mama" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qh7-Xf-FcP">
+                                                        <rect key="frame" x="10" y="0.0" width="47" height="20.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <edgeInsets key="layoutMargins" top="0.0" left="10" bottom="0.0" right="10"/>
+                                            </stackView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&quot;All I Care About Is Love&quot;" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HAO-7p-80Y">
+                                                <rect key="frame" x="10" y="280.5" width="197" height="20.5"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="wrg-io-NOl">
+                                                <rect key="frame" x="10" y="309" width="193.5" height="20.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Billy, Female Ensemble" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4D4-ch-TBo">
+                                                        <rect key="frame" x="10" y="0.0" width="173.5" height="20.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <edgeInsets key="layoutMargins" top="0.0" left="10" bottom="0.0" right="10"/>
+                                            </stackView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&quot;We Both Reached For The Gun&quot;" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E13-Ta-XpB">
+                                                <rect key="frame" x="10" y="337.5" width="258" height="20.5"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="tox-5F-v7w">
+                                                <rect key="frame" x="10" y="366" width="184.5" height="20.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Billy, Roxie, Ensemble" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sol-CA-CNX">
+                                                        <rect key="frame" x="10" y="0.0" width="164.5" height="20.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <edgeInsets key="layoutMargins" top="0.0" left="10" bottom="0.0" right="10"/>
+                                            </stackView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&quot;Roxie&quot;" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Wa-re-1Hh">
+                                                <rect key="frame" x="10" y="394.5" width="59" height="20.5"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="ehR-2N-Ijq">
+                                                <rect key="frame" x="10" y="423" width="186.5" height="20.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Roxie, Male Ensemble" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o5R-HJ-Omi">
+                                                        <rect key="frame" x="10" y="0.0" width="166.5" height="20.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <edgeInsets key="layoutMargins" top="0.0" left="10" bottom="0.0" right="10"/>
+                                            </stackView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&quot;I Can't Do It Alone&quot;" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I6g-pv-Kq7">
+                                                <rect key="frame" x="10" y="451.5" width="157.5" height="20.5"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="sOa-fx-nFd">
+                                                <rect key="frame" x="10" y="480" width="67" height="20.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Velma" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hoR-Om-vk8">
+                                                        <rect key="frame" x="10" y="0.0" width="47" height="20.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <edgeInsets key="layoutMargins" top="0.0" left="10" bottom="0.0" right="10"/>
+                                            </stackView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&quot;My Own Best Friend&quot;" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cfW-jm-eqo">
+                                                <rect key="frame" x="10" y="508.5" width="175.5" height="20.5"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="bLn-MG-UNg">
+                                                <rect key="frame" x="10" y="537" width="117.5" height="20.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Velma, Roxie" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wpu-5E-1fb">
+                                                        <rect key="frame" x="10" y="0.0" width="97.5" height="20.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <edgeInsets key="layoutMargins" top="0.0" left="10" bottom="0.0" right="10"/>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="G2O-w0-QrD">
+                                                <rect key="frame" x="10" y="565.5" width="120.5" height="79"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="INTERMISSION" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Gq-1p-YN4">
+                                                        <rect key="frame" x="0.0" y="15" width="120.5" height="20.5"/>
+                                                        <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                                        <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ACT 2" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KiO-AN-ejG">
+                                                        <rect key="frame" x="0.0" y="50.5" width="120.5" height="20.5"/>
+                                                        <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                                        <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <edgeInsets key="layoutMargins" top="15" left="0.0" bottom="8" right="0.0"/>
+                                            </stackView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&quot;Me And My Baby&quot;" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j8O-Co-Dne">
+                                                <rect key="frame" x="10" y="652.5" width="149" height="20.5"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="fWp-L6-lMp">
+                                                <rect key="frame" x="10" y="681" width="145.5" height="20.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Roxie, Ensemble" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pTR-Ng-U7l">
+                                                        <rect key="frame" x="10" y="0.0" width="125.5" height="20.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <edgeInsets key="layoutMargins" top="0.0" left="10" bottom="0.0" right="10"/>
+                                            </stackView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&quot;Mister Cellophane&quot;" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wde-WT-z5a">
+                                                <rect key="frame" x="10" y="709.5" width="160.5" height="20.5"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="ECy-Ks-z5w">
+                                                <rect key="frame" x="10" y="738" width="64" height="20.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Amos" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RPN-Xk-0os">
+                                                        <rect key="frame" x="10" y="0.0" width="44" height="20.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <edgeInsets key="layoutMargins" top="0.0" left="10" bottom="0.0" right="10"/>
+                                            </stackView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&quot;When Velma Takes The Stand&quot;" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Knu-U0-Isv">
+                                                <rect key="frame" x="10" y="766.5" width="251" height="20.5"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="x3s-TD-1As">
+                                                <rect key="frame" x="10" y="795" width="192" height="20.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Velma, Male Ensemble" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p8a-lB-nNO">
+                                                        <rect key="frame" x="10" y="0.0" width="172" height="20.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <edgeInsets key="layoutMargins" top="0.0" left="10" bottom="0.0" right="10"/>
+                                            </stackView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&quot;Razzle Dazzle&quot;" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A8w-5L-S9y">
+                                                <rect key="frame" x="10" y="823.5" width="126" height="20.5"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="1BK-M3-aCp">
+                                                <rect key="frame" x="10" y="852" width="134" height="20.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Billy, Ensemble" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="obE-of-K1v">
+                                                        <rect key="frame" x="10" y="0.0" width="114" height="20.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <edgeInsets key="layoutMargins" top="0.0" left="10" bottom="0.0" right="10"/>
+                                            </stackView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&quot;Nowadays&quot;" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="per-XA-jT7">
+                                                <rect key="frame" x="10" y="880.5" width="98" height="20.5"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="euY-hd-QHg">
+                                                <rect key="frame" x="10" y="909" width="117.5" height="20.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Roxie, Velma" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OaU-a3-ueZ">
+                                                        <rect key="frame" x="10" y="0.0" width="97.5" height="20.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <edgeInsets key="layoutMargins" top="0.0" left="10" bottom="0.0" right="10"/>
+                                            </stackView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&quot;Hot Honey Rag&quot;" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jvo-dx-uhN">
+                                                <rect key="frame" x="10" y="937.5" width="135" height="20.5"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Fia-y9-0Na">
+                                                <rect key="frame" x="10" y="966" width="117.5" height="20.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Velma, Roxie" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tNL-9b-twR">
+                                                        <rect key="frame" x="10" y="0.0" width="97.5" height="20.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <edgeInsets key="layoutMargins" top="0.0" left="10" bottom="0.0" right="10"/>
+                                            </stackView>
+                                        </subviews>
+                                        <edgeInsets key="layoutMargins" top="8" left="10" bottom="8" right="10"/>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="G5B-V1-Abw" firstAttribute="leading" secondItem="hbC-p2-Ese" secondAttribute="leading" id="5Jr-bH-Npv"/>
+                                    <constraint firstItem="G5B-V1-Abw" firstAttribute="trailing" secondItem="hbC-p2-Ese" secondAttribute="trailing" id="GQd-sY-1dL"/>
+                                    <constraint firstItem="G5B-V1-Abw" firstAttribute="top" secondItem="hbC-p2-Ese" secondAttribute="top" constant="10" id="U0i-Va-dNn"/>
+                                    <constraint firstItem="G5B-V1-Abw" firstAttribute="width" secondItem="cnx-iM-ywo" secondAttribute="width" id="iav-qQ-zdo"/>
+                                    <constraint firstItem="G5B-V1-Abw" firstAttribute="bottom" secondItem="hbC-p2-Ese" secondAttribute="bottom" symbolic="YES" id="vC6-V9-uZ3"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="hbC-p2-Ese"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="cnx-iM-ywo"/>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="maC-Gu-D27" firstAttribute="leading" secondItem="TJX-yC-Suj" secondAttribute="leading" id="HSu-nG-2Q4"/>
+                            <constraint firstItem="maC-Gu-D27" firstAttribute="top" secondItem="TJX-yC-Suj" secondAttribute="top" id="gMk-O5-gXF"/>
+                            <constraint firstItem="maC-Gu-D27" firstAttribute="bottom" secondItem="TJX-yC-Suj" secondAttribute="bottom" id="gUN-zZ-tos"/>
+                            <constraint firstItem="maC-Gu-D27" firstAttribute="trailing" secondItem="TJX-yC-Suj" secondAttribute="trailing" id="z3h-dm-X0X"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="qy4-eQ-HGD"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Musical Numbers" id="M3R-wp-FBS"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pdl-ym-5mS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="803" y="275"/>
         </scene>
     </scenes>
     <resources>

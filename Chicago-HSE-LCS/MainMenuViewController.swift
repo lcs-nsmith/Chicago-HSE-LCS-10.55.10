@@ -115,7 +115,7 @@ class MainMenuViewController: UIViewController, UITableViewDataSource, UITableVi
             case "Tickets and Dates":
                 performSegue(withIdentifier: "TicketsDates", sender: nil)
             case "Musical Numbers":
-                break
+                performSegue(withIdentifier: "MusicalNumbers", sender: nil)
             case "Characters":
                 performSegue(withIdentifier: "Characters", sender: nil)
             case "Cast":
