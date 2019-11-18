@@ -18,6 +18,7 @@ class MainMenuViewController: UIViewController, UITableViewDataSource, UITableVi
     // See https://docs.swift.org/swift-book/LanguageGuide/Enumerations.html#ID149
     var mainMenuItems: [MainMenuItem] = [
         
+        MainMenuItem(name: "Tickets and Dates"),
         MainMenuItem(name: "Characters"),
         MainMenuItem(name: "Cast"),
         MainMenuItem(name: "Crew"),
@@ -25,7 +26,6 @@ class MainMenuViewController: UIViewController, UITableViewDataSource, UITableVi
         MainMenuItem(name: "Faculty"),
         MainMenuItem(name: "Art Display"),
         MainMenuItem(name: "Concessions"),
-        MainMenuItem(name: "Tickets and Dates"),
         MainMenuItem(name: "Acknowledgements"),
         MainMenuItem(name: "About This App")
         
@@ -89,6 +89,8 @@ class MainMenuViewController: UIViewController, UITableViewDataSource, UITableVi
         
         // Activate a given segue based on what item was selected
         switch mainMenuItems[indexPath.row].name {
+        case "Tickets and Dates":
+            performSegue(withIdentifier: "TicketsDates", sender: nil)
         case "Characters":
             performSegue(withIdentifier: "Characters", sender: nil)
         case "Cast":
@@ -103,8 +105,6 @@ class MainMenuViewController: UIViewController, UITableViewDataSource, UITableVi
             performSegue(withIdentifier: "ArtDisplay", sender: nil)
         case "Concessions":
             performSegue(withIdentifier: "Concessions", sender: nil)
-        case "Tickets and Dates":
-            performSegue(withIdentifier: "TicketsDates", sender: nil)
         case "About This App":
             performSegue(withIdentifier: "About", sender: nil)
         default:
