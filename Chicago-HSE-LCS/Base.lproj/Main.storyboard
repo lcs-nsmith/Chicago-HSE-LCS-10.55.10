@@ -189,6 +189,7 @@
                         <outlet property="crewBio" destination="kbg-kN-XiV" id="Fvf-RY-cnu"/>
                         <outlet property="crewHeadShot" destination="S0Q-Ed-udE" id="l6M-Bj-it0"/>
                         <outlet property="crewJob" destination="SgS-Mt-g5I" id="3Ii-BR-9nr"/>
+                        <outlet property="labelBio" destination="q7F-Fl-O5v" id="fbV-rk-uNo"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Yse-g7-ZBf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

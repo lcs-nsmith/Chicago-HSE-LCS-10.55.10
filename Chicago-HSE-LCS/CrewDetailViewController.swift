@@ -16,9 +16,9 @@ class CrewDetailViewController: UIViewController {
 
     // Outlets to connect this controller to the view
     @IBOutlet weak var crewHeadShot: UIImageView!    
+    @IBOutlet weak var labelBio: UILabel!
     @IBOutlet weak var crewBio: UILabel!
     @IBOutlet weak var crewJob: UILabel!
-    @IBOutlet weak var scrollView: UIScrollView!
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
@@ -36,10 +36,23 @@ class CrewDetailViewController: UIViewController {
         // Set the navigation title item
         self.navigationItem.title = crewSetFromTableView.name
         
-        // Set details for this faculty member
-        crewHeadShot.image = UIImage(named: crewSetFromTableView.imageId)
+        // Set crew image, if it exists
+        if crewSetFromTableView.imageId.isEmpty {
+            crewHeadShot.isHidden = true
+        } else {
+            crewHeadShot.image = UIImage(named: crewSetFromTableView.imageId)
+        }
+        
+        // Set crew job
         crewJob.text = crewSetFromTableView.job
-        crewBio.text = crewSetFromTableView.bio
+        
+        // Set crew bio, if it exists
+        if crewSetFromTableView.bio.isEmpty {
+            labelBio.isHidden = true
+            crewBio.isHidden = true
+        } else {
+            crewBio.text = crewSetFromTableView.bio
+        }
         
         // Signal need to update the status bar
         self.setNeedsStatusBarAppearanceUpdate()
