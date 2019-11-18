@@ -28,7 +28,11 @@ class FacultyTableViewController: UITableViewController {
         Faculty(name: "Ms. Mary Parulski", supportRole: "Costume Design", bio: "", imageId: ""),
 
         Faculty(name: "Mr. Iain Beaumont", supportRole: "Box Office Manager and Front of House", bio: "", imageId: "iainBeaumont"),
-        
+
+        Faculty(name: "Ms. June Saunders", supportRole: "Set Construction", bio: "", imageId: ""),
+
+        Faculty(name: "Ms. Tayler Morencie", supportRole: "Set Painting", bio: "", imageId: ""),
+
     ]
     
     // Set the status bar text to be white
