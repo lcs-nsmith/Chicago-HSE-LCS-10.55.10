@@ -26,7 +26,6 @@ class MainMenuViewController: UIViewController, UITableViewDataSource, UITableVi
         MainMenuItem(name: "Art Display"),
         MainMenuItem(name: "Concessions"),
         MainMenuItem(name: "Tickets and Dates"),
-        MainMenuItem(name: "Acknowledgements")
         MainMenuItem(name: "Acknowledgements"),
         MainMenuItem(name: "About This App")
         
