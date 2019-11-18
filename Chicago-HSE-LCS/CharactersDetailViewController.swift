@@ -17,7 +17,6 @@ class CharactersDetailViewController: UIViewController {
     // Outlets to connect this controller to the view
     @IBOutlet weak var characterHeadShot: UIImageView!
     @IBOutlet weak var playedBy: UILabel!
-    @IBOutlet weak var characterDescription: UILabel!
     @IBOutlet weak var scrollView: UIScrollView!
     
     // Set the status bar text to be white
@@ -40,7 +39,6 @@ class CharactersDetailViewController: UIViewController {
         // Set details for this character
         characterHeadShot.image = UIImage(named: characterSetFromTableView.imageId)
         playedBy.text = characterSetFromTableView.playedBy
-        characterDescription.text = characterSetFromTableView.description
         
         // Signal need to update the status bar
         self.setNeedsStatusBarAppearanceUpdate()
