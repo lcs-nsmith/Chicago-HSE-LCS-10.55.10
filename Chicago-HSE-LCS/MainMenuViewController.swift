@@ -13,10 +13,17 @@ class MainMenuViewController: UIViewController, UITableViewDataSource, UITableVi
     // MARK: Properties
     @IBOutlet weak var tableView: UITableView!
     
-    // List of menu items
+    // List of sections
+    var sections: [String] = [
+        "The Show",
+        "Intermission",
+        "Other"
+    ]
+    
+    // Lists of various section items
     // TODO: Replace 'magic constants' with an enumeration with raw string values for menu items
     // See https://docs.swift.org/swift-book/LanguageGuide/Enumerations.html#ID149
-    var mainMenuItems: [MainMenuItem] = [
+    var showItems: [MainMenuItem] = [
         
         MainMenuItem(name: "Tickets and Dates"),
         MainMenuItem(name: "Musical Numbers"),
@@ -25,15 +32,23 @@ class MainMenuViewController: UIViewController, UITableViewDataSource, UITableVi
         MainMenuItem(name: "Crew"),
         MainMenuItem(name: "Musicians"),
         MainMenuItem(name: "Faculty"),
-        MainMenuItem(name: "Production Team Notes"),
+        MainMenuItem(name: "Production Team Notes")
+        
+    ]
+    var intermissionItems: [MainMenuItem] = [
+        
         MainMenuItem(name: "Art Display"),
-        MainMenuItem(name: "Concessions"),
+        MainMenuItem(name: "Concessions")
+        
+    ]
+    var otherItems: [MainMenuItem] = [
+        
         MainMenuItem(name: "Our Musical Theatre Program"),
         MainMenuItem(name: "About This App"),
         MainMenuItem(name: "Acknowledgements and Legal")
         
     ]
-    
+
     // Set the status bar text color to be white
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
@@ -90,38 +105,68 @@ class MainMenuViewController: UIViewController, UITableViewDataSource, UITableVi
     // Print the currently selected menu item to the console
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        // Activate a given segue based on what item was selected
-        switch mainMenuItems[indexPath.row].name {
-        case "Production Team Notes":
-            performSegue(withIdentifier: "ProductionTeamNotes", sender: nil)
-        case "Tickets and Dates":
-            performSegue(withIdentifier: "TicketsDates", sender: nil)
-        case "Characters":
-            performSegue(withIdentifier: "Characters", sender: nil)
-        case "Cast":
-            performSegue(withIdentifier: "Cast", sender: nil)
-        case "Crew":
-            performSegue(withIdentifier: "Crew", sender: nil)
-        case "Musicians":
-            performSegue(withIdentifier: "Musicians", sender: nil)
-        case "Faculty":
-            performSegue(withIdentifier: "Faculty", sender: nil)
-        case "Art Display":
-            performSegue(withIdentifier: "ArtDisplay", sender: nil)
-        case "Concessions":
-            performSegue(withIdentifier: "Concessions", sender: nil)
-        case "About This App":
-            performSegue(withIdentifier: "About", sender: nil)
-        case "Acknowledgements and Legal":
-            performSegue(withIdentifier: "Acknowledgements", sender: nil)
+        print("Row is: \(indexPath.row)")
+        
+        // Identify what section we are on
+        switch indexPath.section {
+        case 0:
+            // Now what page to navigation to in this section
+            switch showItems[indexPath.row].name {
+            case "Tickets and Dates":
+                performSegue(withIdentifier: "TicketsDates", sender: nil)
+            case "Musical Numbers":
+                break
+            case "Characters":
+                performSegue(withIdentifier: "Characters", sender: nil)
+            case "Cast":
+                performSegue(withIdentifier: "Cast", sender: nil)
+            case "Crew":
+                performSegue(withIdentifier: "Crew", sender: nil)
+            case "Musicians":
+                performSegue(withIdentifier: "Musicians", sender: nil)
+            case "Faculty":
+                performSegue(withIdentifier: "Faculty", sender: nil)
+            case "Production Team Notes":
+                performSegue(withIdentifier: "ProductionTeamNotes", sender: nil)
+            default:
+                break
+            }
+        case 1:
+            // Now what page to navigation to in this section
+            switch intermissionItems[indexPath.row].name {
+            case "Art Display":
+                performSegue(withIdentifier: "ArtDisplay", sender: nil)
+            case "Concessions":
+                performSegue(withIdentifier: "Concessions", sender: nil)
+            default:
+                break
+            }
+        case 2:
+            // Now what page to navigation to in this section
+            switch otherItems[indexPath.row].name {
+            case "Our Musical Theatre Program":
+                break
+            case "About This App":
+                performSegue(withIdentifier: "About", sender: nil)
+            case "Acknowledgements and Legal":
+                performSegue(withIdentifier: "Acknowledgements", sender: nil)
+            default:
+                break
+            }
         default:
             break
         }
+        
     }
     
     // How many sections are in the table view
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
+        return sections.count
+    }
+    
+    // Return the title for each section
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return sections[section]
     }
     
     // How many rows to show in that one section
@@ -129,9 +174,14 @@ class MainMenuViewController: UIViewController, UITableViewDataSource, UITableVi
         
         // On the first section, return the count of menu items
         // For any other section, return 0
-        if section == 0 {
-            return mainMenuItems.count
-        } else {
+        switch section {
+        case 0:
+            return showItems.count
+        case 1:
+            return intermissionItems.count
+        case 2:
+            return otherItems.count
+        default:
             return 0
         }
         
@@ -144,7 +194,18 @@ class MainMenuViewController: UIViewController, UITableViewDataSource, UITableVi
         let cell = tableView.dequeueReusableCell(withIdentifier: "MenuItemCell", for: indexPath)
         
         // Depending on the section, fill the textLabel with the relevant text
-        cell.textLabel?.text = mainMenuItems[indexPath.row].name
+        switch indexPath.section {
+        case 0:
+            cell.textLabel?.text = showItems[indexPath.row].name
+        case 1:
+            cell.textLabel?.text = intermissionItems[indexPath.row].name
+        case 2:
+            cell.textLabel?.text = otherItems[indexPath.row].name
+        default:
+            break
+        }
+        
+        // Configure cell text color
         cell.textLabel?.textColor = .white
         
         // Make the cell have a black background colour
