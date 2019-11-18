@@ -37,7 +37,7 @@ class MainMenuViewController: UIViewController, UITableViewDataSource, UITableVi
     ]
     var intermissionItems: [MainMenuItem] = [
         
-        MainMenuItem(name: "Art Display"),
+        MainMenuItem(name: "Theatre Lobby Art Display"),
         MainMenuItem(name: "Concessions")
         
     ]
@@ -102,11 +102,9 @@ class MainMenuViewController: UIViewController, UITableViewDataSource, UITableVi
      }
      */
     
-    // Print the currently selected menu item to the console
+    // Runs when a table view cell is selected
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
-        print("Row is: \(indexPath.row)")
-        
+                
         // Identify what section we are on
         switch indexPath.section {
         case 0:
@@ -134,7 +132,7 @@ class MainMenuViewController: UIViewController, UITableViewDataSource, UITableVi
         case 1:
             // Now what page to navigation to in this section
             switch intermissionItems[indexPath.row].name {
-            case "Art Display":
+            case "Theatre Lobby Art Display":
                 performSegue(withIdentifier: "ArtDisplay", sender: nil)
             case "Concessions":
                 performSegue(withIdentifier: "Concessions", sender: nil)
@@ -145,7 +143,7 @@ class MainMenuViewController: UIViewController, UITableViewDataSource, UITableVi
             // Now what page to navigation to in this section
             switch otherItems[indexPath.row].name {
             case "Our Musical Theatre Program":
-                break
+                performSegue(withIdentifier: "MusicalTheatreProgram", sender: nil)
             case "About This App":
                 performSegue(withIdentifier: "About", sender: nil)
             case "Acknowledgements and Legal":
@@ -157,7 +155,11 @@ class MainMenuViewController: UIViewController, UITableViewDataSource, UITableVi
             break
         }
         
+        // Deselect the cell after segue unwind
+        self.tableView.deselectRow(at: indexPath, animated: true)
+        
     }
+    
     
     // How many sections are in the table view
     func numberOfSections(in tableView: UITableView) -> Int {

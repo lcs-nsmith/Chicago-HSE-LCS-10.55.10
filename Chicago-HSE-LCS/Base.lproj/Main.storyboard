@@ -3,7 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -69,6 +69,7 @@
                         <segue destination="SiL-5K-JOX" kind="show" identifier="About" id="IT1-SL-ndl"/>
                         <segue destination="OdO-Yh-N6Y" kind="show" identifier="ProductionTeamNotes" id="Zon-Nb-Yac"/>
                         <segue destination="0s0-q6-e68" kind="show" identifier="MusicalNumbers" id="Rrc-Mg-8Ck"/>
+                        <segue destination="7hY-OZ-JHb" kind="show" identifier="MusicalTheatreProgram" id="LWm-2r-IiO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Lmx-z4-zXo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -242,7 +243,75 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AR0-UH-GqT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1264" y="114"/>
+            <point key="canvasLocation" x="-2593" y="311"/>
+        </scene>
+        <!--Our Musical Theatre Program-->
+        <scene sceneID="v8r-TM-oOI">
+            <objects>
+                <viewController id="7hY-OZ-JHb" customClass="MuscialTheatreProgramViewController" customModule="Chicago_LCS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="NFa-FG-2jq">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FfH-Mh-bPf">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="UIg-V6-g2S">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="655.5"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="artsAtLakefieldWhiteOnBlack" translatesAutoresizingMaskIntoConstraints="NO" id="1eT-h0-hbw">
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="124"/>
+                                            </imageView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="3Ml-bJ-ykW">
+                                                <rect key="frame" x="0.0" y="132" width="414" height="523.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="307-4y-cr6">
+                                                        <rect key="frame" x="10" y="8" width="394" height="507.5"/>
+                                                        <mutableString key="text">Lakefield College School’s well-rounded approach to education has a longstanding reputation of educating artists and athletes for life. We are known for our outstanding drama productions and our musicals have long garnered the attention and support of our local media and the greater community.
+
+Novice and experienced students find opportunities to explore a full range of activities both behind and on stage—as many as 65 students may be involved in one production. Valuable skills are developed through live performance, technical and production work. Students fine-tune their ability to sing, dance, act, direct, build sets, design lights and produce projects of their own design. For the first time this year, student musicians will play alongside professionals from our community in our live pit band. 
+
+During the fall, winter and spring terms, our students are dedicated to developing all aspects of their performance abilities in preparation for our annual drama productions, instrumental and vocal music performances and dance showcases.</mutableString>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <edgeInsets key="layoutMargins" top="8" left="10" bottom="8" right="10"/>
+                                            </stackView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="1eT-h0-hbw" firstAttribute="height" secondItem="UIg-V6-g2S" secondAttribute="width" multiplier="0.3" id="FBS-oP-CbF"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="UIg-V6-g2S" firstAttribute="width" secondItem="Gca-YG-DBI" secondAttribute="width" id="7NR-dP-eux"/>
+                                    <constraint firstItem="UIg-V6-g2S" firstAttribute="top" secondItem="voW-CS-XxQ" secondAttribute="top" id="8nK-hi-ky7"/>
+                                    <constraint firstItem="1eT-h0-hbw" firstAttribute="width" secondItem="FfH-Mh-bPf" secondAttribute="width" id="L3s-J8-1gk"/>
+                                    <constraint firstItem="UIg-V6-g2S" firstAttribute="trailing" secondItem="voW-CS-XxQ" secondAttribute="trailing" id="eE8-X4-Ecl"/>
+                                    <constraint firstItem="UIg-V6-g2S" firstAttribute="bottom" secondItem="voW-CS-XxQ" secondAttribute="bottom" id="iJA-uz-FZj"/>
+                                    <constraint firstItem="UIg-V6-g2S" firstAttribute="leading" secondItem="voW-CS-XxQ" secondAttribute="leading" id="n6J-8w-mQJ"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="voW-CS-XxQ"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="Gca-YG-DBI"/>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="FfH-Mh-bPf" firstAttribute="bottom" secondItem="NFa-FG-2jq" secondAttribute="bottom" id="70b-kl-Obk"/>
+                            <constraint firstItem="FfH-Mh-bPf" firstAttribute="top" secondItem="NFa-FG-2jq" secondAttribute="top" id="O9T-7E-tLq"/>
+                            <constraint firstItem="FfH-Mh-bPf" firstAttribute="trailing" secondItem="NFa-FG-2jq" secondAttribute="trailing" id="jz9-WS-xTF"/>
+                            <constraint firstItem="FfH-Mh-bPf" firstAttribute="leading" secondItem="NFa-FG-2jq" secondAttribute="leading" id="mih-ob-lMK"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="dK8-uo-dWE"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Our Musical Theatre Program" id="Fqq-FS-AFR"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="X8U-lg-jTS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1715" y="-34"/>
         </scene>
         <!--Musicians-->
         <scene sceneID="2je-xj-xFM">
@@ -509,29 +578,168 @@ All images © Lakefield College School, 2019.  Used with permission.</string>
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="JnA-db-Cmx">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1067"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1907.5"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="facultyPlaceholderImage" translatesAutoresizingMaskIntoConstraints="NO" id="EDa-wi-BGb">
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lostBees" translatesAutoresizingMaskIntoConstraints="NO" id="EDa-wi-BGb">
                                                 <rect key="frame" x="0.0" y="0.0" width="414" height="414"/>
                                             </imageView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="q5a-Zc-M71">
-                                                <rect key="frame" x="0.0" y="422" width="414" height="645"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="1Z6-Ig-eyB" userLabel="Lost Bees detail">
+                                                <rect key="frame" x="0.0" y="422" width="414" height="41"/>
+                                                <attributedString key="attributedText">
+                                                    <fragment content="Lost Bees">
+                                                        <attributes>
+                                                            <color key="NSColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <font key="NSFont" size="17" name=".AppleSystemUIFontItalic"/>
+                                                            <font key="NSOriginalFont" size="17" name=".AppleSystemUIFontItalic"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                    <fragment>
+                                                        <string key="content">. 2019. Catie Dobson.
+Mixed Media. 6 x 4 inches.</string>
+                                                        <attributes>
+                                                            <color key="NSColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <font key="NSFont" metaFont="system" size="17"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                </attributedString>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="51c-xo-r2O">
+                                                <rect key="frame" x="0.0" y="471" width="414" height="1014.5"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="3Dw-Dh-hWm">
-                                                        <rect key="frame" x="10" y="8" width="394" height="629"/>
-                                                        <string key="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut finibus diam lectus, quis egestas nisl luctus id. Vivamus ac erat ornare, porttitor elit vitae, pretium nisi. Integer quis ultricies lectus, vitae blandit diam. In vel purus non turpis dignissim dapibus et in orci. Sed non vehicula tortor, vitae cursus odio. Quisque aliquam nulla velit, eget scelerisque sem tristique ac. Integer tempus enim at magna venenatis dictum. Integer bibendum erat non scelerisque mollis. In tempor pretium magna, ac vehicula ligula accumsan et. Curabitur finibus eget libero vitae sagittis.
-
-In condimentum, nunc sed euismod efficitur, dui tellus mattis turpis, ut dapibus leo purus vel turpis. Vestibulum tristique, nisl id sollicitudin accumsan, mauris dui vestibulum justo, vitae sagittis lectus orci quis libero. Sed porttitor nunc at libero lobortis laoreet. Suspendisse fermentum sapien id tortor euismod, quis mollis purus accumsan. Nunc interdum ultricies ipsum, eget auctor erat placerat sit amet. Nunc scelerisque risus quis leo consequat, vitae tempor tortor hendrerit. Praesent nec urna tempus metus aliquam hendrerit non ac leo. Fusce tincidunt nisl ac dui fringilla, accumsan placerat nisl vulputate. Cras commodo tincidunt dui, sit amet ornare eros imperdiet sit amet. Mauris eget ultricies tortor, ut tincidunt ante. Integer faucibus hendrerit velit ac efficitur. Pellentesque elementum ac sapien consectetur dignissim. Praesent faucibus facilisis lacinia.</string>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Postcards" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VoD-Ob-TdU" userLabel="Postcards Display">
+                                                        <rect key="frame" x="10" y="8" width="394" height="26.5"/>
+                                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
                                                         <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="aZp-dJ-TLQ">
+                                                        <rect key="frame" x="10" y="42.5" width="394" height="381.5"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="0bW-dq-60E" userLabel="Display details">
+                                                                <rect key="frame" x="5" y="8" width="384" height="365.5"/>
+                                                                <string key="text">As their first project of the year, students in Grade 11 Visual Arts created a series of three postcards. To make their postcards, students used mixed media and connected their series of three with an overarching theme. As an authentic learning experience and in an effort to participate in a greater art community, each student will choose one of their cards to be sent to Surface Gallery, an artist-run Contemporary Art gallery in Nottingham, United Kingdom, as they participate in Surface Gallery's annual International Postcard Show. The artwork will be on display at the gallery from January 11th to February 1st, 2020. Students will have the opportunity to put their cards up for sale and to participate in an artist card swap, which would result in students being mailed a card from another participating artist from elsewhere in the world!</string>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                        <edgeInsets key="layoutMargins" top="8" left="5" bottom="8" right="5"/>
+                                                    </stackView>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Student Commentary" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cfW-az-Zx4">
+                                                        <rect key="frame" x="10" y="432" width="394" height="26.5"/>
+                                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
+                                                        <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="7U1-A6-3Tu">
+                                                        <rect key="frame" x="10" y="466.5" width="394" height="540"/>
+                                                        <subviews>
+                                                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="9bI-bp-p7Z">
+                                                                <rect key="frame" x="5" y="8" width="384" height="162.5"/>
+                                                                <gestureRecognizers/>
+                                                                <attributedString key="attributedText">
+                                                                    <fragment>
+                                                                        <string key="content">"I feel very excited to enter my card into an actual exhibit. I felt that this project had an overall purpose which made me think deeper about my choices. This also made me have more care in the final product. I think it’s really neat that we will also get to see someone else’s art and that even though we are far away we are connected by art." - </string>
+                                                                        <attributes>
+                                                                            <color key="NSColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                            <font key="NSFont" metaFont="system" size="17"/>
+                                                                        </attributes>
+                                                                    </fragment>
+                                                                    <fragment content="Kate Bemrose, Grade 10">
+                                                                        <attributes>
+                                                                            <color key="NSColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                            <font key="NSFont" size="17" name=".AppleSystemUIFontItalic"/>
+                                                                            <font key="NSOriginalFont" size="17" name=".AppleSystemUIFontItalic"/>
+                                                                        </attributes>
+                                                                    </fragment>
+                                                                </attributedString>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Tb-CZ-Hnb">
+                                                                <rect key="frame" x="5" y="178.5" width="384" height="99.5"/>
+                                                                <gestureRecognizers/>
+                                                                <attributedString key="attributedText">
+                                                                    <fragment>
+                                                                        <string key="content">"I am really excited to know how people react to it, and its message. I wonder whether my card will actually catch people’s attention, and if people will take the time to analyze the theme of it and its significance." -</string>
+                                                                        <attributes>
+                                                                            <color key="NSColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                            <font key="NSFont" size="17" name="HelveticaNeue"/>
+                                                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
+                                                                        </attributes>
+                                                                    </fragment>
+                                                                    <fragment content=" Alana Kim, Grade 10">
+                                                                        <attributes>
+                                                                            <color key="NSColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                            <font key="NSFont" size="17" name="HelveticaNeue-Italic"/>
+                                                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
+                                                                        </attributes>
+                                                                    </fragment>
+                                                                </attributedString>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YjY-ov-0XK">
+                                                                <rect key="frame" x="5" y="286" width="384" height="119"/>
+                                                                <gestureRecognizers/>
+                                                                <attributedString key="attributedText">
+                                                                    <fragment>
+                                                                        <string key="content">"I felt very honoured to be entering one of my cards into a public exhibition. I felt proud of my painting. Also, I’d like to show my card to more people and express my ideas to different people, and I hope people can get inspired from one of my paintings." -</string>
+                                                                        <attributes>
+                                                                            <color key="NSColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                            <font key="NSFont" size="17" name="HelveticaNeue"/>
+                                                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
+                                                                        </attributes>
+                                                                    </fragment>
+                                                                    <fragment content=" Jesse Zhang, Grade 10">
+                                                                        <attributes>
+                                                                            <color key="NSColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                            <font key="NSFont" size="17" name="HelveticaNeue-Italic"/>
+                                                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
+                                                                        </attributes>
+                                                                    </fragment>
+                                                                </attributedString>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Nt-yC-Upa">
+                                                                <rect key="frame" x="5" y="413" width="384" height="119"/>
+                                                                <gestureRecognizers/>
+                                                                <attributedString key="attributedText">
+                                                                    <fragment>
+                                                                        <string key="content">"I think it is a really good opportunity especially because I want to study art in my future and to enter my card into a public exhibition will give me a small sense of what if feels like having the public looking at your work and even buying it." -</string>
+                                                                        <attributes>
+                                                                            <color key="NSColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                            <font key="NSFont" size="17" name="HelveticaNeue"/>
+                                                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
+                                                                        </attributes>
+                                                                    </fragment>
+                                                                    <fragment content=" Fernanda Fulcherbeguer, Grade 11">
+                                                                        <attributes>
+                                                                            <color key="NSColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                            <font key="NSFont" size="17" name="HelveticaNeue-Italic"/>
+                                                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
+                                                                        </attributes>
+                                                                    </fragment>
+                                                                </attributedString>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                        <edgeInsets key="layoutMargins" top="8" left="5" bottom="8" right="5"/>
+                                                    </stackView>
                                                 </subviews>
                                                 <edgeInsets key="layoutMargins" top="8" left="10" bottom="8" right="10"/>
                                             </stackView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="postcardShow" translatesAutoresizingMaskIntoConstraints="NO" id="Jow-ZU-cAq">
+                                                <rect key="frame" x="0.0" y="1493.5" width="414" height="414"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" secondItem="Jow-ZU-cAq" secondAttribute="width" id="ArQ-lH-DBt"/>
+                                                </constraints>
+                                            </imageView>
                                         </subviews>
                                         <constraints>
                                             <constraint firstItem="EDa-wi-BGb" firstAttribute="height" secondItem="JnA-db-Cmx" secondAttribute="width" id="F4V-nm-XK1"/>
+                                            <constraint firstItem="Jow-ZU-cAq" firstAttribute="width" secondItem="JnA-db-Cmx" secondAttribute="width" id="M1n-1w-4Eq"/>
                                         </constraints>
                                     </stackView>
                                 </subviews>
@@ -556,7 +764,7 @@ In condimentum, nunc sed euismod efficitur, dui tellus mattis turpis, ut dapibus
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="hMw-c6-s91"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Art Display" id="0dm-sE-xiG"/>
+                    <navigationItem key="navigationItem" title="Theatre Lobby Art Display" id="0dm-sE-xiG"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KWw-kB-DdU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -698,13 +906,13 @@ In condimentum, nunc sed euismod efficitur, dui tellus mattis turpis, ut dapibus
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Nuz-rx-NLP">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="556"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="493"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="230" verticalHuggingPriority="230" image="facultyPlaceholderImage" translatesAutoresizingMaskIntoConstraints="NO" id="ST2-e5-8dX" userLabel="Character Head Shot">
                                                 <rect key="frame" x="0.0" y="0.0" width="414" height="414"/>
                                             </imageView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="ZDO-bo-M97">
-                                                <rect key="frame" x="0.0" y="422" width="414" height="134"/>
+                                                <rect key="frame" x="0.0" y="422" width="414" height="71"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Portrayed by" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hwl-mq-JmB" userLabel="Played by label">
                                                         <rect key="frame" x="10" y="8" width="394" height="26.5"/>
@@ -714,18 +922,6 @@ In condimentum, nunc sed euismod efficitur, dui tellus mattis turpis, ut dapibus
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="iNa-ba-BJb" userLabel="Played by details">
                                                         <rect key="frame" x="10" y="42.5" width="394" height="20.5"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                        <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Description" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tj5-4U-OlF" userLabel="Description label">
-                                                        <rect key="frame" x="10" y="71" width="394" height="26.5"/>
-                                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
-                                                        <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="vwU-dr-cLE" userLabel="Description details">
-                                                        <rect key="frame" x="10" y="105.5" width="394" height="20.5"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
@@ -761,7 +957,6 @@ In condimentum, nunc sed euismod efficitur, dui tellus mattis turpis, ut dapibus
                     </view>
                     <navigationItem key="navigationItem" id="MSf-tX-ybG"/>
                     <connections>
-                        <outlet property="characterDescription" destination="vwU-dr-cLE" id="q8h-bR-aNy"/>
                         <outlet property="characterHeadShot" destination="ST2-e5-8dX" id="F5U-MW-66X"/>
                         <outlet property="playedBy" destination="iNa-ba-BJb" id="3nd-Ce-u6f"/>
                         <outlet property="scrollView" destination="4jw-ZO-vwB" id="Ulv-75-fFl"/>
@@ -1005,19 +1200,19 @@ In condimentum, nunc sed euismod efficitur, dui tellus mattis turpis, ut dapibus
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="f0P-7A-9Ce">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1067"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="436"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="facultyPlaceholderImage" translatesAutoresizingMaskIntoConstraints="NO" id="2Db-Ab-NKZ">
-                                                <rect key="frame" x="0.0" y="0.0" width="414" height="414"/>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="popcorn" translatesAutoresizingMaskIntoConstraints="NO" id="2Db-Ab-NKZ">
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="310.5"/>
                                             </imageView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="qt7-8t-NCB">
-                                                <rect key="frame" x="0.0" y="422" width="414" height="645"/>
+                                                <rect key="frame" x="0.0" y="318.5" width="414" height="117.5"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="Se8-FR-RrG">
-                                                        <rect key="frame" x="10" y="8" width="394" height="629"/>
-                                                        <string key="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut finibus diam lectus, quis egestas nisl luctus id. Vivamus ac erat ornare, porttitor elit vitae, pretium nisi. Integer quis ultricies lectus, vitae blandit diam. In vel purus non turpis dignissim dapibus et in orci. Sed non vehicula tortor, vitae cursus odio. Quisque aliquam nulla velit, eget scelerisque sem tristique ac. Integer tempus enim at magna venenatis dictum. Integer bibendum erat non scelerisque mollis. In tempor pretium magna, ac vehicula ligula accumsan et. Curabitur finibus eget libero vitae sagittis.
+                                                        <rect key="frame" x="10" y="8" width="394" height="101.5"/>
+                                                        <string key="text">The Lakefield College School DECA Club will be selling a variety of concessions in the Theatre Lobby during Intermission.
 
-In condimentum, nunc sed euismod efficitur, dui tellus mattis turpis, ut dapibus leo purus vel turpis. Vestibulum tristique, nisl id sollicitudin accumsan, mauris dui vestibulum justo, vitae sagittis lectus orci quis libero. Sed porttitor nunc at libero lobortis laoreet. Suspendisse fermentum sapien id tortor euismod, quis mollis purus accumsan. Nunc interdum ultricies ipsum, eget auctor erat placerat sit amet. Nunc scelerisque risus quis leo consequat, vitae tempor tortor hendrerit. Praesent nec urna tempus metus aliquam hendrerit non ac leo. Fusce tincidunt nisl ac dui fringilla, accumsan placerat nisl vulputate. Cras commodo tincidunt dui, sit amet ornare eros imperdiet sit amet. Mauris eget ultricies tortor, ut tincidunt ante. Integer faucibus hendrerit velit ac efficitur. Pellentesque elementum ac sapien consectetur dignissim. Praesent faucibus facilisis lacinia.</string>
+Don't miss out on this tasty array of treats!</string>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
@@ -1027,7 +1222,7 @@ In condimentum, nunc sed euismod efficitur, dui tellus mattis turpis, ut dapibus
                                             </stackView>
                                         </subviews>
                                         <constraints>
-                                            <constraint firstItem="2Db-Ab-NKZ" firstAttribute="height" secondItem="f0P-7A-9Ce" secondAttribute="width" id="63x-fd-Tde"/>
+                                            <constraint firstItem="2Db-Ab-NKZ" firstAttribute="height" secondItem="f0P-7A-9Ce" secondAttribute="width" multiplier="0.75" id="63x-fd-Tde"/>
                                         </constraints>
                                     </stackView>
                                 </subviews>
@@ -1036,6 +1231,7 @@ In condimentum, nunc sed euismod efficitur, dui tellus mattis turpis, ut dapibus
                                     <constraint firstItem="f0P-7A-9Ce" firstAttribute="trailing" secondItem="EXQ-Ag-cVM" secondAttribute="trailing" id="Ea2-Yp-BTq"/>
                                     <constraint firstItem="f0P-7A-9Ce" firstAttribute="top" secondItem="EXQ-Ag-cVM" secondAttribute="top" id="Kaf-Lm-nHV"/>
                                     <constraint firstItem="f0P-7A-9Ce" firstAttribute="leading" secondItem="EXQ-Ag-cVM" secondAttribute="leading" id="VnJ-KT-lVf"/>
+                                    <constraint firstItem="2Db-Ab-NKZ" firstAttribute="width" secondItem="b1c-i9-V2f" secondAttribute="width" id="dYd-oa-EEJ"/>
                                     <constraint firstItem="f0P-7A-9Ce" firstAttribute="bottom" secondItem="EXQ-Ag-cVM" secondAttribute="bottom" id="gyv-fA-o4f"/>
                                     <constraint firstItem="f0P-7A-9Ce" firstAttribute="width" secondItem="J0W-7U-M5O" secondAttribute="width" id="xPo-5C-ank"/>
                                 </constraints>
@@ -1070,21 +1266,46 @@ In condimentum, nunc sed euismod efficitur, dui tellus mattis turpis, ut dapibus
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="LU4-x2-CYX">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1247.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="736.5"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="almostAllOfTheGang" translatesAutoresizingMaskIntoConstraints="NO" id="u5R-2X-Z5j">
                                                 <rect key="frame" x="0.0" y="0.0" width="414" height="310.5"/>
                                             </imageView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Jnx-Ht-FqB">
-                                                <rect key="frame" x="0.0" y="318.5" width="414" height="929"/>
+                                                <rect key="frame" x="0.0" y="318.5" width="414" height="418"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="qe3-do-zdK">
-                                                        <rect key="frame" x="10" y="8" width="394" height="913"/>
-                                                        <string key="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus at risus massa. Vestibulum ac ligula eget mauris tempor porttitor. Curabitur at nunc sit amet quam sagittis pulvinar et sed est. Aliquam tincidunt lorem a sem posuere sollicitudin. Pellentesque ut posuere lectus. Sed tincidunt non nisi at cursus. Integer mattis dui in magna feugiat, porttitor mollis nunc sodales. Donec quis leo nec risus cursus sodales at ac libero. Integer ut pulvinar nunc. Nullam nec dui aliquam leo suscipit venenatis. Fusce malesuada, lectus ut vehicula gravida, odio purus viverra ante, sit amet varius enim libero at enim. Vestibulum non dolor eu diam vulputate venenatis at eget mi. Nunc varius lobortis lacus, eget congue metus dapibus sit amet. Vivamus efficitur eget nibh eget aliquet.
-
-Morbi rutrum ac arcu at finibus. Maecenas dapibus ante at dapibus tempor. Nulla ornare, erat et pulvinar sollicitudin, dolor felis pharetra diam, quis gravida orci eros non ligula. Sed ac auctor mauris, ac convallis eros. Donec nisl ex, suscipit id facilisis eu, gravida eu quam. Suspendisse quis euismod nibh. Fusce placerat nisl varius leo varius sodales. Nunc tempor viverra lacus quis efficitur. Maecenas scelerisque, dolor et fermentum ornare, nisl metus convallis nisi, a lobortis quam ipsum at sem. Praesent maximus dolor sit amet magna egestas, a ornare dolor rhoncus. Vestibulum ac elementum augue, eu fringilla velit. Praesent a dolor eros. Sed id tempor mi.
-
-Suspendisse quis ligula vel enim varius ultricies. Mauris ultrices ligula in sem maximus tristique. Pellentesque sapien enim, faucibus et scelerisque at, porttitor accumsan erat. Phasellus at ante aliquet, lacinia nisi ut, malesuada felis. Quisque pharetra tincidunt ligula, venenatis vehicula est. Nulla non elit urna. Integer facilisis nec nisi ut rhoncus. Suspendisse semper maximus leo rutrum mollis. Sed ac nisi augue. Proin eget dictum magna. Curabitur in lacus molestie, porttitor nisi eu, ultricies ex. Proin ut dictum mi, eget volutpat leo. Donec metus mauris, luctus eu ligula ac, venenatis molestie libero.</string>
+                                                        <rect key="frame" x="10" y="8" width="394" height="81.5"/>
+                                                        <string key="text">This app was collaboratively authored by students in the Grade 12 Computer Science class with some contributions by their teacher, Mr. Gordon. The members of the class are:</string>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="fa4-vU-Xwd">
+                                                        <rect key="frame" x="10" y="89.5" width="394" height="219"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="ORT-lP-9Ej">
+                                                                <rect key="frame" x="5" y="8" width="384" height="203"/>
+                                                                <string key="text">Nick Anstoetz
+Liam Davidson
+Dima Dovgalyk
+Jeewoo Lee
+Jason Liu
+Maxwell Lu
+Julio Midence
+Joven Peralta
+Selena Yang
+Chelsea Yue</string>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                        <edgeInsets key="layoutMargins" top="8" left="5" bottom="8" right="5"/>
+                                                    </stackView>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="yBg-RQ-fja">
+                                                        <rect key="frame" x="10" y="308.5" width="394" height="101.5"/>
+                                                        <string key="text">The purpose was to learn project management techniques and tools in the context of a teacher-led project. Later this school year, students will apply what they have learned to collaboratively develop apps in student-led projects.</string>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
@@ -1576,7 +1797,11 @@ Alf Curtis Construction, Russell Gordon and his Grade 12 Computer Science class 
     </scenes>
     <resources>
         <image name="almostAllOfTheGang" width="2000" height="1500"/>
+        <image name="artsAtLakefieldWhiteOnBlack" width="2304" height="922"/>
         <image name="banner" width="674.5" height="227.5"/>
         <image name="facultyPlaceholderImage" width="2293" height="2293"/>
+        <image name="lostBees" width="1050" height="1624"/>
+        <image name="popcorn" width="1920" height="1440"/>
+        <image name="postcardShow" width="750" height="1058"/>
     </resources>
 </document>

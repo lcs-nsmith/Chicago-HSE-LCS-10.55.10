@@ -76,6 +76,9 @@ class CrewTableViewController: UITableViewController {
         // Set the seperator color to always be dark grey
         tableView.separatorColor = .darkGray
         
+        // Set a zero-height footer so that no blank cells show after the list of menu items
+        tableView.tableFooterView = UIView()
+        
         // Signal need to update the status bar
         self.setNeedsStatusBarAppearanceUpdate()
         
