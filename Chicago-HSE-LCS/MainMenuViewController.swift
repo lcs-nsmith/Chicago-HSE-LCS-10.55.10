@@ -102,11 +102,9 @@ class MainMenuViewController: UIViewController, UITableViewDataSource, UITableVi
      }
      */
     
-    // Print the currently selected menu item to the console
+    // Runs when a table view cell is selected
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
-        print("Row is: \(indexPath.row)")
-        
+                
         // Identify what section we are on
         switch indexPath.section {
         case 0:
@@ -157,7 +155,11 @@ class MainMenuViewController: UIViewController, UITableViewDataSource, UITableVi
             break
         }
         
+        // Deselect the cell after segue unwind
+        self.tableView.deselectRow(at: indexPath, animated: true)
+        
     }
+    
     
     // How many sections are in the table view
     func numberOfSections(in tableView: UITableView) -> Int {
