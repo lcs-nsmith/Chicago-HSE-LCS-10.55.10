@@ -1444,21 +1444,46 @@ Don't miss out on this tasty array of treats!</string>
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="LU4-x2-CYX">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1247.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="736.5"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="almostAllOfTheGang" translatesAutoresizingMaskIntoConstraints="NO" id="u5R-2X-Z5j">
                                                 <rect key="frame" x="0.0" y="0.0" width="414" height="310.5"/>
                                             </imageView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Jnx-Ht-FqB">
-                                                <rect key="frame" x="0.0" y="318.5" width="414" height="929"/>
+                                                <rect key="frame" x="0.0" y="318.5" width="414" height="418"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="qe3-do-zdK">
-                                                        <rect key="frame" x="10" y="8" width="394" height="913"/>
-                                                        <string key="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus at risus massa. Vestibulum ac ligula eget mauris tempor porttitor. Curabitur at nunc sit amet quam sagittis pulvinar et sed est. Aliquam tincidunt lorem a sem posuere sollicitudin. Pellentesque ut posuere lectus. Sed tincidunt non nisi at cursus. Integer mattis dui in magna feugiat, porttitor mollis nunc sodales. Donec quis leo nec risus cursus sodales at ac libero. Integer ut pulvinar nunc. Nullam nec dui aliquam leo suscipit venenatis. Fusce malesuada, lectus ut vehicula gravida, odio purus viverra ante, sit amet varius enim libero at enim. Vestibulum non dolor eu diam vulputate venenatis at eget mi. Nunc varius lobortis lacus, eget congue metus dapibus sit amet. Vivamus efficitur eget nibh eget aliquet.
-
-Morbi rutrum ac arcu at finibus. Maecenas dapibus ante at dapibus tempor. Nulla ornare, erat et pulvinar sollicitudin, dolor felis pharetra diam, quis gravida orci eros non ligula. Sed ac auctor mauris, ac convallis eros. Donec nisl ex, suscipit id facilisis eu, gravida eu quam. Suspendisse quis euismod nibh. Fusce placerat nisl varius leo varius sodales. Nunc tempor viverra lacus quis efficitur. Maecenas scelerisque, dolor et fermentum ornare, nisl metus convallis nisi, a lobortis quam ipsum at sem. Praesent maximus dolor sit amet magna egestas, a ornare dolor rhoncus. Vestibulum ac elementum augue, eu fringilla velit. Praesent a dolor eros. Sed id tempor mi.
-
-Suspendisse quis ligula vel enim varius ultricies. Mauris ultrices ligula in sem maximus tristique. Pellentesque sapien enim, faucibus et scelerisque at, porttitor accumsan erat. Phasellus at ante aliquet, lacinia nisi ut, malesuada felis. Quisque pharetra tincidunt ligula, venenatis vehicula est. Nulla non elit urna. Integer facilisis nec nisi ut rhoncus. Suspendisse semper maximus leo rutrum mollis. Sed ac nisi augue. Proin eget dictum magna. Curabitur in lacus molestie, porttitor nisi eu, ultricies ex. Proin ut dictum mi, eget volutpat leo. Donec metus mauris, luctus eu ligula ac, venenatis molestie libero.</string>
+                                                        <rect key="frame" x="10" y="8" width="394" height="81.5"/>
+                                                        <string key="text">This app was collaboratively authored by students in the Grade 12 Computer Science class with some contributions by their teacher, Mr. Gordon. The members of the class are:</string>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="fa4-vU-Xwd">
+                                                        <rect key="frame" x="10" y="89.5" width="394" height="219"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="ORT-lP-9Ej">
+                                                                <rect key="frame" x="5" y="8" width="384" height="203"/>
+                                                                <string key="text">Nick Anstoetz
+Liam Davidson
+Dima Dovgalyk
+Jeewoo Lee
+Jason Liu
+Maxwell Lu
+Julio Midence
+Joven Peralta
+Selena Yang
+Chelsea Yue</string>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                        <edgeInsets key="layoutMargins" top="8" left="5" bottom="8" right="5"/>
+                                                    </stackView>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="yBg-RQ-fja">
+                                                        <rect key="frame" x="10" y="308.5" width="394" height="101.5"/>
+                                                        <string key="text">The purpose was to learn project management techniques and tools in the context of a teacher-led project. Later this school year, students will apply what they have learned to collaboratively develop apps in student-led projects.</string>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
