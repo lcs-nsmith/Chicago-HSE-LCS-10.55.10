@@ -191,7 +191,7 @@
         <!--CrewList-->
         <scene sceneID="n6e-aB-ptk">
             <objects>
-                <tableViewController id="l0g-V4-d5d" userLabel="CrewList" customClass="CrewsTableViewController" customModule="Chicago_LCS" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="l0g-V4-d5d" userLabel="CrewList" customClass="CrewTableViewController" customModule="Chicago_LCS" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="eVz-6m-ZZV">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

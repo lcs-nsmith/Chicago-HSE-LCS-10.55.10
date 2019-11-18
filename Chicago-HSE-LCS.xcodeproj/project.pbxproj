@@ -26,11 +26,11 @@
 		7A64AC5E237DFA650067FC9D /* CastMember.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A64AC5D237DFA650067FC9D /* CastMember.swift */; };
 		7A64AC60237DFC400067FC9D /* CastMemberTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A64AC5F237DFC400067FC9D /* CastMemberTableViewController.swift */; };
 		7A64AC62237E05810067FC9D /* Crew.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A64AC61237E05810067FC9D /* Crew.swift */; };
-		7A64AC64237E073D0067FC9D /* CrewsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A64AC63237E073D0067FC9D /* CrewsTableViewController.swift */; };
+		7A64AC64237E073D0067FC9D /* CrewTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A64AC63237E073D0067FC9D /* CrewTableViewController.swift */; };
 		813DAC962381AE560053EE91 /* LightNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 813DAC952381AE560053EE91 /* LightNavigationController.swift */; };
 		9D31DBC9238202BA00259CAE /* CrewDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D31DBC8238202BA00259CAE /* CrewDetailViewController.swift */; };
 		9EF52C522381E6DD00825087 /* MusicianTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EF52C512381E6DD00825087 /* MusicianTableViewController.swift */; };
-		9EF52C542381E76000825087 /* MusicianStructure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EF52C532381E76000825087 /* MusicianStructure.swift */; };
+		9EF52C542381E76000825087 /* Musician.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EF52C532381E76000825087 /* Musician.swift */; };
 		9EF52C5A2381FACD00825087 /* MusicianDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EF52C592381FACD00825087 /* MusicianDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -56,11 +56,11 @@
 		7A64AC5D237DFA650067FC9D /* CastMember.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CastMember.swift; sourceTree = "<group>"; };
 		7A64AC5F237DFC400067FC9D /* CastMemberTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CastMemberTableViewController.swift; sourceTree = "<group>"; };
 		7A64AC61237E05810067FC9D /* Crew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Crew.swift; sourceTree = "<group>"; };
-		7A64AC63237E073D0067FC9D /* CrewsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrewsTableViewController.swift; sourceTree = "<group>"; };
+		7A64AC63237E073D0067FC9D /* CrewTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrewTableViewController.swift; sourceTree = "<group>"; };
 		813DAC952381AE560053EE91 /* LightNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightNavigationController.swift; sourceTree = "<group>"; };
 		9D31DBC8238202BA00259CAE /* CrewDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CrewDetailViewController.swift; sourceTree = "<group>"; };
 		9EF52C512381E6DD00825087 /* MusicianTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicianTableViewController.swift; sourceTree = "<group>"; };
-		9EF52C532381E76000825087 /* MusicianStructure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicianStructure.swift; sourceTree = "<group>"; };
+		9EF52C532381E76000825087 /* Musician.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Musician.swift; sourceTree = "<group>"; };
 		9EF52C592381FACD00825087 /* MusicianDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicianDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -100,26 +100,26 @@
 				0EAC5E27237DF9C700E92727 /* Assets.xcassets */,
 				0EAC5E29237DF9C700E92727 /* LaunchScreen.storyboard */,
 				0EAC5E2C237DF9C700E92727 /* Info.plist */,
+				0EAC5E32237E313F00E92727 /* MainMenuItem.swift */,
+				0EAC5E34237E336300E92727 /* MainMenuViewController.swift */,
+				302F3A382381E93C003B3725 /* Characters.swift */,
+				302F3A362381E81D003B3725 /* CharactersTableViewController.swift */,
+				302F3A3A2381EAAE003B3725 /* CharactersDetailViewController.swift */,
 				7A64AC5D237DFA650067FC9D /* CastMember.swift */,
 				7A64AC5F237DFC400067FC9D /* CastMemberTableViewController.swift */,
 				0EAC5E4223821E8A00E92727 /* CastMemberDetailViewController.swift */,
 				7A64AC61237E05810067FC9D /* Crew.swift */,
+				7A64AC63237E073D0067FC9D /* CrewTableViewController.swift */,
 				9D31DBC8238202BA00259CAE /* CrewDetailViewController.swift */,
-				7A64AC63237E073D0067FC9D /* CrewsTableViewController.swift */,
-				0EAC5E32237E313F00E92727 /* MainMenuItem.swift */,
-				0EAC5E34237E336300E92727 /* MainMenuViewController.swift */,
-				0EAC5E36237E45F400E92727 /* Colors.swift */,
-				0EAC5E38237E555400E92727 /* FacultyTableViewController.swift */,
-				0EAC5E3A237E558E00E92727 /* Faculty.swift */,
-				0EAC5E3C237E5B1B00E92727 /* FacultyDetailViewController.swift */,
-				813DAC952381AE560053EE91 /* LightNavigationController.swift */,
-				0EAC5E4023820CF600E92727 /* ArtDisplayViewController.swift */,
-				302F3A362381E81D003B3725 /* CharactersTableViewController.swift */,
-				302F3A382381E93C003B3725 /* Characters.swift */,
-				302F3A3A2381EAAE003B3725 /* CharactersDetailViewController.swift */,
+				9EF52C532381E76000825087 /* Musician.swift */,
 				9EF52C512381E6DD00825087 /* MusicianTableViewController.swift */,
-				9EF52C532381E76000825087 /* MusicianStructure.swift */,
 				9EF52C592381FACD00825087 /* MusicianDetailViewController.swift */,
+				0EAC5E3A237E558E00E92727 /* Faculty.swift */,
+				0EAC5E38237E555400E92727 /* FacultyTableViewController.swift */,
+				0EAC5E3C237E5B1B00E92727 /* FacultyDetailViewController.swift */,
+				0EAC5E4023820CF600E92727 /* ArtDisplayViewController.swift */,
+				0EAC5E36237E45F400E92727 /* Colors.swift */,
+				813DAC952381AE560053EE91 /* LightNavigationController.swift */,
 			);
 			path = "Chicago-HSE-LCS";
 			sourceTree = "<group>";
@@ -201,7 +201,7 @@
 				813DAC962381AE560053EE91 /* LightNavigationController.swift in Sources */,
 				0EAC5E37237E45F400E92727 /* Colors.swift in Sources */,
 				0EAC5E4123820CF600E92727 /* ArtDisplayViewController.swift in Sources */,
-				7A64AC64237E073D0067FC9D /* CrewsTableViewController.swift in Sources */,
+				7A64AC64237E073D0067FC9D /* CrewTableViewController.swift in Sources */,
 				302F3A392381E93C003B3725 /* Characters.swift in Sources */,
 				0EAC5E33237E314000E92727 /* MainMenuItem.swift in Sources */,
 				0EAC5E1F237DF9C300E92727 /* AppDelegate.swift in Sources */,
@@ -214,7 +214,7 @@
 				0EAC5E21237DF9C300E92727 /* SceneDelegate.swift in Sources */,
 				9EF52C522381E6DD00825087 /* MusicianTableViewController.swift in Sources */,
 				7A64AC5E237DFA650067FC9D /* CastMember.swift in Sources */,
-				9EF52C542381E76000825087 /* MusicianStructure.swift in Sources */,
+				9EF52C542381E76000825087 /* Musician.swift in Sources */,
 				7A64AC62237E05810067FC9D /* Crew.swift in Sources */,
 				0EAC5E39237E555400E92727 /* FacultyTableViewController.swift in Sources */,
 			);
