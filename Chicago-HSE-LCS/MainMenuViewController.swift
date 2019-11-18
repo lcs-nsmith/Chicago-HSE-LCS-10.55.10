@@ -19,12 +19,13 @@ class MainMenuViewController: UIViewController, UITableViewDataSource, UITableVi
     var mainMenuItems: [MainMenuItem] = [
         
         MainMenuItem(name: "Tickets and Dates"),
-        MainMenuItem(name: "Production Team Notes"),
+        MainMenuItem(name: "Musical Numbers"),
         MainMenuItem(name: "Characters"),
         MainMenuItem(name: "Cast"),
         MainMenuItem(name: "Crew"),
         MainMenuItem(name: "Musicians"),
         MainMenuItem(name: "Faculty"),
+        MainMenuItem(name: "Production Team Notes"),
         MainMenuItem(name: "Art Display"),
         MainMenuItem(name: "Concessions"),
         MainMenuItem(name: "Acknowledgements and Legal"),
