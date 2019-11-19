@@ -89,18 +89,15 @@ class MusicianTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         return sections[section]
     }
-
     
     // How many sections are in the table view
     override func numberOfSections(in tableView: UITableView) -> Int {
         return sections.count
     }
     
-    // How many rows to show in that one section
+    // How many rows to show in each section
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        // On the first section, return the count of menu items
-        // For any other section, return 0
         if section == 0 {
             return studentMusicians.count
         } else if section == 1 {
@@ -221,8 +218,7 @@ class MusicianTableViewController: UITableViewController {
             return
         }
         
-        // Now set the faculty member to be displayed
-        // Depending on the section, fill the textLabel with the relevant text
+        // Now set the musician to be displayed
          switch section {
          case 0:
              detailViewController.bandMemberToDisplay = studentMusicians[index]

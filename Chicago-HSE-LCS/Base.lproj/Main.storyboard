@@ -190,6 +190,7 @@
                         <outlet property="crewHeadShot" destination="S0Q-Ed-udE" id="l6M-Bj-it0"/>
                         <outlet property="crewJob" destination="SgS-Mt-g5I" id="3Ii-BR-9nr"/>
                         <outlet property="labelBio" destination="q7F-Fl-O5v" id="fbV-rk-uNo"/>
+                        <outlet property="labelJob" destination="Bgy-IS-hug" id="73c-oY-p3d"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Yse-g7-ZBf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -200,13 +201,13 @@
         <scene sceneID="n6e-aB-ptk">
             <objects>
                 <tableViewController id="l0g-V4-d5d" userLabel="CrewList" customClass="CrewTableViewController" customModule="Chicago_LCS" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="eVz-6m-ZZV">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="eVz-6m-ZZV">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CrewCell" id="Ejj-Hm-ptB">
-                                <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                <rect key="frame" x="0.0" y="55.5" width="414" height="43.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Ejj-Hm-ptB" id="MwA-8C-cjF">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
