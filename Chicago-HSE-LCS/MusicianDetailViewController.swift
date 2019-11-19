@@ -37,7 +37,7 @@ class MusicianDetailViewController: UIViewController {
         
         // Add an exception for community musicians
         switch musicianSetFromTableView.name {
-        case "... and our Community Musicians":
+        case "Community Musicians":
             
             // Set the navigation title item
             self.navigationItem.title = "Community Musicians"
