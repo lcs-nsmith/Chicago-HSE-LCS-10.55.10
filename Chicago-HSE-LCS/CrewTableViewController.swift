@@ -69,8 +69,10 @@ class CrewTableViewController: UITableViewController {
     
     var specialTeams : [Crew] = [
         
+        Crew(name: "Costume Design Assistants", job: "", imageId: "", bio: ""),
+
         Crew(name: "Set Construction", job: "", imageId: "", bio: ""),
-        
+
         Crew(name: "Set Painting", job: "", imageId: "", bio: ""),
         
         Crew(name: "Hair and Make-up", job: "", imageId: "", bio: ""),

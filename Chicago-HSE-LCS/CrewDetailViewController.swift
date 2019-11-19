@@ -36,6 +36,21 @@ class CrewDetailViewController: UIViewController {
         
         // Add exceptions for special teams
         switch crewSetFromTableView.name {
+            
+        case "Costume Design Assistants":
+            // Set the navigation title item
+            self.navigationItem.title = "Costume Design Assistants"
+            
+            // Hide unnecessary items
+            hideItemsForSpecialTeams()
+            
+            // Set names
+            crewBio.text = """
+            Amy Shin
+            Eno Chen
+            Judy Yu
+            """
+            
         case "Set Construction":
             // Set the navigation title item
             self.navigationItem.title = "Set Construction"
@@ -43,7 +58,7 @@ class CrewDetailViewController: UIViewController {
             // Hide unnecessary items
             hideItemsForSpecialTeams()
             
-            // Set names for set construction
+            // Set names
             crewBio.text = """
             Curtis Elliot
             Dylan Smith
@@ -71,7 +86,7 @@ class CrewDetailViewController: UIViewController {
             // Hide unnecessary items
             hideItemsForSpecialTeams()
             
-            // Set names for set painting
+            // Set names
             crewBio.text = """
             Alejandro Rodriguez
             Alexis Pettersen
@@ -103,7 +118,7 @@ class CrewDetailViewController: UIViewController {
             // Hide unnecessary items
             hideItemsForSpecialTeams()
             
-            // Set names for Hair and make-up
+            // Set names
             crewBio.text = """
             Amy Shin
             Chloe Traviss
@@ -121,7 +136,7 @@ class CrewDetailViewController: UIViewController {
             // Hide unnecessary items
             hideItemsForSpecialTeams()
             
-            // Set names for Hair and make-up
+            // Set names
             crewBio.text = """
             Stephanie Wilcox
             Drew Antzis
