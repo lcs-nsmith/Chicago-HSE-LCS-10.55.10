@@ -12,15 +12,20 @@ class ArtDisplayViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Show the navigation item
-        self.navigationController?.setNavigationBarHidden(false, animated: false)
         
         // Signal need to update the status bar
         self.setNeedsStatusBarAppearanceUpdate()
 
     }
     
+    // Runs every time the view appears (not just once when initially loaded)
+    override func viewWillAppear(_ animated: Bool) {
+
+        // Show the navigation item
+        // Fixes bug where slow slide to unwind segue that is cancelled causes navigation bar to disappear
+        self.navigationController?.setNavigationBarHidden(false, animated: false)
+
+    }
 
     /*
     // MARK: - Navigation

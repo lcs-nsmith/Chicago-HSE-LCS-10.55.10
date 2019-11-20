@@ -49,9 +49,6 @@ class FacultyTableViewController: UITableViewController {
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
         
-        // Show the navigation item
-        self.navigationController?.setNavigationBarHidden(false, animated: false)
-        
         // Get table view to always have black background
         tableView.backgroundColor = .black
         
@@ -64,6 +61,15 @@ class FacultyTableViewController: UITableViewController {
         // Signal need to update the status bar
         self.setNeedsStatusBarAppearanceUpdate()
         
+    }
+    
+    // Runs every time the view appears (not just once when initially loaded)
+    override func viewWillAppear(_ animated: Bool) {
+
+        // Show the navigation item
+        // Fixes bug where slow slide to unwind segue that is cancelled causes navigation bar to disappear
+        self.navigationController?.setNavigationBarHidden(false, animated: false)
+
     }
     
     // MARK: - Table view data source
