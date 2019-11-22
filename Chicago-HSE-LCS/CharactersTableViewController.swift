@@ -15,12 +15,15 @@ class CharactersTableViewController: UITableViewController {
     
     // List of sections
     var sections: [String] = [
-        "Students",
-        "Other"
+        "Leads",
+        
+        "Ensemble/Cell Block Dancers"
+        
+        
     ]
 
     
-    var characters : [Characters] = [
+    var leads : [Characters] = [
         Characters(characterName: "Velma Kelly", playedBy: "Kate Bemrose", description: """
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla eu libero elit. In accumsan tristique eleifend. Cras luctus elit a accumsan interdum. Donec commodo felis augue, a fringilla nulla pretium sit amet. Etiam sed nisi in felis facilisis posuere. Sed ullamcorper eleifend maximus. Fusce dictum vel quam sollicitudin finibus. Duis venenatis arcu quis mi efficitur viverra. Cras a dolor at turpis vehicula elementum eget eu ligula. Integer maximus augue dolor, non interdum tellus rutrum eu. Curabitur facilisis est nec tellus venenatis convallis. Ut porttitor, enim quis rutrum consequat, leo arcu tristique neque, nec faucibus urna tortor in lacus.
 
@@ -56,6 +59,17 @@ class CharactersTableViewController: UITableViewController {
 
         Sed eu interdum diam. Maecenas id nisl non turpis varius pulvinar in tincidunt sapien. Maecenas sed odio ut turpis sodales luctus ac in urna. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Pellentesque in congue risus, vel sodales tellus. Donec elementum eu orci ac ultrices. Praesent facilisis, dolor vel sodales porttitor, mauris quam bibendum ipsum, et venenatis lectus augue in elit.
         """, imageId: "marySunshine"),
+        
+        Characters(characterName: "Fred Casely", playedBy: "Liam Cole", description: """
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla eu libero elit. In accumsan tristique eleifend. Cras luctus elit a accumsan interdum. Donec commodo felis augue, a fringilla nulla pretium sit amet. Etiam sed nisi in felis facilisis posuere. Sed ullamcorper eleifend maximus. Fusce dictum vel quam sollicitudin finibus. Duis venenatis arcu quis mi efficitur viverra. Cras a dolor at turpis vehicula elementum eget eu ligula. Integer maximus augue dolor, non interdum tellus rutrum eu. Curabitur facilisis est nec tellus venenatis convallis. Ut porttitor, enim quis rutrum consequat, leo arcu tristique neque, nec faucibus urna tortor in lacus.
+
+        Sed eu interdum diam. Maecenas id nisl non turpis varius pulvinar in tincidunt sapien. Maecenas sed odio ut turpis sodales luctus ac in urna. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Pellentesque in congue risus, vel sodales tellus. Donec elementum eu orci ac ultrices. Praesent facilisis, dolor vel sodales porttitor, mauris quam bibendum ipsum, et venenatis lectus augue in elit.
+        """, imageId: "fredCasely"),
+
+        
+    ]
+    
+    var ensemble: [Characters] = [
 
         Characters(characterName: "Liz", playedBy: "Ava Mason", description: """
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla eu libero elit. In accumsan tristique eleifend. Cras luctus elit a accumsan interdum. Donec commodo felis augue, a fringilla nulla pretium sit amet. Etiam sed nisi in felis facilisis posuere. Sed ullamcorper eleifend maximus. Fusce dictum vel quam sollicitudin finibus. Duis venenatis arcu quis mi efficitur viverra. Cras a dolor at turpis vehicula elementum eget eu ligula. Integer maximus augue dolor, non interdum tellus rutrum eu. Curabitur facilisis est nec tellus venenatis convallis. Ut porttitor, enim quis rutrum consequat, leo arcu tristique neque, nec faucibus urna tortor in lacus.
@@ -87,11 +101,6 @@ class CharactersTableViewController: UITableViewController {
         Sed eu interdum diam. Maecenas id nisl non turpis varius pulvinar in tincidunt sapien. Maecenas sed odio ut turpis sodales luctus ac in urna. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Pellentesque in congue risus, vel sodales tellus. Donec elementum eu orci ac ultrices. Praesent facilisis, dolor vel sodales porttitor, mauris quam bibendum ipsum, et venenatis lectus augue in elit.
         """, imageId: "dolores"),
 
-        Characters(characterName: "Fred Casely", playedBy: "Liam Cole", description: """
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla eu libero elit. In accumsan tristique eleifend. Cras luctus elit a accumsan interdum. Donec commodo felis augue, a fringilla nulla pretium sit amet. Etiam sed nisi in felis facilisis posuere. Sed ullamcorper eleifend maximus. Fusce dictum vel quam sollicitudin finibus. Duis venenatis arcu quis mi efficitur viverra. Cras a dolor at turpis vehicula elementum eget eu ligula. Integer maximus augue dolor, non interdum tellus rutrum eu. Curabitur facilisis est nec tellus venenatis convallis. Ut porttitor, enim quis rutrum consequat, leo arcu tristique neque, nec faucibus urna tortor in lacus.
-
-        Sed eu interdum diam. Maecenas id nisl non turpis varius pulvinar in tincidunt sapien. Maecenas sed odio ut turpis sodales luctus ac in urna. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Pellentesque in congue risus, vel sodales tellus. Donec elementum eu orci ac ultrices. Praesent facilisis, dolor vel sodales porttitor, mauris quam bibendum ipsum, et venenatis lectus augue in elit.
-        """, imageId: "fredCasely"),
         
         Characters(characterName: "Kitty", playedBy: "Mikayla Stoodley", description: """
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla eu libero elit. In accumsan tristique eleifend. Cras luctus elit a accumsan interdum. Donec commodo felis augue, a fringilla nulla pretium sit amet. Etiam sed nisi in felis facilisis posuere. Sed ullamcorper eleifend maximus. Fusce dictum vel quam sollicitudin finibus. Duis venenatis arcu quis mi efficitur viverra. Cras a dolor at turpis vehicula elementum eget eu ligula. Integer maximus augue dolor, non interdum tellus rutrum eu. Curabitur facilisis est nec tellus venenatis convallis. Ut porttitor, enim quis rutrum consequat, leo arcu tristique neque, nec faucibus urna tortor in lacus.
@@ -146,13 +155,7 @@ class CharactersTableViewController: UITableViewController {
 
         Sed eu interdum diam. Maecenas id nisl non turpis varius pulvinar in tincidunt sapien. Maecenas sed odio ut turpis sodales luctus ac in urna. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Pellentesque in congue risus, vel sodales tellus. Donec elementum eu orci ac ultrices. Praesent facilisis, dolor vel sodales porttitor, mauris quam bibendum ipsum, et venenatis lectus augue in elit.
         """, imageId: "charlie")
-
-    ]
-    
-    var otherCharacters: [Characters] = [
-
-        Characters(characterName: "Other Characters", playedBy: "", description: "", imageId: ""),
-
+        
     ]
 
     // Set the status bar text to be white
@@ -216,9 +219,9 @@ class CharactersTableViewController: UITableViewController {
           // On the first section, return the count of menu items
           // For any other section, return 0
           if section == 0 {
-              return characters.count
+              return leads.count
           } else if section == 1 {
-              return otherCharacters.count
+              return ensemble.count
           } else {
               return 0
           }
@@ -234,9 +237,9 @@ class CharactersTableViewController: UITableViewController {
       // Depending on the section, fill the textLabel with the relevant text
       switch indexPath.section {
       case 0:
-          cell.textLabel?.text = characters[indexPath.row].characterName
+          cell.textLabel?.text = leads[indexPath.row].characterName
       case 1:
-          cell.textLabel?.text = otherCharacters[indexPath.row].characterName
+          cell.textLabel?.text = ensemble[indexPath.row].characterName
       default:
           break
       }
@@ -281,9 +284,9 @@ class CharactersTableViewController: UITableViewController {
         // Depending on the section, fill the textLabel with the relevant text
          switch section {
          case 0:
-             detailViewController.characterToDisplay = characters[index]
+             detailViewController.characterToDisplay = leads[index]
          case 1:
-             detailViewController.characterToDisplay = otherCharacters[index]
+             detailViewController.characterToDisplay = ensemble[index]
          default:
              break
          }
