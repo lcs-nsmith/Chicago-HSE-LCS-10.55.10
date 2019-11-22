@@ -30,6 +30,7 @@ class CastMemberTableViewController: UITableViewController {
             """),
         
         CastMember(name: "Liam Davidson", character: "Amos Hart", imageId: "liamDavidson", bio: """
+        After taking part in 4 other shows at Lakefield, Liam is proud to see off his high school career in the musical Chicago. Playing the lonely loser once more, Liam takes on the role of Amos Hart, married to Catherine Kim for the second year in a row.
         """),
         
         CastMember(name: "Lily Bowman", character: "Mama Morton", imageId: "lilyBowman", bio: """
@@ -159,17 +160,17 @@ class CastMemberTableViewController: UITableViewController {
         CastMember(name: "Carine Martin", character: "Cell Block Dancer", imageId: "carineMartin", bio: """
             Carine has never participated in a school musical before. However, for her last year in Lakefield as a grade 12, she decided to put herself out there and try out for the Chicago musical knowing that it would be her last chance to. The musical has allowed her to pursue her passion for singing and dancing as well as help her discover new interests. She is thrilled to be in the cast and part of such a great production surrounded by talent and support.
             """),
-
+        
     ]
     
     // Set the status bar text to be white
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
     }
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
         
@@ -178,16 +179,16 @@ class CastMemberTableViewController: UITableViewController {
         
         // Get table view to always have black background
         tableView.backgroundColor = .black
-
+        
         // Set the seperator color to always be dark grey
         tableView.separatorColor = .darkGray
-
+        
         // Set a zero-height footer so that no blank cells show after the list of menu items
         tableView.tableFooterView = UIView()
-
+        
         // Signal need to update the status bar
         self.setNeedsStatusBarAppearanceUpdate()
-
+        
     }
     
     // Runs every time the view appears (not just once when initially loaded)
