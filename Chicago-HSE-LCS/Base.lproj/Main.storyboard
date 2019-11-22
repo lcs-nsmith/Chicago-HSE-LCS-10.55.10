@@ -1359,82 +1359,93 @@ Chelsea Yue</string>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Voz-XT-3aT">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="9Pt-CK-esV">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1056.5"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="rM3-Ga-LsB" userLabel="Outer Stack View">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1470.5"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="About the show" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LWS-IH-E6c">
-                                                <rect key="frame" x="10" y="8" width="394" height="26.5"/>
-                                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
-                                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="0zq-e4-jE3">
-                                                <rect key="frame" x="10" y="42.5" width="394" height="219"/>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="aboutTheShowHEIF" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jlg-9H-9FW">
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="414"/>
+                                            </imageView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="9Pt-CK-esV">
+                                                <rect key="frame" x="0.0" y="414" width="414" height="1056.5"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="oQD-vL-nZL">
-                                                        <rect key="frame" x="5" y="8" width="384" height="203"/>
-                                                        <string key="text">Set in a lavish nightclub during the roaring twenties, Chicago satirizes the justice system while examining the pitfalls of celebrity and the quest for the ever-elusive “American Dream”.  Based on true news reports from Maurine Dallas Watkins, Chicago highlights the empowerment of women and the media sensationalization of the famous “Jazz-Slayer” murder trials. Using the iconic dancing style of Bob Fosse, this hit musical has dazzled audiences since the mid-seventies.</string>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="About the show" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LWS-IH-E6c">
+                                                        <rect key="frame" x="10" y="8" width="394" height="26.5"/>
+                                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
                                                         <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                </subviews>
-                                                <edgeInsets key="layoutMargins" top="8" left="5" bottom="8" right="5"/>
-                                            </stackView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Director's Note" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gfm-g1-ZZ8">
-                                                <rect key="frame" x="10" y="269.5" width="394" height="26.5"/>
-                                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
-                                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="JL0-Kd-hoy">
-                                                <rect key="frame" x="10" y="304" width="394" height="341"/>
-                                                <subviews>
-                                                    <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="DVR-CO-7sF" userLabel="Director's note details">
-                                                        <rect key="frame" x="5" y="8" width="384" height="325"/>
-                                                        <gestureRecognizers/>
-                                                        <string key="text">The ever-growing LCS Musical Theatre program is very proud to take on such a powerful and exciting show. From the challenging choreography, characters and vocals, to the student musicians playing alongside professionals in the pit; the student set builders and artistic designers to the technical sound, lighting and stage crew, this production has been embraced by the students in every way with so much excitement and passion. We could not be prouder of them! The Production team would like to thank all of you for your continued support of the Arts at Lakefield College School. Working with over sixty-five talented, dedicated and professional young people has been an incredible and inspirational journey for us. We hope you enjoy the show!</string>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="0zq-e4-jE3">
+                                                        <rect key="frame" x="10" y="42.5" width="394" height="219"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="oQD-vL-nZL">
+                                                                <rect key="frame" x="5" y="8" width="384" height="203"/>
+                                                                <string key="text">Set in a lavish nightclub during the roaring twenties, Chicago satirizes the justice system while examining the pitfalls of celebrity and the quest for the ever-elusive “American Dream”.  Based on true news reports from Maurine Dallas Watkins, Chicago highlights the empowerment of women and the media sensationalization of the famous “Jazz-Slayer” murder trials. Using the iconic dancing style of Bob Fosse, this hit musical has dazzled audiences since the mid-seventies.</string>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                        <edgeInsets key="layoutMargins" top="8" left="5" bottom="8" right="5"/>
+                                                    </stackView>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Director's Note" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gfm-g1-ZZ8">
+                                                        <rect key="frame" x="10" y="269.5" width="394" height="26.5"/>
+                                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
                                                         <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                </subviews>
-                                                <edgeInsets key="layoutMargins" top="8" left="5" bottom="8" right="5"/>
-                                            </stackView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Special Thanks" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8XX-2o-cYb" userLabel="Special thanks">
-                                                <rect key="frame" x="10" y="653" width="394" height="26.5"/>
-                                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
-                                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Ybj-Nt-iqT">
-                                                <rect key="frame" x="10" y="687.5" width="394" height="361"/>
-                                                <subviews>
-                                                    <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="AAx-Cn-KsH" userLabel="Special thanks details">
-                                                        <rect key="frame" x="5" y="8" width="384" height="345"/>
-                                                        <gestureRecognizers/>
-                                                        <string key="text">All of our family and friends, LCS Faculty &amp; Staff, Aramark Campus Services, 
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="JL0-Kd-hoy">
+                                                        <rect key="frame" x="10" y="304" width="394" height="341"/>
+                                                        <subviews>
+                                                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="DVR-CO-7sF" userLabel="Director's note details">
+                                                                <rect key="frame" x="5" y="8" width="384" height="325"/>
+                                                                <gestureRecognizers/>
+                                                                <string key="text">The ever-growing LCS Musical Theatre program is very proud to take on such a powerful and exciting show. From the challenging choreography, characters and vocals, to the student musicians playing alongside professionals in the pit; the student set builders and artistic designers to the technical sound, lighting and stage crew, this production has been embraced by the students in every way with so much excitement and passion. We could not be prouder of them! The Production team would like to thank all of you for your continued support of the Arts at Lakefield College School. Working with over sixty-five talented, dedicated and professional young people has been an incredible and inspirational journey for us. We hope you enjoy the show!</string>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                        <edgeInsets key="layoutMargins" top="8" left="5" bottom="8" right="5"/>
+                                                    </stackView>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Special Thanks" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8XX-2o-cYb" userLabel="Special thanks">
+                                                        <rect key="frame" x="10" y="653" width="394" height="26.5"/>
+                                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
+                                                        <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Ybj-Nt-iqT">
+                                                        <rect key="frame" x="10" y="687.5" width="394" height="361"/>
+                                                        <subviews>
+                                                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="AAx-Cn-KsH" userLabel="Special thanks details">
+                                                                <rect key="frame" x="5" y="8" width="384" height="345"/>
+                                                                <gestureRecognizers/>
+                                                                <string key="text">All of our family and friends, LCS Faculty &amp; Staff, Aramark Campus Services, 
 Brian McCaw &amp; LCS Facilities Services, Sarah Young, Neil Young, 
 Tai Timbers and Maar’s Music, Tom Vaccaro (Peterborough Academy of Circus Arts), 
 Alf Curtis Construction, Russell Gordon and his Grade 12 Computer Science class (App development), Justin Hiscox, Lori Davidson, Katherine Carlton, Tayler Morencie (Art Display), Drew Antzis, Marjorie Claassen, Vicky Boomgaardt, Simon Spivey, Sara Connelly, Tony Buell, Will Callaghan, Nicole Rogerson, Stephanie Wilcox, Sam Tweedle (Kawartha NOW), Lance Anderson (Ptbo this Week), Neil Morton (PTBO Canada), Entrepreneurship Club (DECA) for the intermission concession stand.</string>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                        <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                        <edgeInsets key="layoutMargins" top="8" left="5" bottom="8" right="5"/>
+                                                    </stackView>
                                                 </subviews>
-                                                <edgeInsets key="layoutMargins" top="8" left="5" bottom="8" right="5"/>
+                                                <edgeInsets key="layoutMargins" top="8" left="10" bottom="8" right="10"/>
                                             </stackView>
                                         </subviews>
-                                        <edgeInsets key="layoutMargins" top="8" left="10" bottom="8" right="10"/>
+                                        <constraints>
+                                            <constraint firstItem="jlg-9H-9FW" firstAttribute="height" secondItem="rM3-Ga-LsB" secondAttribute="width" id="6lC-kf-IF3"/>
+                                        </constraints>
                                     </stackView>
                                 </subviews>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstItem="9Pt-CK-esV" firstAttribute="leading" secondItem="JFc-jO-b9U" secondAttribute="leading" id="BXe-1N-7nc"/>
-                                    <constraint firstItem="9Pt-CK-esV" firstAttribute="trailing" secondItem="JFc-jO-b9U" secondAttribute="trailing" id="LC2-aR-9Bo"/>
-                                    <constraint firstItem="9Pt-CK-esV" firstAttribute="bottom" secondItem="JFc-jO-b9U" secondAttribute="bottom" id="Tr1-EX-FeQ"/>
-                                    <constraint firstItem="JFc-jO-b9U" firstAttribute="top" secondItem="9Pt-CK-esV" secondAttribute="top" id="a3c-Pu-0Iy"/>
-                                    <constraint firstItem="9Pt-CK-esV" firstAttribute="width" secondItem="ZcI-ih-ffp" secondAttribute="width" id="n0Q-or-TuM"/>
+                                    <constraint firstItem="rM3-Ga-LsB" firstAttribute="trailing" secondItem="JFc-jO-b9U" secondAttribute="trailing" id="S8W-k4-UY1"/>
+                                    <constraint firstItem="rM3-Ga-LsB" firstAttribute="leading" secondItem="JFc-jO-b9U" secondAttribute="leading" id="Wu8-GN-HbX"/>
+                                    <constraint firstItem="rM3-Ga-LsB" firstAttribute="bottom" secondItem="JFc-jO-b9U" secondAttribute="bottom" id="g64-g3-FBk"/>
+                                    <constraint firstItem="rM3-Ga-LsB" firstAttribute="width" secondItem="ZcI-ih-ffp" secondAttribute="width" id="lEY-5k-ucH"/>
+                                    <constraint firstItem="rM3-Ga-LsB" firstAttribute="top" secondItem="JFc-jO-b9U" secondAttribute="top" id="spf-8M-mhk"/>
                                 </constraints>
                                 <viewLayoutGuide key="contentLayoutGuide" id="JFc-jO-b9U"/>
                                 <viewLayoutGuide key="frameLayoutGuide" id="ZcI-ih-ffp"/>
@@ -1801,6 +1812,7 @@ Alf Curtis Construction, Russell Gordon and his Grade 12 Computer Science class 
         </scene>
     </scenes>
     <resources>
+        <image name="aboutTheShowHEIF" width="3502" height="3502"/>
         <image name="almostAllOfTheGang" width="2000" height="1500"/>
         <image name="artsAtLakefieldWhiteOnBlack" width="2304" height="922"/>
         <image name="banner" width="674.5" height="227.5"/>
