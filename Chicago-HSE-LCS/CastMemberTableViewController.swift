@@ -24,8 +24,17 @@ class CastMemberTableViewController: UITableViewController {
     var isSearchBarEmpty: Bool {
       return searchController.searchBar.text?.isEmpty ?? true
     }
-
+    
+    
+    var isFiltering: Bool {
+      let searchBarScopeIsFiltering =
+        searchController.searchBar.selectedScopeButtonIndex != 0
+      return searchController.isActive &&
+        (!isSearchBarEmpty || searchBarScopeIsFiltering)
+    }
+    
     var sortedCastMembers: [CastMember]?
+    
     var castMembers: [CastMember] = [
         
         CastMember(name: "Kate Bemrose", character: "Velma Kelly", imageId: "kateBemrose", bio: """
@@ -203,7 +212,7 @@ class CastMemberTableViewController: UITableViewController {
         // 2
         searchController.obscuresBackgroundDuringPresentation = false
         // 3
-        searchController.searchBar.placeholder = "Search Candies"
+        searchController.searchBar.placeholder = "Search Cast Members"
         // 4
         navigationItem.searchController = searchController
         // 5
@@ -232,11 +241,16 @@ class CastMemberTableViewController: UITableViewController {
         
         // On the first section, return the count of menu items
         // For any other section, return 0
-        if section == 0 {
-            return castMembers.count
-        } else {
-            return 0
+//        if section == 0 {
+//            return castMembers.count
+//        } else {
+//            return 0
+//        }
+        if isFiltering {
+          return filteredCastMembers.count
         }
+          
+        return castMembers.count
         
     }
     
@@ -248,6 +262,13 @@ class CastMemberTableViewController: UITableViewController {
         // Depending on the section, fill the textLabel with the relevant text
         cell.textLabel?.text = sortedCastMembers?[indexPath.row].name
         cell.textLabel?.textColor = .white
+        let cast: CastMember
+        
+        if isFiltering {
+          cast = filteredCastMembers[indexPath.row]
+        } else {
+          cast = castMembers[indexPath.row]
+        }
         
         // Make the cell have a black background colour
         cell.backgroundColor = .black
@@ -295,8 +316,5 @@ class CastMemberTableViewController: UITableViewController {
 
     
 }
-extension CastMemberTableViewController: UISearchResultsUpdating {
-  func updateSearchResults(for searchController: UISearchController) {
-    // TODO
-  }
-}
+
+
