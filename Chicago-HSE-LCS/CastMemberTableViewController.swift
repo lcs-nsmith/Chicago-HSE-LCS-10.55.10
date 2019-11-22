@@ -11,6 +11,8 @@ import UIKit
 class CastMemberTableViewController: UITableViewController {
     
     //MARK: Properties
+    var filteredCastMembers: [CastMember] = []
+
     var sortedCastMembers: [CastMember]?
     var castMembers: [CastMember] = [
         
@@ -154,6 +156,9 @@ class CastMemberTableViewController: UITableViewController {
         
     ]
     
+    let searchController = UISearchController(searchResultsController: nil)
+
+    
     // Set the status bar text to be white
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
@@ -180,6 +185,18 @@ class CastMemberTableViewController: UITableViewController {
         
         // Sort the array by name
         sortedCastMembers = castMembers.sorted { $0.name < $1.name }
+        
+        // 1
+        searchController.searchResultsUpdater = self
+        // 2
+        searchController.obscuresBackgroundDuringPresentation = false
+        // 3
+        searchController.searchBar.placeholder = "Search Candies"
+        // 4
+        navigationItem.searchController = searchController
+        // 5
+        definesPresentationContext = true
+
         
     }
     
@@ -256,4 +273,9 @@ class CastMemberTableViewController: UITableViewController {
         detailViewController.castMemberToDisplay = sortedCastMembers?[index]
     }
     
+}
+extension CastMemberTableViewController: UISearchResultsUpdating {
+  func updateSearchResults(for searchController: UISearchController) {
+    // TODO
+  }
 }
