@@ -49,6 +49,7 @@ class CrewDetailViewController: UIViewController {
             Amy Shin
             Eno Chen
             Judy Yu
+            Quang Bui
             """
             
         case "Set Construction":
