@@ -233,6 +233,14 @@ class MusicianTableViewController: UITableViewController {
          default:
              break
          }
+        
+        // Deselect the cell after segue unwind
+        guard let indexPath = tableView.indexPathForSelectedRow else {
+            return
+        }
+        self.tableView.deselectRow(at: indexPath, animated: true)
+
+
     }
     
 }

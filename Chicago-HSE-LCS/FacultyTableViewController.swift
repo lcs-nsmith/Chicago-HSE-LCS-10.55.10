@@ -172,6 +172,14 @@ class FacultyTableViewController: UITableViewController {
         
         // Now set the faculty member to be displayed
         detailViewController.facultyMemberToDisplay = facultyMembers[index]
+
+        // Deselect the cell after segue unwind
+        guard let indexPath = tableView.indexPathForSelectedRow else {
+            return
+        }
+        self.tableView.deselectRow(at: indexPath, animated: true)
+
+
     }
     
 }
