@@ -326,7 +326,14 @@ class CastMemberTableViewController: UITableViewController {
         cell.accessoryView = UIImageView(image: chevron!)
         
         // Make text in the search bar be white, always
-        searchController.searchBar.searchTextField.textColor = .white
+        if #available(iOS 13.0, *) {
+            // Change search field text color in iOS 13
+            searchController.searchBar.searchTextField.textColor = .white
+        } else {
+            // Change search field text color in iOS 12
+            let textFieldInsideSearchBar = searchController.searchBar.value(forKey: "searchField") as? UITextField
+            textFieldInsideSearchBar?.textColor = .white
+        }
         
         // Return the configured cell
         return cell
