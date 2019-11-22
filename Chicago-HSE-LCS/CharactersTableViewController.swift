@@ -17,7 +17,7 @@ class CharactersTableViewController: UITableViewController {
     var sections: [String] = [
         "Leads",
         
-        "Ensemble/Cell Block Dancers"
+        "Ensemble and Cell Block Dancers"
         
         
     ]
