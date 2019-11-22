@@ -9,6 +9,14 @@
 
 import UIKit
 
+extension CastMemberTableViewController: UISearchResultsUpdating {
+    func updateSearchResults(for searchController: UISearchController) {
+        let searchBar = searchController.searchBar
+        filterContentForSearchText(searchBar.text!)
+    }
+    
+}
+
 class CastMemberTableViewController: UITableViewController {
     
     // List of sections
@@ -18,8 +26,23 @@ class CastMemberTableViewController: UITableViewController {
     ]
     
     //MARK: Properties
-    // Array of all cast members
-    var leads: [CastMember] = [
+    var filteredCastMembers: [CastMember] = []
+    
+    var isSearchBarEmpty: Bool {
+        return searchController.searchBar.text?.isEmpty ?? true
+    }
+    
+    
+    var isFiltering: Bool {
+        let searchBarScopeIsFiltering =
+            searchController.searchBar.selectedScopeButtonIndex != 0
+        return searchController.isActive &&
+            (!isSearchBarEmpty || searchBarScopeIsFiltering)
+    }
+    
+    var sortedCastMembers: [CastMember]?
+    
+    var castMembers: [CastMember] = [
         
         CastMember(name: "Kate Bemrose", character: "Velma Kelly", imageId: "kateBemrose", bio: """
             Kate is super excited to perform in this year’s fall musical Chicago, as the one and only Velma Kelly. After an amazing year packed with Lakefield arts experiences last year, she has decided to come back for more. Coming from an intense competitive dance background at Premiere Studio of Dance, television commercial work and local theatre involvement (Young Cosette in Les Miserables, Sophie in Mamma Mia) , she can’t wait to star as a wicked Vaudeville murderer. She would like to give thanks to everyone involved in this magical production, that makes her Lakefield difference truly like no other!
@@ -163,6 +186,9 @@ class CastMemberTableViewController: UITableViewController {
         
     ]
     
+    let searchController = UISearchController(searchResultsController: nil)
+    
+    
     // Set the status bar text to be white
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
@@ -188,6 +214,22 @@ class CastMemberTableViewController: UITableViewController {
         
         // Signal need to update the status bar
         self.setNeedsStatusBarAppearanceUpdate()
+        
+        // Sort the array by name
+        sortedCastMembers = castMembers.sorted { $0.name < $1.name }
+        
+        // 1
+        searchController.searchResultsUpdater = self
+        // 2
+        searchController.obscuresBackgroundDuringPresentation = false
+        // 3
+        searchController.searchBar.placeholder = "Search Cast Members"
+        
+        // 4
+        navigationItem.searchController = searchController
+        // 5
+        definesPresentationContext = true
+        
         
     }
     
@@ -220,7 +262,16 @@ class CastMemberTableViewController: UITableViewController {
             return ensemble.count
         } else {
             return 0
+        //        if section == 0 {
+        //            return castMembers.count
+        //        } else {
+        //            return 0
+        //        }
+        if isFiltering {
+            return filteredCastMembers.count
         }
+        
+        return castMembers.count
         
     }
     
@@ -242,6 +293,16 @@ class CastMemberTableViewController: UITableViewController {
         // Configure cell color
         cell.textLabel?.textColor = .white
         
+        let cast: CastMember
+        
+        if isFiltering {
+            cast = filteredCastMembers[indexPath.row]
+        } else {
+            cast = castMembers[indexPath.row]
+        }
+        cell.textLabel?.text = cast.name
+        
+        
         // Make the cell have a black background colour
         cell.backgroundColor = .black
         
@@ -255,12 +316,14 @@ class CastMemberTableViewController: UITableViewController {
         cell.accessoryType = .disclosureIndicator
         cell.accessoryView = UIImageView(image: chevron!)
         
+        searchController.searchBar.searchTextField.textColor = .white
         // Return the configured cell
         return cell
         
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
         
         // Get a reference to the destination view controller using segue.destination
         guard let detailViewController = segue.destination as? CastMemberDetailViewController else {
@@ -296,5 +359,23 @@ class CastMemberTableViewController: UITableViewController {
 
 
     }
+        // Now set the cast member to be displayed
+        if isFiltering {
+            detailViewController.castMemberToDisplay = filteredCastMembers[index]
+        } else {
+            detailViewController.castMemberToDisplay = castMembers[index]
+        }
+    }
+    
+    func filterContentForSearchText(_ searchText: String) {
+        filteredCastMembers = castMembers.filter { (cast: CastMember) -> Bool in
+            return cast.name.lowercased().contains(searchText.lowercased())
+        }
+        
+        tableView.reloadData()
+    }
+    
     
 }
+
+

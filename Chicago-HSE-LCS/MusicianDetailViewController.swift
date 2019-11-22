@@ -58,6 +58,7 @@ class MusicianDetailViewController: UIViewController {
                                 Al Pounsett (Banjo)
                                 Sam Quinn (Bass)
                                 Nick Gilroy (Drums)
+                                Sarah Young (Flute)
                                 """
             
         default:
