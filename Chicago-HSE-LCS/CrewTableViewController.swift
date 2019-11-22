@@ -64,21 +64,23 @@ class CrewTableViewController: UITableViewController {
         Crew(name: "Dylan Smith", job: "Lighting Technician", imageId: "dylanSmith",  bio: ""),
         
         Crew(name: "Patricio Arnau Young", job: "Projection Design", imageId: "patricioArnauYoung",  bio: ""),
+        Crew(name: "Amy Shin", job: "Costume Design Assistant", imageId: "amy", bio: ""),
+        Crew(name: "Eno Chen", job: "Costume Design Assistant", imageId: "eno", bio: ""),
+        Crew(name: "Judy Yu", job: "Costume Design Assistant", imageId: "judy", bio: ""),
+        Crew(name: "Quang Bui", job: "Costume Design Assistant", imageId: "quang", bio: "")
         
     ]
     
     var specialTeams : [Crew] = [
         
-        Crew(name: "Costume Design Assistants", job: "", imageId: "", bio: ""),
-
         Crew(name: "Set Construction", job: "", imageId: "", bio: ""),
-
+        
         Crew(name: "Set Painting", job: "", imageId: "", bio: ""),
         
         Crew(name: "Hair and Make-up", job: "", imageId: "", bio: ""),
-
+        
         Crew(name: "Posters", job: "", imageId: "", bio: ""),
-
+        
     ]
     // Set the status bar text to be white
     override var preferredStatusBarStyle: UIStatusBarStyle {
@@ -110,13 +112,13 @@ class CrewTableViewController: UITableViewController {
     
     // Runs every time the view appears (not just once when initially loaded)
     override func viewWillAppear(_ animated: Bool) {
-
+        
         // Show the navigation item
         // Fixes bug where slow slide to unwind segue that is cancelled causes navigation bar to disappear
         self.navigationController?.setNavigationBarHidden(false, animated: false)
-
+        
     }
-
+    
     // MARK: - Table view data source
     
     // Return the title for each section
@@ -224,17 +226,17 @@ class CrewTableViewController: UITableViewController {
         guard let detailViewController = segue.destination as? CrewDetailViewController else {
             return
         }
-
+        
         // Get the currently selected section of the table view
         guard let section = tableView.indexPathForSelectedRow?.section else {
             return
         }
-
+        
         // Get the currently selected row of the table view
         guard let index = tableView.indexPathForSelectedRow?.row else {
             return
         }
-                
+        
         // Now set the crew member to be displayed
         switch section {
         case 0:
