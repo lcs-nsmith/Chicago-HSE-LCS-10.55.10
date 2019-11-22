@@ -28,21 +28,21 @@ class CastMemberTableViewController: UITableViewController {
     //MARK: Properties
     var filteredCastMembers: [CastMember] = []
     
+    // Computed property to determine whether the search bar is empty
     var isSearchBarEmpty: Bool {
         return searchController.searchBar.text?.isEmpty ?? true
     }
     
-    
+    // Computed property to determine whether we are currently filtering results
     var isFiltering: Bool {
         let searchBarScopeIsFiltering =
             searchController.searchBar.selectedScopeButtonIndex != 0
         return searchController.isActive &&
             (!isSearchBarEmpty || searchBarScopeIsFiltering)
     }
+
     
-    var sortedCastMembers: [CastMember]?
-    
-    var castMembers: [CastMember] = [
+    var leads: [CastMember] = [
         
         CastMember(name: "Kate Bemrose", character: "Velma Kelly", imageId: "kateBemrose", bio: """
             Kate is super excited to perform in this year’s fall musical Chicago, as the one and only Velma Kelly. After an amazing year packed with Lakefield arts experiences last year, she has decided to come back for more. Coming from an intense competitive dance background at Premiere Studio of Dance, television commercial work and local theatre involvement (Young Cosette in Les Miserables, Sophie in Mamma Mia) , she can’t wait to star as a wicked Vaudeville murderer. She would like to give thanks to everyone involved in this magical production, that makes her Lakefield difference truly like no other!
@@ -186,8 +186,11 @@ class CastMemberTableViewController: UITableViewController {
         
     ]
     
+    // Join the leads and ensemble arrays (for searching)
+    var sortedCastMembers: [CastMember]?
+
+    // Create a search controller instance
     let searchController = UISearchController(searchResultsController: nil)
-    
     
     // Set the status bar text to be white
     override var preferredStatusBarStyle: UIStatusBarStyle {
@@ -214,10 +217,7 @@ class CastMemberTableViewController: UITableViewController {
         
         // Signal need to update the status bar
         self.setNeedsStatusBarAppearanceUpdate()
-        
-        // Sort the array by name
-        sortedCastMembers = castMembers.sorted { $0.name < $1.name }
-        
+                
         // 1
         searchController.searchResultsUpdater = self
         // 2
@@ -230,6 +230,9 @@ class CastMemberTableViewController: UITableViewController {
         // 5
         definesPresentationContext = true
         
+        // Create a combined array of cast members
+        let castMembers = leads + ensemble
+        sortedCastMembers = castMembers.sorted { $0.name < $1.name }
         
     }
     
@@ -245,33 +248,37 @@ class CastMemberTableViewController: UITableViewController {
     // MARK: - Table view data source
     
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return sections[section] 
+        if isFiltering {
+            return "Results"
+        } else {
+            return sections[section]
+        }
     }
     
     override func numberOfSections(in tableView: UITableView) -> Int {
-        return sections.count
-    }
-    
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        
-        // On the first section, return the count of menu items
-        // For any other section, return 0
-        if section == 0 {
-            return leads.count
-        } else if section == 1 {
-            return ensemble.count
+        if isFiltering {
+            return 1
         } else {
-            return 0
-        //        if section == 0 {
-        //            return castMembers.count
-        //        } else {
-        //            return 0
-        //        }
+            return sections.count
+        }
+    }
+
+    // Return count of table cells in each section
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+                
+        // When searching, return number of matches in filtered list
         if isFiltering {
             return filteredCastMembers.count
+        } else {
+            // When not searching return appropriate count of cells in given section
+            if section == 0 {
+                return leads.count
+            } else if section == 1 {
+                return ensemble.count
+            } else {
+                return 0
+            }
         }
-        
-        return castMembers.count
         
     }
     
@@ -279,29 +286,24 @@ class CastMemberTableViewController: UITableViewController {
         
         // Create an object of the dynamic cell "FacultyCell"
         let cell = tableView.dequeueReusableCell(withIdentifier: "CastMemberCell", for: indexPath)
-        
-        // Depending on the section, fill the textLabel with the relevant text
-        switch indexPath.section {
-        case 0:
-            cell.textLabel?.text = leads[indexPath.row].name
-        case 1:
-            cell.textLabel?.text = ensemble[indexPath.row].name
-        default:
-            break
-        }
-        
+                
         // Configure cell color
         cell.textLabel?.textColor = .white
         
-        let cast: CastMember
-        
+        // If searching, return result from filtered list based on search
         if isFiltering {
-            cast = filteredCastMembers[indexPath.row]
+            cell.textLabel?.text = filteredCastMembers[indexPath.row].name
         } else {
-            cast = castMembers[indexPath.row]
+            // Depending on the section, fill the textLabel with the relevant text
+            switch indexPath.section {
+            case 0:
+                cell.textLabel?.text = leads[indexPath.row].name
+            case 1:
+                cell.textLabel?.text = ensemble[indexPath.row].name
+            default:
+                break
+            }
         }
-        cell.textLabel?.text = cast.name
-        
         
         // Make the cell have a black background colour
         cell.backgroundColor = .black
@@ -316,7 +318,9 @@ class CastMemberTableViewController: UITableViewController {
         cell.accessoryType = .disclosureIndicator
         cell.accessoryView = UIImageView(image: chevron!)
         
+        // Make text in the search bar be white, always
         searchController.searchBar.searchTextField.textColor = .white
+        
         // Return the configured cell
         return cell
         
@@ -340,15 +344,20 @@ class CastMemberTableViewController: UITableViewController {
             return
         }
         
-        // Now set the faculty member to be displayed
-        // Depending on the section, fill the textLabel with the relevant text
-        switch section {
-        case 0:
-            detailViewController.castMemberToDisplay = leads[index]
-        case 1:
-            detailViewController.castMemberToDisplay = ensemble[index]
-        default:
-            break
+        // Now set the cast member to be displayed
+        // If searching, present from filtered results
+        if isFiltering {
+            detailViewController.castMemberToDisplay = filteredCastMembers[index]
+        } else {
+            // Depending on the section, fill the textLabel with the relevant text
+            switch section {
+            case 0:
+                detailViewController.castMemberToDisplay = leads[index]
+            case 1:
+                detailViewController.castMemberToDisplay = ensemble[index]
+            default:
+                break
+            }
         }
 
         // Deselect the cell after segue unwind
@@ -359,20 +368,21 @@ class CastMemberTableViewController: UITableViewController {
 
 
     }
-        // Now set the cast member to be displayed
-        if isFiltering {
-            detailViewController.castMemberToDisplay = filteredCastMembers[index]
-        } else {
-            detailViewController.castMemberToDisplay = castMembers[index]
-        }
-    }
     
     func filterContentForSearchText(_ searchText: String) {
+        
+        // Unwrap the array of sorted cast members
+        guard let castMembers = sortedCastMembers else {
+            return
+        }
+        
+        // Filter the cast members based on the search string
         filteredCastMembers = castMembers.filter { (cast: CastMember) -> Bool in
             return cast.name.lowercased().contains(searchText.lowercased())
         }
         
-        tableView.reloadData()
+        // Change the data shown in the table view
+        self.tableView.reloadData()
     }
     
     
