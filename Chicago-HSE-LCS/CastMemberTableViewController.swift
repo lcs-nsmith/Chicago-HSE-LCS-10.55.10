@@ -26,8 +26,9 @@ class CastMemberTableViewController: UITableViewController {
     ]
     
     //MARK: Properties
-    var filteredCastMembers: [CastMember] = []
-    
+    var filteredLeads: [CastMember] = []
+    var filteredEnsemble: [CastMember] = []
+
     // Computed property to determine whether the search bar is empty
     var isSearchBarEmpty: Bool {
         return searchController.searchBar.text?.isEmpty ?? true
@@ -41,7 +42,7 @@ class CastMemberTableViewController: UITableViewController {
             (!isSearchBarEmpty || searchBarScopeIsFiltering)
     }
 
-    
+    // List of lead cast members
     var leads: [CastMember] = [
         
         CastMember(name: "Kate Bemrose", character: "Velma Kelly", imageId: "kateBemrose", bio: """
@@ -78,6 +79,7 @@ class CastMemberTableViewController: UITableViewController {
         
     ]
     
+    // List of ensemble cast
     var ensemble: [CastMember] = [
         
         CastMember(name: "Ava Mason", character: "Liz", imageId: "avaMason", bio: """
@@ -186,9 +188,6 @@ class CastMemberTableViewController: UITableViewController {
         
     ]
     
-    // Join the leads and ensemble arrays (for searching)
-    var sortedCastMembers: [CastMember]?
-
     // Create a search controller instance
     let searchController = UISearchController(searchResultsController: nil)
     
@@ -229,11 +228,7 @@ class CastMemberTableViewController: UITableViewController {
         navigationItem.searchController = searchController
         // 5
         definesPresentationContext = true
-        
-        // Create a combined array of cast members
-        let castMembers = leads + ensemble
-        sortedCastMembers = castMembers.sorted { $0.name < $1.name }
-        
+                
     }
     
     // Runs every time the view appears (not just once when initially loaded)
@@ -248,19 +243,11 @@ class CastMemberTableViewController: UITableViewController {
     // MARK: - Table view data source
     
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        if isFiltering {
-            return "Results"
-        } else {
-            return sections[section]
-        }
+        return sections[section]
     }
     
     override func numberOfSections(in tableView: UITableView) -> Int {
-        if isFiltering {
-            return 1
-        } else {
-            return sections.count
-        }
+        return sections.count
     }
 
     // Return count of table cells in each section
@@ -268,9 +255,17 @@ class CastMemberTableViewController: UITableViewController {
                 
         // When searching, return number of matches in filtered list
         if isFiltering {
-            return filteredCastMembers.count
+
+            if section == 0 {
+                return filteredLeads.count
+            } else if section == 1 {
+                return filteredEnsemble.count
+            } else {
+                return 0
+            }
+
         } else {
-            // When not searching return appropriate count of cells in given section
+
             if section == 0 {
                 return leads.count
             } else if section == 1 {
@@ -278,6 +273,7 @@ class CastMemberTableViewController: UITableViewController {
             } else {
                 return 0
             }
+
         }
         
     }
@@ -290,11 +286,21 @@ class CastMemberTableViewController: UITableViewController {
         // Configure cell color
         cell.textLabel?.textColor = .white
         
+        // Depending on the section, fill the textLabel with the relevant text
         // If searching, return result from filtered list based on search
         if isFiltering {
-            cell.textLabel?.text = filteredCastMembers[indexPath.row].name
+
+            switch indexPath.section {
+            case 0:
+                cell.textLabel?.text = filteredLeads[indexPath.row].name
+            case 1:
+                cell.textLabel?.text = filteredEnsemble[indexPath.row].name
+            default:
+                break
+            }
+
         } else {
-            // Depending on the section, fill the textLabel with the relevant text
+
             switch indexPath.section {
             case 0:
                 cell.textLabel?.text = leads[indexPath.row].name
@@ -303,6 +309,7 @@ class CastMemberTableViewController: UITableViewController {
             default:
                 break
             }
+            
         }
         
         // Make the cell have a black background colour
@@ -347,7 +354,15 @@ class CastMemberTableViewController: UITableViewController {
         // Now set the cast member to be displayed
         // If searching, present from filtered results
         if isFiltering {
-            detailViewController.castMemberToDisplay = filteredCastMembers[index]
+            // Depending on the section, fill the textLabel with the relevant text
+            switch section {
+            case 0:
+                detailViewController.castMemberToDisplay = filteredLeads[index]
+            case 1:
+                detailViewController.castMemberToDisplay = filteredEnsemble[index]
+            default:
+                break
+            }
         } else {
             // Depending on the section, fill the textLabel with the relevant text
             switch section {
@@ -370,17 +385,17 @@ class CastMemberTableViewController: UITableViewController {
     }
     
     func filterContentForSearchText(_ searchText: String) {
-        
-        // Unwrap the array of sorted cast members
-        guard let castMembers = sortedCastMembers else {
-            return
-        }
-        
+                
         // Filter the cast members based on the search string
-        filteredCastMembers = castMembers.filter { (cast: CastMember) -> Bool in
+        filteredLeads = leads.filter { (cast: CastMember) -> Bool in
             return cast.name.lowercased().contains(searchText.lowercased())
         }
-        
+
+        // Filter the cast members based on the search string
+        filteredEnsemble = ensemble.filter { (cast: CastMember) -> Bool in
+            return cast.name.lowercased().contains(searchText.lowercased())
+        }
+
         // Change the data shown in the table view
         self.tableView.reloadData()
     }
