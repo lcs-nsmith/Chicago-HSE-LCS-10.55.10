@@ -262,6 +262,7 @@ class CastMemberTableViewController: UITableViewController {
         // Depending on the section, fill the textLabel with the relevant text
         cell.textLabel?.text = sortedCastMembers?[indexPath.row].name
         cell.textLabel?.textColor = .white
+        
         let cast: CastMember
         
         if isFiltering {
@@ -269,6 +270,8 @@ class CastMemberTableViewController: UITableViewController {
         } else {
           cast = castMembers[indexPath.row]
         }
+        cell.textLabel?.text = cast.name
+        
         
         // Make the cell have a black background colour
         cell.backgroundColor = .black
