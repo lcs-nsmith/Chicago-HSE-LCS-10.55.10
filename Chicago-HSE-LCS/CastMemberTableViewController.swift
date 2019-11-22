@@ -38,7 +38,7 @@ class CastMemberTableViewController: UITableViewController {
             """),
         
         CastMember(name: "Ava Mason", character: "Liz", imageId: "avaMason", bio: """
-            Ava Mason is a grade 9 student that has always  wanted to come to this amazing school and be in the musical.  She followed her dreams and now she is here at LCS doing the musical Chicago and playing Liz featured in Cell Block Tango.  She is  thrilled to be a part of this show and can’t wait to see what the next years bring. She is also very thankful for my parents and all of the amazing teachers for making this wonderful experience happen! 😀
+            Ava Mason is a grade 9 student that has always  wanted to come to this amazing school and be in the musical.  She followed her dreams and now she is here at LCS doing the musical Chicago and playing Liz featured in Cell Block Tango.  She is  thrilled to be a part of this show and can’t wait to see what the next years bring. She is also very thankful for her parents and all of the amazing teachers for making this wonderful experience happen! 😀
             """),
         
         CastMember(name: "Liam Cole", character: "Fred Casely", imageId: "liamCole", bio: """
