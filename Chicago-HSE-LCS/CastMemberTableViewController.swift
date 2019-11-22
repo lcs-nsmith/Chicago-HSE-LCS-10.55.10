@@ -9,11 +9,11 @@
 import UIKit
 
 extension CastMemberTableViewController: UISearchResultsUpdating {
-  func updateSearchResults(for searchController: UISearchController) {
-    let searchBar = searchController.searchBar
-    filterContentForSearchText(searchBar.text!)
-  }
-  
+    func updateSearchResults(for searchController: UISearchController) {
+        let searchBar = searchController.searchBar
+        filterContentForSearchText(searchBar.text!)
+    }
+    
 }
 
 class CastMemberTableViewController: UITableViewController {
@@ -22,15 +22,15 @@ class CastMemberTableViewController: UITableViewController {
     var filteredCastMembers: [CastMember] = []
     
     var isSearchBarEmpty: Bool {
-      return searchController.searchBar.text?.isEmpty ?? true
+        return searchController.searchBar.text?.isEmpty ?? true
     }
     
     
     var isFiltering: Bool {
-      let searchBarScopeIsFiltering =
-        searchController.searchBar.selectedScopeButtonIndex != 0
-      return searchController.isActive &&
-        (!isSearchBarEmpty || searchBarScopeIsFiltering)
+        let searchBarScopeIsFiltering =
+            searchController.searchBar.selectedScopeButtonIndex != 0
+        return searchController.isActive &&
+            (!isSearchBarEmpty || searchBarScopeIsFiltering)
     }
     
     var sortedCastMembers: [CastMember]?
@@ -178,7 +178,7 @@ class CastMemberTableViewController: UITableViewController {
     ]
     
     let searchController = UISearchController(searchResultsController: nil)
-
+    
     
     // Set the status bar text to be white
     override var preferredStatusBarStyle: UIStatusBarStyle {
@@ -218,19 +218,19 @@ class CastMemberTableViewController: UITableViewController {
         navigationItem.searchController = searchController
         // 5
         definesPresentationContext = true
-
+        
         
     }
     
     // Runs every time the view appears (not just once when initially loaded)
     override func viewWillAppear(_ animated: Bool) {
-
+        
         // Show the navigation item
         // Fixes bug where slow slide to unwind segue that is cancelled causes navigation bar to disappear
         self.navigationController?.setNavigationBarHidden(false, animated: false)
-
+        
     }
-
+    
     // MARK: - Table view data source
     
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -242,15 +242,15 @@ class CastMemberTableViewController: UITableViewController {
         
         // On the first section, return the count of menu items
         // For any other section, return 0
-//        if section == 0 {
-//            return castMembers.count
-//        } else {
-//            return 0
-//        }
+        //        if section == 0 {
+        //            return castMembers.count
+        //        } else {
+        //            return 0
+        //        }
         if isFiltering {
-          return filteredCastMembers.count
+            return filteredCastMembers.count
         }
-          
+        
         return castMembers.count
         
     }
@@ -267,9 +267,9 @@ class CastMemberTableViewController: UITableViewController {
         let cast: CastMember
         
         if isFiltering {
-          cast = filteredCastMembers[indexPath.row]
+            cast = filteredCastMembers[indexPath.row]
         } else {
-          cast = castMembers[indexPath.row]
+            cast = castMembers[indexPath.row]
         }
         cell.textLabel?.text = cast.name
         
@@ -297,6 +297,7 @@ class CastMemberTableViewController: UITableViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
+        
         // Get a reference to the destination view controller using segue.destination
         guard let detailViewController = segue.destination as? CastMemberDetailViewController else {
             return
@@ -307,18 +308,22 @@ class CastMemberTableViewController: UITableViewController {
             return
         }
         
-        // Now set the faculty member to be displayed
-        detailViewController.castMemberToDisplay = sortedCastMembers?[index]
+        // Now set the cast member to be displayed
+        if isFiltering {
+            detailViewController.castMemberToDisplay = filteredCastMembers[index]
+        } else {
+            detailViewController.castMemberToDisplay = castMembers[index]
+        }
     }
     
     func filterContentForSearchText(_ searchText: String) {
         filteredCastMembers = castMembers.filter { (cast: CastMember) -> Bool in
-        return cast.name.lowercased().contains(searchText.lowercased())
-      }
-      
-      tableView.reloadData()
+            return cast.name.lowercased().contains(searchText.lowercased())
+        }
+        
+        tableView.reloadData()
     }
-
+    
     
 }
 
