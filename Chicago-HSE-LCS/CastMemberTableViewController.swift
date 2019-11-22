@@ -213,6 +213,7 @@ class CastMemberTableViewController: UITableViewController {
         searchController.obscuresBackgroundDuringPresentation = false
         // 3
         searchController.searchBar.placeholder = "Search Cast Members"
+        
         // 4
         navigationItem.searchController = searchController
         // 5
@@ -286,6 +287,7 @@ class CastMemberTableViewController: UITableViewController {
         cell.accessoryType = .disclosureIndicator
         cell.accessoryView = UIImageView(image: chevron!)
         
+        searchController.searchBar.searchTextField.textColor = .white
         // Return the configured cell
         return cell
         
