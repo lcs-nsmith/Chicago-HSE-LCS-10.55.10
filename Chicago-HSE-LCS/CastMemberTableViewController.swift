@@ -14,7 +14,7 @@ class CastMemberTableViewController: UITableViewController {
     // List of sections
     var sections: [String] = [
         "Leads",
-        "Ensemble"
+        "Ensemble AND Cell Block Dancers"
     ]
     
     //MARK: Properties
@@ -44,14 +44,21 @@ class CastMemberTableViewController: UITableViewController {
             Cam has been in multiple theatre productions back in her hometown Austin, Texas. She is a published singer on Apple and Spotify. Her special talent is making a three minute kraft mac n cheese in two minutes.
             """),
         
+        CastMember(name: "Liam Cole", character: "Fred Casely", imageId: "liamCole", bio: """
+        Liam is excited to appear in this year's production of Chicago in the role of Fred Casely. His fourth appearance on stage, Liam is once again very excited to get to get the chance to perform on stage. Liam would like all the teachers and student volunteers who work tirelessly behind the scenes to make this show happen.
+        """),
+        
+        CastMember(name: "Will Hicks", character: "Narrator", imageId: "willHicks", bio: """
+        Will is delighted to play the role of the announcer in this year's production, Chicago. The younger brother of LCS acting prodigy Meg Hicks, Class of 2017, Will is taking part in his first show of his 4 years at the school. He didn't believe he could live up to the exceptionally high standards set by his awesome sister. However, Will believed that it was time to try something new and follow in her footsteps. Outside the theatre, Will can be found playing ultimate frisbee, soccer, and jamming to music with his roommate, Julio. He hopes you enjoy the show!
+        """),
+        
+    ]
+    
+    var ensemble: [CastMember] = [
+        
         CastMember(name: "Ava Mason", character: "Liz", imageId: "avaMason", bio: """
             Ava Mason is a grade 9 student that has always  wanted to come to this amazing school and be in the musical.  She followed her dreams and now she is here at LCS doing the musical Chicago and playing Liz featured in Cell Block Tango.  She is  thrilled to be a part of this show and can’t wait to see what the next years bring. She is also very thankful for my parents and all of the amazing teachers for making this wonderful experience happen! 😀
             """),
-        
-        CastMember(name: "Liam Cole", character: "Fred Casely", imageId: "liamCole", bio: """
-            Liam is excited to appear in this year's production of Chicago in the role of Fred Casely. His fourth appearance on stage, Liam is once again very excited to get to get the chance to perform on stage. Liam would like all the teachers and student volunteers who work tirelessly behind the scenes to make this show happen.
-            """),
-        
         
         CastMember(name: "Sierra Gibb", character: "Annie", imageId: "sierraGibb", bio: """
             Sierra is thrilled to be playing the role of Annie in this year’s production of Chicago.  She has been involved in many musicals and dance showcases at LCS.  Most recently she played the hilarious role of Rosie in Mamma Mia.  She has been dancing for many years and is so grateful for the support she’s received at LCS. She hopes you enjoy the show!
@@ -66,58 +73,41 @@ class CastMemberTableViewController: UITableViewController {
 
             """),
         
-        CastMember(name: "Valentina Boren", character: "Hunyak (Delores)", imageId: "valentinaBoren", bio: """
+        CastMember(name: "Valentina Boren", character: "Dolores)", imageId: "valentinaBoren", bio: """
             Valentina B. Is very thrilled to be part of this show this year. She was a part of the Mamma Mia performance last year as well and she hopes you truly enjoy the show.
             """),
+        
+        CastMember(name: "Mikayla Stoodley", character: "Kitty", imageId: "mikaylaStoodley", bio: """
+        Mikayla is so excited to be taking part in this year's production of Chicago, playing the role of Kitty! She is so grateful to be working alongside such a dedicated, energetic and all-around amazing cast and team. Mikayla always enjoys the overall creative process and everything that goes into making the show. Everyone has put so much time and energy into Chicago whether it be the crew, tech team, costume designers, set team, cast or directors. Mikayla is thrilled to be working alongside them and hopes you enjoy what everyone has worked so hard on! :)
+        """),
         
         CastMember(name: "Rori Ash", character: "Veronica", imageId: "roriAsh", bio: """
             Rori is thrilled to be performing in this year’s musical, Chicago. Rori has been dancing for over ten years and is excited to be dancing as Veronica Kelly and as part of the chorus. Being in the musical was a perfect way for her to continue dancing but to also step outside of her comfort zone and try singing. She would like to thank the directors of the show for being “awesome musical parents.
             """),
         
-        CastMember(name: "Mikayla Stoodley", character: "Kitty", imageId: "mikaylaStoodley", bio: """
-            Mikayla is so excited to be taking part in this year's production of Chicago, playing the role of Kitty! She is so grateful to be working alongside such a dedicated, energetic and all-around amazing cast and team. Mikayla always enjoys the overall creative process and everything that goes into making the show. Everyone has put so much time and energy into Chicago whether it be the crew, tech team, costume designers, set team, cast or directors. Mikayla is thrilled to be working alongside them and hopes you enjoy what everyone has worked so hard on! :)
-            """),
+        CastMember(name: "Ben Freeman", character: "Sgt. Fogarty", imageId: "benFreeman", bio: """
+        Ben is a grade 9 student and very excited to be part of his first musical at LCS. He has been in various productions over the years and has played roles including Rumplestiltskin In Princess Whatshername, the Mad Hatter in Dorothy in Wonderland, and Michael in Mary Poppins.
+        """),
         
-        CastMember(name: "Will Hicks", character: "Narrator/Ensemble", imageId: "willHicks", bio: """
-            Will is delighted to play the role of the announcer in this year's production, Chicago. The younger brother of LCS acting prodigy Meg Hicks, Class of 2017, Will is taking part in his first show of his 4 years at the school. He didn't believe he could live up to the exceptionally high standards set by his awesome sister. However, Will believed that it was time to try something new and follow in her footsteps. Outside the theatre, Will can be found playing ultimate frisbee, soccer, and jamming to music with his roommate, Julio. He hopes you enjoy the show!
-
-            """),
+        CastMember(name: "Julio Midence", character: "Judge", imageId: "julioMidence", bio: """
+        Julio has always had an interest in the 1920s. He really enjoys the dancing and music portrayed in the Chicago Musical. The name Midence has played a significant role in the arts of LCS with the older sibling, Raul Midence participating in 4 of the LCS theatre productions. Julio can be often found outside playing frisbee with his great roommate Will Hicks. Julio is excited to be able to participate in such an amazing show!
+        """),
         
-        CastMember(name: "Julio Midence", character: "Judge/Bernie/Harry/Ensemble", imageId: "julioMidence", bio: """
-            Julio has always had an interest in the 1920s. He really enjoys the dancing and music portrayed in the Chicago Musical. The name Midence has played a significant role in the arts of LCS with the older sibling, Raul Midence participating in 4 of the LCS theatre productions. Julio can be often found outside playing frisbee with his great roommate Will Hicks. Julio is excited to be able to participate in such an amazing show!
-            """),
+        CastMember(name: "Marlow Florotto-Bickert", character: "Harrison", imageId: "marlowFiorotto-Bickert", bio: """
+        Marlow Fiorotto-Bickert has had a hell of a life, but that’s not what you’re here for. He’s been singing since he could crawl, dancing to Michael Jackson songs since he could wear a fedora, and he’s always wanted to act in a production like Chicago. He took ballet just long enough ago that he can’t remember it, and his mum was the closest thing he’s had to vocal training before coming to Lakefield. He plays piano, and has been playing classical and pop for eight years. With a passion for astrophysics and other sciences, an unquenchable thirst for art, and a knack for poetry and writing, he’s excited for whatever is to come in his future.
+        """),
         
-        CastMember(name: "Ben Freeman", character: "Sgt Fogarty/Ensemble", imageId: "benFreeman", bio: """
-            Ben is a grade 9 student and very excited to be part of his first musical at LCS. He has been in various productions over the years and has played roles including Rumplestiltskin In Princess Whatshername, the Mad Hatter in Dorothy in Wonderland, and Michael in Mary Poppins.
-
-            """),
+        CastMember(name: "Cristian Cicardo", character: "Ezekiel", imageId: "chrisCicardo", bio: """
+        This is Cris’s first time on the stage at LCS.  He has loved performing and getting to learn so many complicated dance moves and lifts.  Cris loves being on stage and wishes he had taken drama and dance class throughout his time at LCS.  He hopes you enjoy the show.
+        """),
         
-        CastMember(name: "Marlow Florotto-Bickert", character: "Harrison/ Ensemble", imageId: "marlowFiorotto-Bickert", bio: """
-            Marlow Fiorotto-Bickert has had a hell of a life, but that’s not what you’re here for. He’s been singing since he could crawl, dancing to Michael Jackson songs since he could wear a fedora, and he’s always wanted to act in a production like Chicago. He took ballet just long enough ago that he can’t remember it, and his mum was the closest thing he’s had to vocal training before coming to Lakefield. He plays piano, and has been playing classical and pop for eight years. With a passion for astrophysics and other sciences, an unquenchable thirst for art, and a knack for poetry and writing, he’s excited for whatever is to come in his future.
-            """),
+        CastMember(name: "Vincent Dahm", character: "Alejandro", imageId: "vincentDahm", bio: """
+        Vince is elated to be a member of the musical production of Chicago. When he isn’t driving his teachers crazy, he can be found reading or preparing for English class (his favourite course at LCS, right after OE). He has loved getting to learn so many cool lifts and dance moves. He hopes you enjoy the show.
+        """),
         
-        
-        CastMember(name: "Carine Martin", character: "Cell Block Dancer", imageId: "carineMartin", bio: """
-            Carine has never participated in a school musical before. However, for her last year in Lakefield as a grade 12, she decided to put herself out there and try out for the Chicago musical knowing that it would be her last chance to. The musical has allowed her to pursue her passion for singing and dancing as well as help her discover new interests. She is thrilled to be in the cast and part of such a great production surrounded by talent and support.
-            """),
-        
-        
-        CastMember(name: "Cristian Cicardo", character: "Ensemble Member", imageId: "chrisCicardo", bio: """
-            This is Cris’s first time on the stage at LCS.  He has loved performing and getting to learn so many complicated dance moves and lifts.  Cris loves being on stage and wishes he had taken drama and dance class throughout his time at LCS.  He hopes you enjoy the show.
-
-            """),
-        
-        CastMember(name: "Vincent Dahm", character: "Ensemble Member", imageId: "vincentDahm", bio: """
-            Vince is elated to be a member of the musical production of Chicago. When he isn’t driving his teachers crazy, he can be found reading or preparing for English class (his favourite course at LCS, right after OE). He has loved getting to learn so many cool lifts and dance moves. He hopes you enjoy the show.
-            """),
-        
-        CastMember(name: "Kaam Schlagenhauf", character: "Ensemble Member", imageId: "kaamSchlagenhauf", bio: """
-            Kaam is no stranger to the stage. He has performed in numerous dance performances at LCS (including an epic RuPaul performance) and is an active member of drama class.  He loves to dance and is ecstatic to be part of such a wonderful production.
-            """),
-        
-    ]
-    
-    var ensemble: [CastMember] = [
+        CastMember(name: "Kaam Schlagenhauf", character: "Charlie", imageId: "kaamSchlagenhauf", bio: """
+        Kaam is no stranger to the stage. He has performed in numerous dance performances at LCS (including an epic RuPaul performance) and is an active member of drama class.  He loves to dance and is ecstatic to be part of such a wonderful production.
+        """),
         
         CastMember(name: "Pia Garcia", character: "Cell Block Dancer", imageId: "piaGarcia", bio: """
     Pia is delighted to be part of this year’s fall musical. After taking part in Mamma Mia! last fall term, she knew she had to perform in Chicago. After many years of dance classes and recitals, the stage has become a huge part of Pia’s life. Keep an eye above you, because chances are, you will be able to spot her while she is mid-air! She would like to give a special thanks to the Production Team for being such great leaders!
@@ -164,7 +154,12 @@ class CastMemberTableViewController: UITableViewController {
         
         CastMember(name: "Soroosh Siyoofi", character: "Ensemble Member", imageId: "sorooshSiyoofi", bio: """
     Soroosh is excited to show his dancing and singing skills (if any). He made a bold decision, stepping out of his comfort zone and joined the cast of the Chicago Musical in this very fall.
-    """)
+    """),
+        
+        CastMember(name: "Carine Martin", character: "Cell Block Dancer", imageId: "carineMartin", bio: """
+            Carine has never participated in a school musical before. However, for her last year in Lakefield as a grade 12, she decided to put herself out there and try out for the Chicago musical knowing that it would be her last chance to. The musical has allowed her to pursue her passion for singing and dancing as well as help her discover new interests. She is thrilled to be in the cast and part of such a great production surrounded by talent and support.
+            """),
+
     ]
     
     // Set the status bar text to be white
