@@ -8,10 +8,22 @@
 
 import UIKit
 
+extension CastMemberTableViewController: UISearchResultsUpdating {
+  func updateSearchResults(for searchController: UISearchController) {
+    let searchBar = searchController.searchBar
+    filterContentForSearchText(searchBar.text!)
+  }
+  
+}
+
 class CastMemberTableViewController: UITableViewController {
     
     //MARK: Properties
     var filteredCastMembers: [CastMember] = []
+    
+    var isSearchBarEmpty: Bool {
+      return searchController.searchBar.text?.isEmpty ?? true
+    }
 
     var sortedCastMembers: [CastMember]?
     var castMembers: [CastMember] = [
@@ -272,6 +284,15 @@ class CastMemberTableViewController: UITableViewController {
         // Now set the faculty member to be displayed
         detailViewController.castMemberToDisplay = sortedCastMembers?[index]
     }
+    
+    func filterContentForSearchText(_ searchText: String) {
+        filteredCastMembers = castMembers.filter { (cast: CastMember) -> Bool in
+        return cast.name.lowercased().contains(searchText.lowercased())
+      }
+      
+      tableView.reloadData()
+    }
+
     
 }
 extension CastMemberTableViewController: UISearchResultsUpdating {
