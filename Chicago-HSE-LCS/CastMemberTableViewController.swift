@@ -3,6 +3,7 @@
 //  Chicago-HSE-LCS
 //
 //  Created by Lee, Jeewoo on 2019-11-14.
+//  Edited by Maxwell Lu on 2019-11-21.
 //  Copyright © 2019 Gordon, Russell. All rights reserved.
 //
 
@@ -10,9 +11,15 @@ import UIKit
 
 class CastMemberTableViewController: UITableViewController {
     
+    // List of sections
+    var sections: [String] = [
+        "Leads",
+        "Ensemble"
+    ]
+    
     //MARK: Properties
-    var sortedCastMembers: [CastMember]?
-    var castMembers: [CastMember] = [
+    // Array of all cast members
+    var leads: [CastMember] = [
         
         CastMember(name: "Kate Bemrose", character: "Velma Kelly", imageId: "kateBemrose", bio: """
             Kate is super excited to perform in this year’s fall musical Chicago, as the one and only Velma Kelly. After an amazing year packed with Lakefield arts experiences last year, she has decided to come back for more. Coming from an intense competitive dance background at Premiere Studio of Dance, television commercial work and local theatre involvement (Young Cosette in Les Miserables, Sophie in Mamma Mia) , she can’t wait to star as a wicked Vaudeville murderer. She would like to give thanks to everyone involved in this magical production, that makes her Lakefield difference truly like no other!
@@ -89,46 +96,11 @@ class CastMemberTableViewController: UITableViewController {
             Marlow Fiorotto-Bickert has had a hell of a life, but that’s not what you’re here for. He’s been singing since he could crawl, dancing to Michael Jackson songs since he could wear a fedora, and he’s always wanted to act in a production like Chicago. He took ballet just long enough ago that he can’t remember it, and his mum was the closest thing he’s had to vocal training before coming to Lakefield. He plays piano, and has been playing classical and pop for eight years. With a passion for astrophysics and other sciences, an unquenchable thirst for art, and a knack for poetry and writing, he’s excited for whatever is to come in his future.
             """),
         
-        CastMember(name: "Maya Katsof", character: "Cell Block Dancer", imageId: "mayaKatsof", bio: """
-            Maya is very excited to be participating in this year's fall musical; Chicago! She is one of three new students in this years graduating class and she's very glad to have the chance to be in this production. She has been dancing ever since she was young but has never participated in an official production like this and is looking forward to testing her limits. She is very happy that she was able to spend the fall term working on this musical and was able to meet great people along the way. Maya hopes you enjoy the show!
-
-            """),
-        
-        CastMember(name: "Pia Garcia", character: "Cell Block Dancer", imageId: "piaGarcia", bio: """
-            Pia is delighted to be part of this year’s fall musical. After taking part in Mamma Mia! last fall term, she knew she had to perform in Chicago. After many years of dance classes and recitals, the stage has become a huge part of Pia’s life. Keep an eye above you, because chances are, you will be able to spot her while she is mid-air! She would like to give a special thanks to the Production Team for being such great leaders!
-
-            """),
-        
-        CastMember(name: "Razan Hammoud", character: "Cell Block Dancer", imageId: "razanHammoud", bio: """
-            Razan loves to perform. She has been involved in many productions and dance showcases at the school. She hopes you love the show!
-            """),
-        CastMember(name: "Ximena Meneses", character: "Cell Block Dancer", imageId: "ximenaMeneses", bio: """
-            Ximena is super excited to perform in Chicago. She saw the musical on Broadway during summer and she had no doubt that she wanted to be part of the school production. Although she has been part of the Dance Showcase, its her first time being part of the musical. She’s really excited about it! She has been dancing for a long time and that's what she loves to do the most. Her love for dance is what made her get out of her comfort zone since she had to sing for her audition and it's something she had never done before! Ximena truly enjoyed being part of this amazing group of people. She would like to give a special thank you to all the directors, cast and crew for all the support and time given. She doesn't regret getting out of her comfort zone and she can't wait for everyone to see this amazing show.
-            """),
         
         CastMember(name: "Carine Martin", character: "Cell Block Dancer", imageId: "carineMartin", bio: """
             Carine has never participated in a school musical before. However, for her last year in Lakefield as a grade 12, she decided to put herself out there and try out for the Chicago musical knowing that it would be her last chance to. The musical has allowed her to pursue her passion for singing and dancing as well as help her discover new interests. She is thrilled to be in the cast and part of such a great production surrounded by talent and support.
             """),
         
-        CastMember(name: "Olivia Cantelon", character: "Cell Block Dancer", imageId: "oliviaCantelon", bio: """
-            Olivia is so excited to be back on stage for this year's fall musical Chicago, as a featured dancer and chorus member. She has always had a passion for theatre especially when it comes to dancing. She has done 4 years of competitive dance and participated in many theatre productions. Enjoy the show!!
-
-            """),
-        
-        CastMember(name: "Jayden Julian", character: "Ensemble Member", imageId: "jaydenJulian", bio: """
-            This is Jayden’s 4th production at LCS. She fell in love with theatre when she auditioned for her very first musical Damn Yankees in grade 10. Jayden has always been apart of the ensemble  and earned a larger role as Augusta Makepeace in last year’s production of The Heart of Robin Hood. Jayden has enjoyed this experience so much and think of this cast as her second family she has developed many new talents and habits as an actress and is striving in this characters position. She is a very talented and beautiful young lady and we can’t wait to see her performance in the show. She is also very excited to show you what she has to offer and her improvement over the span of 2 years in her acting experience.
-
-            """),
-        
-        CastMember(name: "Alejandra Porcar", character: "Ensemble Member", imageId: "alejandraPorcar", bio: """
-            Alejandra is very excited to be in this year’s musical, CHICAGO! She is part of the girls dance group and is her first time being a part of a musical. She has been in Drama since 10th grade but she is nervous because this is her first time performing in front of so many people. She has always wanted to be part of a musical at LCS, now that this is her last year she had the courage to be a part of it. She has never done dance before but her enthusiasm turns heads and that's when we knew she belonged in the musical. She is always positive, has lots of fun in the rehearsal and tries her best at dancing.
-
-            """),
-        
-        CastMember(name: "Sophie Gray", character: "Ensemble Member", imageId: "sophieGray", bio: """
-            Chicago is Sophie’s first musical theatre production at LCS and is honoured to contribute to such an amazing production. Her love of theatre stemmed from doing rhyming couplet Shakespeare productions in Grade 4 & 5 and her passion for theatre has influenced much of her life. When not hibernating in her room, she is often found participating in Safe Space and the D&D club.  Earning a place in the ensemble, Sophie has immensely enjoyed being a part of a wonderful cast and learning new musical theatre skills and dance skills. She looks forward to taking part in future LCS productions.
-
-            """),
         
         CastMember(name: "Cristian Cicardo", character: "Ensemble Member", imageId: "chrisCicardo", bio: """
             This is Cris’s first time on the stage at LCS.  He has loved performing and getting to learn so many complicated dance moves and lifts.  Cris loves being on stage and wishes he had taken drama and dance class throughout his time at LCS.  He hopes you enjoy the show.
@@ -143,26 +115,66 @@ class CastMemberTableViewController: UITableViewController {
             Kaam is no stranger to the stage. He has performed in numerous dance performances at LCS (including an epic RuPaul performance) and is an active member of drama class.  He loves to dance and is ecstatic to be part of such a wonderful production.
             """),
         
-        CastMember(name: "Eric Xia", character: "Ensemble Member", imageId: "ericXia", bio: """
-            As a loyal follower and one of the last generations of the world famous DSB, Eric Xia has graced the stage once again with his masterful performance of a … whatever he is. With multiple experiences in school performances such as “Damn Yankees”, “Mamma Mia”, “The Heart of Robin Hood”, and his personal favourite, “Lord of the Flies” featuring Nicholas Watts as Jack and the boys, Eric Xia has truly lived in the theatre since his grade 10 year.
+    ]
+    
+    var ensemble: [CastMember] = [
+        
+        CastMember(name: "Pia Garcia", character: "Cell Block Dancer", imageId: "piaGarcia", bio: """
+    Pia is delighted to be part of this year’s fall musical. After taking part in Mamma Mia! last fall term, she knew she had to perform in Chicago. After many years of dance classes and recitals, the stage has become a huge part of Pia’s life. Keep an eye above you, because chances are, you will be able to spot her while she is mid-air! She would like to give a special thanks to the Production Team for being such great leaders!
 
-            """),
+    """),
+        
+        CastMember(name: "Maya Katsof", character: "Cell Block Dancer", imageId: "mayaKatsof", bio: """
+    Maya is very excited to be participating in this year's fall musical; Chicago! She is one of three new students in this years graduating class and she's very glad to have the chance to be in this production. She has been dancing ever since she was young but has never participated in an official production like this and is looking forward to testing her limits. She is very happy that she was able to spend the fall term working on this musical and was able to meet great people along the way. Maya hopes you enjoy the show!
+
+    """),
+        
+        CastMember(name: "Olivia Cantelon", character: "Cell Block Dancer", imageId: "oliviaCantelon", bio: """
+    Olivia is so excited to be back on stage for this year's fall musical Chicago, as a featured dancer and chorus member. She has always had a passion for theatre especially when it comes to dancing. She has done 4 years of competitive dance and participated in many theatre productions. Enjoy the show!!
+
+    """),
+        
+        CastMember(name: "Razan Hammoud", character: "Cell Block Dancer", imageId: "razanHammoud", bio: """
+    Razan loves to perform. She has been involved in many productions and dance showcases at the school. She hopes you love the show!
+    """),
+        
+        CastMember(name: "Ximena Meneses", character: "Cell Block Dancer", imageId: "ximenaMeneses", bio: """
+    Ximena is super excited to perform in Chicago. She saw the musical on Broadway during summer and she had no doubt that she wanted to be part of the school production. Although she has been part of the Dance Showcase, its her first time being part of the musical. She’s really excited about it! She has been dancing for a long time and that's what she loves to do the most. Her love for dance is what made her get out of her comfort zone since she had to sing for her audition and it's something she had never done before! Ximena truly enjoyed being part of this amazing group of people. She would like to give a special thank you to all the directors, cast and crew for all the support and time given. She doesn't regret getting out of her comfort zone and she can't wait for everyone to see this amazing show.
+    """),
+        
+        CastMember(name: "Jayden Julian", character: "Ensemble Member", imageId: "jaydenJulian", bio: """
+    This is Jayden’s 4th production at LCS. She fell in love with theatre when she auditioned for her very first musical Damn Yankees in grade 10. Jayden has always been apart of the ensemble  and earned a larger role as Augusta Makepeace in last year’s production of The Heart of Robin Hood. Jayden has enjoyed this experience so much and think of this cast as her second family she has developed many new talents and habits as an actress and is striving in this characters position. She is a very talented and beautiful young lady and we can’t wait to see her performance in the show. She is also very excited to show you what she has to offer and her improvement over the span of 2 years in her acting experience.
+
+    """),
+        
+        CastMember(name: "Sophie Gray", character: "Ensemble Member", imageId: "sophieGray", bio: """
+    Chicago is Sophie’s first musical theatre production at LCS and is honoured to contribute to such an amazing production. Her love of theatre stemmed from doing rhyming couplet Shakespeare productions in Grade 4 & 5 and her passion for theatre has influenced much of her life. When not hibernating in her room, she is often found participating in Safe Space and the D&D club.  Earning a place in the ensemble, Sophie has immensely enjoyed being a part of a wonderful cast and learning new musical theatre skills and dance skills. She looks forward to taking part in future LCS productions.
+
+    """),
+        
+        CastMember(name: "Alejandra Porcar", character: "Ensemble Member", imageId: "alejandraPorcar", bio: """
+    Alejandra is very excited to be in this year’s musical, CHICAGO! She is part of the girls dance group and is her first time being a part of a musical. She has been in Drama since 10th grade but she is nervous because this is her first time performing in front of so many people. She has always wanted to be part of a musical at LCS, now that this is her last year she had the courage to be a part of it. She has never done dance before but her enthusiasm turns heads and that's when we knew she belonged in the musical. She is always positive, has lots of fun in the rehearsal and tries her best at dancing.
+
+    """),
+        
+        CastMember(name: "Eric Xia", character: "Ensemble Member", imageId: "ericXia", bio: """
+    As a loyal follower and one of the last generations of the world famous DSB, Eric Xia has graced the stage once again with his masterful performance of a … whatever he is. With multiple experiences in school performances such as “Damn Yankees”, “Mamma Mia”, “The Heart of Robin Hood”, and his personal favourite, “Lord of the Flies” featuring Nicholas Watts as Jack and the boys, Eric Xia has truly lived in the theatre since his grade 10 year.
+
+    """),
         
         CastMember(name: "Soroosh Siyoofi", character: "Ensemble Member", imageId: "sorooshSiyoofi", bio: """
-            Soroosh is excited to show his dancing and singing skills (if any). He made a bold decision, stepping out of his comfort zone and joined the cast of the Chicago Musical in this very fall.
-            """)
-        
+    Soroosh is excited to show his dancing and singing skills (if any). He made a bold decision, stepping out of his comfort zone and joined the cast of the Chicago Musical in this very fall.
+    """)
     ]
     
     // Set the status bar text to be white
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
     }
-    
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
         
@@ -171,32 +183,35 @@ class CastMemberTableViewController: UITableViewController {
         
         // Get table view to always have black background
         tableView.backgroundColor = .black
-        
+
         // Set the seperator color to always be dark grey
         tableView.separatorColor = .darkGray
-        
+
+        // Set a zero-height footer so that no blank cells show after the list of menu items
+        tableView.tableFooterView = UIView()
+
         // Signal need to update the status bar
         self.setNeedsStatusBarAppearanceUpdate()
-        
-        // Sort the array by name
-        sortedCastMembers = castMembers.sorted { $0.name < $1.name }
-        
+
     }
     
     // Runs every time the view appears (not just once when initially loaded)
     override func viewWillAppear(_ animated: Bool) {
-
+        
         // Show the navigation item
         // Fixes bug where slow slide to unwind segue that is cancelled causes navigation bar to disappear
         self.navigationController?.setNavigationBarHidden(false, animated: false)
-
+        
     }
-
+    
     // MARK: - Table view data source
     
+    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return sections[section] 
+    }
+    
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 1
+        return sections.count
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -204,7 +219,9 @@ class CastMemberTableViewController: UITableViewController {
         // On the first section, return the count of menu items
         // For any other section, return 0
         if section == 0 {
-            return castMembers.count
+            return leads.count
+        } else if section == 1 {
+            return ensemble.count
         } else {
             return 0
         }
@@ -217,7 +234,16 @@ class CastMemberTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "CastMemberCell", for: indexPath)
         
         // Depending on the section, fill the textLabel with the relevant text
-        cell.textLabel?.text = sortedCastMembers?[indexPath.row].name
+        switch indexPath.section {
+        case 0:
+            cell.textLabel?.text = leads[indexPath.row].name
+        case 1:
+            cell.textLabel?.text = ensemble[indexPath.row].name
+        default:
+            break
+        }
+        
+        // Configure cell color
         cell.textLabel?.textColor = .white
         
         // Make the cell have a black background colour
@@ -238,12 +264,15 @@ class CastMemberTableViewController: UITableViewController {
         
     }
     
-    
-    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         // Get a reference to the destination view controller using segue.destination
         guard let detailViewController = segue.destination as? CastMemberDetailViewController else {
+            return
+        }
+        
+        // Get the currently selected section of the table view
+        guard let section = tableView.indexPathForSelectedRow?.section else {
             return
         }
         
@@ -253,7 +282,16 @@ class CastMemberTableViewController: UITableViewController {
         }
         
         // Now set the faculty member to be displayed
-        detailViewController.castMemberToDisplay = sortedCastMembers?[index]
+        // Depending on the section, fill the textLabel with the relevant text
+        switch section {
+        case 0:
+            detailViewController.castMemberToDisplay = leads[index]
+        case 1:
+            detailViewController.castMemberToDisplay = ensemble[index]
+        default:
+            break
+        }
+        
     }
     
 }

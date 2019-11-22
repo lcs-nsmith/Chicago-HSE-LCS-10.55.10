@@ -80,13 +80,13 @@
         <scene sceneID="xpl-kj-Hn5">
             <objects>
                 <tableViewController id="oDI-oI-k8k" userLabel="Cast Member" customClass="CastMemberTableViewController" customModule="Chicago_LCS" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Xyq-5s-txr">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="Xyq-5s-txr">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CastMemberCell" id="fql-wE-n6y">
-                                <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                <rect key="frame" x="0.0" y="55.5" width="414" height="43.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="fql-wE-n6y" id="Yoa-b5-dQ0">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
@@ -592,8 +592,8 @@ All images © Lakefield College School, 2019.  Used with permission.</string>
                                                     <fragment content="Lost Bees">
                                                         <attributes>
                                                             <color key="NSColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                            <font key="NSFont" size="17" name=".AppleSystemUIFontItalic"/>
-                                                            <font key="NSOriginalFont" size="17" name=".AppleSystemUIFontItalic"/>
+                                                            <font key="NSFont" metaFont="system" size="17"/>
+                                                            <font key="NSOriginalFont" metaFont="system" size="17"/>
                                                             <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                         </attributes>
                                                     </fragment>
@@ -654,8 +654,8 @@ Mixed Media. 6 x 4 inches.</string>
                                                                     <fragment content="Kate Bemrose, Grade 10">
                                                                         <attributes>
                                                                             <color key="NSColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                                            <font key="NSFont" size="17" name=".AppleSystemUIFontItalic"/>
-                                                                            <font key="NSOriginalFont" size="17" name=".AppleSystemUIFontItalic"/>
+                                                                            <font key="NSFont" metaFont="system" size="17"/>
+                                                                            <font key="NSOriginalFont" metaFont="system" size="17"/>
                                                                         </attributes>
                                                                     </fragment>
                                                                 </attributedString>
@@ -1131,7 +1131,7 @@ Mixed Media. 6 x 4 inches.</string>
                                                             <fragment content="Get your tickets">
                                                                 <attributes>
                                                                     <color key="NSColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                                    <font key="NSFont" size="17" name=".AppleSystemUIFont"/>
+                                                                    <font key="NSFont" metaFont="system" size="17"/>
                                                                     <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                                     <integer key="NSUnderline" value="1"/>
                                                                 </attributes>
@@ -1139,7 +1139,7 @@ Mixed Media. 6 x 4 inches.</string>
                                                             <fragment content=" before they're gone!">
                                                                 <attributes>
                                                                     <color key="NSColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                                    <font key="NSFont" size="17" name=".AppleSystemUIFont"/>
+                                                                    <font key="NSFont" metaFont="system" size="17"/>
                                                                     <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                                 </attributes>
                                                             </fragment>
