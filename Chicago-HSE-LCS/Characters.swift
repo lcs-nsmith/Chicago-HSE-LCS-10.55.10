@@ -13,4 +13,13 @@ struct Characters {
     var playedBy: String
     var description: String
     var imageId: String
+    var actionImageId: String
+    
+    init(characterName: String, playedBy: String, description: String, imageId: String, actionImageId: String = "") {
+        self.characterName = characterName
+        self.playedBy = playedBy
+        self.description = description
+        self.imageId = imageId
+        self.actionImageId = actionImageId
+    }
 }

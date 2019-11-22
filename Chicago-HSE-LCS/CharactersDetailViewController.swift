@@ -18,6 +18,7 @@ class CharactersDetailViewController: UIViewController {
     @IBOutlet weak var characterHeadShot: UIImageView!
     @IBOutlet weak var playedBy: UILabel!
     @IBOutlet weak var scrollView: UIScrollView!
+    @IBOutlet weak var characterActionShot: UIImageView!
     
     // Set the status bar text to be white
     override var preferredStatusBarStyle: UIStatusBarStyle {
@@ -37,14 +38,20 @@ class CharactersDetailViewController: UIViewController {
         self.navigationItem.title = characterSetFromTableView.characterName
         
         // Set details for this character
-        // Set photo for this faculty member, if one exists
+        // Set photo for this character, if one exists
         if characterSetFromTableView.imageId.isEmpty {
             characterHeadShot.isHidden = true
         } else {
             characterHeadShot.image = UIImage(named: characterSetFromTableView.imageId)
         }
         playedBy.text = characterSetFromTableView.playedBy
-        
+        // Set action photo for this character, if one exists
+        if characterSetFromTableView.actionImageId.isEmpty {
+            characterActionShot.isHidden = true
+        } else {
+            characterActionShot.image = UIImage(named: characterSetFromTableView.actionImageId)
+        }
+
         // Signal need to update the status bar
         self.setNeedsStatusBarAppearanceUpdate()
 

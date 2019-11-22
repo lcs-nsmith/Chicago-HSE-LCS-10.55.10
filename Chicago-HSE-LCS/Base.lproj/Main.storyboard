@@ -909,7 +909,7 @@ Mixed Media. 6 x 4 inches.</string>
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Nuz-rx-NLP">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="493"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="915"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="230" verticalHuggingPriority="230" image="facultyPlaceholderImage" translatesAutoresizingMaskIntoConstraints="NO" id="ST2-e5-8dX" userLabel="Character Head Shot">
                                                 <rect key="frame" x="0.0" y="0.0" width="414" height="414"/>
@@ -932,9 +932,13 @@ Mixed Media. 6 x 4 inches.</string>
                                                 </subviews>
                                                 <edgeInsets key="layoutMargins" top="8" left="10" bottom="8" right="10"/>
                                             </stackView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="facultyPlaceholderImage" translatesAutoresizingMaskIntoConstraints="NO" id="ukK-VI-T5a" userLabel="Character Action Shot">
+                                                <rect key="frame" x="0.0" y="501" width="414" height="414"/>
+                                            </imageView>
                                         </subviews>
                                         <constraints>
                                             <constraint firstItem="ST2-e5-8dX" firstAttribute="height" secondItem="Nuz-rx-NLP" secondAttribute="width" id="2UV-Xl-rNF" userLabel="Faculty Head Shot.height = width"/>
+                                            <constraint firstItem="ukK-VI-T5a" firstAttribute="height" secondItem="Nuz-rx-NLP" secondAttribute="width" id="NVg-mh-xvj"/>
                                         </constraints>
                                     </stackView>
                                 </subviews>
@@ -960,6 +964,7 @@ Mixed Media. 6 x 4 inches.</string>
                     </view>
                     <navigationItem key="navigationItem" id="MSf-tX-ybG"/>
                     <connections>
+                        <outlet property="characterActionShot" destination="ukK-VI-T5a" id="chF-9D-2BE"/>
                         <outlet property="characterHeadShot" destination="ST2-e5-8dX" id="F5U-MW-66X"/>
                         <outlet property="playedBy" destination="iNa-ba-BJb" id="3nd-Ce-u6f"/>
                         <outlet property="scrollView" destination="4jw-ZO-vwB" id="Ulv-75-fFl"/>
