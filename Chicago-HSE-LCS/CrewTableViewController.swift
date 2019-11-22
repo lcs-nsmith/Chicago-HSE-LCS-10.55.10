@@ -16,6 +16,8 @@ class CrewTableViewController: UITableViewController {
         "Special Teams"
     ]
     
+    var sortedPrimaryCrewMembers: [Crew]?
+    
     //MARK: Properties
     var primaryCrewMembers : [Crew] = [
         
@@ -73,13 +75,13 @@ class CrewTableViewController: UITableViewController {
     
     var specialTeams : [Crew] = [
         
-        Crew(name: "Set Construction", job: "", imageId: "", bio: ""),
-        
-        Crew(name: "Set Painting", job: "", imageId: "", bio: ""),
-        
         Crew(name: "Hair and Make-up", job: "", imageId: "", bio: ""),
         
         Crew(name: "Posters", job: "", imageId: "", bio: ""),
+
+        Crew(name: "Set Construction", job: "", imageId: "", bio: ""),
+        
+        Crew(name: "Set Painting", job: "", imageId: "", bio: ""),
         
     ]
     // Set the status bar text to be white
@@ -107,6 +109,9 @@ class CrewTableViewController: UITableViewController {
         
         // Signal need to update the status bar
         self.setNeedsStatusBarAppearanceUpdate()
+        
+        // Sort the crew array by name
+        sortedPrimaryCrewMembers = primaryCrewMembers.sorted { $0.name < $1.name }
         
     }
     
@@ -148,13 +153,13 @@ class CrewTableViewController: UITableViewController {
     // Configure the cell
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        // Create an object of the dynamic cell "FacultyCell"
+        // Create an object of the dynamic cell "CrewCell"
         let cell = tableView.dequeueReusableCell(withIdentifier: "CrewCell", for: indexPath)
         
         // Depending on the section, fill the textLabel with the relevant text
         switch indexPath.section {
         case 0:
-            cell.textLabel?.text = primaryCrewMembers[indexPath.row].name
+            cell.textLabel?.text = sortedPrimaryCrewMembers?[indexPath.row].name
         case 1:
             cell.textLabel?.text = specialTeams[indexPath.row].name
         default:
@@ -240,7 +245,7 @@ class CrewTableViewController: UITableViewController {
         // Now set the crew member to be displayed
         switch section {
         case 0:
-            detailViewController.crewMemberToDisplay = primaryCrewMembers[index]
+            detailViewController.crewMemberToDisplay = sortedPrimaryCrewMembers?[index]
         case 1:
             detailViewController.crewMemberToDisplay = specialTeams[index]
         default:
