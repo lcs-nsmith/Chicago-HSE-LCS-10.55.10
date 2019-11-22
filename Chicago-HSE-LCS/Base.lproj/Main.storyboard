@@ -1391,25 +1391,25 @@ Don't miss out on this tasty array of treats!</string>
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="LU4-x2-CYX">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="736.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1093.5"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="almostAllOfTheGang" translatesAutoresizingMaskIntoConstraints="NO" id="u5R-2X-Z5j">
                                                 <rect key="frame" x="0.0" y="0.0" width="414" height="310.5"/>
                                             </imageView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Jnx-Ht-FqB">
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="2BQ-Cf-cOr">
                                                 <rect key="frame" x="0.0" y="318.5" width="414" height="418"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="qe3-do-zdK">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="Wd5-dh-1fW">
                                                         <rect key="frame" x="10" y="8" width="394" height="81.5"/>
                                                         <string key="text">This app was collaboratively authored by students in the Grade 12 Computer Science class with some contributions by their teacher, Mr. Gordon. The members of the class are:</string>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="fa4-vU-Xwd">
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="jkQ-7z-6dK">
                                                         <rect key="frame" x="10" y="89.5" width="394" height="219"/>
                                                         <subviews>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="ORT-lP-9Ej">
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="85A-Gd-tsM">
                                                                 <rect key="frame" x="5" y="8" width="384" height="203"/>
                                                                 <string key="text">Nick Anstoetz
 Liam Davidson
@@ -1428,7 +1428,7 @@ Chelsea Yue</string>
                                                         </subviews>
                                                         <edgeInsets key="layoutMargins" top="8" left="5" bottom="8" right="5"/>
                                                     </stackView>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="yBg-RQ-fja">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="qn5-PO-isT">
                                                         <rect key="frame" x="10" y="308.5" width="394" height="101.5"/>
                                                         <string key="text">The purpose was to learn project management techniques and tools in the context of a teacher-led project. Later this school year, students will apply what they have learned to collaboratively develop apps in student-led projects.</string>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -1438,6 +1438,9 @@ Chelsea Yue</string>
                                                 </subviews>
                                                 <edgeInsets key="layoutMargins" top="8" left="10" bottom="8" right="10"/>
                                             </stackView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="maxwellAndJoven" translatesAutoresizingMaskIntoConstraints="NO" id="yhD-Uk-k2L">
+                                                <rect key="frame" x="0.0" y="744.5" width="414" height="349"/>
+                                            </imageView>
                                         </subviews>
                                     </stackView>
                                 </subviews>
@@ -1445,6 +1448,7 @@ Chelsea Yue</string>
                                     <constraint firstItem="LU4-x2-CYX" firstAttribute="top" secondItem="IRF-NO-ESf" secondAttribute="top" id="52B-fs-T5E"/>
                                     <constraint firstItem="LU4-x2-CYX" firstAttribute="trailing" secondItem="IRF-NO-ESf" secondAttribute="trailing" id="LqZ-7h-DTA"/>
                                     <constraint firstItem="LU4-x2-CYX" firstAttribute="bottom" secondItem="IRF-NO-ESf" secondAttribute="bottom" id="Nwv-XG-Qg4"/>
+                                    <constraint firstItem="yhD-Uk-k2L" firstAttribute="height" secondItem="lca-WB-2Bp" secondAttribute="width" multiplier="0.8432" id="PCf-3S-WGN"/>
                                     <constraint firstItem="u5R-2X-Z5j" firstAttribute="height" secondItem="lca-WB-2Bp" secondAttribute="width" multiplier="0.75" id="fd1-ne-wJC"/>
                                     <constraint firstItem="LU4-x2-CYX" firstAttribute="width" secondItem="5S8-HP-R5J" secondAttribute="width" id="kqa-hE-1nR"/>
                                     <constraint firstItem="LU4-x2-CYX" firstAttribute="leading" secondItem="IRF-NO-ESf" secondAttribute="leading" id="w9v-h0-aFL"/>
@@ -1940,6 +1944,7 @@ Alf Curtis Construction, Russell Gordon and his Grade 12 Computer Science class 
         <image name="downstairs-2" width="964" height="964"/>
         <image name="facultyPlaceholderImage" width="2293" height="2293"/>
         <image name="lostBees" width="1050" height="1624"/>
+        <image name="maxwellAndJoven" width="1250" height="1054"/>
         <image name="popcorn" width="1920" height="1440"/>
         <image name="postcardShow" width="750" height="1058"/>
         <image name="upstairs" width="1100" height="918"/>
