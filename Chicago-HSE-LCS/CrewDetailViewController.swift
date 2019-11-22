@@ -37,20 +37,6 @@ class CrewDetailViewController: UIViewController {
         // Add exceptions for special teams
         switch crewSetFromTableView.name {
             
-        case "Costume Design Assistants":
-            // Set the navigation title item
-            self.navigationItem.title = "Costume Design Assistants"
-            
-            // Hide unnecessary items
-            hideItemsForSpecialTeams()
-            
-            // Set names
-            crewBio.text = """
-            Amy Shin
-            Eno Chen
-            Judy Yu
-            """
-            
         case "Set Construction":
             // Set the navigation title item
             self.navigationItem.title = "Set Construction"
