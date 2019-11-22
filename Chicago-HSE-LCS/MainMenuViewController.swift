@@ -38,8 +38,9 @@ class MainMenuViewController: UIViewController, UITableViewDataSource, UITableVi
     var intermissionItems: [MainMenuItem] = [
         
         MainMenuItem(name: "Theatre Lobby Art Display"),
-        MainMenuItem(name: "Concessions")
-        
+        MainMenuItem(name: "Concessions"),
+        MainMenuItem(name: "Washroom Locations"),
+
     ]
     var otherItems: [MainMenuItem] = [
         
@@ -136,6 +137,8 @@ class MainMenuViewController: UIViewController, UITableViewDataSource, UITableVi
                 performSegue(withIdentifier: "ArtDisplay", sender: nil)
             case "Concessions":
                 performSegue(withIdentifier: "Concessions", sender: nil)
+            case "Washroom Locations":
+                performSegue(withIdentifier: "Washrooms", sender: nil)
             default:
                 break
             }

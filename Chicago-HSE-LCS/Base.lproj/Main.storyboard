@@ -70,6 +70,7 @@
                         <segue destination="OdO-Yh-N6Y" kind="show" identifier="ProductionTeamNotes" id="Zon-Nb-Yac"/>
                         <segue destination="0s0-q6-e68" kind="show" identifier="MusicalNumbers" id="Rrc-Mg-8Ck"/>
                         <segue destination="7hY-OZ-JHb" kind="show" identifier="MusicalTheatreProgram" id="LWm-2r-IiO"/>
+                        <segue destination="9q0-UY-LZe" kind="show" identifier="Washrooms" id="edi-bz-P8P"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Lmx-z4-zXo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -771,7 +772,7 @@ Mixed Media. 6 x 4 inches.</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KWw-kB-DdU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1971" y="972"/>
+            <point key="canvasLocation" x="2571" y="948"/>
         </scene>
         <!--Cast Member Detail View Controller-->
         <scene sceneID="s6U-Xm-9VY">
@@ -1198,6 +1199,120 @@ Mixed Media. 6 x 4 inches.</string>
             </objects>
             <point key="canvasLocation" x="-172" y="1085"/>
         </scene>
+        <!--Washroom Locations-->
+        <scene sceneID="JNg-OD-CVN">
+            <objects>
+                <viewController id="9q0-UY-LZe" customClass="WashroomsViewController" customModule="Chicago_LCS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5GF-mV-qmo">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ARd-6Z-Ii9">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="enY-pj-uHc">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1522"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="G2l-WI-Voz">
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="1522"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Main floor options" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Og-xM-8fX">
+                                                        <rect key="frame" x="10" y="15" width="394" height="26.5"/>
+                                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
+                                                        <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="iLw-0E-lYm">
+                                                        <rect key="frame" x="10" y="41.5" width="394" height="84"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="gkR-d7-zqc">
+                                                                <rect key="frame" x="5" y="8" width="384" height="61"/>
+                                                                <string key="text">Walk straight out of the theatre doors. Go through a set of doors. Further down the hall, two non-gendered washrooms are on your right.</string>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                        <edgeInsets key="layoutMargins" top="8" left="5" bottom="15" right="5"/>
+                                                    </stackView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="upstairs" translatesAutoresizingMaskIntoConstraints="NO" id="y7g-fm-QcZ">
+                                                        <rect key="frame" x="10" y="125.5" width="394" height="345.5"/>
+                                                    </imageView>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Downstairs options" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U0N-8c-8nW">
+                                                        <rect key="frame" x="10" y="471" width="394" height="26.5"/>
+                                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
+                                                        <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Gla-Ik-Gii">
+                                                        <rect key="frame" x="10" y="497.5" width="394" height="64"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Turn left out of the theatre doors and go downstairs." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="zYY-fT-edB">
+                                                                <rect key="frame" x="5" y="8" width="384" height="41"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                        <edgeInsets key="layoutMargins" top="8" left="5" bottom="15" right="5"/>
+                                                    </stackView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="downstairs-1" translatesAutoresizingMaskIntoConstraints="NO" id="OjV-Fx-VGp">
+                                                        <rect key="frame" x="10" y="561.5" width="394" height="414"/>
+                                                    </imageView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Vd5-bD-6cS">
+                                                        <rect key="frame" x="10" y="975.5" width="394" height="124.5"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="51d-GD-gfx">
+                                                                <rect key="frame" x="5" y="8" width="384" height="101.5"/>
+                                                                <string key="text">Out of the stairwell, turn left for two non-gendered washrooms. Or, continue straight on for a larger men's washroom on your right. The larger women's washroom is just a bit further along, turning left and then left again.</string>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                        <edgeInsets key="layoutMargins" top="8" left="5" bottom="15" right="5"/>
+                                                    </stackView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="downstairs-2" translatesAutoresizingMaskIntoConstraints="NO" id="5Uj-2t-cjY">
+                                                        <rect key="frame" x="10" y="1100" width="394" height="414"/>
+                                                    </imageView>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstItem="5Uj-2t-cjY" firstAttribute="height" secondItem="G2l-WI-Voz" secondAttribute="width" id="BKA-Nd-c0m"/>
+                                                    <constraint firstItem="y7g-fm-QcZ" firstAttribute="height" secondItem="G2l-WI-Voz" secondAttribute="width" multiplier="0.835" id="keo-Cd-fWF"/>
+                                                    <constraint firstItem="OjV-Fx-VGp" firstAttribute="height" secondItem="G2l-WI-Voz" secondAttribute="width" id="qLT-n8-jDR"/>
+                                                </constraints>
+                                                <edgeInsets key="layoutMargins" top="15" left="10" bottom="8" right="10"/>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="enY-pj-uHc" firstAttribute="leading" secondItem="Dlf-Wa-3vD" secondAttribute="leading" id="Ah6-If-ekO"/>
+                                    <constraint firstItem="enY-pj-uHc" firstAttribute="trailing" secondItem="Dlf-Wa-3vD" secondAttribute="trailing" id="lQi-36-Mxn"/>
+                                    <constraint firstItem="enY-pj-uHc" firstAttribute="width" secondItem="Bva-lr-cYT" secondAttribute="width" id="lVm-zO-FJH"/>
+                                    <constraint firstItem="enY-pj-uHc" firstAttribute="bottom" secondItem="Dlf-Wa-3vD" secondAttribute="bottom" id="nUR-eK-0Zj"/>
+                                    <constraint firstItem="enY-pj-uHc" firstAttribute="top" secondItem="Dlf-Wa-3vD" secondAttribute="top" id="xrK-rp-ysR"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="Dlf-Wa-3vD"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="Bva-lr-cYT"/>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="ARd-6Z-Ii9" firstAttribute="leading" secondItem="5GF-mV-qmo" secondAttribute="leading" id="DEk-m8-eKA"/>
+                            <constraint firstItem="ARd-6Z-Ii9" firstAttribute="bottom" secondItem="5GF-mV-qmo" secondAttribute="bottom" id="NG5-d9-gku"/>
+                            <constraint firstItem="ARd-6Z-Ii9" firstAttribute="trailing" secondItem="5GF-mV-qmo" secondAttribute="trailing" id="dRr-pB-ZDF"/>
+                            <constraint firstItem="ARd-6Z-Ii9" firstAttribute="top" secondItem="5GF-mV-qmo" secondAttribute="top" id="plv-d7-37s"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="rYR-5d-5eU"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Washroom Locations" id="HJ7-eo-NEE"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bMh-p7-JDK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="768" y="1010"/>
+        </scene>
         <!--Concessions-->
         <scene sceneID="JK6-UD-IIU">
             <objects>
@@ -1262,7 +1377,7 @@ Don't miss out on this tasty array of treats!</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Szc-rm-CHQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1012" y="1044"/>
+            <point key="canvasLocation" x="1646" y="1033"/>
         </scene>
         <!--About This App-->
         <scene sceneID="CQI-QO-ZGR">
@@ -1821,9 +1936,12 @@ Alf Curtis Construction, Russell Gordon and his Grade 12 Computer Science class 
         <image name="almostAllOfTheGang" width="2000" height="1500"/>
         <image name="artsAtLakefieldWhiteOnBlack" width="2304" height="922"/>
         <image name="banner" width="674.5" height="227.5"/>
+        <image name="downstairs-1" width="1129" height="919"/>
+        <image name="downstairs-2" width="964" height="964"/>
         <image name="facultyPlaceholderImage" width="2293" height="2293"/>
         <image name="lostBees" width="1050" height="1624"/>
         <image name="popcorn" width="1920" height="1440"/>
         <image name="postcardShow" width="750" height="1058"/>
+        <image name="upstairs" width="1100" height="918"/>
     </resources>
 </document>

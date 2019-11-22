@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0E91E2D62387A2C10025C793 /* WashroomsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E91E2D52387A2C10025C793 /* WashroomsViewController.swift */; };
 		0EAC5E1F237DF9C300E92727 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EAC5E1E237DF9C300E92727 /* AppDelegate.swift */; };
 		0EAC5E21237DF9C300E92727 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EAC5E20237DF9C300E92727 /* SceneDelegate.swift */; };
 		0EAC5E26237DF9C300E92727 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0EAC5E24237DF9C300E92727 /* Main.storyboard */; };
@@ -42,6 +43,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0E91E2D52387A2C10025C793 /* WashroomsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WashroomsViewController.swift; sourceTree = "<group>"; };
 		0EAC5E1B237DF9C300E92727 /* Chicago@LCS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Chicago@LCS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0EAC5E1E237DF9C300E92727 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0EAC5E20237DF9C300E92727 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -141,6 +143,7 @@
 				0EAC5E36237E45F400E92727 /* Colors.swift */,
 				813DAC952381AE560053EE91 /* LightNavigationController.swift */,
 				81FCF3762382E2B600C040C7 /* MuscialTheatreProgramViewController.swift */,
+				0E91E2D52387A2C10025C793 /* WashroomsViewController.swift */,
 			);
 			path = "Chicago-HSE-LCS";
 			sourceTree = "<group>";
@@ -242,6 +245,7 @@
 				7A64AC5E237DFA650067FC9D /* CastMember.swift in Sources */,
 				9EF52C542381E76000825087 /* Musician.swift in Sources */,
 				7A64AC62237E05810067FC9D /* Crew.swift in Sources */,
+				0E91E2D62387A2C10025C793 /* WashroomsViewController.swift in Sources */,
 				42C3AD9D23820CF90015216E /* ConcessionsViewController.swift in Sources */,
 				0EAC5E39237E555400E92727 /* FacultyTableViewController.swift in Sources */,
 				81FCF3772382E2B600C040C7 /* MuscialTheatreProgramViewController.swift in Sources */,
