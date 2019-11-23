@@ -10,6 +10,11 @@ import UIKit
 
 class MusicalNumbersViewController: UIViewController {
     
+    // Set the status bar text to be white
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
