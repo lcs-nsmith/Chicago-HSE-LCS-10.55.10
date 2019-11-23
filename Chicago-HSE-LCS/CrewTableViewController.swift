@@ -101,13 +101,64 @@ class CrewTableViewController: UITableViewController {
     
     var specialTeams : [Crew] = [
         
-        Crew(name: "Hair and Make-up", job: "", imageId: "", bio: ""),
+        Crew(name: "Hair and Make-up", job: "", imageId: "", bio: """
+            Amy Shin
+            Chloe Traviss
+            Elizabeth Moody
+            Jami Lowry
+            Judy Yu
+            Rachel Bemrose
+            Tori Whitmore
+            """),
         
-        Crew(name: "Posters", job: "", imageId: "", bio: ""),
+        Crew(name: "Posters", job: "", imageId: "", bio: """
+            Stephanie Wilcox
+            Drew Antzis
+            """),
 
-        Crew(name: "Set Construction", job: "", imageId: "", bio: ""),
+        Crew(name: "Set Construction", job: "", imageId: "", bio: """
+            Curtis Elliot
+            Dylan Smith
+            Geoff Bemrose
+            Jenis Kim
+            Joe Huang
+            June Saunders
+            Matt McCall
+            Mike Grant
+            Neil Young
+            Rob Fleming
+            Rowan Harris-Stoertz
+            Sebastian Tyson
+            Sihan Che
+            Simon Dutil
+            Tyler Jervis
+            Wulfric Harris-Stoertz
+            Zach Rubin
+            """),
         
-        Crew(name: "Set Painting", job: "", imageId: "", bio: ""),
+        Crew(name: "Set Painting", job: "", imageId: "", bio: """
+            Alejandro Rodriguez
+            Alexis Pettersen
+            Amber Claassen
+            Amy Shin
+            Catherine Kim
+            Chelsea Yue
+            Emile Boisjoly
+            Eno Chen
+            Geoff Bemrose
+            Judy Yu
+            Julio Midence
+            Kelly Wang
+            Nancy Lu
+            Olivia Cantelon
+            Patricio Arnau Young
+            Paulina Martinez Reyes
+            Pia Garcia
+            Rachel Bemrose
+            Sarah Young
+            Tayler Morencie
+            Tina St. John
+            """),
         
     ]
 
@@ -360,8 +411,11 @@ class CrewTableViewController: UITableViewController {
         }
 
         // Filter the special teams list based on the search string
-        filteredSpecialTeams = specialTeams.filter { (crew: Crew) -> Bool in
-            return crew.name.lowercased().contains(searchText.lowercased())
+        filteredSpecialTeams = []
+        for team in specialTeams {
+            if team.bio.lowercased().contains(searchText.lowercased()) {
+                filteredSpecialTeams.append(team)
+            }
         }
 
         // Change the data shown in the table view

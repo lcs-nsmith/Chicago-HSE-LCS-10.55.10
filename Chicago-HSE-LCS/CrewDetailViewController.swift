@@ -37,97 +37,17 @@ class CrewDetailViewController: UIViewController {
         // Add exceptions for special teams
         switch crewSetFromTableView.name {
             
-        case "Set Construction":
-            // Set the navigation title item
-            self.navigationItem.title = "Set Construction"
-            
+        case "Set Construction", "Set Painting", "Hair and Make-up", "Posters":
+
             // Hide unnecessary items
             hideItemsForSpecialTeams()
-            
-            // Set names
-            crewBio.text = """
-            Curtis Elliot
-            Dylan Smith
-            Geoff Bemrose
-            Jenis Kim
-            Joe Huang
-            June Saunders
-            Matt McCall
-            Mike Grant
-            Neil Young
-            Rob Fleming
-            Rowan Harris-Stoertz
-            Sebastian Tyson
-            Sihan Che
-            Simon Dutil
-            Tyler Jervis
-            Wulfric Harris-Stoertz
-            Zach Rubin
-            """
-            
-        case "Set Painting":
+
             // Set the navigation title item
-            self.navigationItem.title = "Set Painting"
+            self.navigationItem.title = crewSetFromTableView.name
             
-            // Hide unnecessary items
-            hideItemsForSpecialTeams()
-            
-            // Set names
-            crewBio.text = """
-            Alejandro Rodriguez
-            Alexis Pettersen
-            Amber Claassen
-            Amy Shin
-            Catherine Kim
-            Chelsea Yue
-            Emile Boisjoly
-            Eno Chen
-            Geoff Bemrose
-            Judy Yu
-            Julio Midence
-            Kelly Wang
-            Nancy Lu
-            Olivia Cantelon
-            Patricio Arnau Young
-            Paulina Martinez Reyes
-            Pia Garcia
-            Rachel Bemrose
-            Sarah Young
-            Tayler Morencie
-            Tina St. John
-            """
-            
-        case "Hair and Make-up":
-            // Set the navigation title item
-            self.navigationItem.title = "Hair and Make-up"
-            
-            // Hide unnecessary items
-            hideItemsForSpecialTeams()
-            
-            // Set names
-            crewBio.text = """
-            Amy Shin
-            Chloe Traviss
-            Elizabeth Moody
-            Jami Lowry
-            Judy Yu
-            Rachel Bemrose
-            Tori Whitmore
-            """
-            
-        case "Posters":
-            // Set the navigation title item
-            self.navigationItem.title = "Posters"
-            
-            // Hide unnecessary items
-            hideItemsForSpecialTeams()
-            
-            // Set names
-            crewBio.text = """
-            Stephanie Wilcox
-            Drew Antzis
-            """
-            
+            // Set names using crew bio space
+            crewBio.text = crewSetFromTableView.bio
+                                    
         default:
             // Set the navigation title item
             self.navigationItem.title = crewSetFromTableView.name
