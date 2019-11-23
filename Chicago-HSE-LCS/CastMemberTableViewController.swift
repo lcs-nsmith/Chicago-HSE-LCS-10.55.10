@@ -400,6 +400,10 @@ class CastMemberTableViewController: UITableViewController {
         self.tableView.reloadData()
     }
     
+    // Ensure that keyboard will not obscure longer list of search results on a phone with a small screen
+    override func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
+        searchController.searchBar.resignFirstResponder()
+    }
     
 }
 
