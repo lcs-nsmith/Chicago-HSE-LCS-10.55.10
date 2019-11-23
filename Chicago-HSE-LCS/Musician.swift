@@ -12,6 +12,6 @@ struct Musician {
     
     var name: String
     var instrument: String
-    var Bio: String
-    var ImageID: String
+    var bio: String
+    var imageID: String
 }

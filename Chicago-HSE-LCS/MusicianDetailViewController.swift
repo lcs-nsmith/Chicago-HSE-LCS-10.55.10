@@ -40,35 +40,23 @@ class MusicianDetailViewController: UIViewController {
         case "Community Musicians":
             
             // Set the navigation title item
-            self.navigationItem.title = "Community Musicians"
+            self.navigationItem.title = musicianSetFromTableView.name
             
             // Hide items not needed
             musicianHeadShot.isHidden = true
             labelInstrument.isHidden = true
             musicianInstrument.isHidden = true
             labelBio.isHidden = true
-            musicianBio.text = """
-                                Kelsey Van Blarcom (Piano 1)
-                                Teala Kozmik (Piano 2)
-                                Cydney Kamping (Reed 1)
-                                Christine Williamson (Reed 2)
-                                Bruce Cole (Reed 3)
-                                Doug Sutherland (Trumpet)
-                                Peter Hanmore (Trombone)
-                                Al Pounsett (Banjo)
-                                Sam Quinn (Bass)
-                                Nick Gilroy (Drums)
-                                Sarah Young (Flute)
-                                """
+            musicianBio.text = musicianSetFromTableView.bio
             
         default:
             // Set the navigation title item
             self.navigationItem.title = musicianSetFromTableView.name
             
             // Set details for this faculty member
-            musicianHeadShot.image = UIImage(named: musicianSetFromTableView.ImageID)
+            musicianHeadShot.image = UIImage(named: musicianSetFromTableView.imageID)
             musicianInstrument.text = musicianSetFromTableView.instrument
-            musicianBio.text = musicianSetFromTableView.Bio
+            musicianBio.text = musicianSetFromTableView.bio
         }
         
         // Signal need to update the status bar
