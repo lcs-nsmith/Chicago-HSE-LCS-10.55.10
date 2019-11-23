@@ -9,6 +9,7 @@
 
 import UIKit
 
+// Extend the table view to add ability to search
 extension CastMemberTableViewController: UISearchResultsUpdating {
     func updateSearchResults(for searchController: UISearchController) {
         let searchBar = searchController.searchBar
@@ -210,16 +211,11 @@ class CastMemberTableViewController: UITableViewController {
         // Signal need to update the status bar
         self.setNeedsStatusBarAppearanceUpdate()
                 
-        // 1
+        // Configure search
         searchController.searchResultsUpdater = self
-        // 2
         searchController.obscuresBackgroundDuringPresentation = false
-        // 3
         searchController.searchBar.placeholder = "Search Cast Members"
-        
-        // 4
         navigationItem.searchController = searchController
-        // 5
         definesPresentationContext = true
                 
     }

@@ -8,6 +8,15 @@
 
 import UIKit
 
+// Extend the table view to add ability to search
+extension CrewTableViewController: UISearchResultsUpdating {
+    func updateSearchResults(for searchController: UISearchController) {
+        let searchBar = searchController.searchBar
+        filterContentForSearchText(searchBar.text!)
+    }
+    
+}
+
 class CrewTableViewController: UITableViewController {
     
     // List of sections
@@ -16,9 +25,26 @@ class CrewTableViewController: UITableViewController {
         "Special Teams"
     ]
     
+    //MARK: Properties
+    var filteredSortedPrimaryCrewMembers: [Crew] = []
+    var filteredSpecialTeams: [Crew] = []
+
+    // Will contain sorted list of crew members
     var sortedPrimaryCrewMembers: [Crew]?
     
-    //MARK: Properties
+    // Computed property to determine whether the search bar is empty
+    var isSearchBarEmpty: Bool {
+        return searchController.searchBar.text?.isEmpty ?? true
+    }
+    
+    // Computed property to determine whether we are currently filtering results
+    var isFiltering: Bool {
+        let searchBarScopeIsFiltering =
+            searchController.searchBar.selectedScopeButtonIndex != 0
+        return searchController.isActive &&
+            (!isSearchBarEmpty || searchBarScopeIsFiltering)
+    }
+
     var primaryCrewMembers : [Crew] = [
         
         Crew(name: "Faith Dickinson", job: "Dance Captain", imageId: "faithDickinson", bio: """
@@ -84,6 +110,10 @@ class CrewTableViewController: UITableViewController {
         Crew(name: "Set Painting", job: "", imageId: "", bio: ""),
         
     ]
+
+    // Create a search controller instance
+    let searchController = UISearchController(searchResultsController: nil)
+    
     // Set the status bar text to be white
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
@@ -110,6 +140,13 @@ class CrewTableViewController: UITableViewController {
         // Signal need to update the status bar
         self.setNeedsStatusBarAppearanceUpdate()
         
+        // Configure search
+        searchController.searchResultsUpdater = self
+        searchController.obscuresBackgroundDuringPresentation = false
+        searchController.searchBar.placeholder = "Search Crew Members"
+        navigationItem.searchController = searchController
+        definesPresentationContext = true
+
         // Sort the crew array by name
         sortedPrimaryCrewMembers = primaryCrewMembers.sorted { $0.name < $1.name }
         
@@ -138,14 +175,27 @@ class CrewTableViewController: UITableViewController {
     
     // How many rows to show in each section
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        
-        switch section {
-        case 0:
-            return primaryCrewMembers.count
-        case 1:
-            return specialTeams.count
-        default:
-            return 0
+
+        // When searching, return number of matches in filtered list
+        if isFiltering {
+
+            if section == 0 {
+                return filteredSortedPrimaryCrewMembers.count
+            } else if section == 1 {
+                return filteredSpecialTeams.count
+            } else {
+                return 0
+            }
+
+        } else {
+            switch section {
+            case 0:
+                return primaryCrewMembers.count
+            case 1:
+                return specialTeams.count
+            default:
+                return 0
+            }
         }
         
     }
@@ -155,20 +205,36 @@ class CrewTableViewController: UITableViewController {
         
         // Create an object of the dynamic cell "CrewCell"
         let cell = tableView.dequeueReusableCell(withIdentifier: "CrewCell", for: indexPath)
-        
-        // Depending on the section, fill the textLabel with the relevant text
-        switch indexPath.section {
-        case 0:
-            cell.textLabel?.text = sortedPrimaryCrewMembers?[indexPath.row].name
-        case 1:
-            cell.textLabel?.text = specialTeams[indexPath.row].name
-        default:
-            break
-        }
-        
+                
         // Configure cell color
         cell.textLabel?.textColor = .white
         
+        // Depending on the section, fill the textLabel with the relevant text
+        // If searching, return result from filtered list based on search
+        if isFiltering {
+
+            switch indexPath.section {
+            case 0:
+                cell.textLabel?.text = filteredSortedPrimaryCrewMembers[indexPath.row].name
+            case 1:
+                cell.textLabel?.text = filteredSpecialTeams[indexPath.row].name
+            default:
+                break
+            }
+
+        } else {
+
+            switch indexPath.section {
+            case 0:
+                cell.textLabel?.text = sortedPrimaryCrewMembers?[indexPath.row].name
+            case 1:
+                cell.textLabel?.text = specialTeams[indexPath.row].name
+            default:
+                break
+            }
+            
+        }
+
         // Make the cell have a black background colour
         cell.backgroundColor = .black
         
@@ -182,6 +248,16 @@ class CrewTableViewController: UITableViewController {
         cell.accessoryType = .disclosureIndicator
         cell.accessoryView = UIImageView(image: chevron!)
         
+        // Make text in the search bar be white, always
+        if #available(iOS 13.0, *) {
+            // Change search field text color in iOS 13
+            searchController.searchBar.searchTextField.textColor = .white
+        } else {
+            // Change search field text color in iOS 12
+            let textFieldInsideSearchBar = searchController.searchBar.value(forKey: "searchField") as? UITextField
+            textFieldInsideSearchBar?.textColor = .white
+        }
+
         // Return the configured cell
         return cell
         
@@ -243,15 +319,29 @@ class CrewTableViewController: UITableViewController {
         }
         
         // Now set the crew member to be displayed
-        switch section {
-        case 0:
-            detailViewController.crewMemberToDisplay = sortedPrimaryCrewMembers?[index]
-        case 1:
-            detailViewController.crewMemberToDisplay = specialTeams[index]
-        default:
-            break
+        // If searching, present from filtered results
+        if isFiltering {
+            // Depending on the section, fill the textLabel with the relevant text
+            switch section {
+            case 0:
+                detailViewController.crewMemberToDisplay = filteredSortedPrimaryCrewMembers[index]
+            case 1:
+                detailViewController.crewMemberToDisplay = filteredSpecialTeams[index]
+            default:
+                break
+            }
+        } else {
+            // Depending on the section, fill the textLabel with the relevant text
+            switch section {
+            case 0:
+                detailViewController.crewMemberToDisplay = sortedPrimaryCrewMembers?[index]
+            case 1:
+                detailViewController.crewMemberToDisplay = specialTeams[index]
+            default:
+                break
+            }
         }
-        
+
         // Deselect the cell after segue unwind
         guard let indexPath = tableView.indexPathForSelectedRow else {
             return
@@ -259,5 +349,29 @@ class CrewTableViewController: UITableViewController {
         self.tableView.deselectRow(at: indexPath, animated: true)
         
     }
+
+    func filterContentForSearchText(_ searchText: String) {
+                
+        // Filter the crew members based on the search string
+        if let sortedCrew = sortedPrimaryCrewMembers {
+            filteredSortedPrimaryCrewMembers = sortedCrew.filter { (crew: Crew) -> Bool in
+                return crew.name.lowercased().contains(searchText.lowercased())
+            }
+        }
+
+        // Filter the special teams list based on the search string
+        filteredSpecialTeams = specialTeams.filter { (crew: Crew) -> Bool in
+            return crew.name.lowercased().contains(searchText.lowercased())
+        }
+
+        // Change the data shown in the table view
+        self.tableView.reloadData()
+    }
     
+    
+    // Ensure that keyboard will not obscure longer list of search results on a phone with a small screen
+    override func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
+        searchController.searchBar.resignFirstResponder()
+    }
+
 }
