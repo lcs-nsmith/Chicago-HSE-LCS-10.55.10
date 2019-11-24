@@ -125,21 +125,22 @@ class MainMenuViewController: UIViewController, UITableViewDataSource, UITableVi
                     
                     print("During the show 🤨")
                     // Show the message
-                    UIView.animate(withDuration: 1) {
-                        self.showStartedMessage.isHidden = false
-                        self.showStartedMessage.backgroundColor = .systemYellow
-                        self.showStartedMessageHeight.constant = 20.5
-                    }
                     
+                    view.layoutIfNeeded() // force any pending operations to finish
+                    UIView.animate(withDuration: 1.0, animations: { () -> Void in
+                        self.showStartedMessageHeight.constant = 20.5
+                        self.view.layoutIfNeeded()
+                    })
+
                 } else {
 
                     print("Not during the show 👍🏻")
-                    UIView.animate(withDuration: 1) {
-                        self.showStartedMessage.isHidden = true
-                        self.showStartedMessage.backgroundColor = .black
+                    view.layoutIfNeeded() // force any pending operations to finish
+                    UIView.animate(withDuration: 1.0, animations: { () -> Void in
                         self.showStartedMessageHeight.constant = 0
-                    }
-                    
+                        self.view.layoutIfNeeded()
+                    })
+
                 }
                 
             }
