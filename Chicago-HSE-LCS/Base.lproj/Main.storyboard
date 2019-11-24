@@ -22,16 +22,168 @@
                                     <constraint firstAttribute="height" constant="148" id="fcZ-p5-dRg"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Has the show started?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="vpZ-l8-6FC">
+                            <stackView contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="QhR-Sn-gYU">
                                 <rect key="frame" x="0.0" y="236" width="414" height="0.0"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vpZ-l8-6FC">
+                                        <rect key="frame" x="10" y="0.0" width="394" height="0.0"/>
+                                        <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" id="S1P-JM-myD"/>
+                                        </constraints>
+                                        <attributedString key="attributedText">
+                                            <fragment content="Welcome to the show!">
+                                                <attributes>
+                                                    <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <font key="NSFont" size="24" name="SFProDisplay-Bold"/>
+                                                    <font key="NSOriginalFont" size="24" name="SFProDisplay-Bold"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                                        <tabStops>
+                                                            <textTab alignment="left" location="28.299999237060547">
+                                                                <options/>
+                                                            </textTab>
+                                                            <textTab alignment="left" location="56.650001525878906">
+                                                                <options/>
+                                                            </textTab>
+                                                            <textTab alignment="left" location="85">
+                                                                <options/>
+                                                            </textTab>
+                                                            <textTab alignment="left" location="113.34999847412109">
+                                                                <options/>
+                                                            </textTab>
+                                                            <textTab alignment="left" location="141.69999694824219">
+                                                                <options/>
+                                                            </textTab>
+                                                            <textTab alignment="left" location="170.05000305175781">
+                                                                <options/>
+                                                            </textTab>
+                                                            <textTab alignment="left" location="198.39999389648438">
+                                                                <options/>
+                                                            </textTab>
+                                                            <textTab alignment="left" location="226.75">
+                                                                <options/>
+                                                            </textTab>
+                                                            <textTab alignment="left" location="255.10000610351562">
+                                                                <options/>
+                                                            </textTab>
+                                                            <textTab alignment="left" location="283.45001220703125">
+                                                                <options/>
+                                                            </textTab>
+                                                            <textTab alignment="left" location="311.79998779296875">
+                                                                <options/>
+                                                            </textTab>
+                                                            <textTab alignment="left" location="340.14999389648438">
+                                                                <options/>
+                                                            </textTab>
+                                                        </tabStops>
+                                                    </paragraphStyle>
+                                                </attributes>
+                                            </fragment>
+                                            <fragment>
+                                                <string key="content" base64-UTF8="YES">
+Cgo
+</string>
+                                                <attributes>
+                                                    <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <font key="NSFont" size="14" name="SFProDisplay-Bold"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                                        <tabStops>
+                                                            <textTab alignment="left" location="28.299999237060547">
+                                                                <options/>
+                                                            </textTab>
+                                                            <textTab alignment="left" location="56.650001525878906">
+                                                                <options/>
+                                                            </textTab>
+                                                            <textTab alignment="left" location="85">
+                                                                <options/>
+                                                            </textTab>
+                                                            <textTab alignment="left" location="113.34999847412109">
+                                                                <options/>
+                                                            </textTab>
+                                                            <textTab alignment="left" location="141.69999694824219">
+                                                                <options/>
+                                                            </textTab>
+                                                            <textTab alignment="left" location="170.05000305175781">
+                                                                <options/>
+                                                            </textTab>
+                                                            <textTab alignment="left" location="198.39999389648438">
+                                                                <options/>
+                                                            </textTab>
+                                                            <textTab alignment="left" location="226.75">
+                                                                <options/>
+                                                            </textTab>
+                                                            <textTab alignment="left" location="255.10000610351562">
+                                                                <options/>
+                                                            </textTab>
+                                                            <textTab alignment="left" location="283.45001220703125">
+                                                                <options/>
+                                                            </textTab>
+                                                            <textTab alignment="left" location="311.79998779296875">
+                                                                <options/>
+                                                            </textTab>
+                                                            <textTab alignment="left" location="340.14999389648438">
+                                                                <options/>
+                                                            </textTab>
+                                                        </tabStops>
+                                                    </paragraphStyle>
+                                                </attributes>
+                                            </fragment>
+                                            <fragment>
+                                                <string key="content">By attending the show, you’ve unlocked access to exclusive bonus content that will be released through this app in the weeks to come.
+
+Once the show begins, please pocket your phone, sit back, and enjoy!</string>
+                                                <attributes>
+                                                    <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <font key="NSFont" size="18" name="SFProDisplay-Regular"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                                        <tabStops>
+                                                            <textTab alignment="left" location="28.299999237060547">
+                                                                <options/>
+                                                            </textTab>
+                                                            <textTab alignment="left" location="56.650001525878906">
+                                                                <options/>
+                                                            </textTab>
+                                                            <textTab alignment="left" location="85">
+                                                                <options/>
+                                                            </textTab>
+                                                            <textTab alignment="left" location="113.34999847412109">
+                                                                <options/>
+                                                            </textTab>
+                                                            <textTab alignment="left" location="141.69999694824219">
+                                                                <options/>
+                                                            </textTab>
+                                                            <textTab alignment="left" location="170.05000305175781">
+                                                                <options/>
+                                                            </textTab>
+                                                            <textTab alignment="left" location="198.39999389648438">
+                                                                <options/>
+                                                            </textTab>
+                                                            <textTab alignment="left" location="226.75">
+                                                                <options/>
+                                                            </textTab>
+                                                            <textTab alignment="left" location="255.10000610351562">
+                                                                <options/>
+                                                            </textTab>
+                                                            <textTab alignment="left" location="283.45001220703125">
+                                                                <options/>
+                                                            </textTab>
+                                                            <textTab alignment="left" location="311.79998779296875">
+                                                                <options/>
+                                                            </textTab>
+                                                            <textTab alignment="left" location="340.14999389648438">
+                                                                <options/>
+                                                            </textTab>
+                                                        </tabStops>
+                                                    </paragraphStyle>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
                                 <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" id="S1P-JM-myD"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                                <edgeInsets key="layoutMargins" top="0.0" left="10" bottom="0.0" right="10"/>
+                            </stackView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="BSd-dC-B9c">
                                 <rect key="frame" x="0.0" y="236" width="414" height="626"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -54,25 +206,25 @@
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="vpZ-l8-6FC" firstAttribute="trailing" secondItem="ugg-rc-x1n" secondAttribute="trailing" id="6Sg-4Y-Jj6"/>
+                            <constraint firstItem="QhR-Sn-gYU" firstAttribute="top" secondItem="7r9-SR-wRo" secondAttribute="bottom" id="7Xd-bO-arA"/>
                             <constraint firstItem="7r9-SR-wRo" firstAttribute="leading" secondItem="ugg-rc-x1n" secondAttribute="leading" id="8Rd-af-llb"/>
                             <constraint firstItem="7r9-SR-wRo" firstAttribute="top" secondItem="ugg-rc-x1n" secondAttribute="top" id="9KZ-tO-epf"/>
                             <constraint firstItem="7r9-SR-wRo" firstAttribute="centerX" secondItem="vYr-dE-t3W" secondAttribute="centerX" id="DNY-uV-8Su"/>
-                            <constraint firstItem="BSd-dC-B9c" firstAttribute="top" secondItem="vpZ-l8-6FC" secondAttribute="bottom" id="GqL-RL-qnG"/>
-                            <constraint firstItem="vpZ-l8-6FC" firstAttribute="top" secondItem="7r9-SR-wRo" secondAttribute="bottom" id="ILx-Y5-VwR"/>
+                            <constraint firstItem="BSd-dC-B9c" firstAttribute="top" secondItem="QhR-Sn-gYU" secondAttribute="bottom" id="GM4-p7-gFX"/>
+                            <constraint firstItem="QhR-Sn-gYU" firstAttribute="leading" secondItem="ugg-rc-x1n" secondAttribute="leading" id="LZT-i2-VdX"/>
                             <constraint firstItem="BSd-dC-B9c" firstAttribute="leading" secondItem="ugg-rc-x1n" secondAttribute="leading" id="M2N-pP-u50"/>
                             <constraint firstItem="BSd-dC-B9c" firstAttribute="bottom" secondItem="ugg-rc-x1n" secondAttribute="bottom" id="NSS-Hg-qTu"/>
-                            <constraint firstItem="vpZ-l8-6FC" firstAttribute="bottom" secondItem="BSd-dC-B9c" secondAttribute="top" id="OTT-EC-J0T"/>
                             <constraint firstItem="7r9-SR-wRo" firstAttribute="leading" secondItem="BSd-dC-B9c" secondAttribute="leading" id="bjV-wB-cZK"/>
                             <constraint firstItem="BSd-dC-B9c" firstAttribute="trailing" secondItem="ugg-rc-x1n" secondAttribute="trailing" id="h5W-ML-1Uv"/>
                             <constraint firstItem="7r9-SR-wRo" firstAttribute="trailing" secondItem="BSd-dC-B9c" secondAttribute="trailing" id="lYN-Ek-Nml"/>
-                            <constraint firstItem="vpZ-l8-6FC" firstAttribute="leading" secondItem="ugg-rc-x1n" secondAttribute="leading" id="mCV-Zd-6Wb"/>
+                            <constraint firstItem="QhR-Sn-gYU" firstAttribute="trailing" secondItem="ugg-rc-x1n" secondAttribute="trailing" id="uAT-cP-C2r"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ugg-rc-x1n"/>
                     </view>
                     <navigationItem key="navigationItem" id="dIH-JT-SM9"/>
                     <connections>
-                        <outlet property="showStartedMessage" destination="vpZ-l8-6FC" id="epW-Gf-x4P"/>
+                        <outlet property="messageStackView" destination="QhR-Sn-gYU" id="qPE-8O-SgP"/>
+                        <outlet property="showStartedMessage" destination="vpZ-l8-6FC" id="NNm-wb-vWy"/>
                         <outlet property="showStartedMessageHeight" destination="S1P-JM-myD" id="l5u-aa-Bmf"/>
                         <outlet property="tableView" destination="BSd-dC-B9c" id="1Ac-h1-ccb"/>
                         <segue destination="oDI-oI-k8k" kind="show" identifier="Cast" id="F3U-qm-8RB"/>

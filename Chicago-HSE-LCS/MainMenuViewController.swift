@@ -8,12 +8,34 @@
 
 import UIKit
 
+// Allow one view to be pinned to another
+// See: https://useyourloaf.com/blog/stack-view-background-color/
+public extension UIView {
+    func pin(to view: UIView) {
+    NSLayoutConstraint.activate([
+      leadingAnchor.constraint(equalTo: view.leadingAnchor),
+      trailingAnchor.constraint(equalTo: view.trailingAnchor),
+      topAnchor.constraint(equalTo: view.topAnchor),
+      bottomAnchor.constraint(equalTo: view.bottomAnchor)
+      ])
+  }
+}
+
 class MainMenuViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     // MARK: Properties
     @IBOutlet weak var tableView: UITableView!
-    @IBOutlet weak var showStartedMessage: UILabel!
     @IBOutlet weak var showStartedMessageHeight: NSLayoutConstraint!
+    @IBOutlet weak var messageStackView: UIStackView!
+    @IBOutlet weak var showStartedMessage: UILabel!
+    
+    // Background view for the stack view
+    private lazy var backgroundView: UIView = {
+        let view = UIView()
+        view.backgroundColor = chicagoGold
+        view.layer.cornerRadius = 0
+        return view
+    }()
     
     // Define showing times of the musical
     let forChicagoMusical: [Showing] = [
@@ -98,6 +120,13 @@ class MainMenuViewController: UIViewController, UITableViewDataSource, UITableVi
         // Signal need to update the status bar
         self.setNeedsStatusBarAppearanceUpdate()
         
+        // Add the background to the stack view
+        pinBackground(backgroundView, to: messageStackView)
+        
+        // Set the show started message color
+        showStartedMessage.backgroundColor = chicagoGold
+        
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -118,23 +147,29 @@ class MainMenuViewController: UIViewController, UITableViewDataSource, UITableVi
         if let dateTimeToCheckWith = dateTimeToCheck {
             if dateTimeToCheckWith.timeZone() == "EST" {
                 
+                #if DEBUG
                 print("In the Eastern time zone...")
+                #endif
                 
                 // During show time?
                 if dateTimeToCheckWith.isDuring(showings: forChicagoMusical) {
                     
+                    #if DEBUG
                     print("During the show 🤨")
+                    #endif
                     // Show the message
                     
                     view.layoutIfNeeded() // force any pending operations to finish
                     UIView.animate(withDuration: 1.0, animations: { () -> Void in
-                        self.showStartedMessageHeight.constant = 20.5
+                        self.showStartedMessageHeight.constant = 225
                         self.view.layoutIfNeeded()
                     })
 
                 } else {
 
+                    #if DEBUG
                     print("Not during the show 👍🏻")
+                    #endif
                     view.layoutIfNeeded() // force any pending operations to finish
                     UIView.animate(withDuration: 1.0, animations: { () -> Void in
                         self.showStartedMessageHeight.constant = 0
@@ -146,6 +181,15 @@ class MainMenuViewController: UIViewController, UITableViewDataSource, UITableVi
             }
         }
     }
+    
+    // Add the background view to the stack view
+    private func pinBackground(_ view: UIView, to stackView: UIStackView) {
+        view.translatesAutoresizingMaskIntoConstraints = false
+        stackView.insertSubview(view, at: 0)
+        view.pin(to: stackView)
+    }
+    
+    // Pins
     
     
     /*
