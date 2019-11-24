@@ -12,7 +12,19 @@ class MainMenuViewController: UIViewController, UITableViewDataSource, UITableVi
     
     // MARK: Properties
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var showStartedMessage: UILabel!
+    @IBOutlet weak var showStartedMessageHeight: NSLayoutConstraint!
     
+    // Define showing times of the musical
+    let forChicagoMusical: [Showing] = [
+
+        Showing(start: "19:25 Tue, 26 Nov 2019 EST", end: "21:45 Tue, 26 Nov 2019 EST"),
+        Showing(start: "19:25 Wed, 27 Nov 2019 EST", end: "21:45 Wed, 27 Nov 2019 EST"),
+        Showing(start: "19:25 Thu, 28 Nov 2019 EST", end: "21:45 Thu, 28 Nov 2019 EST"),
+        Showing(start: "19:25 Fri, 29 Nov 2019 EST", end: "21:45 Fri, 29 Nov 2019 EST"),
+
+    ]
+
     // List of sections
     var sections: [String] = [
         "The Show",
@@ -55,6 +67,9 @@ class MainMenuViewController: UIViewController, UITableViewDataSource, UITableVi
         return .lightContent
     }
     
+    // Time to check to display warning when show is on
+    var dateTimeToCheck: Date?
+
     // MARK: Initializer
     
     
@@ -82,9 +97,8 @@ class MainMenuViewController: UIViewController, UITableViewDataSource, UITableVi
         
         // Signal need to update the status bar
         self.setNeedsStatusBarAppearanceUpdate()
-
+        
     }
-    
     
     override func viewWillAppear(_ animated: Bool) {
         
@@ -92,6 +106,46 @@ class MainMenuViewController: UIViewController, UITableViewDataSource, UITableVi
         self.navigationController?.setNavigationBarHidden(true, animated: false)
                 
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        
+        // If the current date and time is during a showing, ask the user to turn off the app
+        // Eastern time zone only
+        #if DEBUG
+        #else
+            dateTimeToCheck = Date()
+        #endif
+        if let dateTimeToCheckWith = dateTimeToCheck {
+            if dateTimeToCheckWith.timeZone() == "EST" {
+                
+                print("In the Eastern time zone...")
+                
+                // During show time?
+                if dateTimeToCheckWith.isDuring(showings: forChicagoMusical) {
+                    
+                    print("During the show 🤨")
+                    // Show the message
+                    UIView.animate(withDuration: 1) {
+                        self.showStartedMessage.isHidden = false
+                        self.showStartedMessage.backgroundColor = .systemYellow
+                        self.showStartedMessageHeight.constant = 20.5
+                    }
+                    
+                } else {
+
+                    print("Not during the show 👍🏻")
+                    UIView.animate(withDuration: 1) {
+                        self.showStartedMessage.isHidden = true
+                        self.showStartedMessage.backgroundColor = .black
+                        self.showStartedMessageHeight.constant = 0
+                    }
+                    
+                }
+                
+            }
+        }
+    }
+    
     
     /*
      // MARK: - Navigation
@@ -113,8 +167,14 @@ class MainMenuViewController: UIViewController, UITableViewDataSource, UITableVi
             switch showItems[indexPath.row].name {
             case "Tickets and Dates":
                 performSegue(withIdentifier: "TicketsDates", sender: nil)
+                #if DEBUG
+                dateTimeToCheck = forChicagoMusical[0].start.addingTimeInterval(TimeInterval(60))
+                #endif
             case "Musical Numbers":
                 performSegue(withIdentifier: "MusicalNumbers", sender: nil)
+                #if DEBUG
+                dateTimeToCheck = Date()
+                #endif
             case "Characters":
                 performSegue(withIdentifier: "Characters", sender: nil)
             case "Cast":
