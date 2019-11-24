@@ -20,6 +20,7 @@ struct Showing {
         if let startDate = formatter.date(from: start) {
             self.start = startDate
         } else {
+            // If an invalid date, set date to current time
             self.start = Date()
         }
         
@@ -27,6 +28,7 @@ struct Showing {
         if let endDate = formatter.date(from: end) {
             self.end = endDate
         } else {
+            // If an invalid date, set date to current time
             self.end = Date()
         }
         
@@ -49,6 +51,23 @@ extension Date {
         formatter.dateFormat = defaultTimeZoneFormat
         return formatter.string(from: self)
     }
+    
+    // Is the current date during a showing of the musical?
+    func isDuring(showings: [Showing]) -> Bool {
+        
+        // Iterate over showings and see whether the date is after the start and before the end
+        for show in showings {
+            
+            if self >= show.start && self <= show.end {
+                return true
+            }
+            
+        }
+        
+        // If we made it here, the date is not during one of the showings
+        return false
+        
+    }
 }
 
 // What time is it now?
@@ -56,7 +75,7 @@ Date().formatted()
 Date().timeZone()
 
 // Define the showings for the musical
-let musicalShowings: [Showing] = [
+let forChicagoMusical: [Showing] = [
 
     Showing(start: "19:25 Tue, 26 Nov 2019 EST", end: "21:45 Tue, 26 Nov 2019 EST"),
     Showing(start: "19:25 Wed, 27 Nov 2019 EST", end: "21:45 Wed, 27 Nov 2019 EST"),
@@ -66,10 +85,37 @@ let musicalShowings: [Showing] = [
 ]
 
 // When are the showings?
-for showing in musicalShowings{
+for showing in forChicagoMusical {
     print("Showing start: \(showing.start.formatted())")
     print("Showing end: \(showing.end.formatted())")
     print("=====")
+}
+
+// Is the current date and time during a showing?
+Date().isDuring(showings: forChicagoMusical)
+
+// Check various times near the boundary of showings
+
+for showing in forChicagoMusical.enumerated() {
+    
+    // Around start of a show
+    print("--- start of a show ---")
+    print(forChicagoMusical[showing.offset].start.addingTimeInterval(TimeInterval(-1)).formatted())
+    print(forChicagoMusical[showing.offset].start.addingTimeInterval(TimeInterval(-1)).isDuring(showings: forChicagoMusical))
+    print(forChicagoMusical[showing.offset].start.addingTimeInterval(TimeInterval(0)).formatted())
+    print(forChicagoMusical[showing.offset].start.addingTimeInterval(TimeInterval(0)).isDuring(showings: forChicagoMusical))
+    print(forChicagoMusical[showing.offset].start.addingTimeInterval(TimeInterval(60)).formatted())
+    print(forChicagoMusical[showing.offset].start.addingTimeInterval(TimeInterval(60)).isDuring(showings: forChicagoMusical))
+
+    // Around end of a show
+    print("--- end of a show ---")
+    print(forChicagoMusical[showing.offset].end.addingTimeInterval(TimeInterval(-1)).formatted())
+    print(forChicagoMusical[showing.offset].end.addingTimeInterval(TimeInterval(-1)).isDuring(showings: forChicagoMusical))
+    print(forChicagoMusical[showing.offset].end.addingTimeInterval(TimeInterval(0)).formatted())
+    print(forChicagoMusical[showing.offset].end.addingTimeInterval(TimeInterval(0)).isDuring(showings: forChicagoMusical))
+    print(forChicagoMusical[showing.offset].end.addingTimeInterval(TimeInterval(60)).formatted())
+    print(forChicagoMusical[showing.offset].end.addingTimeInterval(TimeInterval(60)).isDuring(showings: forChicagoMusical))
+
 }
 
 
