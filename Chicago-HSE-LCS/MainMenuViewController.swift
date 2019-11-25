@@ -357,6 +357,7 @@ class MainMenuViewController: UIViewController, UITableViewDataSource, UITableVi
             locationManager?.requestWhenInUseAuthorization()
             // Define theatre region
             let theatre = CLLocationCoordinate2D(latitude: 44.439697265625, longitude: -78.26487680066764) // Actual theatre location
+            //let theatre = CLLocationCoordinate2D(latitude: 37.785834, longitude: -122.406417) // Simulator location
             theatreRegion = CLCircularRegion(center: theatre, radius: 30, identifier: "theTheatre")
         #else
         // Ask for location services authorization in Eastern time zone only, and only during time interval that is prior to one hour past the end of the final showing
