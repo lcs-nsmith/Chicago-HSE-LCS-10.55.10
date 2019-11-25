@@ -48,11 +48,11 @@ class MainMenuViewController: UIViewController, UITableViewDataSource, UITableVi
     //       Set first showing to time you want to test under production conditions
     let forChicagoMusical: [Showing] = [
 
-        Showing(start: "09:43 Mon, 25 Nov 2019 EST", end: "09:45 Mon, 25 Nov 2019 EST"),
-        Showing(start: "19:25 Tue, 26 Nov 2019 EST", end: "21:45 Tue, 26 Nov 2019 EST"),
-        Showing(start: "19:25 Wed, 27 Nov 2019 EST", end: "21:45 Wed, 27 Nov 2019 EST"),
-        Showing(start: "19:25 Thu, 28 Nov 2019 EST", end: "21:45 Thu, 28 Nov 2019 EST"),
-        Showing(start: "19:25 Fri, 29 Nov 2019 EST", end: "21:45 Fri, 29 Nov 2019 EST"),
+        Showing(start: "10:49 Mon, 25 Nov 2019 EST", end: "10:51 Mon, 25 Nov 2019 EST"),
+        Showing(start: "18:45 Tue, 26 Nov 2019 EST", end: "21:45 Tue, 26 Nov 2019 EST"),
+        Showing(start: "18:45 Wed, 27 Nov 2019 EST", end: "21:45 Wed, 27 Nov 2019 EST"),
+        Showing(start: "18:45 Thu, 28 Nov 2019 EST", end: "21:45 Thu, 28 Nov 2019 EST"),
+        Showing(start: "18:45 Fri, 29 Nov 2019 EST", end: "21:45 Fri, 29 Nov 2019 EST"),
 
     ]
 
@@ -338,10 +338,9 @@ class MainMenuViewController: UIViewController, UITableViewDataSource, UITableVi
         #if DEBUG
             locationManager?.requestWhenInUseAuthorization()
             // Define theatre region
-            //        let theatre = CLLocationCoordinate2D(latitude: 44.4396331, longitude: -78.2649631) // Actual theatre location
+                    let theatre = CLLocationCoordinate2D(latitude: 44.439697265625, longitude: -78.26487680066764) // Actual theatre location
             //        let theatre = CLLocationCoordinate2D(latitude: 44.3508735, longitude: -78.3014703) // Tim Horton's on Water Street
-            let theatre = CLLocationCoordinate2D(latitude: 44.42974853515625, longitude: -78.26181482073447) // Home
-            theatreRegion = CLCircularRegion(center: theatre, radius: 250, identifier: "theTheatre")
+            theatreRegion = CLCircularRegion(center: theatre, radius: 100, identifier: "theTheatre")
         #else
         // Ask for location services authorization in Eastern time zone only, and only during time interval that is prior to one hour past the end of the final showing
         if let finalShowing = forChicagoMusical.last {
@@ -350,9 +349,8 @@ class MainMenuViewController: UIViewController, UITableViewDataSource, UITableVi
                 locationManager?.requestWhenInUseAuthorization()
 
                 // Define theatre region
-                let theatre = CLLocationCoordinate2D(latitude: 44.42974853515625, longitude: -78.26181482073447) // Home -- REMOVE THIS LINE BEFORE FINAL PRODUCTION COMMIT
-// REMOVE COMMENT BEFORE FINAL PRODUCTION COMMIT                let theatre = CLLocationCoordinate2D(latitude: 44.4396331, longitude: -78.2649631) // Actual theatre location
-                theatreRegion = CLCircularRegion(center: theatre, radius: 250, identifier: "theTheatre")
+                let theatre = CLLocationCoordinate2D(latitude: 44.439697265625, longitude: -78.26487680066764) // Actual theatre location
+                theatreRegion = CLCircularRegion(center: theatre, radius: 100, identifier: "theTheatre")
             }
         }
         #endif
@@ -391,7 +389,7 @@ class MainMenuViewController: UIViewController, UITableViewDataSource, UITableVi
                             print("current location is:")
                             print("latitude: \(currentLocation.latitude)")
                             print("longitude: \(currentLocation.longitude)")
-                            print("comparing against 250m radius around theatre location of:")
+                            print("comparing against 100m radius around theatre location of:")
                             print("latitude: \(theatre.center.latitude)")
                             print("longitude: \(theatre.center.longitude)")
                             #endif
