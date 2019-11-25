@@ -44,10 +44,11 @@ class MainMenuViewController: UIViewController, UITableViewDataSource, UITableVi
     var locationManager: CLLocationManager?
     
     // Define showing times of the musical
-    // Set first showing to time you want to test under production conditions
+    // NOTE: REMOVE FIRST SHOWING BEFORE PUBLISHING FINAL PRODUCTION COMMIT
+    //       Set first showing to time you want to test under production conditions
     let forChicagoMusical: [Showing] = [
 
-        Showing(start: "21:00 Sun, 24 Nov 2019 EST", end: "21:07 Sun, 24 Nov 2019 EST"),
+        Showing(start: "09:43 Mon, 25 Nov 2019 EST", end: "09:45 Mon, 25 Nov 2019 EST"),
         Showing(start: "19:25 Tue, 26 Nov 2019 EST", end: "21:45 Tue, 26 Nov 2019 EST"),
         Showing(start: "19:25 Wed, 27 Nov 2019 EST", end: "21:45 Wed, 27 Nov 2019 EST"),
         Showing(start: "19:25 Thu, 28 Nov 2019 EST", end: "21:45 Thu, 28 Nov 2019 EST"),
@@ -102,6 +103,10 @@ class MainMenuViewController: UIViewController, UITableViewDataSource, UITableVi
     
     // Area around the LCS theatre
     var theatreRegion: CLCircularRegion?
+    
+    // Whether this is the initial load
+    // This is used to determine whether to display the "At the show?" banner
+    var mainMenuDisplayedOnce = false
 
     // MARK: Initializer
     
@@ -140,53 +145,16 @@ class MainMenuViewController: UIViewController, UITableViewDataSource, UITableVi
 
         // Configure location services
         locationManager = CLLocationManager()
-        
-        // Request location access only when app is in use
-        // And only ask if it is during show time
-        #if DEBUG
-            locationManager?.requestWhenInUseAuthorization()
-            // Define theatre region
-            //        let theatre = CLLocationCoordinate2D(latitude: 44.4396331, longitude: -78.2649631) // Actual theatre location
-            //        let theatre = CLLocationCoordinate2D(latitude: 44.3508735, longitude: -78.3014703) // Tim Horton's on Water Street
-            let theatre = CLLocationCoordinate2D(latitude: 44.42974853515625, longitude: -78.26181482073447) // Home
-            theatreRegion = CLCircularRegion(center: theatre, radius: 250, identifier: "theTheatre")
-        #else
-            if Date().timeZone() == "EST" && Date().isDuring(showings: forChicagoMusical) {
                 
-                // Ask for authorization
-                locationManager?.requestWhenInUseAuthorization()
+        // If run of shows hasn't concluded, ask for location services permission
+        beforeShowsCompleteAskForLocationServicesPermission()
 
-                // Define theatre region
-                let theatre = CLLocationCoordinate2D(latitude: 44.42974853515625, longitude: -78.26181482073447) // Home
-//                let theatre = CLLocationCoordinate2D(latitude: 44.4396331, longitude: -78.2649631) // Actual theatre location
-                theatreRegion = CLCircularRegion(center: theatre, radius: 250, identifier: "theTheatre")
-
-            }
-        #endif
-        
         // Assign this view as the delegate (will implement required methods to obtain user location)
         locationManager?.delegate = self
         
-//        #if DEBUG
-        // Read the state for this theatre patron
-        let patronGetsBonusContent = doesPatronGetBonusContent()
-        print("Patron gets bonus content: \(patronGetsBonusContent)")
-        // Create an alert
-        // Necessary because we lose debugging connection to Xcode when force quitting an app
-        let alertController = UIAlertController(title: "Bonus Content", message: "Does user get bonus content? \(patronGetsBonusContent)", preferredStyle: .alert)
-        // Create a default action for the alert
-        // It is a button and we hae given the button text style and handler
-        let defaultAction = UIAlertAction(title: "Close Alert", style: .default, handler: nil)
-        // Now add the action to the alert controller
-        alertController.addAction(defaultAction)
-        // Now present the alert
-        present(alertController, animated: true, completion: nil)
-        
-        #if DEBUG
-        // Reset attendance to false for debugging purposes
-        print("Resetting bonus content flag...")
-        recordAttendanceAtShowAs(present: false)
-        #endif
+//REMOVE COMMENT FOR PRODUCTION        #if DEBUG
+        showPatronStateMessageForDebugPurposes()
+//REMOVE COMMENT FOR PRODUCTION        #endif
                 
     }
     
@@ -199,87 +167,13 @@ class MainMenuViewController: UIViewController, UITableViewDataSource, UITableVi
     
     override func viewDidAppear(_ animated: Bool) {
         
-        // If the current date and time is during a showing, ask the user to turn off the app
-        // Eastern time zone only
-        #if DEBUG
-        #else
-        dateTimeToCheck = Date()    // Get's current date and time
-        #endif
-        if let dateTimeToCheckWith = dateTimeToCheck {
-            if dateTimeToCheckWith.timeZone() == "EST" {
-                
-                #if DEBUG
-                print("In the Eastern time zone...")
-                #endif
-                
-                // During show time?
-                if dateTimeToCheckWith.isDuring(showings: forChicagoMusical) {
-                    
-                    #if DEBUG
-                    print("During the show 🤨")
-                    #endif
-
-                    // Decide what message to show
-                    var showBonusContentUnlockedMessage = false
-                    
-                    // Is the user at the show?
-                    if let currentLocation = locationManager?.location?.coordinate {
-                        if let theatre = theatreRegion {
-                            #if DEBUG
-                            print("current location is:")
-                            print("latitude: \(currentLocation.latitude)")
-                            print("longitude: \(currentLocation.longitude)")
-                            print("comparing against 250m radius around theatre location of:")
-                            print("latitude: \(theatre.center.latitude)")
-                            print("longitude: \(theatre.center.longitude)")
-                            #endif
-                            if theatre.contains(currentLocation) {
-                                #if DEBUG
-                                print("Result: in the theatre")
-                                #endif
-                                showBonusContentUnlockedMessage = true
-                                recordAttendanceAtShowAs(present: true)
-                            } else {
-                                #if DEBUG
-                                print("Result: NOT in the theatre")
-                                #endif
-                            }
-                        }
-                    }
-                    
-                    // Show the appropriate message
-                    view.layoutIfNeeded() // force any pending operations to finish
-                    if showBonusContentUnlockedMessage {
-                        UIView.animate(withDuration: 1.0, animations: { () -> Void in
-                            self.bonusContentUnlockedMessageHeight.constant = 225
-                            self.view.layoutIfNeeded()
-                        })
-                    } else {
-                        UIView.animate(withDuration: 1.0, animations: { () -> Void in
-                            self.showStartedMessageHeight.constant = 110
-                            self.view.layoutIfNeeded()
-                        })
-                    }
-
-                } else {
-
-                    // No longer during the show, so hide any message banner
-                    #if DEBUG
-                    print("Not during the show 👍🏻")
-                    #endif
-                    view.layoutIfNeeded() // force any pending operations to finish
-                    UIView.animate(withDuration: 1.0, animations: { () -> Void in
-                        self.showStartedMessageHeight.constant = 0
-                        self.bonusContentUnlockedMessageHeight.constant = 0
-                        self.view.layoutIfNeeded()
-                    })
-
-                }
-                
-            }
-        }
+        // Conditionally display "welcome to the show" message
+        welcomeToTheShow()
+        
+        // Update to indicate that view has been displayed once
+        mainMenuDisplayedOnce = true
+        
     }
-
     
     /*
      // MARK: - Navigation
@@ -437,7 +331,124 @@ class MainMenuViewController: UIViewController, UITableViewDataSource, UITableVi
     }
         
     // MARK: Methods for handling presence at a show
-    // Add the background view to the stack view
+    // Ask for permission to track location (only if show run has not completed)
+    func beforeShowsCompleteAskForLocationServicesPermission() {
+
+        // Request location access (for when App Is In Use only)
+        #if DEBUG
+            locationManager?.requestWhenInUseAuthorization()
+            // Define theatre region
+            //        let theatre = CLLocationCoordinate2D(latitude: 44.4396331, longitude: -78.2649631) // Actual theatre location
+            //        let theatre = CLLocationCoordinate2D(latitude: 44.3508735, longitude: -78.3014703) // Tim Horton's on Water Street
+            let theatre = CLLocationCoordinate2D(latitude: 44.42974853515625, longitude: -78.26181482073447) // Home
+            theatreRegion = CLCircularRegion(center: theatre, radius: 250, identifier: "theTheatre")
+        #else
+        // Ask for location services authorization in Eastern time zone only, and only during time interval that is prior to one hour past the end of the final showing
+        if let finalShowing = forChicagoMusical.last {
+            if Date().timeZone() == "EST" && Date() < finalShowing.end.addingTimeInterval(3600)  {
+                // Ask for authorization
+                locationManager?.requestWhenInUseAuthorization()
+
+                // Define theatre region
+                let theatre = CLLocationCoordinate2D(latitude: 44.42974853515625, longitude: -78.26181482073447) // Home -- REMOVE THIS LINE BEFORE FINAL PRODUCTION COMMIT
+// REMOVE COMMENT BEFORE FINAL PRODUCTION COMMIT                let theatre = CLLocationCoordinate2D(latitude: 44.4396331, longitude: -78.2649631) // Actual theatre location
+                theatreRegion = CLCircularRegion(center: theatre, radius: 250, identifier: "theTheatre")
+            }
+        }
+        #endif
+    }
+    
+    // Display "welcome to the show" message when in Eastern Time Zone and if show is on
+    func welcomeToTheShow() {
+        
+        // If the current date and time is during a showing, ask the user to turn off the app
+        // Eastern time zone only
+        #if DEBUG
+        #else
+        dateTimeToCheck = Date()    // Gets current date and time
+        #endif
+        if let dateTimeToCheckWith = dateTimeToCheck, mainMenuDisplayedOnce == true  {
+            if dateTimeToCheckWith.timeZone() == "EST" {
+                
+                #if DEBUG
+                print("In the Eastern time zone...")
+                #endif
+                
+                // During show time?
+                if dateTimeToCheckWith.isDuring(showings: forChicagoMusical) {
+                    
+                    #if DEBUG
+                    print("During the show 🤨")
+                    #endif
+
+                    // Decide what message to show
+                    var showBonusContentUnlockedMessage = false
+                    
+                    // Is the user at the show?
+                    if let currentLocation = locationManager?.location?.coordinate {
+                        if let theatre = theatreRegion {
+                            #if DEBUG
+                            print("current location is:")
+                            print("latitude: \(currentLocation.latitude)")
+                            print("longitude: \(currentLocation.longitude)")
+                            print("comparing against 250m radius around theatre location of:")
+                            print("latitude: \(theatre.center.latitude)")
+                            print("longitude: \(theatre.center.longitude)")
+                            #endif
+                            if theatre.contains(currentLocation) {
+                                #if DEBUG
+                                print("Result: in the theatre")
+                                #endif
+                                showBonusContentUnlockedMessage = true
+                                recordAttendanceAtShowAs(present: true)
+                            } else {
+                                #if DEBUG
+                                print("Result: NOT in the theatre")
+                                #endif
+                            }
+                        }
+                    }
+                    
+                    // Show the appropriate message
+                    view.layoutIfNeeded() // force any pending operations to finish
+                    if showBonusContentUnlockedMessage {
+                        
+                        UIView.animate(withDuration: 1.0, animations: { () -> Void in
+                            self.bonusContentUnlockedMessageHeight.constant = 225
+                            self.view.layoutIfNeeded()
+                        })
+                        
+                    } else {
+                        
+                        UIView.animate(withDuration: 1.0, animations: { () -> Void in
+                            self.showStartedMessageHeight.constant = 110
+                            self.view.layoutIfNeeded()
+                        })
+                        
+                    }
+
+                } else {
+
+                    // No longer during the show, so hide any message banner
+                    #if DEBUG
+                    print("Not during the show 👍🏻")
+                    #endif
+                    
+                    view.layoutIfNeeded() // force any pending operations to finish
+                    UIView.animate(withDuration: 1.0, animations: { () -> Void in
+                        self.showStartedMessageHeight.constant = 0
+                        self.bonusContentUnlockedMessageHeight.constant = 0
+                        self.view.layoutIfNeeded()
+                    })
+
+                }
+                
+            }
+        }
+        
+    }
+    
+    // Add the background view to the stack view that contains the message
     private func pinBackground(_ view: UIView, to stackView: UIStackView) {
         view.translatesAutoresizingMaskIntoConstraints = false
         stackView.insertSubview(view, at: 0)
@@ -500,26 +511,37 @@ class MainMenuViewController: UIViewController, UITableViewDataSource, UITableVi
                 
             }
         }
-        
-//        // Get the address of the .plist file in the app bundle
-//        // Attempt to read from it
-//        if let path = Bundle.main.path(forResource: "PatronState", ofType: "plist"),
-//            let xml = FileManager.default.contents(atPath: path),
-//            let patronState = try? PropertyListDecoder().decode(PatronState.self, from: xml)
-//        {
-//
-//            #if DEBUG
-//            print("About to read from property list file...")
-//            #endif
-//
-//            // Return whether they attended show (and should therefore get bonus content
-//            return patronState.attendedShow
-//
-//        }
 
         // Occurs when there is no property list file yet
         return false
         
     }
+    
+//REMOVE COMMENT FOR FINAL PRODUCTION COMMIT    #if DEBUG
+    func showPatronStateMessageForDebugPurposes() {
+
+        // Read the state for this theatre patron
+        let patronGetsBonusContent = doesPatronGetBonusContent()
+        print("Patron gets bonus content: \(patronGetsBonusContent)")
+        // Create an alert
+        // Necessary because we lose debugging connection to Xcode when force quitting an app
+        let alertController = UIAlertController(title: "Bonus Content", message: "Does user get bonus content? \(patronGetsBonusContent)", preferredStyle: .alert)
+        // Create a default action for the alert
+        // It is a button and we hae given the button text style and handler
+        let defaultAction = UIAlertAction(title: "Close Alert", style: .default, handler: nil)
+        // Now add the action to the alert controller
+        alertController.addAction(defaultAction)
+        // Now present the alert
+        present(alertController, animated: true, completion: nil)
+        
+        #if DEBUG   // REMOVE LINE FOR FINAL PRODUCTION COMMIT
+        // Reset attendance to false for debugging purposes
+        print("Resetting bonus content flag...")
+        recordAttendanceAtShowAs(present: false)
+        #endif   // REMOVE LINE FOR FINAL PRODUCTION COMMIT
+
+    }
+    
+//REMOVE COMMENT FOR FINAL PRODUCTION COMMIT    #endif
 
 }
