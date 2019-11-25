@@ -46,9 +46,9 @@ class MainMenuViewController: UIViewController, UITableViewDataSource, UITableVi
     // Define showing times of the musical
     // NOTE: REMOVE FIRST SHOWING BEFORE PUBLISHING FINAL PRODUCTION COMMIT
     //       Set first showing to time you want to test under production conditions
+    //        Showing(start: "10:49 Mon, 25 Nov 2019 EST", end: "10:51 Mon, 25 Nov 2019 EST"),
     let forChicagoMusical: [Showing] = [
 
-        Showing(start: "10:49 Mon, 25 Nov 2019 EST", end: "10:51 Mon, 25 Nov 2019 EST"),
         Showing(start: "18:45 Tue, 26 Nov 2019 EST", end: "21:45 Tue, 26 Nov 2019 EST"),
         Showing(start: "18:45 Wed, 27 Nov 2019 EST", end: "21:45 Wed, 27 Nov 2019 EST"),
         Showing(start: "18:45 Thu, 28 Nov 2019 EST", end: "21:45 Thu, 28 Nov 2019 EST"),
@@ -152,9 +152,9 @@ class MainMenuViewController: UIViewController, UITableViewDataSource, UITableVi
         // Assign this view as the delegate (will implement required methods to obtain user location)
         locationManager?.delegate = self
         
-//REMOVE COMMENT FOR PRODUCTION        #if DEBUG
+        #if DEBUG
         showPatronStateMessageForDebugPurposes()
-//REMOVE COMMENT FOR PRODUCTION        #endif
+        #endif
                 
     }
     
@@ -336,10 +336,10 @@ class MainMenuViewController: UIViewController, UITableViewDataSource, UITableVi
 
         // Request location access (for when App Is In Use only)
         #if DEBUG
+            // (Always request authorization when in debug mode)
             locationManager?.requestWhenInUseAuthorization()
             // Define theatre region
-                    let theatre = CLLocationCoordinate2D(latitude: 44.439697265625, longitude: -78.26487680066764) // Actual theatre location
-            //        let theatre = CLLocationCoordinate2D(latitude: 44.3508735, longitude: -78.3014703) // Tim Horton's on Water Street
+            let theatre = CLLocationCoordinate2D(latitude: 44.439697265625, longitude: -78.26487680066764) // Actual theatre location
             theatreRegion = CLCircularRegion(center: theatre, radius: 100, identifier: "theTheatre")
         #else
         // Ask for location services authorization in Eastern time zone only, and only during time interval that is prior to one hour past the end of the final showing
@@ -431,7 +431,6 @@ class MainMenuViewController: UIViewController, UITableViewDataSource, UITableVi
                     #if DEBUG
                     print("Not during the show 👍🏻")
                     #endif
-                    
                     view.layoutIfNeeded() // force any pending operations to finish
                     UIView.animate(withDuration: 1.0, animations: { () -> Void in
                         self.showStartedMessageHeight.constant = 0
@@ -515,7 +514,7 @@ class MainMenuViewController: UIViewController, UITableViewDataSource, UITableVi
         
     }
     
-//REMOVE COMMENT FOR FINAL PRODUCTION COMMIT    #if DEBUG
+#if DEBUG
     func showPatronStateMessageForDebugPurposes() {
 
         // Read the state for this theatre patron
@@ -532,14 +531,11 @@ class MainMenuViewController: UIViewController, UITableViewDataSource, UITableVi
         // Now present the alert
         present(alertController, animated: true, completion: nil)
         
-        #if DEBUG   // REMOVE LINE FOR FINAL PRODUCTION COMMIT
         // Reset attendance to false for debugging purposes
         print("Resetting bonus content flag...")
         recordAttendanceAtShowAs(present: false)
-        #endif   // REMOVE LINE FOR FINAL PRODUCTION COMMIT
 
     }
-    
-//REMOVE COMMENT FOR FINAL PRODUCTION COMMIT    #endif
+#endif
 
 }
