@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreLocation
 
 // Allow one view to be pinned to another
 // See: https://useyourloaf.com/blog/stack-view-background-color/
@@ -21,21 +22,26 @@ public extension UIView {
   }
 }
 
-class MainMenuViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class MainMenuViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, CLLocationManagerDelegate {
     
     // MARK: Properties
     @IBOutlet weak var tableView: UITableView!
-    @IBOutlet weak var showStartedMessageHeight: NSLayoutConstraint!
     @IBOutlet weak var messageStackView: UIStackView!
     @IBOutlet weak var showStartedMessage: UILabel!
+    @IBOutlet weak var showStartedMessageHeight: NSLayoutConstraint!
+    @IBOutlet weak var bonusContentUnlockedMessage: UILabel!
+    @IBOutlet weak var bonusContentUnlockedMessageHeight: NSLayoutConstraint!
     
-    // Background view for the stack view
+    // Background view for the stack view that displays message to user during show
     private lazy var backgroundView: UIView = {
         let view = UIView()
         view.backgroundColor = chicagoGold
         view.layer.cornerRadius = 0
         return view
     }()
+    
+    // Object that we'll use to find location of the user
+    var locationManager: CLLocationManager?
     
     // Define showing times of the musical
     let forChicagoMusical: [Showing] = [
@@ -91,6 +97,9 @@ class MainMenuViewController: UIViewController, UITableViewDataSource, UITableVi
     
     // Time to check to display warning when show is on
     var dateTimeToCheck: Date?
+    
+    // Area around the LCS theatre
+    var theatreRegion: CLCircularRegion?
 
     // MARK: Initializer
     
@@ -123,10 +132,33 @@ class MainMenuViewController: UIViewController, UITableViewDataSource, UITableVi
         // Add the background to the stack view
         pinBackground(backgroundView, to: messageStackView)
         
-        // Set the show started message color
+        // Set the alert message colors
         showStartedMessage.backgroundColor = chicagoGold
+        bonusContentUnlockedMessage.backgroundColor = chicagoGold
+
+        // Configure location services
+        locationManager = CLLocationManager()
         
+        // Request location access only when app is in use
+        // And only ask if it is during show time
+        #if DEBUG
+        locationManager?.requestWhenInUseAuthorization()
+        #else
+        if Date().isDuring(showings: forChicagoMusical) {
+            
+            // Ask for authorization
+            locationManager?.requestWhenInUseAuthorization()
+
+        }
+        #endif
+        // Define theatre region
+        let theatre = CLLocationCoordinate2D(latitude: 44.4396331, longitude: -78.2649631) // Actual theatre location
+//        let theatre = CLLocationCoordinate2D(latitude: 44.3508735, longitude: -78.3014703) // Tim Horton's on Water Street
+        theatreRegion = CLCircularRegion(center: theatre, radius: 250, identifier: "theTheatre")
         
+        // Assign this view as the delegate (will implement required methods to obtain user location)
+        locationManager?.delegate = self
+                
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -142,7 +174,7 @@ class MainMenuViewController: UIViewController, UITableViewDataSource, UITableVi
         // Eastern time zone only
         #if DEBUG
         #else
-            dateTimeToCheck = Date()
+        dateTimeToCheck = Date()    // Get's current date and time
         #endif
         if let dateTimeToCheckWith = dateTimeToCheck {
             if dateTimeToCheckWith.timeZone() == "EST" {
@@ -157,22 +189,58 @@ class MainMenuViewController: UIViewController, UITableViewDataSource, UITableVi
                     #if DEBUG
                     print("During the show 🤨")
                     #endif
-                    // Show the message
+
+                    // Decide what message to show
+                    var showBonusContentUnlockedMessage = false
                     
+                    // Is the user at the show?
+                    if let currentLocation = locationManager?.location?.coordinate {
+                        if let theatre = theatreRegion {
+                            #if DEBUG
+                            print("current location is:")
+                            print("latitude: \(currentLocation.latitude)")
+                            print("longitude: \(currentLocation.longitude)")
+                            print("comparing against 250m radius around theatre location of:")
+                            print("latitude: \(theatre.center.latitude)")
+                            print("longitude: \(theatre.center.longitude)")
+                            #endif
+                            if theatre.contains(currentLocation) {
+                                #if DEBUG
+                                print("Result: in the theatre")
+                                #endif
+                                showBonusContentUnlockedMessage = true
+                            } else {
+                                #if DEBUG
+                                print("Result: NOT in the theatre")
+                                #endif
+                            }
+                        }
+                    }
+                    
+                    // Show the appropriate message
                     view.layoutIfNeeded() // force any pending operations to finish
-                    UIView.animate(withDuration: 1.0, animations: { () -> Void in
-                        self.showStartedMessageHeight.constant = 225
-                        self.view.layoutIfNeeded()
-                    })
+                    if showBonusContentUnlockedMessage {
+                        UIView.animate(withDuration: 1.0, animations: { () -> Void in
+                            self.bonusContentUnlockedMessageHeight.constant = 225
+                            self.view.layoutIfNeeded()
+                        })
+                    } else {
+                        UIView.animate(withDuration: 1.0, animations: { () -> Void in
+                            self.showStartedMessageHeight.constant = 110
+                            self.view.layoutIfNeeded()
+                        })
+                    }
 
                 } else {
 
+                    // No longer during the show, so hide any message banner
                     #if DEBUG
                     print("Not during the show 👍🏻")
                     #endif
                     view.layoutIfNeeded() // force any pending operations to finish
                     UIView.animate(withDuration: 1.0, animations: { () -> Void in
                         self.showStartedMessageHeight.constant = 0
+                        self.bonusContentUnlockedMessageHeight.constant = 0
                         self.view.layoutIfNeeded()
                     })
 
@@ -181,16 +249,7 @@ class MainMenuViewController: UIViewController, UITableViewDataSource, UITableVi
             }
         }
     }
-    
-    // Add the background view to the stack view
-    private func pinBackground(_ view: UIView, to stackView: UIStackView) {
-        view.translatesAutoresizingMaskIntoConstraints = false
-        stackView.insertSubview(view, at: 0)
-        view.pin(to: stackView)
-    }
-    
-    // Pins
-    
+
     
     /*
      // MARK: - Navigation
@@ -213,11 +272,13 @@ class MainMenuViewController: UIViewController, UITableViewDataSource, UITableVi
             case "Tickets and Dates":
                 performSegue(withIdentifier: "TicketsDates", sender: nil)
                 #if DEBUG
+                // For debugging purposes, set time to a time during one of the showings
                 dateTimeToCheck = forChicagoMusical[0].start.addingTimeInterval(TimeInterval(60))
                 #endif
             case "Musical Numbers":
                 performSegue(withIdentifier: "MusicalNumbers", sender: nil)
                 #if DEBUG
+                // For debugging purposes, set time to the actual time (to see if message disappears)
                 dateTimeToCheck = Date()
                 #endif
             case "Characters":
@@ -336,5 +397,22 @@ class MainMenuViewController: UIViewController, UITableViewDataSource, UITableVi
         
     }
     
+    // MARK: Location
+    func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
+        if status == .authorizedWhenInUse {
+            #if DEBUG
+            print("Authorized!")
+            #endif
+        }
+    }
+        
+    // MARK: Appearance of alert message
+    // Add the background view to the stack view
+    private func pinBackground(_ view: UIView, to stackView: UIStackView) {
+        view.translatesAutoresizingMaskIntoConstraints = false
+        stackView.insertSubview(view, at: 0)
+        view.pin(to: stackView)
+    }
+
     
 }
