@@ -49,6 +49,7 @@ class MainMenuViewController: UIViewController, UITableViewDataSource, UITableVi
     //        Showing(start: "10:49 Mon, 25 Nov 2019 EST", end: "10:51 Mon, 25 Nov 2019 EST"),
     let forChicagoMusical: [Showing] = [
 
+        Showing(start: "11:26 Mon, 25 Nov 2019 EST", end: "11:28 Mon, 25 Nov 2019 EST"),
         Showing(start: "18:45 Tue, 26 Nov 2019 EST", end: "21:45 Tue, 26 Nov 2019 EST"),
         Showing(start: "18:45 Wed, 27 Nov 2019 EST", end: "21:45 Wed, 27 Nov 2019 EST"),
         Showing(start: "18:45 Thu, 28 Nov 2019 EST", end: "21:45 Thu, 28 Nov 2019 EST"),
@@ -103,6 +104,9 @@ class MainMenuViewController: UIViewController, UITableViewDataSource, UITableVi
     
     // Area around the LCS theatre
     var theatreRegion: CLCircularRegion?
+    
+    // Time of last location update
+    var timeIntervalSinceLastLocationUpdate: TimeInterval = 0
     
     // Whether this is the initial load
     // This is used to determine whether to display the "At the show?" banner
@@ -321,7 +325,7 @@ class MainMenuViewController: UIViewController, UITableViewDataSource, UITableVi
         
     }
     
-    // MARK: Location
+    // MARK: Location methods required by use of Location Services
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
         if status == .authorizedWhenInUse {
             #if DEBUG
@@ -329,7 +333,21 @@ class MainMenuViewController: UIViewController, UITableViewDataSource, UITableVi
             #endif
         }
     }
-        
+    
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        #if DEBUG
+        print("Location was updated")
+        #endif
+        // Keep track of when location was updated
+        timeIntervalSinceLastLocationUpdate = Date().timeIntervalSince1970
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
+        #if DEBUG
+        print("Location failed to update")
+        #endif
+    }
+
     // MARK: Methods for handling presence at a show
     // Ask for permission to track location (only if show run has not completed)
     func beforeShowsCompleteAskForLocationServicesPermission() {
@@ -382,6 +400,19 @@ class MainMenuViewController: UIViewController, UITableViewDataSource, UITableVi
                     // Decide what message to show
                     var showBonusContentUnlockedMessage = false
                     
+                    // Request the user's location every ten minutes (10 seconds in debug)
+                    #if DEBUG
+                    let updateLocationInterval: TimeInterval = 10
+                    #else
+                    let updateLocationInterval: TimeInterval = 3600
+                    #endif
+                    if Date().timeIntervalSince1970 - timeIntervalSinceLastLocationUpdate > updateLocationInterval {
+                        locationManager?.requestLocation()
+                        #if DEBUG
+                        print("Requested location update")
+                        #endif
+                    }
+                    
                     // Is the user at the show?
                     if let currentLocation = locationManager?.location?.coordinate {
                         if let theatre = theatreRegion {
@@ -412,6 +443,8 @@ class MainMenuViewController: UIViewController, UITableViewDataSource, UITableVi
                     if showBonusContentUnlockedMessage {
                         
                         UIView.animate(withDuration: 1.0, animations: { () -> Void in
+                            // Ensure that both banners do not show at once
+                            self.showStartedMessageHeight.constant = 0
                             self.bonusContentUnlockedMessageHeight.constant = 225
                             self.view.layoutIfNeeded()
                         })
@@ -419,6 +452,8 @@ class MainMenuViewController: UIViewController, UITableViewDataSource, UITableVi
                     } else {
                         
                         UIView.animate(withDuration: 1.0, animations: { () -> Void in
+                            // Ensure that both banners do not show at once
+                            self.bonusContentUnlockedMessageHeight.constant = 0
                             self.showStartedMessageHeight.constant = 110
                             self.view.layoutIfNeeded()
                         })
@@ -514,7 +549,7 @@ class MainMenuViewController: UIViewController, UITableViewDataSource, UITableVi
         
     }
     
-#if DEBUG
+    #if DEBUG
     func showPatronStateMessageForDebugPurposes() {
 
         // Read the state for this theatre patron
@@ -536,6 +571,25 @@ class MainMenuViewController: UIViewController, UITableViewDataSource, UITableVi
         recordAttendanceAtShowAs(present: false)
 
     }
-#endif
+    #endif
+
+    #if DEBUG
+    func showAlertWith(message: String) {
+
+        // Create an alert
+        // Necessary because we lose debugging connection to Xcode when force quitting an app
+        let alertController = UIAlertController(title: "Location update", message: message, preferredStyle: .alert)
+        // Create a default action for the alert
+        // It is a button and we hae given the button text style and handler
+        let defaultAction = UIAlertAction(title: "Close Alert", style: .default, handler: nil)
+        // Now add the action to the alert controller
+        alertController.addAction(defaultAction)
+        // Now present the alert
+        present(alertController, animated: true, completion: nil)
+        
+    }
+    #endif
+    
+    
 
 }
