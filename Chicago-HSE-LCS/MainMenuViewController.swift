@@ -44,8 +44,10 @@ class MainMenuViewController: UIViewController, UITableViewDataSource, UITableVi
     var locationManager: CLLocationManager?
     
     // Define showing times of the musical
+    // Set first showing to time you want to test under production conditions
     let forChicagoMusical: [Showing] = [
 
+        Showing(start: "21:00 Sun, 24 Nov 2019 EST", end: "21:07 Sun, 24 Nov 2019 EST"),
         Showing(start: "19:25 Tue, 26 Nov 2019 EST", end: "21:45 Tue, 26 Nov 2019 EST"),
         Showing(start: "19:25 Wed, 27 Nov 2019 EST", end: "21:45 Wed, 27 Nov 2019 EST"),
         Showing(start: "19:25 Thu, 28 Nov 2019 EST", end: "21:45 Thu, 28 Nov 2019 EST"),
@@ -155,7 +157,8 @@ class MainMenuViewController: UIViewController, UITableViewDataSource, UITableVi
                 locationManager?.requestWhenInUseAuthorization()
 
                 // Define theatre region
-                let theatre = CLLocationCoordinate2D(latitude: 44.4396331, longitude: -78.2649631) // Actual theatre location
+                let theatre = CLLocationCoordinate2D(latitude: 44.42974853515625, longitude: -78.26181482073447) // Home
+//                let theatre = CLLocationCoordinate2D(latitude: 44.4396331, longitude: -78.2649631) // Actual theatre location
                 theatreRegion = CLCircularRegion(center: theatre, radius: 250, identifier: "theTheatre")
 
             }
@@ -164,7 +167,7 @@ class MainMenuViewController: UIViewController, UITableViewDataSource, UITableVi
         // Assign this view as the delegate (will implement required methods to obtain user location)
         locationManager?.delegate = self
         
-        #if DEBUG
+//        #if DEBUG
         // Read the state for this theatre patron
         let patronGetsBonusContent = doesPatronGetBonusContent()
         print("Patron gets bonus content: \(patronGetsBonusContent)")
@@ -179,6 +182,7 @@ class MainMenuViewController: UIViewController, UITableViewDataSource, UITableVi
         // Now present the alert
         present(alertController, animated: true, completion: nil)
         
+        #if DEBUG
         // Reset attendance to false for debugging purposes
         print("Resetting bonus content flag...")
         recordAttendanceAtShowAs(present: false)
