@@ -142,22 +142,47 @@ class MainMenuViewController: UIViewController, UITableViewDataSource, UITableVi
         // Request location access only when app is in use
         // And only ask if it is during show time
         #if DEBUG
-        locationManager?.requestWhenInUseAuthorization()
-        #else
-        if Date().isDuring(showings: forChicagoMusical) {
-            
-            // Ask for authorization
             locationManager?.requestWhenInUseAuthorization()
+            // Define theatre region
+            //        let theatre = CLLocationCoordinate2D(latitude: 44.4396331, longitude: -78.2649631) // Actual theatre location
+            //        let theatre = CLLocationCoordinate2D(latitude: 44.3508735, longitude: -78.3014703) // Tim Horton's on Water Street
+            let theatre = CLLocationCoordinate2D(latitude: 44.42974853515625, longitude: -78.26181482073447) // Home
+            theatreRegion = CLCircularRegion(center: theatre, radius: 250, identifier: "theTheatre")
+        #else
+            if Date().timeZone() == "EST" && Date().isDuring(showings: forChicagoMusical) {
+                
+                // Ask for authorization
+                locationManager?.requestWhenInUseAuthorization()
 
-        }
+                // Define theatre region
+                let theatre = CLLocationCoordinate2D(latitude: 44.4396331, longitude: -78.2649631) // Actual theatre location
+                theatreRegion = CLCircularRegion(center: theatre, radius: 250, identifier: "theTheatre")
+
+            }
         #endif
-        // Define theatre region
-        let theatre = CLLocationCoordinate2D(latitude: 44.4396331, longitude: -78.2649631) // Actual theatre location
-//        let theatre = CLLocationCoordinate2D(latitude: 44.3508735, longitude: -78.3014703) // Tim Horton's on Water Street
-        theatreRegion = CLCircularRegion(center: theatre, radius: 250, identifier: "theTheatre")
         
         // Assign this view as the delegate (will implement required methods to obtain user location)
         locationManager?.delegate = self
+        
+        #if DEBUG
+        // Read the state for this theatre patron
+        let patronGetsBonusContent = doesPatronGetBonusContent()
+        print("Patron gets bonus content: \(patronGetsBonusContent)")
+        // Create an alert
+        // Necessary because we lose debugging connection to Xcode when force quitting an app
+        let alertController = UIAlertController(title: "Bonus Content", message: "Does user get bonus content? \(patronGetsBonusContent)", preferredStyle: .alert)
+        // Create a default action for the alert
+        // It is a button and we hae given the button text style and handler
+        let defaultAction = UIAlertAction(title: "Close Alert", style: .default, handler: nil)
+        // Now add the action to the alert controller
+        alertController.addAction(defaultAction)
+        // Now present the alert
+        present(alertController, animated: true, completion: nil)
+        
+        // Reset attendance to false for debugging purposes
+        print("Resetting bonus content flag...")
+        recordAttendanceAtShowAs(present: false)
+        #endif
                 
     }
     
@@ -209,6 +234,7 @@ class MainMenuViewController: UIViewController, UITableViewDataSource, UITableVi
                                 print("Result: in the theatre")
                                 #endif
                                 showBonusContentUnlockedMessage = true
+                                recordAttendanceAtShowAs(present: true)
                             } else {
                                 #if DEBUG
                                 print("Result: NOT in the theatre")
@@ -401,18 +427,95 @@ class MainMenuViewController: UIViewController, UITableViewDataSource, UITableVi
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
         if status == .authorizedWhenInUse {
             #if DEBUG
-            print("Authorized!")
+            print("Authorized to use location services!")
             #endif
         }
     }
         
-    // MARK: Appearance of alert message
+    // MARK: Methods for handling presence at a show
     // Add the background view to the stack view
     private func pinBackground(_ view: UIView, to stackView: UIStackView) {
         view.translatesAutoresizingMaskIntoConstraints = false
         stackView.insertSubview(view, at: 0)
         view.pin(to: stackView)
     }
-
     
+    // Save to our Patron State property list, so that we know the user attended the show
+    // We can use this later on to determine who sees the bonus content
+    // See: https://learnappmaking.com/plist-property-list-swift-how-to/ for tutorial on reading and writing to property list files
+    func recordAttendanceAtShowAs(present: Bool) {
+        
+        // Record whether show was attended
+        var patronState = PatronState(attendedShow: present)
+        patronState.attendedShow = present
+        
+        #if DEBUG
+        print("Patron show attendance now set to: \(present)")
+        #endif
+
+        // Write to the property list
+        // Get an encoder object
+        let encoder = PropertyListEncoder()
+        encoder.outputFormat = .xml
+
+        // Attempt to write to the property list file
+        let writePath = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0].appendingPathComponent("PatronState.plist")
+        do {
+          #if DEBUG
+          print("About to write patronState of \(patronState)")
+          #endif
+          let data = try encoder.encode(patronState)
+          try data.write(to: writePath)
+        } catch {
+          #if DEBUG
+          print("Error writing property list file: \(error)")
+          #endif
+        }
+        
+    }
+    
+    // We will use this function in the future to see if the patron should have access to bonus content
+    func doesPatronGetBonusContent() -> Bool {
+
+        // Set the path to read from
+        let readPath: URL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0].appendingPathComponent("PatronState.plist")
+
+        // Attempt to read from the path
+        #if DEBUG
+        print("About to open property list file...")
+        #endif
+        if let data = try? Data(contentsOf: readPath) {
+          let decoder = PropertyListDecoder()
+            if let patronState = try? decoder.decode(PatronState.self, from: data) {
+                
+                #if DEBUG
+                print("About to read from property list file...")
+                #endif
+
+                return patronState.attendedShow
+                
+            }
+        }
+        
+//        // Get the address of the .plist file in the app bundle
+//        // Attempt to read from it
+//        if let path = Bundle.main.path(forResource: "PatronState", ofType: "plist"),
+//            let xml = FileManager.default.contents(atPath: path),
+//            let patronState = try? PropertyListDecoder().decode(PatronState.self, from: xml)
+//        {
+//
+//            #if DEBUG
+//            print("About to read from property list file...")
+//            #endif
+//
+//            // Return whether they attended show (and should therefore get bonus content
+//            return patronState.attendedShow
+//
+//        }
+
+        // Occurs when there is no property list file yet
+        return false
+        
+    }
+
 }

@@ -29,6 +29,7 @@
 		7A64AC60237DFC400067FC9D /* CastMemberTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A64AC5F237DFC400067FC9D /* CastMemberTableViewController.swift */; };
 		7A64AC62237E05810067FC9D /* Crew.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A64AC61237E05810067FC9D /* Crew.swift */; };
 		7A64AC64237E073D0067FC9D /* CrewTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A64AC63237E073D0067FC9D /* CrewTableViewController.swift */; };
+		813770CC238B5DB00038C092 /* PatronState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 813770CB238B5DB00038C092 /* PatronState.swift */; };
 		813DAC962381AE560053EE91 /* LightNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 813DAC952381AE560053EE91 /* LightNavigationController.swift */; };
 		818DFA8E2382C16900429E5E /* ProductionTeamNotesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 818DFA8D2382C16900429E5E /* ProductionTeamNotesViewController.swift */; };
 		81C84E872382BE0A0061126B /* AcknowledgementsAndLegalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81C84E862382BE0A0061126B /* AcknowledgementsAndLegalViewController.swift */; };
@@ -70,6 +71,7 @@
 		7A64AC61237E05810067FC9D /* Crew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Crew.swift; sourceTree = "<group>"; };
 		7A64AC63237E073D0067FC9D /* CrewTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrewTableViewController.swift; sourceTree = "<group>"; };
 		812F76EE238B07C6004B77CC /* Time.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Time.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		813770CB238B5DB00038C092 /* PatronState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatronState.swift; sourceTree = "<group>"; };
 		813DAC952381AE560053EE91 /* LightNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightNavigationController.swift; sourceTree = "<group>"; };
 		818DFA8D2382C16900429E5E /* ProductionTeamNotesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductionTeamNotesViewController.swift; sourceTree = "<group>"; };
 		81C84E862382BE0A0061126B /* AcknowledgementsAndLegalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcknowledgementsAndLegalViewController.swift; sourceTree = "<group>"; };
@@ -152,6 +154,7 @@
 				0E91E2D52387A2C10025C793 /* WashroomsViewController.swift */,
 				81D3C083238B0C2B006AB290 /* TimeDateHelpers.swift */,
 				81D3C081238B0BFE006AB290 /* Showing.swift */,
+				813770CB238B5DB00038C092 /* PatronState.swift */,
 			);
 			path = "Chicago-HSE-LCS";
 			sourceTree = "<group>";
@@ -232,6 +235,7 @@
 				302F3A3B2381EAAE003B3725 /* CharactersDetailViewController.swift in Sources */,
 				813DAC962381AE560053EE91 /* LightNavigationController.swift in Sources */,
 				0EAC5E37237E45F400E92727 /* Colors.swift in Sources */,
+				813770CC238B5DB00038C092 /* PatronState.swift in Sources */,
 				0EAC5E4123820CF600E92727 /* ArtDisplayViewController.swift in Sources */,
 				818DFA8E2382C16900429E5E /* ProductionTeamNotesViewController.swift in Sources */,
 				81D3C082238B0BFE006AB290 /* Showing.swift in Sources */,
