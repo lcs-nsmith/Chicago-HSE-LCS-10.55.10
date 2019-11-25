@@ -60,7 +60,7 @@ class CrewTableViewController: UITableViewController {
             """),
         
         Crew(name: "Camila Marcos", job: "Assistant Stage Manager", imageId: "camilaMarcos", bio: """
-            Camila is a grade 9 student at Lakefield. She has been doing theatre since she was seven years old. She has been on stage in acting roles in the past, and this year, wanted to learn more about the magic that happens backstage.
+            Camila is a Grade 9 student at Lakefield. She has been doing theatre since she was seven years old. She has been on stage in acting roles in the past, and this year, wanted to learn more about the magic that happens backstage.
             """),
         
         Crew(name: "Brent Dadds", job: "Props Master", imageId: "brentDadds", bio: ""),
