@@ -47,27 +47,27 @@ class MusicianTableViewController: UITableViewController {
     var studentMusicians: [Musician] = [
         
         Musician(name: "Aidan Melville", instrument: "Saxophone", bio: """
-                Aidan Melville is a member of the Concert Band, Jazz Band, and Lorelei Choir. He has been playing Saxophone for 5 years and in bands for 4 with 3 years in both bands at LCS. He loves playing jazz and is extremely excited to be performing Chicago this year.
+                Aidan Melville is a member of the Concert Band, Jazz Band, and Lorelei Choir. He has been playing the saxophone for five years and has been in various bands for four years at LCS. He loves playing jazz and is extremely excited to be performing in Chicago this year.
                 """, imageID:"aidan"),
         
         Musician(name: "Dorothy Li", instrument: "Flute", bio: """
-                This is Dorothy's fourth year in Lakefield. She's been playing the clarinet since grade 3. Dorothy has played in different concert bands and orchestras throughout the years. However, it's her first time being a member of the pit band and plays live in a musical, she's very excited to perform in Chicago!
+                This is Dorothy's fourth year at LCS. She's been playing the clarinet since Grade 3. Dorothy has played in different concert bands and orchestras throughout the years. However, it's her first time being a member of the pit band and playing live in a musical. She is very excited to perform in Chicago!
                 """, imageID:"dorothy"),
         
         Musician(name: "Jeewoo Lee", instrument: "Trumpet", bio: """
-                Jeewoo plays the trumpet as part of the pit band in this production. He is also a member of the concert band. He got cut from soccer, but he thinks that made him step out from the comfort zone, and try new things since he had never been the part of the production before
+                Jeewoo plays the trumpet as part of the pit band in this production. He is also a member of the Concert Band at LCS. Getting cut from soccer is what spurred him to step out from his comfort zone and audition for this production. He's glad he took the leap of faith and is excited to perform for audiences during the Chicago run at LCS.
                 """, imageID:"jeewoo"),
         
         Musician(name: "Prajina Salvarajah", instrument: "Saxophone", bio: """
-                This is Prajina’s first time being part of an LCS production. She has been playing the clarinet since 5th grade and has learned how to play the tenor saxophone last year. She has been a member of the LCS Concert band for 1 year and has recently joined the Jazz band. She is thrilled to play in the live band for the Chicago Musical.
+                This is Prajina’s first time being part of an LCS production. She's been playing the clarinet since Grade 5 and learned how to play the tenor saxophone last year. She has been a member of the LCS Concert Band for one year and has recently joined the Jazz Band. She is thrilled to play in the live pit band for the Chicago musical.
                 """, imageID:"prajina"),
         
         Musician(name: "Rachel Xu", instrument: "Flute", bio: """
-                Rachel is from China Beijing and it is her fourth year in Lakefield. This is Rachel’s first time participating in a pit band. She has been playing flute since grade one, she has done a duet with clarinet and trio with cello and flute. Rachel is also a member of the LCS concert band for four years. She is excited to be performing in Chicago this year. Hope you enjoy the show!
+                Rachel is from Beijing, China and it is her fourth year at Lakefield College School. This is Rachel’s first time participating in a pit band. She has been playing flute since Grade 1, and has had experience doing a duet with clarinet, as well as a trio with a cello and flute. Rachel has also been a member of the LCS Concert Band for four years. She is excited to be performing in Chicago, and hopes you enjoy the show!
                 """, imageID:"rachel"),
         
         Musician(name: "Ryosuke Togawa", instrument: "Trumpet", bio: """
-                Ryosuke plays the trumpet as part of the pit band in this production. He is passionate about cooking food as much as he is playing the trumpet
+                Ryosuke plays the trumpet as part of the pit band in this production. He is as passionate about cooking food he is about playing the trumpet!
                 """, imageID:"ryosuke"),
         
     ]
