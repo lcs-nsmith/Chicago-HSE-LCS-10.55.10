@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0E8F004125D5751A0023C003 /* SwiftUI_Chicago_HSE_LCSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8F004025D5751A0023C003 /* SwiftUI_Chicago_HSE_LCSApp.swift */; };
+		0E8F004325D5751A0023C003 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8F004225D5751A0023C003 /* ContentView.swift */; };
+		0E8F004825D5751C0023C003 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0E8F004725D5751C0023C003 /* Preview Assets.xcassets */; };
+		0E8F005225D575A40023C003 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0EAC5E27237DF9C700E92727 /* Assets.xcassets */; };
 		0E91E2D62387A2C10025C793 /* WashroomsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E91E2D52387A2C10025C793 /* WashroomsViewController.swift */; };
 		0EAC5E1F237DF9C300E92727 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EAC5E1E237DF9C300E92727 /* AppDelegate.swift */; };
 		0EAC5E21237DF9C300E92727 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EAC5E20237DF9C300E92727 /* SceneDelegate.swift */; };
@@ -46,6 +50,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0E8F003E25D5751A0023C003 /* SwiftUI-Chicago-HSE-LCS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SwiftUI-Chicago-HSE-LCS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0E8F004025D5751A0023C003 /* SwiftUI_Chicago_HSE_LCSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUI_Chicago_HSE_LCSApp.swift; sourceTree = "<group>"; };
+		0E8F004225D5751A0023C003 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		0E8F004725D5751C0023C003 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		0E8F004925D5751C0023C003 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0E91E2D52387A2C10025C793 /* WashroomsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WashroomsViewController.swift; sourceTree = "<group>"; };
 		0EAC5E1B237DF9C300E92727 /* Chicago@LCS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Chicago@LCS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0EAC5E1E237DF9C300E92727 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -88,6 +97,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		0E8F003B25D5751A0023C003 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		0EAC5E18237DF9C300E92727 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -98,10 +114,39 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0E8F003F25D5751A0023C003 /* SwiftUI-Chicago-HSE-LCS */ = {
+			isa = PBXGroup;
+			children = (
+				0E8F004025D5751A0023C003 /* SwiftUI_Chicago_HSE_LCSApp.swift */,
+				0E8F004225D5751A0023C003 /* ContentView.swift */,
+				0E8F004925D5751C0023C003 /* Info.plist */,
+				0E8F004625D5751C0023C003 /* Preview Content */,
+			);
+			path = "SwiftUI-Chicago-HSE-LCS";
+			sourceTree = "<group>";
+		};
+		0E8F004625D5751C0023C003 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				0E8F004725D5751C0023C003 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		0E8F004F25D5757C0023C003 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				0EAC5E27237DF9C700E92727 /* Assets.xcassets */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
 		0EAC5E12237DF9C300E92727 = {
 			isa = PBXGroup;
 			children = (
+				0E8F004F25D5757C0023C003 /* Shared */,
 				0EAC5E1D237DF9C300E92727 /* Chicago-HSE-LCS */,
+				0E8F003F25D5751A0023C003 /* SwiftUI-Chicago-HSE-LCS */,
 				0EAC5E1C237DF9C300E92727 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -110,6 +155,7 @@
 			isa = PBXGroup;
 			children = (
 				0EAC5E1B237DF9C300E92727 /* Chicago@LCS.app */,
+				0E8F003E25D5751A0023C003 /* SwiftUI-Chicago-HSE-LCS.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -121,7 +167,6 @@
 				0EAC5E1E237DF9C300E92727 /* AppDelegate.swift */,
 				0EAC5E20237DF9C300E92727 /* SceneDelegate.swift */,
 				0EAC5E24237DF9C300E92727 /* Main.storyboard */,
-				0EAC5E27237DF9C700E92727 /* Assets.xcassets */,
 				0EAC5E29237DF9C700E92727 /* LaunchScreen.storyboard */,
 				0EAC5E2C237DF9C700E92727 /* Info.plist */,
 				0EAC5E32237E313F00E92727 /* MainMenuItem.swift */,
@@ -162,6 +207,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		0E8F003D25D5751A0023C003 /* SwiftUI-Chicago-HSE-LCS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0E8F004C25D5751C0023C003 /* Build configuration list for PBXNativeTarget "SwiftUI-Chicago-HSE-LCS" */;
+			buildPhases = (
+				0E8F003A25D5751A0023C003 /* Sources */,
+				0E8F003B25D5751A0023C003 /* Frameworks */,
+				0E8F003C25D5751A0023C003 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "SwiftUI-Chicago-HSE-LCS";
+			productName = "SwiftUI-Chicago-HSE-LCS";
+			productReference = 0E8F003E25D5751A0023C003 /* SwiftUI-Chicago-HSE-LCS.app */;
+			productType = "com.apple.product-type.application";
+		};
 		0EAC5E1A237DF9C300E92727 /* Chicago-HSE-LCS */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0EAC5E2F237DF9C700E92727 /* Build configuration list for PBXNativeTarget "Chicago-HSE-LCS" */;
@@ -185,10 +247,13 @@
 		0EAC5E13237DF9C300E92727 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1120;
+				LastSwiftUpdateCheck = 1230;
 				LastUpgradeCheck = 1120;
 				ORGANIZATIONNAME = "Gordon, Russell";
 				TargetAttributes = {
+					0E8F003D25D5751A0023C003 = {
+						CreatedOnToolsVersion = 12.3;
+					};
 					0EAC5E1A237DF9C300E92727 = {
 						CreatedOnToolsVersion = 11.2;
 					};
@@ -208,11 +273,21 @@
 			projectRoot = "";
 			targets = (
 				0EAC5E1A237DF9C300E92727 /* Chicago-HSE-LCS */,
+				0E8F003D25D5751A0023C003 /* SwiftUI-Chicago-HSE-LCS */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		0E8F003C25D5751A0023C003 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0E8F005225D575A40023C003 /* Assets.xcassets in Resources */,
+				0E8F004825D5751C0023C003 /* Preview Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		0EAC5E19237DF9C300E92727 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -226,6 +301,15 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		0E8F003A25D5751A0023C003 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0E8F004325D5751A0023C003 /* ContentView.swift in Sources */,
+				0E8F004125D5751A0023C003 /* SwiftUI_Chicago_HSE_LCSApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		0EAC5E17237DF9C300E92727 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -288,6 +372,52 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		0E8F004A25D5751C0023C003 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"SwiftUI-Chicago-HSE-LCS/Preview Content\"";
+				DEVELOPMENT_TEAM = U2ZN2W2UQJ;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "SwiftUI-Chicago-HSE-LCS/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "ca.russellgordon.SwiftUI-Chicago-HSE-LCS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		0E8F004B25D5751C0023C003 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"SwiftUI-Chicago-HSE-LCS/Preview Content\"";
+				DEVELOPMENT_TEAM = U2ZN2W2UQJ;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "SwiftUI-Chicago-HSE-LCS/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "ca.russellgordon.SwiftUI-Chicago-HSE-LCS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		0EAC5E2D237DF9C700E92727 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -447,6 +577,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		0E8F004C25D5751C0023C003 /* Build configuration list for PBXNativeTarget "SwiftUI-Chicago-HSE-LCS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0E8F004A25D5751C0023C003 /* Debug */,
+				0E8F004B25D5751C0023C003 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		0EAC5E16237DF9C300E92727 /* Build configuration list for PBXProject "Chicago-HSE-LCS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
