@@ -13,6 +13,7 @@ struct SwiftUI_Chicago_HSE_LCSApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .preferredColorScheme(.dark)
         }
     }
 }
