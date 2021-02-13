@@ -12,7 +12,7 @@ import SwiftUI
 struct SwiftUI_Chicago_HSE_LCSApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            Landing()
                 .preferredColorScheme(.dark)
         }
     }

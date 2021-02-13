@@ -1,5 +1,5 @@
 //
-//  ContentView.swift
+//  Landing.swift
 //  SwiftUI-Chicago-HSE-LCS
 //
 //  Created by Russell Gordon on 2021-02-11.
@@ -8,15 +8,15 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct Landing: View {
     var body: some View {
         Text("Hello, world!")
             .padding()
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
+struct Landing_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        Landing()
     }
 }
