@@ -16,6 +16,9 @@ struct TheatreLobbyArtDisplay: View {
 
 struct TheatreLobbyArtDisplay_Previews: PreviewProvider {
     static var previews: some View {
-        TheatreLobbyArtDisplay()
+        NavigationView {
+            TheatreLobbyArtDisplay()
+                .preferredColorScheme(.dark)
+        }
     }
 }

@@ -16,6 +16,9 @@ struct Crew: View {
 
 struct Crew_Previews: PreviewProvider {
     static var previews: some View {
-        Crew()
+        NavigationView {
+            Crew()
+                .preferredColorScheme(.dark)
+        }
     }
 }
