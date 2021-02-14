@@ -9,37 +9,47 @@
 import SwiftUI
 
 struct CrewListView: View {
+    
+    @State private var searchText: String = ""
+    
     var body: some View {
         
-        List {
-            Group {
+        VStack {
+            
+            SearchBarView(text: $searchText)
+            
+            List {
                 
-                Section(header: Text("Primary Crew")) {
-                    ForEach(primaryCrewMembers) { someCrewMember in
-                        NavigationLink(destination: CrewPrimaryDetailView(crewMember: someCrewMember)) {
-                            Text(someCrewMember.name)
+                Group {
+                    
+                    Section(header: Text("Primary Crew")) {
+                        ForEach(primaryCrewMembers.filter({ searchText.isEmpty ? true : $0.name.contains(searchText) })) { someCrewMember in
+                            NavigationLink(destination: CrewPrimaryDetailView(crewMember: someCrewMember)) {
+                                Text(someCrewMember.name)
+                            }
                         }
                     }
-                }
-                
-                Section(header: Text("Special Teams")) {
-                    ForEach(specialTeams) { team in
-                        NavigationLink(destination: CrewPrimaryDetailView(crewMember: team)) {
-                            Text(team.name)
+                    
+                    Section(header: Text("Special Teams")) {
+                        ForEach(specialTeams.filter({ searchText.isEmpty ? true : $0.bio.contains(searchText) })) { team in
+                            NavigationLink(destination: CrewPrimaryDetailView(crewMember: team)) {
+                                Text(team.name)
+                            }
                         }
                     }
+                    
                 }
-                
+                .listRowBackground(Color.black)
             }
-            .listRowBackground(Color.black)
+            // Group lists, same style as landing page
+            .listStyle(GroupedListStyle())
+            // Set page title
+            .navigationTitle("Crew")
+            // Ensures page title appears in "small" mode
+            .navigationBarTitleDisplayMode(.inline)
+            
         }
-        // Group lists, same style as landing page
-        .listStyle(GroupedListStyle())
-        // Set page title
-        .navigationTitle("Crew")
-        // Ensures page title appears in "small" mode
-        .navigationBarTitleDisplayMode(.inline)
-
+        
     }
 }
 
