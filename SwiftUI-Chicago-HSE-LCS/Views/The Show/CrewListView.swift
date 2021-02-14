@@ -23,7 +23,18 @@ struct CrewListView: View {
                 Group {
                     
                     Section(header: Text("Primary Crew")) {
-                        ForEach(primaryCrewMembers.filter({ searchText.isEmpty ? true : $0.name.contains(searchText) })) { someCrewMember in
+                        
+                        
+                        ForEach(primaryCrewMembers.filter({ crewMember in
+                                                                if !searchText.isEmpty {
+                                                                    // Only return true when this crew member's name contains the search text
+                                                                    return crewMember.name.contains(searchText)
+                                                                } else {
+                                                                    // When there is no search text, return every crew member
+                                                                    return true
+                                                                }
+                                                            })
+                        ) { someCrewMember in
                             NavigationLink(destination: CrewPrimaryDetailView(crewMember: someCrewMember)) {
                                 Text(someCrewMember.name)
                             }
@@ -31,7 +42,16 @@ struct CrewListView: View {
                     }
                     
                     Section(header: Text("Special Teams")) {
-                        ForEach(specialTeams.filter({ searchText.isEmpty ? true : $0.bio.contains(searchText) })) { team in
+                        ForEach(specialTeams.filter({ team in
+                                                        if !searchText.isEmpty {
+                                                            // Only return true when this special team's bio contains the search text
+                                                            return team.bio.contains(searchText)
+                                                        } else {
+                                                            // When there is no search text, return every special team
+                                                            return true
+                                                        }
+                                                    })
+                        ) { team in
                             NavigationLink(destination: CrewSpecialTeamsDetailView(crewMember: team)) {
                                 Text(team.name)
                             }
