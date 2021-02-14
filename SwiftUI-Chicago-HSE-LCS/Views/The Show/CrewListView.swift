@@ -10,7 +10,36 @@ import SwiftUI
 
 struct CrewListView: View {
     var body: some View {
-        Text("Complete the Crew view here")
+        
+        List {
+            Group {
+                
+                Section(header: Text("Primary Crew")) {
+                    ForEach(primaryCrewMembers) { someCrewMember in
+                        NavigationLink(destination: CrewPrimaryDetailView(crewMember: someCrewMember)) {
+                            Text(someCrewMember.name)
+                        }
+                    }
+                }
+                
+                Section(header: Text("Special Teams")) {
+                    ForEach(specialTeams) { team in
+                        NavigationLink(destination: CrewPrimaryDetailView(crewMember: team)) {
+                            Text(team.name)
+                        }
+                    }
+                }
+                
+            }
+            .listRowBackground(Color.black)
+        }
+        // Group lists, same style as landing page
+        .listStyle(GroupedListStyle())
+        // Set page title
+        .navigationTitle("Crew")
+        // Ensures page title appears in "small" mode
+        .navigationBarTitleDisplayMode(.inline)
+
     }
 }
 

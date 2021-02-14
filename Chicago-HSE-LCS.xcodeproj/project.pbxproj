@@ -17,6 +17,7 @@
 		0E86F42725D8AF3E00A2B03B /* Musician.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EF52C532381E76000825087 /* Musician.swift */; };
 		0E86F42825D8AF3E00A2B03B /* Faculty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EAC5E3A237E558E00E92727 /* Faculty.swift */; };
 		0E86F44025D99A2200A2B03B /* CrewPrimaryDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E86F43F25D99A2200A2B03B /* CrewPrimaryDetailView.swift */; };
+		0E86F44A25D9C17700A2B03B /* CrewSpecialTeamsDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E86F44925D9C17700A2B03B /* CrewSpecialTeamsDetailView.swift */; };
 		0E8F004125D5751A0023C003 /* SwiftUI_Chicago_HSE_LCSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8F004025D5751A0023C003 /* SwiftUI_Chicago_HSE_LCSApp.swift */; };
 		0E8F004325D5751A0023C003 /* LandingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8F004225D5751A0023C003 /* LandingView.swift */; };
 		0E8F004825D5751C0023C003 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0E8F004725D5751C0023C003 /* Preview Assets.xcassets */; };
@@ -66,6 +67,7 @@
 		0E86F41925D8A62100A2B03B /* OurMusicalTheatreProgramView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OurMusicalTheatreProgramView.swift; sourceTree = "<group>"; };
 		0E86F41D25D8AC7000A2B03B /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		0E86F43F25D99A2200A2B03B /* CrewPrimaryDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrewPrimaryDetailView.swift; sourceTree = "<group>"; };
+		0E86F44925D9C17700A2B03B /* CrewSpecialTeamsDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrewSpecialTeamsDetailView.swift; sourceTree = "<group>"; };
 		0E8F003E25D5751A0023C003 /* SwiftUI-Chicago-HSE-LCS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SwiftUI-Chicago-HSE-LCS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0E8F004025D5751A0023C003 /* SwiftUI_Chicago_HSE_LCSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUI_Chicago_HSE_LCSApp.swift; sourceTree = "<group>"; };
 		0E8F004225D5751A0023C003 /* LandingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingView.swift; sourceTree = "<group>"; };
@@ -135,6 +137,7 @@
 			children = (
 				0E86F41125D8A5F500A2B03B /* CrewListView.swift */,
 				0E86F43F25D99A2200A2B03B /* CrewPrimaryDetailView.swift */,
+				0E86F44925D9C17700A2B03B /* CrewSpecialTeamsDetailView.swift */,
 			);
 			path = "The Show";
 			sourceTree = "<group>";
@@ -382,6 +385,7 @@
 				0E86F42825D8AF3E00A2B03B /* Faculty.swift in Sources */,
 				0E86F44025D99A2200A2B03B /* CrewPrimaryDetailView.swift in Sources */,
 				0E86F41A25D8A62100A2B03B /* OurMusicalTheatreProgramView.swift in Sources */,
+				0E86F44A25D9C17700A2B03B /* CrewSpecialTeamsDetailView.swift in Sources */,
 				0E8F004325D5751A0023C003 /* LandingView.swift in Sources */,
 				0E86F41625D8A60B00A2B03B /* TheatreLobbyArtDisplayView.swift in Sources */,
 				0E8F004125D5751A0023C003 /* SwiftUI_Chicago_HSE_LCSApp.swift in Sources */,

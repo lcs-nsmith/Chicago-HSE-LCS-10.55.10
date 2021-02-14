@@ -10,6 +10,12 @@ import SwiftUI
 
 @main
 struct SwiftUI_Chicago_HSE_LCSApp: App {
+    
+    init() {
+        // Sort the arrays of data
+        primaryCrewMembers.sort(by: { $0.name < $1.name })
+    }
+    
     var body: some Scene {
         WindowGroup {
             NavigationView {

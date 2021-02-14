@@ -21,6 +21,7 @@ struct CrewPrimaryDetailView: View {
                 Image(crewMember.imageId)
                 .resizable()
                 .scaledToFit()
+                
                 Group {
                     
                     Text("Job")
@@ -42,7 +43,9 @@ struct CrewPrimaryDetailView: View {
             }
         
         }
+        // Set page title
         .navigationTitle(crewMember.name)
+        // Ensures page title appears in "small" mode
         .navigationBarTitleDisplayMode(.inline)
         
     }
