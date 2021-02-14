@@ -31,7 +31,7 @@ struct SearchBarView: View {
                             .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
                             .padding(.leading, 8)
                  
-                        if isEditing {
+                        if isEditing && !text.isEmpty {
                             Button(action: {
                                 text = ""
                             }) {
