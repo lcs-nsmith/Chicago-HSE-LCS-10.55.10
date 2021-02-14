@@ -17,6 +17,7 @@ struct CrewListView: View {
         VStack {
             
             SearchBarView(text: $searchText)
+                .padding(.top, 20)
             
             List {
                 
