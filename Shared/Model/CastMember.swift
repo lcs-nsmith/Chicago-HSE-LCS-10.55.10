@@ -1,5 +1,5 @@
 //
-//  Crew.swift
+//  Actors.swift
 //  Chicago-HSE-LCS
 //
 //  Created by Lee, Jeewoo on 2019-11-14.
@@ -8,10 +8,11 @@
 
 import Foundation
 
-struct Crew {
+struct CastMember {
+    
     var name: String
-    var job: String
+    var character: String
     var imageId: String
     var bio: String
-    
+   
 }

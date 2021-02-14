@@ -1,17 +1,18 @@
 //
-//  MusicianStructure.swift
+//  Crew.swift
 //  Chicago-HSE-LCS
 //
-//  Created by Davidson, Liam on 2019-11-17.
+//  Created by Lee, Jeewoo on 2019-11-14.
 //  Copyright © 2019 Gordon, Russell. All rights reserved.
 //
 
 import Foundation
 
-struct Musician {
+struct Crew {
     
     var name: String
-    var instrument: String
+    var job: String
+    var imageId: String
     var bio: String
-    var imageID: String
+    
 }

@@ -1,17 +1,18 @@
 //
-//  Actors.swift
+//  MusicianStructure.swift
 //  Chicago-HSE-LCS
 //
-//  Created by Lee, Jeewoo on 2019-11-14.
+//  Created by Davidson, Liam on 2019-11-17.
 //  Copyright © 2019 Gordon, Russell. All rights reserved.
 //
 
 import Foundation
 
-struct CastMember {
+struct Musician {
+    
     var name: String
-    var character: String
-    var imageId: String
+    var instrument: String
     var bio: String
-   
+    var imageID: String
+    
 }
