@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0E86F41225D8A5F500A2B03B /* CrewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E86F41125D8A5F500A2B03B /* CrewView.swift */; };
+		0E86F41225D8A5F500A2B03B /* CrewListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E86F41125D8A5F500A2B03B /* CrewListView.swift */; };
 		0E86F41625D8A60B00A2B03B /* TheatreLobbyArtDisplayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E86F41525D8A60B00A2B03B /* TheatreLobbyArtDisplayView.swift */; };
 		0E86F41A25D8A62100A2B03B /* OurMusicalTheatreProgramView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E86F41925D8A62100A2B03B /* OurMusicalTheatreProgramView.swift */; };
 		0E86F41E25D8AC7000A2B03B /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E86F41D25D8AC7000A2B03B /* Constants.swift */; };
@@ -60,7 +60,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		0E86F41125D8A5F500A2B03B /* CrewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrewView.swift; sourceTree = "<group>"; };
+		0E86F41125D8A5F500A2B03B /* CrewListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrewListView.swift; sourceTree = "<group>"; };
 		0E86F41525D8A60B00A2B03B /* TheatreLobbyArtDisplayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheatreLobbyArtDisplayView.swift; sourceTree = "<group>"; };
 		0E86F41925D8A62100A2B03B /* OurMusicalTheatreProgramView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OurMusicalTheatreProgramView.swift; sourceTree = "<group>"; };
 		0E86F41D25D8AC7000A2B03B /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -131,7 +131,7 @@
 		0E86F40E25D8A5C700A2B03B /* The Show */ = {
 			isa = PBXGroup;
 			children = (
-				0E86F41125D8A5F500A2B03B /* CrewView.swift */,
+				0E86F41125D8A5F500A2B03B /* CrewListView.swift */,
 			);
 			path = "The Show";
 			sourceTree = "<group>";
@@ -381,7 +381,7 @@
 				0E8F004325D5751A0023C003 /* LandingView.swift in Sources */,
 				0E86F41625D8A60B00A2B03B /* TheatreLobbyArtDisplayView.swift in Sources */,
 				0E8F004125D5751A0023C003 /* SwiftUI_Chicago_HSE_LCSApp.swift in Sources */,
-				0E86F41225D8A5F500A2B03B /* CrewView.swift in Sources */,
+				0E86F41225D8A5F500A2B03B /* CrewListView.swift in Sources */,
 				0E86F41E25D8AC7000A2B03B /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

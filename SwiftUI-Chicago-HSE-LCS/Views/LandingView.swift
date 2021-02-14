@@ -20,7 +20,7 @@ struct LandingView: View {
                 Group {
                     Section(header: Text("The Show")) {
                         
-                        NavigationLink(destination: CrewView()) {
+                        NavigationLink(destination: CrewListView()) {
                             Text("Crew")
                         }
                         Text("2")

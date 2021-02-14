@@ -8,16 +8,16 @@
 
 import SwiftUI
 
-struct CrewView: View {
+struct CrewListView: View {
     var body: some View {
         Text("Complete the Crew view here")
     }
 }
 
-struct Crew_Previews: PreviewProvider {
+struct CrewListView_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView {
-            CrewView()
+            CrewListView()
                 .preferredColorScheme(.dark)
         }
     }
