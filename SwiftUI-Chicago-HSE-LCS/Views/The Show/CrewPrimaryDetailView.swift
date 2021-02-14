@@ -21,19 +21,23 @@ struct CrewPrimaryDetailView: View {
                 Image(crewMember.imageId)
                 .resizable()
                 .scaledToFit()
-                
-                Text("Job")
-                    .font(.title2)
-                
-                Text(crewMember.job)
-                
-                if !crewMember.bio.isEmpty {
+                Group {
                     
-                    Text("Bio")
+                    Text("Job")
                         .font(.title2)
                     
-                    Text(crewMember.bio)
+                    Text(crewMember.job)
+                    
+                    if !crewMember.bio.isEmpty {
+                        
+                        Text("Bio")
+                            .font(.title2)
+                        
+                        Text(crewMember.bio)
+                    }
+    
                 }
+                .padding(.horizontal, horizontalTextPadding)
 
             }
         
