@@ -17,22 +17,25 @@ struct Landing: View {
                 .scaledToFit()
             
             List {
-                Section(header: Text("The Show")) {
-                    Text("1")
-                    Text("2")
-                    Text("3")
-                    Text("4")
+                Group {
+                    Section(header: Text("The Show")) {
+                        Text("1")
+                        Text("2")
+                        Text("3")
+                        Text("4")
+                    }
+                    Section(header: Text("Intermission")) {
+                        Text("5")
+                        Text("6")
+                        Text("7")
+                    }
+                    Section(header: Text("Other")) {
+                        Text("8")
+                        Text("9")
+                        Text("10")
+                    }
                 }
-                Section(header: Text("Intermission")) {
-                    Text("5")
-                    Text("6")
-                    Text("7")
-                }
-                Section(header: Text("Other")) {
-                    Text("8")
-                    Text("9")
-                    Text("10")
-                }
+                .listRowBackground(Color.black)
             }
             .listStyle(GroupedListStyle())
             
