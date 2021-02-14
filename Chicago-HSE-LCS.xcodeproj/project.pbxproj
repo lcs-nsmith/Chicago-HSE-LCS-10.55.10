@@ -10,6 +10,7 @@
 		0E86F41225D8A5F500A2B03B /* Crew.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E86F41125D8A5F500A2B03B /* Crew.swift */; };
 		0E86F41625D8A60B00A2B03B /* TheatreLobbyArtDisplay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E86F41525D8A60B00A2B03B /* TheatreLobbyArtDisplay.swift */; };
 		0E86F41A25D8A62100A2B03B /* OurMusicalTheatreProgram.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E86F41925D8A62100A2B03B /* OurMusicalTheatreProgram.swift */; };
+		0E86F41E25D8AC7000A2B03B /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E86F41D25D8AC7000A2B03B /* Constants.swift */; };
 		0E8F004125D5751A0023C003 /* SwiftUI_Chicago_HSE_LCSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8F004025D5751A0023C003 /* SwiftUI_Chicago_HSE_LCSApp.swift */; };
 		0E8F004325D5751A0023C003 /* Landing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8F004225D5751A0023C003 /* Landing.swift */; };
 		0E8F004825D5751C0023C003 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0E8F004725D5751C0023C003 /* Preview Assets.xcassets */; };
@@ -57,6 +58,7 @@
 		0E86F41125D8A5F500A2B03B /* Crew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Crew.swift; sourceTree = "<group>"; };
 		0E86F41525D8A60B00A2B03B /* TheatreLobbyArtDisplay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheatreLobbyArtDisplay.swift; sourceTree = "<group>"; };
 		0E86F41925D8A62100A2B03B /* OurMusicalTheatreProgram.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OurMusicalTheatreProgram.swift; sourceTree = "<group>"; };
+		0E86F41D25D8AC7000A2B03B /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		0E8F003E25D5751A0023C003 /* SwiftUI-Chicago-HSE-LCS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SwiftUI-Chicago-HSE-LCS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0E8F004025D5751A0023C003 /* SwiftUI_Chicago_HSE_LCSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUI_Chicago_HSE_LCSApp.swift; sourceTree = "<group>"; };
 		0E8F004225D5751A0023C003 /* Landing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Landing.swift; sourceTree = "<group>"; };
@@ -250,6 +252,7 @@
 		0EACA6B025D89E500056A694 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				0E86F41D25D8AC7000A2B03B /* Constants.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -361,6 +364,7 @@
 				0E86F41625D8A60B00A2B03B /* TheatreLobbyArtDisplay.swift in Sources */,
 				0E8F004125D5751A0023C003 /* SwiftUI_Chicago_HSE_LCSApp.swift in Sources */,
 				0E86F41225D8A5F500A2B03B /* Crew.swift in Sources */,
+				0E86F41E25D8AC7000A2B03B /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
