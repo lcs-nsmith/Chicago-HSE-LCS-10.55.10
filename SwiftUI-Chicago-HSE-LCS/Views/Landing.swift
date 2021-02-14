@@ -20,7 +20,7 @@ struct Landing: View {
                 Group {
                     Section(header: Text("The Show")) {
                         
-                        NavigationLink(destination: Text("Write crew view here")) {
+                        NavigationLink(destination: Crew()) {
                             Text("Crew")
                         }
                         Text("2")
@@ -28,14 +28,14 @@ struct Landing: View {
                         Text("4")
                     }
                     Section(header: Text("Intermission")) {
-                        NavigationLink(destination: Text("Write Theatre Lobby Art Display view here")) {
+                        NavigationLink(destination: TheatreLobbyArtDisplay()) {
                             Text("Theatre Lobby Art Display")
                         }
                         Text("6")
                         Text("7")
                     }
                     Section(header: Text("Other")) {
-                        NavigationLink(destination: Text("Write Our Musical Theatre Program view here")) {
+                        NavigationLink(destination: OurMusicalTheatreProgram()) {
                             Text("Our Musical Theatre Program")
                         }
                         Text("9")
