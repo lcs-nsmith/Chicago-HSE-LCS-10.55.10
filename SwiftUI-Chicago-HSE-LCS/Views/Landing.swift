@@ -19,18 +19,25 @@ struct Landing: View {
             List {
                 Group {
                     Section(header: Text("The Show")) {
-                        Text("1")
+                        
+                        NavigationLink(destination: Text("Write crew view here")) {
+                            Text("Crew")
+                        }
                         Text("2")
                         Text("3")
                         Text("4")
                     }
                     Section(header: Text("Intermission")) {
-                        Text("5")
+                        NavigationLink(destination: Text("Write Theatre Lobby Art Display view here")) {
+                            Text("Theatre Lobby Art Display")
+                        }
                         Text("6")
                         Text("7")
                     }
                     Section(header: Text("Other")) {
-                        Text("8")
+                        NavigationLink(destination: Text("Write Our Musical Theatre Program view here")) {
+                            Text("Our Musical Theatre Program")
+                        }
                         Text("9")
                         Text("10")
                     }
@@ -41,12 +48,16 @@ struct Landing: View {
             
             Spacer()
         }
+        // Hide the navigation bar on this page to avoid blank space above banner
+        .navigationBarHidden(true)
     }
 }
 
 struct Landing_Previews: PreviewProvider {
     static var previews: some View {
-        Landing()
-            .preferredColorScheme(.dark)
+        NavigationView {
+            Landing()
+                .preferredColorScheme(.dark)
+        }
     }
 }

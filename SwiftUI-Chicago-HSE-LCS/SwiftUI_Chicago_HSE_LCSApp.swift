@@ -12,8 +12,10 @@ import SwiftUI
 struct SwiftUI_Chicago_HSE_LCSApp: App {
     var body: some Scene {
         WindowGroup {
-            Landing()
-                .preferredColorScheme(.dark)
+            NavigationView {
+                Landing()
+                    .preferredColorScheme(.dark)
+            }
         }
     }
 }
