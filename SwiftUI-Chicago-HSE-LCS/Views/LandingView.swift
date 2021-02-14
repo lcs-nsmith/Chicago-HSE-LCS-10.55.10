@@ -15,7 +15,7 @@ struct LandingView: View {
             Image("banner")
                 .resizable()
                 .scaledToFit()
-                .padding(.top, 5.0)
+                .padding(.top, 10.0)
             
             List {
                 Group {
