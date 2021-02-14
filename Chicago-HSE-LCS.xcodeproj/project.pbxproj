@@ -25,6 +25,7 @@
 		0EAC5E3D237E5B1B00E92727 /* FacultyDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EAC5E3C237E5B1B00E92727 /* FacultyDetailViewController.swift */; };
 		0EAC5E4123820CF600E92727 /* ArtDisplayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EAC5E4023820CF600E92727 /* ArtDisplayViewController.swift */; };
 		0EAC5E4323821E8B00E92727 /* CastMemberDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EAC5E4223821E8A00E92727 /* CastMemberDetailViewController.swift */; };
+		0EACA6B325D89F8E0056A694 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0EAC5E29237DF9C700E92727 /* LaunchScreen.storyboard */; };
 		302F3A372381E81D003B3725 /* CharactersTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 302F3A362381E81D003B3725 /* CharactersTableViewController.swift */; };
 		302F3A392381E93C003B3725 /* Characters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 302F3A382381E93C003B3725 /* Characters.swift */; };
 		302F3A3B2381EAAE003B3725 /* CharactersDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 302F3A3A2381EAAE003B3725 /* CharactersDetailViewController.swift */; };
@@ -137,6 +138,7 @@
 		0E8F004F25D5757C0023C003 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				0EAC5E29237DF9C700E92727 /* LaunchScreen.storyboard */,
 				0EAC5E27237DF9C700E92727 /* Assets.xcassets */,
 			);
 			path = Shared;
@@ -168,7 +170,6 @@
 				0EAC5E1E237DF9C300E92727 /* AppDelegate.swift */,
 				0EAC5E20237DF9C300E92727 /* SceneDelegate.swift */,
 				0EAC5E24237DF9C300E92727 /* Main.storyboard */,
-				0EAC5E29237DF9C700E92727 /* LaunchScreen.storyboard */,
 				0EAC5E2C237DF9C700E92727 /* Info.plist */,
 				0EAC5E32237E313F00E92727 /* MainMenuItem.swift */,
 				0EAC5E34237E336300E92727 /* MainMenuViewController.swift */,
@@ -299,6 +300,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0EACA6B325D89F8E0056A694 /* LaunchScreen.storyboard in Resources */,
 				0E8F005225D575A40023C003 /* Assets.xcassets in Resources */,
 				0E8F004825D5751C0023C003 /* Preview Assets.xcassets in Resources */,
 			);
