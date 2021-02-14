@@ -9,12 +9,13 @@
 import Foundation
 
 // MARK: Definition
-struct Crew {
+struct Crew: Identifiable {
     
-    var name: String
-    var job: String
-    var imageId: String
-    var bio: String
+    let id = UUID()
+    let name: String
+    let job: String
+    let imageId: String
+    let bio: String
     
 }
 
