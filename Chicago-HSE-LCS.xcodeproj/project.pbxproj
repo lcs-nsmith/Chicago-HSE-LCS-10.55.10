@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0E86F41225D8A5F500A2B03B /* Crew.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E86F41125D8A5F500A2B03B /* Crew.swift */; };
-		0E86F41625D8A60B00A2B03B /* TheatreLobbyArtDisplay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E86F41525D8A60B00A2B03B /* TheatreLobbyArtDisplay.swift */; };
-		0E86F41A25D8A62100A2B03B /* OurMusicalTheatreProgram.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E86F41925D8A62100A2B03B /* OurMusicalTheatreProgram.swift */; };
+		0E86F41225D8A5F500A2B03B /* CrewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E86F41125D8A5F500A2B03B /* CrewView.swift */; };
+		0E86F41625D8A60B00A2B03B /* TheatreLobbyArtDisplayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E86F41525D8A60B00A2B03B /* TheatreLobbyArtDisplayView.swift */; };
+		0E86F41A25D8A62100A2B03B /* OurMusicalTheatreProgramView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E86F41925D8A62100A2B03B /* OurMusicalTheatreProgramView.swift */; };
 		0E86F41E25D8AC7000A2B03B /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E86F41D25D8AC7000A2B03B /* Constants.swift */; };
 		0E86F42425D8AF3E00A2B03B /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = 302F3A382381E93C003B3725 /* Character.swift */; };
 		0E86F42525D8AF3E00A2B03B /* CastMember.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A64AC5D237DFA650067FC9D /* CastMember.swift */; };
@@ -17,7 +17,7 @@
 		0E86F42725D8AF3E00A2B03B /* Musician.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EF52C532381E76000825087 /* Musician.swift */; };
 		0E86F42825D8AF3E00A2B03B /* Faculty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EAC5E3A237E558E00E92727 /* Faculty.swift */; };
 		0E8F004125D5751A0023C003 /* SwiftUI_Chicago_HSE_LCSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8F004025D5751A0023C003 /* SwiftUI_Chicago_HSE_LCSApp.swift */; };
-		0E8F004325D5751A0023C003 /* Landing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8F004225D5751A0023C003 /* Landing.swift */; };
+		0E8F004325D5751A0023C003 /* LandingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8F004225D5751A0023C003 /* LandingView.swift */; };
 		0E8F004825D5751C0023C003 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0E8F004725D5751C0023C003 /* Preview Assets.xcassets */; };
 		0E8F005225D575A40023C003 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0EAC5E27237DF9C700E92727 /* Assets.xcassets */; };
 		0E91E2D62387A2C10025C793 /* WashroomsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E91E2D52387A2C10025C793 /* WashroomsViewController.swift */; };
@@ -60,13 +60,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		0E86F41125D8A5F500A2B03B /* Crew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Crew.swift; sourceTree = "<group>"; };
-		0E86F41525D8A60B00A2B03B /* TheatreLobbyArtDisplay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheatreLobbyArtDisplay.swift; sourceTree = "<group>"; };
-		0E86F41925D8A62100A2B03B /* OurMusicalTheatreProgram.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OurMusicalTheatreProgram.swift; sourceTree = "<group>"; };
+		0E86F41125D8A5F500A2B03B /* CrewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrewView.swift; sourceTree = "<group>"; };
+		0E86F41525D8A60B00A2B03B /* TheatreLobbyArtDisplayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheatreLobbyArtDisplayView.swift; sourceTree = "<group>"; };
+		0E86F41925D8A62100A2B03B /* OurMusicalTheatreProgramView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OurMusicalTheatreProgramView.swift; sourceTree = "<group>"; };
 		0E86F41D25D8AC7000A2B03B /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		0E8F003E25D5751A0023C003 /* SwiftUI-Chicago-HSE-LCS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SwiftUI-Chicago-HSE-LCS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0E8F004025D5751A0023C003 /* SwiftUI_Chicago_HSE_LCSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUI_Chicago_HSE_LCSApp.swift; sourceTree = "<group>"; };
-		0E8F004225D5751A0023C003 /* Landing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Landing.swift; sourceTree = "<group>"; };
+		0E8F004225D5751A0023C003 /* LandingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingView.swift; sourceTree = "<group>"; };
 		0E8F004725D5751C0023C003 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		0E8F004925D5751C0023C003 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0E91E2D52387A2C10025C793 /* WashroomsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WashroomsViewController.swift; sourceTree = "<group>"; };
@@ -131,7 +131,7 @@
 		0E86F40E25D8A5C700A2B03B /* The Show */ = {
 			isa = PBXGroup;
 			children = (
-				0E86F41125D8A5F500A2B03B /* Crew.swift */,
+				0E86F41125D8A5F500A2B03B /* CrewView.swift */,
 			);
 			path = "The Show";
 			sourceTree = "<group>";
@@ -139,7 +139,7 @@
 		0E86F40F25D8A5CD00A2B03B /* Intermission */ = {
 			isa = PBXGroup;
 			children = (
-				0E86F41525D8A60B00A2B03B /* TheatreLobbyArtDisplay.swift */,
+				0E86F41525D8A60B00A2B03B /* TheatreLobbyArtDisplayView.swift */,
 			);
 			path = Intermission;
 			sourceTree = "<group>";
@@ -147,7 +147,7 @@
 		0E86F41025D8A5DB00A2B03B /* Other */ = {
 			isa = PBXGroup;
 			children = (
-				0E86F41925D8A62100A2B03B /* OurMusicalTheatreProgram.swift */,
+				0E86F41925D8A62100A2B03B /* OurMusicalTheatreProgramView.swift */,
 			);
 			path = Other;
 			sourceTree = "<group>";
@@ -254,7 +254,7 @@
 		0EACA6AF25D89E460056A694 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				0E8F004225D5751A0023C003 /* Landing.swift */,
+				0E8F004225D5751A0023C003 /* LandingView.swift */,
 				0E86F40E25D8A5C700A2B03B /* The Show */,
 				0E86F40F25D8A5CD00A2B03B /* Intermission */,
 				0E86F41025D8A5DB00A2B03B /* Other */,
@@ -377,11 +377,11 @@
 				0E86F42625D8AF3E00A2B03B /* Crew.swift in Sources */,
 				0E86F42725D8AF3E00A2B03B /* Musician.swift in Sources */,
 				0E86F42825D8AF3E00A2B03B /* Faculty.swift in Sources */,
-				0E86F41A25D8A62100A2B03B /* OurMusicalTheatreProgram.swift in Sources */,
-				0E8F004325D5751A0023C003 /* Landing.swift in Sources */,
-				0E86F41625D8A60B00A2B03B /* TheatreLobbyArtDisplay.swift in Sources */,
+				0E86F41A25D8A62100A2B03B /* OurMusicalTheatreProgramView.swift in Sources */,
+				0E8F004325D5751A0023C003 /* LandingView.swift in Sources */,
+				0E86F41625D8A60B00A2B03B /* TheatreLobbyArtDisplayView.swift in Sources */,
 				0E8F004125D5751A0023C003 /* SwiftUI_Chicago_HSE_LCSApp.swift in Sources */,
-				0E86F41225D8A5F500A2B03B /* Crew.swift in Sources */,
+				0E86F41225D8A5F500A2B03B /* CrewView.swift in Sources */,
 				0E86F41E25D8AC7000A2B03B /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

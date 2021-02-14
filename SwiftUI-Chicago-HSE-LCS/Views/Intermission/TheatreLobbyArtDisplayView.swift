@@ -8,16 +8,16 @@
 
 import SwiftUI
 
-struct TheatreLobbyArtDisplay: View {
+struct TheatreLobbyArtDisplayView: View {
     var body: some View {
         Text("Complete the Theatre Lobby Art Display view here")
     }
 }
 
-struct TheatreLobbyArtDisplay_Previews: PreviewProvider {
+struct TheatreLobbyArtDisplayView_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView {
-            TheatreLobbyArtDisplay()
+            TheatreLobbyArtDisplayView()
                 .preferredColorScheme(.dark)
         }
     }

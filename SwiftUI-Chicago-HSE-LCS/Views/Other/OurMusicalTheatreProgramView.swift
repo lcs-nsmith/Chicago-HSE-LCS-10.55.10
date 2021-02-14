@@ -8,7 +8,7 @@
 
 import SwiftUI
 
-struct OurMusicalTheatreProgram: View {
+struct OurMusicalTheatreProgramView: View {
     var body: some View {
         
         ScrollView {
@@ -39,10 +39,10 @@ struct OurMusicalTheatreProgram: View {
     
 }
 
-struct OurMusicalTheatreProgram_Previews: PreviewProvider {
+struct OurMusicalTheatreProgramView_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView {
-            OurMusicalTheatreProgram()
+            OurMusicalTheatreProgramView()
                 .preferredColorScheme(.dark)
         }
     }

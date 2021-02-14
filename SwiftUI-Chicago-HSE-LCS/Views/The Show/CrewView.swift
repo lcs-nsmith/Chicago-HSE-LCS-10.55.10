@@ -8,7 +8,7 @@
 
 import SwiftUI
 
-struct Crew: View {
+struct CrewView: View {
     var body: some View {
         Text("Complete the Crew view here")
     }
@@ -17,7 +17,7 @@ struct Crew: View {
 struct Crew_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView {
-            Crew()
+            CrewView()
                 .preferredColorScheme(.dark)
         }
     }

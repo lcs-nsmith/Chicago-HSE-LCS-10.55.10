@@ -13,7 +13,7 @@ struct SwiftUI_Chicago_HSE_LCSApp: App {
     var body: some Scene {
         WindowGroup {
             NavigationView {
-                Landing()
+                LandingView()
                     .preferredColorScheme(.dark)
             }
         }

@@ -8,7 +8,7 @@
 
 import SwiftUI
 
-struct Landing: View {
+struct LandingView: View {
     var body: some View {
         VStack {
             
@@ -20,26 +20,30 @@ struct Landing: View {
                 Group {
                     Section(header: Text("The Show")) {
                         
-                        NavigationLink(destination: Crew()) {
+                        NavigationLink(destination: CrewView()) {
                             Text("Crew")
                         }
                         Text("2")
                         Text("3")
                         Text("4")
-                    }
-                    Section(header: Text("Intermission")) {
-                        NavigationLink(destination: TheatreLobbyArtDisplay()) {
-                            Text("Theatre Lobby Art Display")
-                        }
+                        Text("5")
                         Text("6")
                         Text("7")
+                        Text("8")
+                    }
+                    Section(header: Text("Intermission")) {
+                        NavigationLink(destination: TheatreLobbyArtDisplayView()) {
+                            Text("Theatre Lobby Art Display")
+                        }
+                        Text("10")
+                        Text("11")
                     }
                     Section(header: Text("Other")) {
-                        NavigationLink(destination: OurMusicalTheatreProgram()) {
+                        NavigationLink(destination: OurMusicalTheatreProgramView()) {
                             Text("Our Musical Theatre Program")
                         }
-                        Text("9")
-                        Text("10")
+                        Text("13")
+                        Text("14")
                     }
                 }
                 .listRowBackground(Color.black)
@@ -53,10 +57,10 @@ struct Landing: View {
     }
 }
 
-struct Landing_Previews: PreviewProvider {
+struct LandingView_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView {
-            Landing()
+            LandingView()
                 .preferredColorScheme(.dark)
         }
     }
