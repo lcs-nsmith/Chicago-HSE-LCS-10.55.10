@@ -12,7 +12,7 @@ class CharactersDetailViewController: UIViewController {
     
     // MARK: Properties
     // The emoji to display detail about
-    var characterToDisplay: Characters?
+    var characterToDisplay: Character?
 
     // Outlets to connect this controller to the view
     @IBOutlet weak var characterHeadShot: UIImageView!

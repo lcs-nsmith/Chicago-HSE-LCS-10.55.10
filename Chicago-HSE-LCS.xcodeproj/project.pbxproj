@@ -11,7 +11,7 @@
 		0E86F41625D8A60B00A2B03B /* TheatreLobbyArtDisplay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E86F41525D8A60B00A2B03B /* TheatreLobbyArtDisplay.swift */; };
 		0E86F41A25D8A62100A2B03B /* OurMusicalTheatreProgram.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E86F41925D8A62100A2B03B /* OurMusicalTheatreProgram.swift */; };
 		0E86F41E25D8AC7000A2B03B /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E86F41D25D8AC7000A2B03B /* Constants.swift */; };
-		0E86F42425D8AF3E00A2B03B /* Characters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 302F3A382381E93C003B3725 /* Characters.swift */; };
+		0E86F42425D8AF3E00A2B03B /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = 302F3A382381E93C003B3725 /* Character.swift */; };
 		0E86F42525D8AF3E00A2B03B /* CastMember.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A64AC5D237DFA650067FC9D /* CastMember.swift */; };
 		0E86F42625D8AF3E00A2B03B /* Crew.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A64AC61237E05810067FC9D /* Crew.swift */; };
 		0E86F42725D8AF3E00A2B03B /* Musician.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EF52C532381E76000825087 /* Musician.swift */; };
@@ -36,7 +36,7 @@
 		0EAC5E4323821E8B00E92727 /* CastMemberDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EAC5E4223821E8A00E92727 /* CastMemberDetailViewController.swift */; };
 		0EACA6B325D89F8E0056A694 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0EAC5E29237DF9C700E92727 /* LaunchScreen.storyboard */; };
 		302F3A372381E81D003B3725 /* CharactersTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 302F3A362381E81D003B3725 /* CharactersTableViewController.swift */; };
-		302F3A392381E93C003B3725 /* Characters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 302F3A382381E93C003B3725 /* Characters.swift */; };
+		302F3A392381E93C003B3725 /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = 302F3A382381E93C003B3725 /* Character.swift */; };
 		302F3A3B2381EAAE003B3725 /* CharactersDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 302F3A3A2381EAAE003B3725 /* CharactersDetailViewController.swift */; };
 		42C3AD9D23820CF90015216E /* ConcessionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42C3AD9C23820CF90015216E /* ConcessionsViewController.swift */; };
 		7A64AC5E237DFA650067FC9D /* CastMember.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A64AC5D237DFA650067FC9D /* CastMember.swift */; };
@@ -86,7 +86,7 @@
 		0EAC5E4023820CF600E92727 /* ArtDisplayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtDisplayViewController.swift; sourceTree = "<group>"; };
 		0EAC5E4223821E8A00E92727 /* CastMemberDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CastMemberDetailViewController.swift; sourceTree = "<group>"; };
 		302F3A362381E81D003B3725 /* CharactersTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersTableViewController.swift; sourceTree = "<group>"; };
-		302F3A382381E93C003B3725 /* Characters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Characters.swift; sourceTree = "<group>"; };
+		302F3A382381E93C003B3725 /* Character.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
 		302F3A3A2381EAAE003B3725 /* CharactersDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersDetailViewController.swift; sourceTree = "<group>"; };
 		42C3AD9C23820CF90015216E /* ConcessionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConcessionsViewController.swift; sourceTree = "<group>"; };
 		7A64AC5D237DFA650067FC9D /* CastMember.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CastMember.swift; sourceTree = "<group>"; };
@@ -155,7 +155,7 @@
 		0E86F42325D8AE0200A2B03B /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				302F3A382381E93C003B3725 /* Characters.swift */,
+				302F3A382381E93C003B3725 /* Character.swift */,
 				7A64AC5D237DFA650067FC9D /* CastMember.swift */,
 				7A64AC61237E05810067FC9D /* Crew.swift */,
 				9EF52C532381E76000825087 /* Musician.swift */,
@@ -372,7 +372,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0E86F42425D8AF3E00A2B03B /* Characters.swift in Sources */,
+				0E86F42425D8AF3E00A2B03B /* Character.swift in Sources */,
 				0E86F42525D8AF3E00A2B03B /* CastMember.swift in Sources */,
 				0E86F42625D8AF3E00A2B03B /* Crew.swift in Sources */,
 				0E86F42725D8AF3E00A2B03B /* Musician.swift in Sources */,
@@ -400,7 +400,7 @@
 				818DFA8E2382C16900429E5E /* ProductionTeamNotesViewController.swift in Sources */,
 				81D3C082238B0BFE006AB290 /* Showing.swift in Sources */,
 				7A64AC64237E073D0067FC9D /* CrewTableViewController.swift in Sources */,
-				302F3A392381E93C003B3725 /* Characters.swift in Sources */,
+				302F3A392381E93C003B3725 /* Character.swift in Sources */,
 				0EAC5E33237E314000E92727 /* MainMenuItem.swift in Sources */,
 				0EAC5E1F237DF9C300E92727 /* AppDelegate.swift in Sources */,
 				0EAC5E3B237E558E00E92727 /* Faculty.swift in Sources */,
