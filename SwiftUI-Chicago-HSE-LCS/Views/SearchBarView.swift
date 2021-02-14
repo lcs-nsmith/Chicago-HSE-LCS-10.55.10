@@ -60,6 +60,7 @@ struct SearchBarView: View {
                     Text("Cancel")
                 }
                 .padding(.trailing, 10)
+                .padding(.bottom, -2)
                 .transition(.move(edge: .trailing))
                 .animation(.default)
             }
