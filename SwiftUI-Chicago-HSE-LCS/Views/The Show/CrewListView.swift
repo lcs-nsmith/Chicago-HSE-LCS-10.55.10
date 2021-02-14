@@ -32,7 +32,7 @@ struct CrewListView: View {
                     
                     Section(header: Text("Special Teams")) {
                         ForEach(specialTeams.filter({ searchText.isEmpty ? true : $0.bio.contains(searchText) })) { team in
-                            NavigationLink(destination: CrewPrimaryDetailView(crewMember: team)) {
+                            NavigationLink(destination: CrewSpecialTeamsDetailView(crewMember: team)) {
                                 Text(team.name)
                             }
                         }
