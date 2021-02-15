@@ -7,18 +7,24 @@
 //
 
 import SwiftUI
- 
+
 struct SearchBarView: View {
     
     var placeholderText: String = "Search..."
     
     @Binding var text: String
- 
+    
     @State private var isEditing = false
- 
+    
+    // Whether to animate changes to the search field appearance
+    @State private var animateSearchField = false
+    
+    // Initialize a timer that will fire in one second
+    let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
+    
     var body: some View {
         HStack {
- 
+            
             TextField(placeholderText, text: $text)
                 .padding(7)
                 .padding(.horizontal, 25)
@@ -30,7 +36,7 @@ struct SearchBarView: View {
                             .foregroundColor(.gray)
                             .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
                             .padding(.leading, 8)
-                 
+                        
                         if isEditing && !text.isEmpty {
                             Button(action: {
                                 text = ""
@@ -46,7 +52,10 @@ struct SearchBarView: View {
                 .onTapGesture {
                     isEditing = true
                 }
- 
+                // Make the search field animate as it changes shape
+                // (Except when it first appears in the view)
+                .animation(animateSearchField ? .default : .none)
+            
             if isEditing {
                 Button(action: {
                     
@@ -65,6 +74,16 @@ struct SearchBarView: View {
                 .animation(.default)
             }
         }
+        .onReceive(timer) { input in
+            
+            // Set the flag to apply animation to the search field
+            animateSearchField = true
+            
+            // Stop the timer
+            timer.upstream.connect().cancel()
+            
+        }
+
     }
 }
 
