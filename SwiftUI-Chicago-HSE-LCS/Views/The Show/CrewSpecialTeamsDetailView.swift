@@ -24,7 +24,8 @@ struct CrewSpecialTeamsDetailView: View {
                 
             }
             .padding(.horizontal, horizontalTextPadding)
-
+            .padding(.top, topTextPadding)
+            
         }
         // Set page title
         .navigationTitle(crewMember.name)

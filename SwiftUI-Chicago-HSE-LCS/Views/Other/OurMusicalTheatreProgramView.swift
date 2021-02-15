@@ -17,7 +17,9 @@ struct OurMusicalTheatreProgramView: View {
                 .resizable()
                 .scaledToFit()
                 .padding(.horizontal, 50)
-            
+                .padding(.top, 15)
+                .padding(.bottom, 10)
+
             Text("""
                 Lakefield College School’s well-rounded approach to education has a longstanding reputation of educating artists and athletes for life. We are known for our outstanding drama productions and our musicals have long garnered the attention and support of our local media and the greater community.
 

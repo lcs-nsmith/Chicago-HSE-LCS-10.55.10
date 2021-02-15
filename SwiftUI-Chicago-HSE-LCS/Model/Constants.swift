@@ -10,3 +10,4 @@ import SwiftUI
 
 // Layout
 let horizontalTextPadding: CGFloat = 18
+let topTextPadding: CGFloat = 20
