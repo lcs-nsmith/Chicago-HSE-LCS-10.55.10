@@ -26,7 +26,7 @@ struct LandingView: View {
                             Image(systemName: "ticket")
                                 .resizable()
                                 .scaledToFit()
-                                .frame(width: 40)
+                                .frame(width: 30, height: 30)
                             Text("Tickets and Dates")
                         }
                         //                        }
@@ -35,7 +35,7 @@ struct LandingView: View {
                             Image(systemName: "music.note.list")
                                 .resizable()
                                 .scaledToFit()
-                                .frame(width: 40)
+                                .frame(width: 30, height: 30)
                             Text("Musical Numbers")
                         }
                         //                        }
@@ -45,7 +45,7 @@ struct LandingView: View {
                             Image(systemName: "person.crop.artframe")
                                 .resizable()
                                 .scaledToFit()
-                                .frame(width: 40)
+                                .frame(width: 30, height: 30)
                             Text("Characters")
                         }
                         //
@@ -55,7 +55,7 @@ struct LandingView: View {
                             Image(systemName: "person.3.fill")
                                 .resizable()
                                 .scaledToFit()
-                                .frame(width: 40)
+                                .frame(width: 30, height: 30)
                             Text("Cast")
                         }
                         //
@@ -65,72 +65,124 @@ struct LandingView: View {
                                 Image(systemName: "person.3.sequence")
                                     .resizable()
                                     .scaledToFit()
-                                    .frame(width: 40)
+                                    .frame(width: 30, height: 30)
                                 Text("Crew")
                             }
                         }
                         
-                            //                        NavigationLink(destination: MusiciansListView()) {
-                            HStack{
-                                Image(systemName: "guitars")
-                                    .resizable()
-                                    .scaledToFit()
-                                    .frame(width: 40)
-                                Text("Musicians")
-                            }
-                            //
-                            
-                            //                        NavigationLink(destination: FacultyListView()) {
-                            HStack{
-                                Image(systemName: "person.text.rectangle")
-                                    .resizable()
-                                    .scaledToFit()
-                                    .frame(width: 40)
-                                Text("Faculty")
-                            }
-                            //
-                            
-                            //                        NavigationLink(destination: ProductionTeamNotesView()) {
-                            HStack{
-                                Image(systemName: "list.and.film")
-                                    .resizable()
-                                    .scaledToFit()
-                                    .frame(width: 40)
-                                Text("Production Team Notes")
-                            }
-                            //
+                        //                        NavigationLink(destination: MusiciansListView()) {
+                        HStack{
+                            Image(systemName: "guitars")
+                                .resizable()
+                                .scaledToFit()
+                                .frame(width: 30, height: 30)
+                            Text("Musicians")
                         }
-                        Section(header: Text("Intermission")) {
+                        //
+                        
+                        //                        NavigationLink(destination: FacultyListView()) {
+                        HStack{
+                            Image(systemName: "person.text.rectangle")
+                                .resizable()
+                                .scaledToFit()
+                                .frame(width: 30, height: 30)
+                            Text("Faculty")
+                        }
+                        //
+                        
+                        //                        NavigationLink(destination: ProductionTeamNotesView()) {
+                        HStack{
+                            Image(systemName: "list.and.film")
+                                .resizable()
+                                .scaledToFit()
+                                .frame(width: 30, height: 30)
+                            Text("Production Team Notes")
+                        }
+                        //
+                    }
+                    .listRowBackground(Color.black)
+                    .listStyle(GroupedListStyle())
+                    
+                    Section(header: Text("Intermission")) {
+                        Group {
                             NavigationLink(destination: TheatreLobbyArtDisplayView()) {
-                                Text("Theatre Lobby Art Display")
+                                HStack{
+                                    Image(systemName: "paintpalette")
+                                        .resizable()
+                                        .scaledToFit()
+                                        .frame(width: 30, height: 30)
+                                    Text("Theatre Lobby Art Display")
+                                }
                             }
-                            Text("10")
-                            Text("11")
-                        }
-                        Section(header: Text("Other")) {
-                            NavigationLink(destination: OurMusicalTheatreProgramView()) {
-                                Text("Our Musical Theatre Program")
+                            //                            NavigationLink(destination: ConcessionsView()) {
+                            HStack{
+                                Image("popcornSymbolUpscaled")
+                                    .resizable()
+                                    .scaledToFit()
+                                    .frame(width: 30, height: 30)
+                                Text("Concessions")
                             }
-                            Text("13")
-                            Text("14")
+                            //                        }
+                            
+                            //                            NavigationLink(destination: WashroomLocationsView()) {
+                            HStack{
+                                Image("bathroomSign.png")
+                                    .resizable()
+                                    .scaledToFit()
+                                    .frame(width: 30, height: 30)
+                                Text("Washroom Locations")
+                            }
+                            //                        }
+                            
+                            Section(header: Text("Other")) {
+                                Group {
+                                    NavigationLink(destination: OurMusicalTheatreProgramView()) {
+                                        HStack{
+                                            Image(systemName: "theatermasks")
+                                                .resizable()
+                                                .scaledToFit()
+                                                .frame(width: 30, height: 30)
+                                            Text("Our Musical Theatre Program")
+                                        }
+                                    }
+                                    //                            NavigationLink(destination: AboutThisAppView()) {
+                                    HStack{
+                                        Image(systemName:"apps.iphone")
+                                            .resizable()
+                                            .scaledToFit()
+                                            .frame(width: 30, height: 30)
+                                        Text("About This App")
+                                    }
+                                    //                        }
+                                    
+                                    //                            NavigationLink(destination: AcknowledgementsAndLegalView()) {
+                                    HStack{
+                                        Image(systemName:"scroll")
+                                            .resizable()
+                                            .scaledToFit()
+                                            .frame(width: 30, height: 30)
+                                        Text("Acknowledgements And Legal")
+                                    }
+                                    //                        }
+                                }
+                            }
                         }
                     }
                     .listRowBackground(Color.black)
+                    .listStyle(GroupedListStyle())
+                    
                 }
-                .listStyle(GroupedListStyle())
-                
-                Spacer()
-            }
-            // Hide the navigation bar on this page to avoid blank space above banner
-            .navigationBarHidden(true)
-        }
-    }
-    
-    struct LandingView_Previews: PreviewProvider {
-        static var previews: some View {
-            NavigationView {
-                LandingView()
-                    .preferredColorScheme(.dark)
+                // Hide the navigation bar on this page to avoid blank space above banner
+                .navigationBarHidden(true)
             }
         }
     }
+}
+struct LandingView_Previews: PreviewProvider {
+    static var previews: some View {
+        NavigationView {
+            LandingView()
+                .preferredColorScheme(.dark)
+        }
+    }
+}
