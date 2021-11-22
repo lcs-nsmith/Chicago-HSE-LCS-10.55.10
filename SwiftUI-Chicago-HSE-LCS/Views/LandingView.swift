@@ -101,7 +101,6 @@ struct LandingView: View {
                         //
                     }
                     .listRowBackground(Color.black)
-                    .listStyle(GroupedListStyle())
                     
                     Section(header: Text("Intermission")) {
                         Group {
@@ -169,12 +168,13 @@ struct LandingView: View {
                         }
                     }
                     .listRowBackground(Color.black)
-                    .listStyle(GroupedListStyle())
+
                     
                 }
                 // Hide the navigation bar on this page to avoid blank space above banner
                 .navigationBarHidden(true)
             }
+            .listStyle(GroupedListStyle())
         }
     }
 }
